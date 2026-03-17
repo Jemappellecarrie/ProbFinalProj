@@ -1,0 +1,42 @@
+{
+  "semantic": {
+    "planets": {
+      "label": "Planets",
+      "rationale": "Baseline semantic group based on classical planets."
+    },
+    "gemstones": {
+      "label": "Gemstones",
+      "rationale": "Baseline semantic group based on common gemstone names."
+    }
+  },
+  "lexical": {
+    "starts_with_sn": {
+      "label": "Starts with SN",
+      "rationale": "Baseline lexical group based on a shared two-letter prefix."
+    },
+    "ends_with_ash": {
+      "label": "Ends with -ASH",
+      "rationale": "Baseline lexical group based on a shared suffix."
+    }
+  },
+  "phonetic": {
+    "rhymes_with_ake": {
+      "label": "Rhymes with -AKE",
+      "rationale": "Baseline phonetic group based on a shallow rhyme family."
+    },
+    "rhymes_with_eel": {
+      "label": "Rhymes with -EEL",
+      "rationale": "Baseline phonetic group based on a shallow rhyme family."
+    }
+  },
+  "theme": {
+    "pacman_ghosts": {
+      "label": "Pac-Man ghosts",
+      "rationale": "Baseline theme/trivia group from a well-known game franchise."
+    },
+    "tmnt": {
+      "label": "Teenage Mutant Ninja Turtles",
+      "rationale": "Baseline theme/trivia group from a well-known pop culture set."
+    }
+  }
+}

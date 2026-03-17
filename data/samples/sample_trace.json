@@ -1,0 +1,44 @@
+{
+  "trace_id": "trace_sample_static",
+  "request_id": "req_sample_static",
+  "mode": "demo",
+  "feature_extractor": "mock_word_feature_extractor",
+  "generators": [
+    "mock_semantic_group_generator",
+    "mock_lexical_group_generator",
+    "mock_phonetic_group_generator",
+    "mock_theme_group_generator"
+  ],
+  "solver_backend": "mock_solver_backend",
+  "scorer": "mock_puzzle_scorer",
+  "events": [
+    {
+      "stage": "seed_load",
+      "message": "Loaded static demo seed entries.",
+      "metadata": {
+        "count": 32
+      },
+      "timestamp": "2026-03-17T00:00:00Z"
+    },
+    {
+      "stage": "feature_extraction",
+      "message": "Extracted baseline feature records.",
+      "metadata": {
+        "count": 32
+      },
+      "timestamp": "2026-03-17T00:00:01Z"
+    },
+    {
+      "stage": "composition",
+      "message": "Built static sample puzzle payload.",
+      "metadata": {
+        "count": 1
+      },
+      "timestamp": "2026-03-17T00:00:02Z"
+    }
+  ],
+  "metadata": {
+    "verifier": "baseline_puzzle_verifier",
+    "composer": "baseline_puzzle_composer"
+  }
+}

@@ -1,55 +1,99 @@
 # Connections Puzzle Generator
 
-Production-style scaffold for a NYT-Connections-style puzzle generator, with a deliberate split between runnable demo infrastructure and intentionally human-owned quality logic.
+Production-style scaffold for a NYT-Connections-style puzzle generator. The repository now has:
 
-## What This Repository Contains
+- a first-stage end-to-end demo generation pipeline
+- a second-stage quality-control scaffold for ambiguity modeling, solver ensemble analysis, style-analysis hooks, batch evaluation, and top-k debug browsing
 
-- A FastAPI backend with typed schemas, pipeline orchestration, repositories, mock/demo generation components, and explicit human-owned strategy stubs.
-- A React + TypeScript + Vite frontend that can request a generated demo puzzle, reveal groups, inspect scoring, and show debug traces.
-- A second-stage quality-control scaffold for solver ensembles, ambiguity reports, style-analysis placeholders, and batch evaluation artifacts.
-- Seed/sample data, bootstrap scripts, developer tooling, and architecture documentation.
-- Clear seams for the project-defining logic that should remain owned by a human researcher/architect.
+The project is intentionally honest: demo mode runs end-to-end, but the project-defining puzzle-quality heuristics remain human-owned and explicitly unimplemented.
+
+## Current Scope
+
+### Generation scaffold
+
+- FastAPI backend with typed schemas, repositories, orchestration, generators, solver, verifier, and scorer wiring
+- React + TypeScript + Vite frontend for puzzle generation, reveal, score inspection, and developer-mode debug views
+- seed/sample/demo data plus bootstrap and local run scripts
+
+### Second-stage quality-control scaffold
+
+- ambiguity evidence models and baseline ambiguity reports
+- solver registry plus ensemble coordinator
+- baseline second solver for agreement/disagreement exercise
+- style-analysis placeholder reports
+- offline batch evaluation with accepted/rejected/top-k persistence
+- debug endpoint and frontend Top-K inspection panel
 
 ## Guiding Principle
 
-The repository runs end-to-end in demo mode, but it does **not** pretend the hard parts are solved. High-value puzzle quality logic is left as explicit placeholders with `TODO[HUMAN_*]` markers, rich docstrings, and either `NotImplementedError` or clearly labeled baseline implementations.
+This repository does **not** claim that ambiguity detection, NYT-likeness, ranking quality, or final solver behavior are solved.
 
-## Quickstart
+Anything project-defining remains clearly marked with `TODO[HUMAN_*]`, rich docstrings, and either:
 
-1. Copy `.env.example` to `.env` if you want local overrides.
-2. Install backend dependencies:
+- a human-owned stub
+- a baseline/mock implementation explicitly labeled as provisional
+
+## Local Setup
+
+### 1. Copy environment variables
+
+```bash
+cp .env.example .env
+```
+
+### 2. Create a backend Python environment
+
+Recommended: use `venv` inside `backend/`.
 
 ```bash
 cd backend
-python3 -m pip install -e ".[dev]"
+/opt/homebrew/bin/python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -e ".[dev]"
 ```
 
-3. Install frontend dependencies:
+
+### 3. Install frontend dependencies
 
 ```bash
-cd frontend
+cd ../frontend
 npm install
 ```
 
-4. Bootstrap demo feature artifacts:
+### 4. Bootstrap demo artifacts
 
 ```bash
+cd ..
 python3 scripts/bootstrap_demo_data.py
 ```
 
-5. Start the backend:
+## Running Locally
+
+Use two terminals.
+
+### Terminal 1: backend
 
 ```bash
-make backend-dev
+cd backend
+source .venv/bin/activate
+python -m uvicorn app.main:create_app --factory --reload --host 0.0.0.0 --port 8000
 ```
 
-6. Start the frontend in another terminal:
+### Terminal 2: frontend
 
 ```bash
-make frontend-dev
+cd frontend
+npm run dev -- --host 0.0.0.0 --port 5173
 ```
 
-7. Open [http://localhost:5173](http://localhost:5173).
+Then open [http://localhost:5173](http://localhost:5173).
+
+Useful backend URLs:
+
+- [http://localhost:8000/api/v1/health](http://localhost:8000/api/v1/health)
+- [http://localhost:8000/api/v1/puzzles/sample](http://localhost:8000/api/v1/puzzles/sample)
+- [http://localhost:8000/api/v1/debug/evaluation/latest](http://localhost:8000/api/v1/debug/evaluation/latest)
 
 ## Demo Mode
 
@@ -57,49 +101,72 @@ Demo mode is enabled by default through `CONNECTIONS_DEMO_MODE=true`.
 
 In demo mode the system:
 
-- Loads seed words from JSONL.
-- Uses a baseline feature extractor with deterministic mock signals.
-- Uses mock group generators for semantic, lexical, phonetic, and theme buckets.
-- Composes a 16-word puzzle from one group of each type.
-- Runs a stub solver/verifier.
-- Scores the result with a transparent baseline scorer.
-- Exposes debug metadata so future human-owned strategies can be evaluated against the same pipeline.
-- Supports offline batch evaluation with accepted/rejected/top-k persistence.
+- loads seed words from JSONL
+- extracts baseline mock features
+- produces mock semantic / lexical / phonetic / theme groups
+- composes a 16-word puzzle
+- runs a solver ensemble scaffold
+- emits a baseline ambiguity report
+- emits a baseline style-analysis report
+- scores the puzzle with a transparent mock scorer
+- supports offline batch evaluation and top-k persistence
+
+## Batch Evaluation
+
+Run a batch evaluation:
+
+```bash
+python3 scripts/evaluate_batch.py --num-puzzles 10 --top-k 5
+```
+
+Artifacts are written under:
+
+```text
+data/processed/eval_runs/<run_id>/
+```
+
+Typical outputs:
+
+- `config.json`
+- `summary.json`
+- `accepted.json`
+- `rejected.json`
+- `top_k.json`
+- `traces.json` when traces are enabled
 
 ## Human-Owned Implementation Map
 
 The following modules are intentionally scaffolded but not solved:
 
 - `backend/app/features/human_feature_strategy.py`
-- `backend/app/generators/semantic.py` (`HumanSemanticGroupGenerator`)
-- `backend/app/generators/lexical.py` (`HumanLexicalGroupGenerator`)
-- `backend/app/generators/phonetic.py` (`HumanPhoneticGroupGenerator`)
-- `backend/app/generators/theme.py` (`HumanThemeGroupGenerator`)
-- `backend/app/pipeline/builder.py` (`HumanPuzzleComposer`)
+- `backend/app/generators/semantic.py`
+- `backend/app/generators/lexical.py`
+- `backend/app/generators/phonetic.py`
+- `backend/app/generators/theme.py`
+- `backend/app/pipeline/builder.py`
 - `backend/app/solver/human_ambiguity_strategy.py`
-- `backend/app/solver/verifier.py` (`InternalPuzzleVerifier`)
-- `backend/app/scoring/style_analysis.py` (`HumanStyleAnalyzer`)
+- `backend/app/solver/verifier.py` via `InternalPuzzleVerifier`
+- `backend/app/scoring/style_analysis.py` via `HumanStyleAnalyzer`
 - `backend/app/scoring/human_scoring_strategy.py`
 
-See [docs/human_owned_components.md](/Users/zoe/ProbFinal/ProbFinalProj/docs/human_owned_components.md) for the exact file/function checklist.
+See [`docs/human_owned_components.md`](docs/human_owned_components.md) for the exact ownership map.
 
 ## Repository Layout
 
 ```text
-backend/   FastAPI application, pipeline, schemas, tests
-frontend/  React + TypeScript + Vite UI shell
-data/      Seed words, processed artifacts, sample payloads
-docs/      Architecture, schemas, API contract, roadmap
-scripts/   Demo bootstrap and local run helpers
+backend/   FastAPI app, pipeline, schemas, services, solver/scoring scaffolds, tests
+frontend/  React + TypeScript + Vite UI shell and developer-facing debug panels
+data/      Seed words, processed artifacts, sample payloads, evaluation runs
+docs/      Architecture, schemas, API contract, TODO maps
+scripts/   Bootstrap, demo generation, batch evaluation, local run helpers
 ```
 
-## Suggested Next Steps
+## Key Docs
 
-1. Replace mock feature extraction with curated strategies.
-2. Implement human-owned group generators one module at a time.
-3. Replace baseline ambiguity checks with real alternative-grouping analysis.
-4. Implement final ranking formulas and offline evaluation loops.
-5. Replace baseline solver ensemble and style-analysis scaffolds with human-owned logic.
+- [`docs/architecture.md`](docs/architecture.md) - architecture and pipeline overview
+- [`docs/api_contract.md`](docs/api_contract.md) - backend API shapes and debug endpoint notes
+- [`docs/data_schema.md`](docs/data_schema.md) - schema reference for puzzle, trace, ambiguity, ensemble, style, and batch models
+- [`docs/human_owned_components.md`](docs/human_owned_components.md) - exact human-owned modules, functions, and responsibilities
 
 ## Development Commands
 

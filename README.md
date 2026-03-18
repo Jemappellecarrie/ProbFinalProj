@@ -1,11 +1,41 @@
 # Connections Puzzle Generator
 
+![Connections Generator Showcase](./showcase.png)
+
+End-to-end product showcase for the current repository state: demo puzzle generation, reveal flow, score inspection, ambiguity/debug outputs, and top-k batch-evaluation browsing.
+
 Production-style scaffold for a NYT-Connections-style puzzle generator. The repository now has:
 
 - a first-stage end-to-end demo generation pipeline
 - a second-stage quality-control scaffold for ambiguity modeling, solver ensemble analysis, style-analysis hooks, batch evaluation, and top-k debug browsing
 
 The project is intentionally honest: demo mode runs end-to-end, but the project-defining puzzle-quality heuristics remain human-owned and explicitly unimplemented.
+
+## Product Showcase
+
+The image above reflects the current developer-facing product shell for this repository.
+
+### What the showcase demonstrates
+
+- a playable demo-style puzzle board with 16 words arranged in a mixed board layout
+- solution reveal panels showing the four hidden groups and their metadata
+- a score panel with coherence, ambiguity penalty, leakage estimate, and style-analysis placeholder values
+- a developer debug panel that surfaces ambiguity reports, solver ensemble output, style-analysis output, and generation trace data
+- a Top-K panel that reads persisted batch-evaluation results and lets you inspect the current best accepted puzzles
+
+### Product surfaces currently scaffolded
+
+- `Generate Puzzle`
+  Runs the current demo pipeline through FastAPI and returns a generated puzzle payload.
+- `Load Static Sample`
+  Loads a bundled sample payload for stable UI and API contract inspection.
+- `Reveal Answers`
+  Shows group labels, rationales, and grouped words for the current puzzle.
+- `Developer Mode`
+  Displays ensemble disagreement, ambiguity evidence, style signals, and latest batch-evaluation summary.
+- `Batch Evaluation Outputs`
+  Persists accepted puzzles, rejected puzzles, top-k rankings, summary metrics, and optional traces under `data/processed/eval_runs/`.
+
 
 ## Current Scope
 

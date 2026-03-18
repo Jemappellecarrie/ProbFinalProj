@@ -13,6 +13,7 @@ from app.schemas.puzzle_models import (
     SolverResult,
     VerificationResult,
 )
+from app.schemas.evaluation_models import EnsembleSolverResult
 
 
 class WordRepository(ABC):
@@ -83,6 +84,7 @@ class AmbiguityEvaluator(ABC):
         puzzle: PuzzleCandidate,
         solver_result: SolverResult,
         context: GenerationContext,
+        ensemble_result: EnsembleSolverResult | None = None,
     ) -> VerificationResult:
         raise NotImplementedError
 

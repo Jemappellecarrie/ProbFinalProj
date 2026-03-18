@@ -50,6 +50,7 @@ class PuzzleGenerationPipeline:
         warnings = [
             "Demo mode is active.",
             "Baseline/mock components are being used for generation, verification, and scoring.",
+            "Ambiguity, solver ensemble, and style-analysis outputs are scaffold reports only.",
         ]
 
         entries = self._word_repository.list_entries()
@@ -95,10 +96,23 @@ class PuzzleGenerationPipeline:
                 "puzzle_id": selected_puzzle.puzzle_id,
                 "passed_verification": selected_verification.passed,
                 "overall_score": selected_score.overall,
+                "ambiguity_risk": (
+                    selected_verification.ambiguity_report.risk_level.value
+                    if selected_verification.ambiguity_report is not None
+                    else None
+                ),
             },
         )
 
-        trace = trace_recorder.build() if context.include_trace else None
+        trace = (
+            trace_recorder.build(
+                ambiguity_report=selected_verification.ambiguity_report,
+                ensemble_result=selected_verification.ensemble_result,
+                style_analysis=selected_score.style_analysis,
+            )
+            if context.include_trace
+            else None
+        )
         return PipelineRunResult(
             puzzle=selected_puzzle,
             verification=selected_verification,

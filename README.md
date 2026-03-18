@@ -6,6 +6,7 @@ Production-style scaffold for a NYT-Connections-style puzzle generator, with a d
 
 - A FastAPI backend with typed schemas, pipeline orchestration, repositories, mock/demo generation components, and explicit human-owned strategy stubs.
 - A React + TypeScript + Vite frontend that can request a generated demo puzzle, reveal groups, inspect scoring, and show debug traces.
+- A second-stage quality-control scaffold for solver ensembles, ambiguity reports, style-analysis placeholders, and batch evaluation artifacts.
 - Seed/sample data, bootstrap scripts, developer tooling, and architecture documentation.
 - Clear seams for the project-defining logic that should remain owned by a human researcher/architect.
 
@@ -63,6 +64,7 @@ In demo mode the system:
 - Runs a stub solver/verifier.
 - Scores the result with a transparent baseline scorer.
 - Exposes debug metadata so future human-owned strategies can be evaluated against the same pipeline.
+- Supports offline batch evaluation with accepted/rejected/top-k persistence.
 
 ## Human-Owned Implementation Map
 
@@ -76,6 +78,7 @@ The following modules are intentionally scaffolded but not solved:
 - `backend/app/pipeline/builder.py` (`HumanPuzzleComposer`)
 - `backend/app/solver/human_ambiguity_strategy.py`
 - `backend/app/solver/verifier.py` (`InternalPuzzleVerifier`)
+- `backend/app/scoring/style_analysis.py` (`HumanStyleAnalyzer`)
 - `backend/app/scoring/human_scoring_strategy.py`
 
 See [docs/human_owned_components.md](/Users/zoe/ProbFinal/ProbFinalProj/docs/human_owned_components.md) for the exact file/function checklist.
@@ -96,6 +99,7 @@ scripts/   Demo bootstrap and local run helpers
 2. Implement human-owned group generators one module at a time.
 3. Replace baseline ambiguity checks with real alternative-grouping analysis.
 4. Implement final ranking formulas and offline evaluation loops.
+5. Replace baseline solver ensemble and style-analysis scaffolds with human-owned logic.
 
 ## Development Commands
 
@@ -103,6 +107,7 @@ scripts/   Demo bootstrap and local run helpers
 - `make backend-dev`
 - `make frontend-dev`
 - `make demo-generate`
+- `make evaluate-batch`
 - `make test-backend`
 - `make lint-backend`
 - `make typecheck-frontend`

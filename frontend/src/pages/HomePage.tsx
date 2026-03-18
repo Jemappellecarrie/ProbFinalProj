@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getLatestEvaluationDebugView } from "../api/client";
 import { DebugPanel } from "../components/DebugPanel";
 import { ErrorState } from "../components/ErrorState";
 import { LoadingState } from "../components/LoadingState";
 import { PuzzleBoard } from "../components/PuzzleBoard";
 import { RevealPanel } from "../components/RevealPanel";
 import { ScorePanel } from "../components/ScorePanel";
+import { TopKPanel } from "../components/TopKPanel";
 import { usePuzzleGenerator } from "../hooks/usePuzzleGenerator";
-import type { GroupType } from "../types/puzzle";
+import type { DebugComparisonView, GroupType } from "../types/puzzle";
 
 const DEFAULT_GROUP_TYPES: GroupType[] = ["semantic", "lexical", "phonetic", "theme"];
 
@@ -14,6 +16,31 @@ export function HomePage() {
   const { data, error, loading, loadSample, generate } = usePuzzleGenerator();
   const [revealed, setRevealed] = useState<boolean>(false);
   const [developerMode, setDeveloperMode] = useState<boolean>(true);
+  const [comparison, setComparison] = useState<DebugComparisonView | null>(null);
+
+  useEffect(() => {
+    let active = true;
+
+    async function loadComparison() {
+      try {
+        const payload = await getLatestEvaluationDebugView();
+        if (!active) {
+          return;
+        }
+        setComparison(payload);
+      } catch {
+        if (!active) {
+          return;
+        }
+        setComparison(null);
+      }
+    }
+
+    void loadComparison();
+    return () => {
+      active = false;
+    };
+  }, []);
 
   async function handleGenerate() {
     setRevealed(false);
@@ -73,7 +100,8 @@ export function HomePage() {
           <PuzzleBoard boardWords={data.puzzle.board_words} groups={data.puzzle.groups} revealed={revealed} />
           <RevealPanel groups={data.puzzle.groups} revealed={revealed} />
           <ScorePanel score={data.score} verification={data.verification} />
-          <DebugPanel response={data} visible={developerMode} />
+          {developerMode ? <TopKPanel comparison={comparison} /> : null}
+          <DebugPanel response={data} comparison={comparison} visible={developerMode} />
         </div>
       )}
     </main>

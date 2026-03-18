@@ -1,11 +1,12 @@
-import type { GeneratedPuzzleResponse } from "../types/puzzle";
+import type { DebugComparisonView, GeneratedPuzzleResponse } from "../types/puzzle";
 
 interface DebugPanelProps {
   response: GeneratedPuzzleResponse;
+  comparison: DebugComparisonView | null;
   visible: boolean;
 }
 
-export function DebugPanel({ response, visible }: DebugPanelProps) {
+export function DebugPanel({ response, comparison, visible }: DebugPanelProps) {
   if (!visible) {
     return null;
   }
@@ -25,6 +26,22 @@ export function DebugPanel({ response, visible }: DebugPanelProps) {
       <div className="subsection">
         <h3>Warnings</h3>
         <pre>{JSON.stringify(response.warnings, null, 2)}</pre>
+      </div>
+      <div className="subsection">
+        <h3>Ambiguity Report</h3>
+        <pre>{JSON.stringify(response.verification.ambiguity_report, null, 2)}</pre>
+      </div>
+      <div className="subsection">
+        <h3>Solver Ensemble</h3>
+        <pre>{JSON.stringify(response.verification.ensemble_result, null, 2)}</pre>
+      </div>
+      <div className="subsection">
+        <h3>Style Analysis</h3>
+        <pre>{JSON.stringify(response.score.style_analysis, null, 2)}</pre>
+      </div>
+      <div className="subsection">
+        <h3>Latest Batch Comparison</h3>
+        <pre>{JSON.stringify(comparison, null, 2)}</pre>
       </div>
       <div className="subsection">
         <h3>Trace</h3>

@@ -25,3 +25,10 @@ def test_generate_endpoint_returns_generated_payload(client: TestClient) -> None
     assert response.status_code == 200
     assert "selected_components" in payload
     assert len(payload["puzzle"]["board_words"]) == 16
+
+
+def test_latest_evaluation_debug_endpoint_returns_envelope(client: TestClient) -> None:
+    response = client.get("/api/v1/debug/evaluation/latest")
+    payload = response.json()
+    assert response.status_code == 200
+    assert "latest" in payload

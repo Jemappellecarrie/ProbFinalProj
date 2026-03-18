@@ -84,6 +84,7 @@ Ranking metadata.
 - `coherence`
 - `ambiguity_penalty`
 - `human_likeness`
+- `style_analysis`
 - `components`
 - `notes`
 
@@ -99,4 +100,61 @@ Developer-mode trace for reproducibility and debugging.
 - `solver_backend`
 - `scorer`
 - `events`
+- `ensemble_result`
+- `ambiguity_report`
+- `style_analysis`
 - `metadata`
+
+## `AmbiguityReport`
+
+Structured ambiguity scaffold output.
+
+- `evaluator_name`
+- `risk_level`
+- `penalty_hint`
+- `reject_recommended`
+- `summary`
+- `evidence`
+- `notes`
+- `metadata`
+
+## `EnsembleSolverResult`
+
+Aggregate solver ensemble output.
+
+- `coordinator_name`
+- `primary_solver_name`
+- `votes`
+- `agreement_summary`
+- `notes`
+- `metadata`
+
+## `StyleAnalysisReport`
+
+Provisional style-analysis output.
+
+- `analyzer_name`
+- `archetype`
+- `nyt_likeness`
+- `signals`
+- `notes`
+- `metadata`
+
+## `BatchEvaluationSummary`
+
+Top-level offline evaluation summary.
+
+- `run_id`
+- `created_at`
+- `total_generated`
+- `accepted_count`
+- `rejected_count`
+- `acceptance_rate`
+- `reject_reason_histogram`
+- `generator_mix`
+- `score_distribution`
+- `ambiguity_risk_distribution`
+- `solver_agreement_statistics`
+- `top_k`
+- `output_dir`
+- `notes`

@@ -32,3 +32,5 @@ class ComponentSelection:
     solver: str
     verifier: str
     scorer: str
+    solver_registry: list[str] = field(default_factory=list)
+    style_analyzer: str | None = None

@@ -1,4 +1,4 @@
-"""Base classes for solver and verification components."""
+"""Base classes for solver, ensemble, and verification components."""
 
 from __future__ import annotations
 
@@ -7,7 +7,13 @@ from abc import ABC
 from app.domain.protocols import AmbiguityEvaluator, PuzzleVerifier, SolverBackend
 
 
-class BaseSolverBackend(SolverBackend, ABC):
+class SolverAdapter(SolverBackend, ABC):
+    """Primary adapter contract used by solver registry and ensemble scaffolds."""
+
+    backend_name = "solver_adapter"
+
+
+class BaseSolverBackend(SolverAdapter, ABC):
     """Convenience base class for solver adapters."""
 
     backend_name = "base_solver_backend"

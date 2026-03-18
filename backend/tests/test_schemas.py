@@ -3,8 +3,9 @@
 from __future__ import annotations
 
 from app.core.enums import GroupType
+from app.schemas.evaluation_models import AmbiguityEvidence, AmbiguityReport, AmbiguityRiskLevel
 from app.schemas.feature_models import WordEntry
-from app.schemas.puzzle_models import GroupCandidate, PuzzleCandidate
+from app.schemas.puzzle_models import GroupCandidate, PuzzleCandidate, PuzzleScore, VerificationResult
 
 
 def test_group_candidate_requires_four_words() -> None:
@@ -65,3 +66,26 @@ def test_word_entry_accepts_group_hints() -> None:
         known_group_hints={"semantic": "planets"},
     )
     assert entry.known_group_hints["semantic"] == "planets"
+
+
+def test_verification_result_accepts_ambiguity_report() -> None:
+    report = AmbiguityReport(
+        evaluator_name="baseline_ambiguity_evaluator",
+        risk_level=AmbiguityRiskLevel.LOW,
+        penalty_hint=0.0,
+        reject_recommended=False,
+        summary="Demo",
+        evidence=AmbiguityEvidence(),
+    )
+    verification = VerificationResult(passed=True, ambiguity_report=report)
+    assert verification.ambiguity_report is not None
+
+
+def test_puzzle_score_accepts_style_analysis_placeholder() -> None:
+    score = PuzzleScore(
+        scorer_name="mock_puzzle_scorer",
+        overall=0.9,
+        coherence=0.9,
+        ambiguity_penalty=0.0,
+    )
+    assert score.overall == 0.9

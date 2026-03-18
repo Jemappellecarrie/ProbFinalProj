@@ -7,6 +7,7 @@ from typing import Any
 from pydantic import BaseModel, Field, field_validator
 
 from app.core.enums import GroupType, RejectReasonCode
+from app.schemas.evaluation_models import AmbiguityReport, EnsembleSolverResult, StyleAnalysisReport
 
 
 class GroupCandidate(BaseModel):
@@ -69,6 +70,7 @@ class SolverResult(BaseModel):
 
     backend_name: str
     solved: bool
+    confidence: float | None = None
     proposed_groups: list[list[str]] = Field(default_factory=list)
     alternative_groupings_detected: int = 0
     notes: list[str] = Field(default_factory=list)
@@ -82,6 +84,8 @@ class VerificationResult(BaseModel):
     reject_reasons: list[RejectReason] = Field(default_factory=list)
     leakage_estimate: float = 0.0
     ambiguity_score: float = 0.0
+    ambiguity_report: AmbiguityReport | None = None
+    ensemble_result: EnsembleSolverResult | None = None
     notes: list[str] = Field(default_factory=list)
     metadata: dict[str, Any] = Field(default_factory=dict)
 
@@ -94,5 +98,6 @@ class PuzzleScore(BaseModel):
     coherence: float
     ambiguity_penalty: float
     human_likeness: float | None = None
+    style_analysis: StyleAnalysisReport | None = None
     components: dict[str, float] = Field(default_factory=dict)
     notes: list[str] = Field(default_factory=list)

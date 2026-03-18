@@ -8,6 +8,7 @@ from typing import Any
 from pydantic import BaseModel, Field
 
 from app.core.enums import GenerationMode
+from app.schemas.evaluation_models import AmbiguityReport, EnsembleSolverResult, StyleAnalysisReport
 
 
 class TraceEvent(BaseModel):
@@ -30,4 +31,7 @@ class GenerationTrace(BaseModel):
     solver_backend: str
     scorer: str
     events: list[TraceEvent] = Field(default_factory=list)
+    ensemble_result: EnsembleSolverResult | None = None
+    ambiguity_report: AmbiguityReport | None = None
+    style_analysis: StyleAnalysisReport | None = None
     metadata: dict[str, Any] = Field(default_factory=dict)

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from app.core.enums import GenerationMode
 from app.domain.value_objects import ComponentSelection
+from app.schemas.evaluation_models import AmbiguityReport, EnsembleSolverResult, StyleAnalysisReport
 from app.schemas.trace_models import GenerationTrace, TraceEvent
 from app.utils.ids import new_id
 
@@ -20,7 +21,12 @@ class TraceRecorder:
     def add(self, stage: str, message: str, metadata: dict[str, object] | None = None) -> None:
         self._events.append(TraceEvent(stage=stage, message=message, metadata=metadata or {}))
 
-    def build(self) -> GenerationTrace:
+    def build(
+        self,
+        ambiguity_report: AmbiguityReport | None = None,
+        ensemble_result: EnsembleSolverResult | None = None,
+        style_analysis: StyleAnalysisReport | None = None,
+    ) -> GenerationTrace:
         return GenerationTrace(
             trace_id=new_id("trace"),
             request_id=self._request_id,
@@ -30,5 +36,13 @@ class TraceRecorder:
             solver_backend=self._components.solver,
             scorer=self._components.scorer,
             events=self._events,
-            metadata={"verifier": self._components.verifier, "composer": self._components.composer},
+            ensemble_result=ensemble_result,
+            ambiguity_report=ambiguity_report,
+            style_analysis=style_analysis,
+            metadata={
+                "verifier": self._components.verifier,
+                "composer": self._components.composer,
+                "solver_registry": self._components.solver_registry,
+                "style_analyzer": self._components.style_analyzer,
+            },
         )

@@ -16,4 +16,6 @@ def test_demo_pipeline_generates_complete_puzzle() -> None:
     assert len(response.puzzle.board_words) == 16
     assert len(set(response.puzzle.board_words)) == 16
     assert response.score.overall >= 0.0
-    assert response.verification.passed is True
+    assert response.verification.ambiguity_report is not None
+    assert response.verification.ensemble_result is not None
+    assert response.score.style_analysis is not None

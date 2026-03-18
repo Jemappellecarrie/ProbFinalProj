@@ -54,7 +54,7 @@ File: `backend/app/pipeline/builder.py`
 
 File: `backend/app/solver/human_ambiguity_strategy.py`
 
-- `HumanAmbiguityEvaluator.evaluate(puzzle, solver_result, context) -> VerificationResult`
+- `HumanAmbiguityEvaluator.evaluate(puzzle, solver_result, context, ensemble_result=None) -> VerificationResult`
 - Responsibility: estimate cross-group ambiguity, alternative regroupings, and leakage.
 - Success looks like: fair puzzles pass, misleading puzzles fail, and the diagnostics are interpretable.
 
@@ -74,11 +74,20 @@ File: `backend/app/scoring/human_scoring_strategy.py`
 - Responsibility: coherence, ambiguity, human-likeness, and overall ranking.
 - Success looks like: rankings align with human judgment and remain debuggable.
 
+## Style Analysis
+
+File: `backend/app/scoring/style_analysis.py`
+
+- `HumanStyleAnalyzer.analyze(puzzle, verification, context) -> StyleAnalysisReport`
+- Responsibility: define the real style signals, archetypes, and NYT-likeness judgment.
+- Success looks like: style metadata aligns with expert editorial judgment rather than placeholder structural cues.
+
 ## Recommended Implementation Order
 
 1. Feature extraction
 2. Semantic and lexical generators
 3. Puzzle composition
 4. Ambiguity evaluation and verification
-5. Final scoring
-6. Theme and phonetic depth improvements
+5. Style analysis
+6. Final scoring
+7. Theme and phonetic depth improvements

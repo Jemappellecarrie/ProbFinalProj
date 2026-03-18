@@ -1,7 +1,7 @@
 PYTHON ?= python3
 NPM ?= npm
 
-.PHONY: backend-install frontend-install bootstrap-demo backend-dev frontend-dev demo-generate test-backend lint-backend format-backend typecheck-frontend
+.PHONY: backend-install frontend-install bootstrap-demo backend-dev frontend-dev demo-generate evaluate-batch test-backend lint-backend format-backend typecheck-frontend
 
 backend-install:
 	cd backend && $(PYTHON) -m pip install -e ".[dev]"
@@ -20,6 +20,9 @@ frontend-dev:
 
 demo-generate:
 	$(PYTHON) scripts/run_demo_generation.py
+
+evaluate-batch:
+	$(PYTHON) scripts/evaluate_batch.py --num-puzzles 10 --top-k 5
 
 test-backend:
 	cd backend && $(PYTHON) -m pytest

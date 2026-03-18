@@ -1,6 +1,8 @@
 import type {
+  DebugComparisonView,
   GeneratedPuzzleResponse,
   GroupTypeMetadata,
+  LatestEvaluationDebugResponse,
   PuzzleGenerationRequest,
 } from "../types/puzzle";
 
@@ -38,4 +40,9 @@ export function generatePuzzle(
 
 export function getGroupTypes(): Promise<GroupTypeMetadata[]> {
   return requestJson<GroupTypeMetadata[]>("/metadata/group-types");
+}
+
+export async function getLatestEvaluationDebugView(): Promise<DebugComparisonView | null> {
+  const response = await requestJson<LatestEvaluationDebugResponse>("/debug/evaluation/latest");
+  return response.latest;
 }

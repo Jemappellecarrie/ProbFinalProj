@@ -6,12 +6,15 @@ from collections import Counter
 
 from app.core.enums import RejectReasonCode
 from app.domain.value_objects import GenerationContext
+from app.schemas.evaluation_models import EnsembleSolverResult
 from app.schemas.puzzle_models import PuzzleCandidate, RejectReason, SolverResult, VerificationResult
+from app.solver.ambiguity_models import build_mock_ambiguity_report
 from app.solver.base import BaseAmbiguityEvaluator, BasePuzzleVerifier, BaseSolverBackend
+from app.solver.ensemble import EnsembleSolverCoordinator
 
 
 class BaselineAmbiguityEvaluator(BaseAmbiguityEvaluator):
-    """Simple ambiguity evaluator for demo mode."""
+    """Structured but provisional ambiguity evaluator for demo mode."""
 
     evaluator_name = "baseline_ambiguity_evaluator"
 
@@ -20,15 +23,33 @@ class BaselineAmbiguityEvaluator(BaseAmbiguityEvaluator):
         puzzle: PuzzleCandidate,
         solver_result: SolverResult,
         context: GenerationContext,
+        ensemble_result: EnsembleSolverResult | None = None,
     ) -> VerificationResult:
-        ambiguity_score = min(1.0, solver_result.alternative_groupings_detected * 0.25)
+        ambiguity_report = build_mock_ambiguity_report(puzzle, ensemble_result)
+        ambiguity_score = ambiguity_report.penalty_hint
+        reject_reasons: list[RejectReason] = []
+        if ambiguity_report.reject_recommended:
+            reject_reasons.append(
+                RejectReason(
+                    code=RejectReasonCode.AMBIGUOUS_GROUPING,
+                    message="Baseline ambiguity scaffold flagged the puzzle for elevated ambiguity risk.",
+                    metadata={
+                        "risk_level": ambiguity_report.risk_level.value,
+                        "triggered_flags": ambiguity_report.evidence.triggered_flags,
+                        "baseline_only": True,
+                    },
+                )
+            )
         return VerificationResult(
-            passed=ambiguity_score < 0.5,
+            passed=not ambiguity_report.reject_recommended,
+            reject_reasons=reject_reasons,
             leakage_estimate=ambiguity_score,
             ambiguity_score=ambiguity_score,
+            ambiguity_report=ambiguity_report,
+            ensemble_result=ensemble_result,
             notes=[
-                "Baseline ambiguity evaluation uses solver-reported alternative grouping counts only.",
-                "This is a transparent demo heuristic rather than the final logic.",
+                "Baseline ambiguity evaluation converts solver disagreement into structured placeholder evidence.",
+                "This is a transparent demo scaffold rather than the final logic.",
             ],
             metadata={"baseline_only": True},
         )
@@ -42,9 +63,11 @@ class BaselinePuzzleVerifier(BasePuzzleVerifier):
     def __init__(
         self,
         solver: BaseSolverBackend,
+        solver_ensemble: EnsembleSolverCoordinator | None = None,
         ambiguity_evaluator: BaseAmbiguityEvaluator | None = None,
     ) -> None:
         self._solver = solver
+        self._solver_ensemble = solver_ensemble
         self._ambiguity_evaluator = ambiguity_evaluator or BaselineAmbiguityEvaluator()
 
     def verify(self, puzzle: PuzzleCandidate, context: GenerationContext) -> VerificationResult:
@@ -61,7 +84,15 @@ class BaselinePuzzleVerifier(BasePuzzleVerifier):
             )
 
         solver_result = self._solver.solve(puzzle, context)
-        ambiguity_result = self._ambiguity_evaluator.evaluate(puzzle, solver_result, context)
+        ensemble_result = (
+            self._solver_ensemble.solve(puzzle, context) if self._solver_ensemble is not None else None
+        )
+        ambiguity_result = self._ambiguity_evaluator.evaluate(
+            puzzle,
+            solver_result,
+            context,
+            ensemble_result=ensemble_result,
+        )
         reject_reasons.extend(ambiguity_result.reject_reasons)
 
         passed = not reject_reasons and solver_result.solved and ambiguity_result.passed
@@ -75,10 +106,17 @@ class BaselinePuzzleVerifier(BasePuzzleVerifier):
             reject_reasons=reject_reasons,
             leakage_estimate=ambiguity_result.leakage_estimate,
             ambiguity_score=ambiguity_result.ambiguity_score,
+            ambiguity_report=ambiguity_result.ambiguity_report,
+            ensemble_result=ensemble_result,
             notes=notes,
             metadata={
                 "solver_backend": solver_result.backend_name,
                 "solver_notes": solver_result.notes,
+                "ensemble_summary": (
+                    ensemble_result.agreement_summary.model_dump(mode="json")
+                    if ensemble_result is not None
+                    else None
+                ),
                 "baseline_only": True,
             },
         )

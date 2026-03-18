@@ -5,6 +5,7 @@ from __future__ import annotations
 from pydantic import BaseModel, Field
 
 from app.core.enums import GroupType
+from app.schemas.evaluation_models import DebugComparisonView
 from app.schemas.puzzle_models import PuzzleCandidate, PuzzleScore, VerificationResult
 from app.schemas.trace_models import GenerationTrace
 
@@ -49,6 +50,12 @@ class DebugConfigResponse(BaseModel):
     cors_origins: list[str]
     seed_words_path: str
     processed_features_path: str
+
+
+class LatestEvaluationDebugResponse(BaseModel):
+    """Latest available batch-evaluation comparison payload."""
+
+    latest: DebugComparisonView | None = None
 
 
 class GroupTypeMetadata(BaseModel):

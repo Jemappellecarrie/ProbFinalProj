@@ -4,9 +4,10 @@ from __future__ import annotations
 
 from fastapi import APIRouter, Depends
 
-from app.api.deps import get_runtime_settings
+from app.api.deps import get_evaluation_service, get_runtime_settings
 from app.config.settings import Settings
-from app.schemas.api import DebugConfigResponse
+from app.schemas.api import DebugConfigResponse, LatestEvaluationDebugResponse
+from app.services.evaluation_service import EvaluationService
 
 router = APIRouter()
 
@@ -22,3 +23,10 @@ def debug_config(settings: Settings = Depends(get_runtime_settings)) -> DebugCon
         seed_words_path=str(settings.seed_words_path),
         processed_features_path=str(settings.processed_features_path),
     )
+
+
+@router.get("/evaluation/latest", response_model=LatestEvaluationDebugResponse)
+def latest_evaluation_debug(
+    service: EvaluationService = Depends(get_evaluation_service),
+) -> LatestEvaluationDebugResponse:
+    return LatestEvaluationDebugResponse(latest=service.load_latest_debug_view())

@@ -13,7 +13,7 @@ Inputs:
     - `GenerationContext`
 
 Outputs:
-    - `PuzzleScore`
+    - `PuzzleScore` with style-analysis integration once implemented
 
 Why this is intentionally unimplemented:
     Final puzzle ranking is part of the project-defining quality logic and
@@ -28,6 +28,9 @@ TODO[HUMAN_RESEARCH]:
 TODO[HUMAN_HEURISTIC]:
     Define the human-likeness/style criteria that separate acceptable puzzles
     from genuinely strong ones.
+
+TODO[HUMAN_DATA_CURATION]:
+    Curate benchmark examples or annotations needed to calibrate style scoring.
 
 Acceptance criteria:
     - Produces interpretable component scores and a stable ranking output.

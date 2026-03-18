@@ -16,6 +16,7 @@ class MockSolverBackend(BaseSolverBackend):
         return SolverResult(
             backend_name=self.backend_name,
             solved=True,
+            confidence=1.0,
             proposed_groups=[group.words for group in puzzle.groups],
             alternative_groupings_detected=0,
             notes=[

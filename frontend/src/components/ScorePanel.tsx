@@ -46,6 +46,23 @@ export function ScorePanel({ score, verification }: ScorePanelProps) {
           ))}
         </ul>
       </div>
+      {score.style_analysis ? (
+        <div className="subsection">
+          <h3>Style scaffold</h3>
+          <p className="muted">
+            Archetype: <strong>{score.style_analysis.archetype.label}</strong> | Placeholder
+            NYT-likeness: <strong>{score.style_analysis.nyt_likeness.score?.toFixed(3) ?? "n/a"}</strong>
+          </p>
+          <ul className="simple-list">
+            {score.style_analysis.signals.map((signal) => (
+              <li key={signal.signal_name}>
+                <span>{signal.signal_name}</span>
+                <strong>{signal.value.toFixed(3)}</strong>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
     </section>
   );
 }

@@ -1,0 +1,238 @@
+{
+  "run_id": "eval_04fb5ef9b672",
+  "created_at": "2026-03-17T21:24:55.882232Z",
+  "total_generated": 5,
+  "accepted_count": 5,
+  "rejected_count": 0,
+  "acceptance_rate": 1.0,
+  "reject_reason_histogram": {
+    "counts": {}
+  },
+  "generator_mix": {
+    "group_type_counts": {
+      "lexical": 5,
+      "phonetic": 5,
+      "semantic": 5,
+      "theme": 5
+    },
+    "generator_strategy_counts": {
+      "mock_lexical_group_generator": 5,
+      "mock_phonetic_group_generator": 5,
+      "mock_semantic_group_generator": 5,
+      "mock_theme_group_generator": 5
+    }
+  },
+  "score_distribution": {
+    "average_overall": 0.9,
+    "average_coherence": 0.9,
+    "average_ambiguity_penalty": 0.0,
+    "average_human_likeness": 0.95,
+    "min_overall": 0.9,
+    "max_overall": 0.9
+  },
+  "ambiguity_risk_distribution": {
+    "low": 5
+  },
+  "solver_agreement_statistics": {
+    "total_ensemble_runs": 5,
+    "unanimous_target_match_count": 0,
+    "disagreement_count": 5,
+    "average_agreement_ratio": 0.5
+  },
+  "top_k": {
+    "requested_k": 3,
+    "returned_count": 3,
+    "ranked_puzzles": [
+      {
+        "rank": 1,
+        "puzzle_id": "puzzle_3219444bbf94",
+        "accepted": true,
+        "board_words": [
+          "RUBY",
+          "BASH",
+          "HEEL",
+          "LEONARDO",
+          "OPAL",
+          "CASH",
+          "KEEL",
+          "DONATELLO",
+          "JADE",
+          "DASH",
+          "PEEL",
+          "RAPHAEL",
+          "TOPAZ",
+          "MASH",
+          "REEL",
+          "MICHELANGELO"
+        ],
+        "group_labels": [
+          "Gemstones",
+          "Ends with -ASH",
+          "Rhymes with -EEL",
+          "Teenage Mutant Ninja Turtles"
+        ],
+        "group_types": [
+          "semantic",
+          "lexical",
+          "phonetic",
+          "theme"
+        ],
+        "score_breakdown": {
+          "overall": 0.9,
+          "coherence": 0.9,
+          "ambiguity_penalty": 0.0,
+          "human_likeness": 0.95,
+          "components": {
+            "group_count_bonus": 0.4,
+            "baseline_coherence": 0.9,
+            "baseline_ambiguity_penalty": 0.0,
+            "baseline_style_placeholder": 0.95
+          }
+        },
+        "ambiguity_risk_level": "low",
+        "ambiguity_penalty_hint": 0.0,
+        "solver_agreement_ratio": 0.5,
+        "solver_disagreement_flags": [
+          "target_mismatch",
+          "confidence_spread"
+        ],
+        "style_archetype": "balanced_demo_mix",
+        "nyt_likeness_placeholder": 0.95,
+        "trace_id": null,
+        "reject_risk_flags": [],
+        "notes": [
+          "Ranked by baseline overall score for developer inspection only."
+        ]
+      },
+      {
+        "rank": 2,
+        "puzzle_id": "puzzle_7dc30ee98201",
+        "accepted": true,
+        "board_words": [
+          "MERCURY",
+          "SNAP",
+          "HEEL",
+          "LEONARDO",
+          "VENUS",
+          "SNIP",
+          "KEEL",
+          "DONATELLO",
+          "EARTH",
+          "SNOW",
+          "PEEL",
+          "RAPHAEL",
+          "MARS",
+          "SNUG",
+          "REEL",
+          "MICHELANGELO"
+        ],
+        "group_labels": [
+          "Planets",
+          "Starts with SN",
+          "Rhymes with -EEL",
+          "Teenage Mutant Ninja Turtles"
+        ],
+        "group_types": [
+          "semantic",
+          "lexical",
+          "phonetic",
+          "theme"
+        ],
+        "score_breakdown": {
+          "overall": 0.9,
+          "coherence": 0.9,
+          "ambiguity_penalty": 0.0,
+          "human_likeness": 0.95,
+          "components": {
+            "group_count_bonus": 0.4,
+            "baseline_coherence": 0.9,
+            "baseline_ambiguity_penalty": 0.0,
+            "baseline_style_placeholder": 0.95
+          }
+        },
+        "ambiguity_risk_level": "low",
+        "ambiguity_penalty_hint": 0.0,
+        "solver_agreement_ratio": 0.5,
+        "solver_disagreement_flags": [
+          "target_mismatch",
+          "confidence_spread"
+        ],
+        "style_archetype": "balanced_demo_mix",
+        "nyt_likeness_placeholder": 0.95,
+        "trace_id": null,
+        "reject_risk_flags": [],
+        "notes": [
+          "Ranked by baseline overall score for developer inspection only."
+        ]
+      },
+      {
+        "rank": 3,
+        "puzzle_id": "puzzle_99a96ccd77bc",
+        "accepted": true,
+        "board_words": [
+          "MERCURY",
+          "SNAP",
+          "HEEL",
+          "LEONARDO",
+          "VENUS",
+          "SNIP",
+          "KEEL",
+          "DONATELLO",
+          "EARTH",
+          "SNOW",
+          "PEEL",
+          "RAPHAEL",
+          "MARS",
+          "SNUG",
+          "REEL",
+          "MICHELANGELO"
+        ],
+        "group_labels": [
+          "Planets",
+          "Starts with SN",
+          "Rhymes with -EEL",
+          "Teenage Mutant Ninja Turtles"
+        ],
+        "group_types": [
+          "semantic",
+          "lexical",
+          "phonetic",
+          "theme"
+        ],
+        "score_breakdown": {
+          "overall": 0.9,
+          "coherence": 0.9,
+          "ambiguity_penalty": 0.0,
+          "human_likeness": 0.95,
+          "components": {
+            "group_count_bonus": 0.4,
+            "baseline_coherence": 0.9,
+            "baseline_ambiguity_penalty": 0.0,
+            "baseline_style_placeholder": 0.95
+          }
+        },
+        "ambiguity_risk_level": "low",
+        "ambiguity_penalty_hint": 0.0,
+        "solver_agreement_ratio": 0.5,
+        "solver_disagreement_flags": [
+          "target_mismatch",
+          "confidence_spread"
+        ],
+        "style_archetype": "balanced_demo_mix",
+        "nyt_likeness_placeholder": 0.95,
+        "trace_id": null,
+        "reject_risk_flags": [],
+        "notes": [
+          "Ranked by baseline overall score for developer inspection only."
+        ]
+      }
+    ],
+    "notes": [
+      "Top-k ordering uses baseline score values and is not final-quality ranking."
+    ]
+  },
+  "output_dir": "/Users/zoe/ProbFinal/ProbFinalProj/data/processed/eval_runs/eval_04fb5ef9b672",
+  "notes": [
+    "Batch summary is built from baseline/mock components unless human-owned strategies are wired in."
+  ]
+}

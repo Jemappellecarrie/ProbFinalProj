@@ -1,0 +1,8 @@
+{
+  "num_puzzles": 5,
+  "output_dir": null,
+  "demo_mode": true,
+  "save_traces": false,
+  "top_k_size": 3,
+  "base_seed": 17
+}

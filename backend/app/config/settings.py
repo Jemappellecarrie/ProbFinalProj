@@ -58,6 +58,11 @@ class Settings(BaseSettings):
 
     @computed_field  # type: ignore[misc]
     @property
+    def eval_runs_dir(self) -> Path:
+        return self.data_dir / "processed" / "eval_runs"
+
+    @computed_field  # type: ignore[misc]
+    @property
     def sample_puzzle_path(self) -> Path:
         return self.data_dir / "samples" / "sample_puzzle.json"
 

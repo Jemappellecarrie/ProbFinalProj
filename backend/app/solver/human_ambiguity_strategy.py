@@ -11,6 +11,7 @@ Inputs:
     - `PuzzleCandidate`
     - `SolverResult`
     - `GenerationContext`
+    - optional `EnsembleSolverResult`
 
 Outputs:
     - `VerificationResult` with ambiguity metrics, rejection reasons, and notes.
@@ -38,6 +39,7 @@ Acceptance criteria:
 from __future__ import annotations
 
 from app.domain.value_objects import GenerationContext
+from app.schemas.evaluation_models import EnsembleSolverResult
 from app.schemas.puzzle_models import PuzzleCandidate, SolverResult, VerificationResult
 from app.solver.base import BaseAmbiguityEvaluator
 
@@ -52,6 +54,7 @@ class HumanAmbiguityEvaluator(BaseAmbiguityEvaluator):
         puzzle: PuzzleCandidate,
         solver_result: SolverResult,
         context: GenerationContext,
+        ensemble_result: EnsembleSolverResult | None = None,
     ) -> VerificationResult:
         raise NotImplementedError(
             "TODO[HUMAN_CORE]: implement ambiguity and leakage evaluation."

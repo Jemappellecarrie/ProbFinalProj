@@ -1,0 +1,192 @@
+{
+  "requested_k": 3,
+  "returned_count": 3,
+  "ranked_puzzles": [
+    {
+      "rank": 1,
+      "puzzle_id": "puzzle_8dfe627d91fd",
+      "accepted": true,
+      "board_words": [
+        "RUBY",
+        "BASH",
+        "BAKE",
+        "LEONARDO",
+        "OPAL",
+        "CASH",
+        "CAKE",
+        "DONATELLO",
+        "JADE",
+        "DASH",
+        "LAKE",
+        "RAPHAEL",
+        "TOPAZ",
+        "MASH",
+        "RAKE",
+        "MICHELANGELO"
+      ],
+      "group_labels": [
+        "Gemstones",
+        "Ends with -ASH",
+        "Rhymes with -AKE",
+        "Teenage Mutant Ninja Turtles"
+      ],
+      "group_types": [
+        "semantic",
+        "lexical",
+        "phonetic",
+        "theme"
+      ],
+      "score_breakdown": {
+        "overall": 0.9,
+        "coherence": 0.9,
+        "ambiguity_penalty": 0.0,
+        "human_likeness": 0.95,
+        "components": {
+          "group_count_bonus": 0.4,
+          "baseline_coherence": 0.9,
+          "baseline_ambiguity_penalty": 0.0,
+          "baseline_style_placeholder": 0.95
+        }
+      },
+      "ambiguity_risk_level": "low",
+      "ambiguity_penalty_hint": 0.0,
+      "solver_agreement_ratio": 0.5,
+      "solver_disagreement_flags": [
+        "target_mismatch",
+        "confidence_spread"
+      ],
+      "style_archetype": "balanced_demo_mix",
+      "nyt_likeness_placeholder": 0.95,
+      "trace_id": null,
+      "reject_risk_flags": [],
+      "notes": [
+        "Ranked by baseline overall score for developer inspection only."
+      ]
+    },
+    {
+      "rank": 2,
+      "puzzle_id": "puzzle_caa0ff0b6eca",
+      "accepted": true,
+      "board_words": [
+        "MERCURY",
+        "SNAP",
+        "HEEL",
+        "LEONARDO",
+        "VENUS",
+        "SNIP",
+        "KEEL",
+        "DONATELLO",
+        "EARTH",
+        "SNOW",
+        "PEEL",
+        "RAPHAEL",
+        "MARS",
+        "SNUG",
+        "REEL",
+        "MICHELANGELO"
+      ],
+      "group_labels": [
+        "Planets",
+        "Starts with SN",
+        "Rhymes with -EEL",
+        "Teenage Mutant Ninja Turtles"
+      ],
+      "group_types": [
+        "semantic",
+        "lexical",
+        "phonetic",
+        "theme"
+      ],
+      "score_breakdown": {
+        "overall": 0.9,
+        "coherence": 0.9,
+        "ambiguity_penalty": 0.0,
+        "human_likeness": 0.95,
+        "components": {
+          "group_count_bonus": 0.4,
+          "baseline_coherence": 0.9,
+          "baseline_ambiguity_penalty": 0.0,
+          "baseline_style_placeholder": 0.95
+        }
+      },
+      "ambiguity_risk_level": "low",
+      "ambiguity_penalty_hint": 0.0,
+      "solver_agreement_ratio": 0.5,
+      "solver_disagreement_flags": [
+        "target_mismatch",
+        "confidence_spread"
+      ],
+      "style_archetype": "balanced_demo_mix",
+      "nyt_likeness_placeholder": 0.95,
+      "trace_id": null,
+      "reject_risk_flags": [],
+      "notes": [
+        "Ranked by baseline overall score for developer inspection only."
+      ]
+    },
+    {
+      "rank": 3,
+      "puzzle_id": "puzzle_49253c794e62",
+      "accepted": true,
+      "board_words": [
+        "MERCURY",
+        "SNAP",
+        "BAKE",
+        "BLINKY",
+        "VENUS",
+        "SNIP",
+        "CAKE",
+        "INKY",
+        "EARTH",
+        "SNOW",
+        "LAKE",
+        "PINKY",
+        "MARS",
+        "SNUG",
+        "RAKE",
+        "CLYDE"
+      ],
+      "group_labels": [
+        "Planets",
+        "Starts with SN",
+        "Rhymes with -AKE",
+        "Pac-Man ghosts"
+      ],
+      "group_types": [
+        "semantic",
+        "lexical",
+        "phonetic",
+        "theme"
+      ],
+      "score_breakdown": {
+        "overall": 0.9,
+        "coherence": 0.9,
+        "ambiguity_penalty": 0.0,
+        "human_likeness": 0.95,
+        "components": {
+          "group_count_bonus": 0.4,
+          "baseline_coherence": 0.9,
+          "baseline_ambiguity_penalty": 0.0,
+          "baseline_style_placeholder": 0.95
+        }
+      },
+      "ambiguity_risk_level": "low",
+      "ambiguity_penalty_hint": 0.0,
+      "solver_agreement_ratio": 0.5,
+      "solver_disagreement_flags": [
+        "target_mismatch",
+        "confidence_spread"
+      ],
+      "style_archetype": "balanced_demo_mix",
+      "nyt_likeness_placeholder": 0.95,
+      "trace_id": null,
+      "reject_risk_flags": [],
+      "notes": [
+        "Ranked by baseline overall score for developer inspection only."
+      ]
+    }
+  ],
+  "notes": [
+    "Top-k ordering uses baseline score values and is not final-quality ranking."
+  ]
+}

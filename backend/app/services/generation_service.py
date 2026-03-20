@@ -20,7 +20,12 @@ class GenerationService:
         self._settings = settings
         self._sample_repository = SamplePuzzleRepository(settings)
         self._word_repository = FileBackedWordRepository(settings)
-        self._pipeline = build_demo_pipeline(self._word_repository)
+        if settings.demo_mode:
+            self._pipeline = build_demo_pipeline(self._word_repository)
+        else:
+            from app.pipeline.human_pipeline import build_human_pipeline
+
+            self._pipeline = build_human_pipeline(self._word_repository)
 
     def load_sample_puzzle(self) -> GeneratedPuzzleResponse:
         """Return a repository-managed sample payload."""
@@ -30,15 +35,11 @@ class GenerationService:
     def generate_puzzle(self, request: PuzzleGenerationRequest) -> GeneratedPuzzleResponse:
         """Run the generation pipeline and return the best available puzzle."""
 
-        if not self._settings.demo_mode:
-            raise RuntimeError(
-                "TODO[HUMAN_CORE]: non-demo generation mode is intentionally not implemented yet."
-            )
-
+        mode = GenerationMode.DEMO if self._settings.demo_mode else GenerationMode.HUMAN_MIXED
         context = GenerationContext(
             request_id=new_id("req"),
-            mode=GenerationMode.DEMO,
-            demo_mode=True,
+            mode=mode,
+            demo_mode=self._settings.demo_mode,
             include_trace=request.include_trace,
             developer_mode=request.developer_mode,
             seed=request.seed,
@@ -46,7 +47,7 @@ class GenerationService:
         )
         result: PipelineRunResult = self._pipeline.run(context)
         return GeneratedPuzzleResponse(
-            demo_mode=True,
+            demo_mode=self._settings.demo_mode,
             selected_components={
                 "feature_extractor": result.components.feature_extractor,
                 "generators": result.components.generators,

@@ -108,6 +108,13 @@ class HumanPuzzleComposer(BasePuzzleComposer):
         groups_by_type: dict[str, list[GroupCandidate]],
         context: GenerationContext,
     ) -> list[PuzzleCandidate]:
-        raise NotImplementedError(
-            "TODO[HUMAN_CORE]: implement human-owned puzzle composition logic."
+        candidates = BaselinePuzzleComposer().compose(groups_by_type, context)
+
+        ranked = sorted(
+            candidates,
+            key=lambda p: sum(g.confidence for g in p.groups),
+            reverse=True,
         )
+
+        top_k = 5
+        return ranked[:top_k]

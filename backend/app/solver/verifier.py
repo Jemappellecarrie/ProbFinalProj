@@ -144,7 +144,67 @@ class InternalPuzzleVerifier(BasePuzzleVerifier):
 
     verifier_name = "internal_puzzle_verifier"
 
+    def __init__(
+        self,
+        solver: BaseSolverBackend,
+        solver_ensemble: EnsembleSolverCoordinator | None = None,
+        ambiguity_evaluator: BaseAmbiguityEvaluator | None = None,
+    ) -> None:
+        from app.solver.human_ambiguity_strategy import HumanAmbiguityEvaluator
+
+        self._solver = solver
+        self._solver_ensemble = solver_ensemble
+        self._ambiguity_evaluator = ambiguity_evaluator or HumanAmbiguityEvaluator()
+
     def verify(self, puzzle: PuzzleCandidate, context: GenerationContext) -> VerificationResult:
-        raise NotImplementedError(
-            "TODO[HUMAN_CORE]: implement the human-owned internal puzzle verifier."
+        baseline = BaselinePuzzleVerifier(
+            solver=self._solver,
+            solver_ensemble=self._solver_ensemble,
+            ambiguity_evaluator=self._ambiguity_evaluator,
+        )
+        result = baseline.verify(puzzle, context)
+
+        extra_reject_reasons = list(result.reject_reasons)
+
+        # Group type diversity check: require at least 2 distinct group types
+        group_types = {g.group_type for g in puzzle.groups}
+        if len(group_types) < 2:
+            extra_reject_reasons.append(
+                RejectReason(
+                    code=RejectReasonCode.AMBIGUOUS_GROUPING,
+                    message="Puzzle lacks group-type diversity (fewer than 2 distinct types).",
+                    metadata={"distinct_types": len(group_types)},
+                )
+            )
+
+        # Minimum confidence threshold: reject if any group confidence < 0.2
+        low_confidence_groups = [g.label for g in puzzle.groups if g.confidence < 0.2]
+        if low_confidence_groups:
+            extra_reject_reasons.append(
+                RejectReason(
+                    code=RejectReasonCode.AMBIGUOUS_GROUPING,
+                    message="One or more groups have confidence below 0.2.",
+                    metadata={"low_confidence_groups": low_confidence_groups},
+                )
+            )
+
+        passed = not extra_reject_reasons and result.passed
+        notes = [
+            "InternalPuzzleVerifier extends baseline structural checks with group-type diversity "
+            "and minimum confidence thresholds.",
+        ]
+        notes.extend(result.notes)
+
+        return VerificationResult(
+            passed=passed,
+            reject_reasons=extra_reject_reasons,
+            leakage_estimate=result.leakage_estimate,
+            ambiguity_score=result.ambiguity_score,
+            ambiguity_report=result.ambiguity_report,
+            ensemble_result=result.ensemble_result,
+            notes=notes,
+            metadata={
+                **result.metadata,
+                "verifier": self.verifier_name,
+            },
         )

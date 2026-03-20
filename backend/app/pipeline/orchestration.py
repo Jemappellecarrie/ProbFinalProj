@@ -58,6 +58,7 @@ class PuzzleGenerationPipeline:
 
         features = self._feature_extractor.extract_features(entries)
         features_by_word_id = {feature.word_id: feature for feature in features}
+        context.run_metadata["features_by_word_id"] = features_by_word_id
         trace_recorder.add("feature_extraction", "Extracted feature records.", {"count": len(features)})
 
         groups_by_type: dict[str, list] = {}

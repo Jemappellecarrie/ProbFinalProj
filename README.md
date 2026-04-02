@@ -2,379 +2,364 @@
 
 ![Connections Generator Showcase](./showcase.png)
 
-End-to-end product showcase for the current repository state: demo puzzle generation, reveal flow, score inspection, ambiguity/debug outputs, and top-k batch-evaluation browsing.
+Submission-grade Connections-style puzzle generator with:
 
-Production-style scaffold for a NYT-Connections-style puzzle generator. The repository now has:
+- a FastAPI backend
+- a React + Vite frontend
+- deterministic Stage 0 semantic generation baselines
+- Stage 1 ambiguity, verification, and scoring
+- Stage 2 lexical and theme diversity
+- Stage 3 phonetic generation, style analysis, and calibration artifacts
+- Stage 4 release hardening for regression coverage, CI, documentation, and demo readiness
 
-- a first-stage end-to-end demo generation pipeline
-- a second-stage quality-control scaffold for ambiguity modeling, solver ensemble analysis, style-analysis hooks, batch evaluation, and top-k debug browsing
+The project is intentionally honest. It implements a real local pipeline and
+reproducible evaluation workflow, but it does not claim that final editorial
+quality, NYT-likeness, or threshold tuning are solved.
 
-The project is intentionally honest: demo mode runs end-to-end, but the project-defining puzzle-quality heuristics remain human-owned and explicitly unimplemented.
+## What Is Implemented
 
-## Product Showcase
+### Generation pipeline
 
-The image above reflects the current developer-facing product shell for this repository.
+- deterministic feature extraction with semantic, lexical, phonetic, and theme signals
+- semantic, lexical, phonetic, and curated-theme `GroupCandidate` generation
+- mixed-board composition with semantic-only fallback
+- trace metadata, stable ids, and persisted batch-evaluation artifacts
 
-### What the showcase demonstrates
+### Quality-control and ranking
 
-- a playable demo-style puzzle board with 16 words arranged in a mixed board layout
-- solution reveal panels showing the four hidden groups and their metadata
-- a score panel with coherence, ambiguity penalty, leakage estimate, and style-analysis placeholder values
-- a developer debug panel that surfaces ambiguity reports, solver ensemble output, style-analysis output, and generation trace data
-- a Top-K panel that reads persisted batch-evaluation results and lets you inspect the current best accepted puzzles
+- Stage 1 `accept` / `borderline` / `reject` verification decisions
+- ambiguity reports with leakage, alternative-group pressure, and cross-group evidence
+- interpretable score breakdowns for top-k ranking
+- Stage 3 style analysis with local target-band comparisons and threshold diagnostics
 
-### Product surfaces currently scaffolded
+### Delivery hardening
 
-- `Generate Puzzle`
-  Runs the current demo pipeline through FastAPI and returns a generated puzzle payload.
-- `Load Static Sample`
-  Loads a bundled sample payload for stable UI and API contract inspection.
-- `Reveal Answers`
-  Shows group labels, rationales, and grouped words for the current puzzle.
-- `Developer Mode`
-  Displays ensemble disagreement, ambiguity evidence, style signals, and latest batch-evaluation summary.
-- `Batch Evaluation Outputs`
-  Persists accepted puzzles, rejected puzzles, top-k rankings, summary metrics, and optional traces under `data/processed/eval_runs/`.
+- compact regression fixtures for accepted, borderline, and rejected boards
+- GitHub Actions CI for lint, format check, tests, frontend build, and eval smoke
+- a release summary builder for batch artifacts
+- a release-check script for local submission validation
 
+## Quickstart
 
-## Current Scope
-
-### Generation scaffold
-
-- FastAPI backend with typed schemas, repositories, orchestration, generators, solver, verifier, and scorer wiring
-- React + TypeScript + Vite frontend for puzzle generation, reveal, score inspection, and developer-mode debug views
-- seed/sample/demo data plus bootstrap and local run scripts
-
-### Second-stage quality-control scaffold
-
-- ambiguity evidence models and baseline ambiguity reports
-- solver registry plus ensemble coordinator
-- baseline second solver for agreement/disagreement exercise
-- style-analysis placeholder reports
-- offline batch evaluation with accepted/rejected/top-k persistence
-- debug endpoint and frontend Top-K inspection panel
-
-## Guiding Principle
-
-This repository does **not** claim that ambiguity detection, NYT-likeness, ranking quality, or final solver behavior are solved.
-
-Anything project-defining remains clearly marked with `TODO[HUMAN_*]`, rich docstrings, and either:
-
-- a human-owned stub
-- a baseline/mock implementation explicitly labeled as provisional
-
-## Local Setup
-
-### 1. Copy environment variables
+### Fresh checkout
 
 ```bash
 cp .env.example .env
+make bootstrap
 ```
 
-### 2. Create a backend Python environment
+`make bootstrap` creates `backend/.venv`, installs backend/frontend dependencies,
+and bootstraps the demo data artifacts. No runtime web downloads are required.
 
-Recommended: use `venv` inside `backend/`.
+### Manual setup
 
 ```bash
+cp .env.example .env
 cd backend
-/opt/homebrew/bin/python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -e ".[dev]"
-```
-
-
-### 3. Install frontend dependencies
-
-```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install --upgrade pip
+.venv/bin/python -m pip install -e ".[dev]"
 cd ../frontend
 npm install
-```
-
-### 4. Bootstrap demo artifacts
-
-```bash
 cd ..
-python3 scripts/bootstrap_demo_data.py
+backend/.venv/bin/python scripts/bootstrap_demo_data.py
 ```
 
 ## Running Locally
 
-Use two terminals.
+### Backend
 
-### Terminal 1: backend
+```bash
+make backend-dev
+```
+
+Manual equivalent:
 
 ```bash
 cd backend
-source .venv/bin/activate
-python -m uvicorn app.main:create_app --factory --reload --host 0.0.0.0 --port 8000
+.venv/bin/python -m uvicorn app.main:create_app --factory --reload --host 0.0.0.0 --port 8000
 ```
 
-### Terminal 2: frontend
+### Frontend
+
+```bash
+make frontend-dev
+```
+
+Manual equivalent:
 
 ```bash
 cd frontend
 npm run dev -- --host 0.0.0.0 --port 5173
 ```
 
-Then open [http://localhost:5173](http://localhost:5173).
+Open [http://localhost:5173](http://localhost:5173).
 
-Useful backend URLs:
+Useful endpoints:
 
 - [http://localhost:8000/api/v1/health](http://localhost:8000/api/v1/health)
 - [http://localhost:8000/api/v1/puzzles/sample](http://localhost:8000/api/v1/puzzles/sample)
 - [http://localhost:8000/api/v1/debug/evaluation/latest](http://localhost:8000/api/v1/debug/evaluation/latest)
 
-## Demo Mode
+## Main Commands
 
-Demo mode is enabled by default through `CONNECTIONS_DEMO_MODE=true`.
-
-In demo mode the system:
-
-- loads seed words from JSONL
-- extracts baseline mock features
-- produces mock semantic / lexical / phonetic / theme groups
-- composes a 16-word puzzle
-- runs a solver ensemble scaffold
-- emits a baseline ambiguity report
-- emits a baseline style-analysis report
-- scores the puzzle with a transparent mock scorer
-- supports offline batch evaluation and top-k persistence
-
-## Batch Evaluation
-
-Run a batch evaluation:
+### Backend validation
 
 ```bash
-python3 scripts/evaluate_batch.py --num-puzzles 10 --top-k 5
+make lint-backend
+make format-check-backend
+make test-backend
 ```
 
-Artifacts are written under:
+The Ruff targets are intentionally scoped to the Stage 4-maintained Python
+paths plus the backend test suite so this hardening pass stays focused on
+submission blockers rather than unrelated legacy lint debt.
 
-```text
-data/processed/eval_runs/<run_id>/
+### Frontend validation
+
+```bash
+make typecheck-frontend
+make frontend-build
 ```
 
-Typical outputs:
+### Demo generation
 
-- `config.json`
-- `summary.json`
-- `accepted.json`
-- `rejected.json`
-- `top_k.json`
-- `traces.json` when traces are enabled
+```bash
+make demo-generate
+```
 
-## Human-Owned Implementation Map
+### Batch evaluation
 
-The following modules are intentionally scaffolded but not solved:
+Demo mode:
 
-- `backend/app/features/human_feature_strategy.py`
-- `backend/app/generators/semantic.py`
-- `backend/app/generators/lexical.py`
-- `backend/app/generators/phonetic.py`
-- `backend/app/generators/theme.py`
-- `backend/app/pipeline/builder.py`
-- `backend/app/solver/human_ambiguity_strategy.py`
-- `backend/app/solver/verifier.py` via `InternalPuzzleVerifier`
-- `backend/app/scoring/style_analysis.py` via `HumanStyleAnalyzer`
-- `backend/app/scoring/human_scoring_strategy.py`
+```bash
+backend/.venv/bin/python scripts/evaluate_batch.py --num-puzzles 10 --top-k 5
+```
 
-See [`docs/human_owned_components.md`](docs/human_owned_components.md) for the exact ownership map.
+Stage 3 mixed-generation mode:
+
+```bash
+CONNECTIONS_DEMO_MODE=false \
+backend/.venv/bin/python scripts/evaluate_batch.py \
+  --num-puzzles 10 \
+  --top-k 5 \
+  --output-dir data/processed/eval_runs/final_stage3_run \
+  --no-demo-mode
+```
+
+Build a human-readable release summary from a completed run:
+
+```bash
+backend/.venv/bin/python scripts/build_release_summary.py \
+  --run-dir data/processed/eval_runs/final_stage3_run
+```
+
+### Final quality acceptance batch
+
+Pre- or post-calibration acceptance run:
+
+```bash
+backend/.venv/bin/python scripts/run_final_quality_acceptance.py \
+  --output-dir data/processed/final_quality_acceptance/pre_calibration_run \
+  --num-requests 200 \
+  --top-k 20 \
+  --candidate-pool-limit 30 \
+  --base-seed 17
+```
+
+This writes:
+
+- the deterministic batch config and seed manifest
+- the selected-board summary bundle
+- a persisted request-level candidate pool
+- `funnel_report.json` and `funnel_report.md`
+- `policy_snapshot.json`
+- a benchmark audit report copied into the run directory
+
+Compare pre/post runs:
+
+```bash
+backend/.venv/bin/python scripts/compare_final_quality_runs.py \
+  --before-run data/processed/final_quality_acceptance/pre_calibration_run \
+  --after-run data/processed/final_quality_acceptance/post_calibration_run \
+  --output-dir data/processed/final_quality_acceptance/reports
+```
+
+### Public NYT benchmark normalization
+
+```bash
+backend/.venv/bin/python scripts/normalize_nyt_benchmark.py
+```
+
+This reads the local public benchmark files under
+`data/external/nyt_connections_public/raw/`, normalizes them into canonical
+board-level artifacts, and writes deterministic calibration / holdout split
+manifests under `data/external/nyt_connections_public/normalized/`.
+
+### NYT quality audit
+
+```bash
+backend/.venv/bin/python scripts/run_nyt_quality_audit.py \
+  --run-dir data/processed/eval_runs/final_stage3_run
+```
+
+This compares generated top-k output against the local public benchmark and
+writes machine-readable and human-readable audit reports under
+`data/external/nyt_connections_public/reports/`.
+
+### Blind review packet
+
+```bash
+backend/.venv/bin/python scripts/build_blind_review_packet.py \
+  --run-dir data/processed/final_quality_acceptance/post_calibration_run \
+  --generated-count 20 \
+  --benchmark-count 20 \
+  --seed 17
+```
+
+This now writes the packet, answer key, reviewer instructions, and an explicit
+`reviewer_template.csv`. If the generated pool is too small, the packet notes
+record the shortfall instead of pretending a full 20-board generated sample
+exists.
+
+### Solve playtest packet
+
+```bash
+backend/.venv/bin/python scripts/build_solve_playtest_packet.py \
+  --run-dir data/processed/final_quality_acceptance/post_calibration_run \
+  --output-dir data/processed/final_quality_acceptance/solve_playtest \
+  --tester-count 5 \
+  --boards-per-tester 4 \
+  --seed 17
+```
+
+### Blind review scoring
+
+```bash
+backend/.venv/bin/python scripts/score_blind_review.py \
+  --answer-key data/external/nyt_connections_public/review_packets/blind_review_key.json \
+  --review-file reviewer_a.csv \
+  --review-file reviewer_b.csv
+```
+
+If no reviewer files are provided, the script writes an explicit unresolved
+final gate instead of a fake pass/fail.
+
+### Solve playtest scoring
+
+```bash
+backend/.venv/bin/python scripts/score_solve_playtest.py \
+  --packet-key data/processed/final_quality_acceptance/solve_playtest/solve_playtest_key.json \
+  --response-file tester_batch_a.csv \
+  --output-dir data/processed/final_quality_acceptance/solve_playtest
+```
+
+### Release validation
+
+```bash
+make release-check
+```
+
+This runs the Stage 4 release validation script, including lint, backend tests,
+frontend build, a non-demo batch-evaluation smoke run, and release summary
+generation.
+
+## Artifact Locations
+
+- `data/processed/eval_runs/<run_id>/`
+  Raw batch artifacts such as `summary.json`, `accepted.json`, `rejected.json`,
+  `top_k.json`, `calibration_summary.json`, `style_summary.json`,
+  `mechanism_mix_summary.json`, `threshold_diagnostics.json`, optional
+  `traces.json`, plus Stage 4 `release_summary.json` and `release_summary.md`.
+- `data/processed/final_quality_acceptance/<run_name>/`
+  Acceptance-sprint bundles including `batch_config.json`, `seed_manifest.json`,
+  `policy_snapshot.json`, `candidate_pool.json`, `funnel_report.json`,
+  `quality_audit_report.json`, and the usual summary/calibration artifacts.
+- `data/processed/release_validation/`
+  Local release-check smoke outputs.
+- `data/reference/`
+  Versioned local calibration targets such as `style_targets_v1.json`.
+- `data/external/nyt_connections_public/normalized/`
+  Canonical public benchmark boards, manifests, and deterministic split files.
+
+## Quality Claims
+
+The acceptance workflow is intentionally conservative:
+
+- candidate-pool-backed top-k review is a debugging and evaluation surface, not
+  proof that the default selected board per request is diverse
+- machine publishable proxies and benchmark distances do not satisfy the final
+  gate
+- the repository should claim the 40% publishable threshold only after real
+  blind review forms are scored
+- `data/external/nyt_connections_public/reports/`
+  Generated-vs-benchmark audit outputs such as `quality_audit_report.json` and
+  `quality_audit_report.md`.
+- `data/external/nyt_connections_public/review_packets/`
+  Blind review packets, answer keys, completed review summaries, and final gate
+  outputs.
+- `presentation/`
+  Presentation and submission support material.
+
+## Tests And Regression Coverage
+
+The backend test suite now includes:
+
+- release fixtures for semantic accepted, mixed accepted, phonetic accepted,
+  borderline, and rejected boards
+- artifact contract checks for persisted evaluation outputs
+- pipeline and evaluation-service integration smoke coverage
+- Stage 0, Stage 1, Stage 2, and Stage 3 contract-preservation tests
+
+Run the full backend suite with:
+
+```bash
+backend/.venv/bin/python -m pytest backend/tests -q
+```
+
+## CI
+
+GitHub Actions is configured at
+[`/.github/workflows/ci.yml`](./.github/workflows/ci.yml) to run:
+
+- Ruff lint
+- Ruff format check
+- backend pytest
+- frontend build
+- a lightweight non-demo evaluation smoke run
+- release summary generation from the smoke artifacts
+
+## What Remains Provisional
+
+These areas are still explicitly baseline or human-owned:
+
+- final editorial truth for puzzle quality
+- broad phonetic coverage beyond the local high-precision inventory
+- long-horizon threshold tuning and historical calibration
+- claims that style-analysis or NYT-likeness are solved
+- claims that generated boards match the NYT benchmark without blind-review evidence
+
+See [`docs/human_owned_components.md`](./docs/human_owned_components.md) for the
+module-by-module ownership map.
+
+## Documentation Map
+
+- [`docs/architecture.md`](./docs/architecture.md)
+- [`docs/data_schema.md`](./docs/data_schema.md)
+- [`docs/evaluation_methodology.md`](./docs/evaluation_methodology.md)
+- [`docs/demo_walkthrough.md`](./docs/demo_walkthrough.md)
+- [`docs/release_candidate_validation.md`](./docs/release_candidate_validation.md)
+- [`docs/submission_checklist.md`](./docs/submission_checklist.md)
+- [`docs/ai_usage.md`](./docs/ai_usage.md)
+- [`docs/stage3_a_plus_enhancements.md`](./docs/stage3_a_plus_enhancements.md)
+- [`docs/stage4_release_hardening.md`](./docs/stage4_release_hardening.md)
 
 ## Repository Layout
 
 ```text
-backend/   FastAPI app, pipeline, schemas, services, solver/scoring scaffolds, tests
-frontend/  React + TypeScript + Vite UI shell and developer-facing debug panels
-data/      Seed words, processed artifacts, sample payloads, evaluation runs
-docs/      Architecture, schemas, API contract, TODO maps
-scripts/   Bootstrap, demo generation, batch evaluation, local run helpers
+backend/   FastAPI app, generation pipeline, schemas, services, tests
+frontend/  React + TypeScript + Vite UI and developer debug panels
+data/      Seed data, reference targets, samples, eval artifacts
+docs/      Architecture, schema, evaluation, demo, and submission docs
+scripts/   Bootstrap, generation, batch evaluation, release validation helpers
 ```
-
-## Key Docs
-
-- [`docs/architecture.md`](docs/architecture.md) - architecture and pipeline overview
-- [`docs/api_contract.md`](docs/api_contract.md) - backend API shapes and debug endpoint notes
-- [`docs/data_schema.md`](docs/data_schema.md) - schema reference for puzzle, trace, ambiguity, ensemble, style, and batch models
-- [`docs/human_owned_components.md`](docs/human_owned_components.md) - exact human-owned modules, functions, and responsibilities
-
-## Development Commands
-
-- `make bootstrap-demo`
-- `make backend-dev`
-- `make frontend-dev`
-- `make demo-generate`
-- `make evaluate-batch`
-- `make test-backend`
-- `make lint-backend`
-- `make typecheck-frontend`
-
-## TODO Roadmap
-
-The repository scaffold is in place. The remaining work is concentrated in the human-owned puzzle-quality pipeline.
-
-### TODO 1 — MVP Generation Path
-
-Build the first real generation path that produces non-mock puzzles end to end.
-
-Priority modules:
-
-- `backend/app/features/human_feature_strategy.py`
-- `backend/app/generators/semantic.py`
-- `backend/app/pipeline/builder.py`
-
-Implementation goals:
-
-- implement semantic-oriented feature extraction
-- implement the first real semantic group generator
-- implement the first real puzzle composer
-- produce valid 16-word puzzles from real `GroupCandidate` outputs instead of mock-only generation
-
-Expected deliverables:
-
-- a usable semantic feature store
-- real semantic `GroupCandidate` outputs with rules, evidence, and local scores
-- real composed `PuzzleCandidate` outputs with 4 groups and 16 unique words
-
-Success criteria:
-
-- the system generates non-mock semantic-heavy puzzles
-- each generated group is human-interpretable
-- composed puzzles are structurally valid and usable by downstream quality-control modules
-
----
-
-### TODO 2 — Quality-Control Core
-
-Turn the current quality-control scaffold into a real filtering pipeline.
-
-Priority modules:
-
-- `backend/app/solver/human_ambiguity_strategy.py`
-- `backend/app/solver/verifier.py`
-- `backend/app/scoring/human_scoring_strategy.py`
-
-Implementation goals:
-
-- implement word leakage analysis and alternative-group detection
-- implement final verification policy for accept / reject / borderline decisions
-- implement a real scoring breakdown for ranking accepted puzzles
-
-Expected deliverables:
-
-- `AmbiguityReport` with real evidence
-- `VerificationResult` with meaningful reject reasons and warning flags
-- `PuzzleScore` with usable ranking signals and component breakdowns
-
-Success criteria:
-
-- obviously ambiguous puzzles are rejected or penalized
-- accepted/rejected batch outputs become informative
-- top-k results are meaningfully better than unsorted outputs
-
----
-
-### TODO 3 — Generator Diversity Upgrade
-
-Expand beyond semantic-heavy generation and move closer to NYT-style variety.
-
-Priority modules:
-
-- `backend/app/generators/lexical.py`
-- `backend/app/generators/theme.py`
-- `backend/app/pipeline/builder.py` (composer mix logic)
-
-Implementation goals:
-
-- implement lexical pattern / template group generation
-- implement curated theme / trivia group generation
-- upgrade composer heuristics to prefer stronger cross-type mixes
-
-Expected deliverables:
-
-- lexical `GroupCandidate` outputs
-- theme `GroupCandidate` outputs
-- more diverse puzzle compositions using multiple group mechanisms
-
-Success criteria:
-
-- puzzles are no longer dominated by plain semantic category groups
-- generator mix includes lexical and theme groups in a controlled way
-- accepted puzzles begin to look more like curated Connections boards
-
----
-
-### TODO 4 — A+ Enhancements
-
-Add higher-risk, higher-upside features once the MVP path and quality-control core are stable.
-
-Priority modules:
-
-- `backend/app/generators/phonetic.py`
-- `backend/app/scoring/style_analysis.py`
-- batch evaluation and historical calibration workflows
-
-Implementation goals:
-
-- implement a small number of high-precision phonetic / wordplay groups
-- calibrate style-analysis against historical Connections patterns
-- improve ranking and acceptance policy using batch-evaluation evidence
-
-Expected deliverables:
-
-- phonetic `GroupCandidate` outputs with strong interpretability
-- stronger style-analysis signals
-- improved accepted-puzzle quality under batch generation
-
-Success criteria:
-
-- the system produces occasional strong wordplay/theme puzzles
-- style-analysis becomes more than a placeholder
-- batch-generated top-k puzzles are plausibly closer to NYT editorial style
-
----
-
-## Recommended Implementation Order
-
-To avoid wasted effort, the recommended execution order is:
-
-1. semantic feature extraction
-2. semantic generator
-3. puzzle composer
-4. ambiguity evaluator
-5. verifier
-6. scorer
-7. lexical generator
-8. theme generator
-9. batch-evaluation tuning
-10. phonetic generator
-11. historical style calibration
-
-This ordering reflects project leverage:
-
-- generation must exist before ranking and rejection are meaningful
-- quality control must exist before large-batch evaluation is useful
-- lexical/theme diversity should be added after the semantic core is stable
-- phonetic and style-calibration work are best treated as later-stage A+ upgrades
-
----
-
-## Current Strategic Focus
-
-The current repository already has strong scaffolding for:
-
-- demo generation
-- solver ensemble infrastructure
-- ambiguity / style / evaluation data models
-- batch evaluation persistence
-- top-k browsing and developer debug surfaces
-
-The current bottleneck is no longer repository structure.
-
-The main remaining challenge is implementing the human-owned logic that determines:
-
-- what makes a strong group candidate
-- what makes a puzzle non-ambiguous
-- what should be rejected
-- what should rank highest
-- what actually feels plausibly NYT-like

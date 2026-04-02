@@ -1,0 +1,48 @@
+{
+  "stage1_thresholds": {
+    "word_leakage_high_fit": 0.84,
+    "word_leakage_medium_fit": 0.7,
+    "word_leakage_high_margin": 0.14,
+    "word_leakage_medium_margin": 0.26,
+    "alternative_group_borderline": 0.68,
+    "alternative_group_reject": 0.8,
+    "alternative_group_limit": 8,
+    "cross_group_borderline": 0.64,
+    "cross_group_reject": 0.78,
+    "board_pressure_borderline": 0.48,
+    "board_pressure_reject": 0.7,
+    "weak_group_support_borderline": 0.7,
+    "weak_group_support_reject": 0.58,
+    "high_leakage_word_borderline": 2,
+    "high_leakage_word_reject": 4
+  },
+  "stage1_scoring": {
+    "coherence_weight": 0.5,
+    "board_balance_weight": 0.2,
+    "evidence_quality_weight": 0.15,
+    "weakest_group_weight": 0.15,
+    "ambiguity_penalty_weight": 0.15,
+    "leakage_penalty_weight": 0.1,
+    "alternative_penalty_weight": 0.1
+  },
+  "stage2_composer": {
+    "max_candidates_per_type": 16,
+    "max_rejected_combinations": 12,
+    "max_ranked_puzzles": 60,
+    "near_duplicate_board_overlap_threshold": 14
+  },
+  "stage3_scoring": {
+    "style_alignment_bonus_weight": 0.08,
+    "wordplay_bonus_weight": 0.04,
+    "phonetic_showcase_bonus_weight": 0.03,
+    "mixed_mechanism_bonus_weight": 0.03,
+    "monotony_penalty_weight": 0.05,
+    "out_of_band_penalty_weight": 0.04
+  },
+  "stage3_verifier": {
+    "monotony_warning_threshold": 0.7,
+    "low_alignment_borderline_threshold": 0.45,
+    "severe_out_of_band_flag_count": 3,
+    "single_mechanism_unique_type_count": 1
+  }
+}

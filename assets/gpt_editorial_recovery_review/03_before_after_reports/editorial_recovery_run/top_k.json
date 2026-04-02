@@ -1,0 +1,1137 @@
+{
+  "requested_k": 20,
+  "returned_count": 8,
+  "ranked_puzzles": [
+    {
+      "rank": 1,
+      "puzzle_id": "puzzle_53efb25c8b81",
+      "accepted": true,
+      "verification_decision": "accept",
+      "board_words": [
+        "TOPAZ",
+        "INKY",
+        "HEEL",
+        "EARTH",
+        "JADE",
+        "PINKY",
+        "KEEL",
+        "MARS",
+        "OPAL",
+        "BLINKY",
+        "PEEL",
+        "MERCURY",
+        "RUBY",
+        "CLYDE",
+        "REEL",
+        "VENUS"
+      ],
+      "group_labels": [
+        "Gemstones",
+        "Pac-Man ghosts",
+        "Rhymes with -EEL",
+        "Planets"
+      ],
+      "group_word_sets": [
+        [
+          "TOPAZ",
+          "JADE",
+          "OPAL",
+          "RUBY"
+        ],
+        [
+          "INKY",
+          "PINKY",
+          "BLINKY",
+          "CLYDE"
+        ],
+        [
+          "HEEL",
+          "KEEL",
+          "PEEL",
+          "REEL"
+        ],
+        [
+          "EARTH",
+          "MARS",
+          "MERCURY",
+          "VENUS"
+        ]
+      ],
+      "group_types": [
+        "semantic",
+        "semantic",
+        "phonetic",
+        "theme"
+      ],
+      "mechanism_mix_summary": {
+        "phonetic": 1,
+        "semantic": 2,
+        "theme": 1
+      },
+      "mixed_board": true,
+      "group_family_signatures": [
+        "semantic:gemstone",
+        "theme:ghost",
+        "phonetic:perfect_rhyme:iy1_l",
+        "theme:classical_planets"
+      ],
+      "board_family_signature": "board_family_9acff884dc03",
+      "editorial_family_signature": "editorial_family_4cc7692ee6a9",
+      "theme_family_signatures": [
+        "theme:classical_planets"
+      ],
+      "surface_wordplay_family_signatures": [
+        "phonetic:perfect_rhyme:iy1_l"
+      ],
+      "editorial_flags": [],
+      "score_breakdown": {
+        "overall": 0.8859,
+        "coherence": 0.8639,
+        "ambiguity_penalty": 0.1282,
+        "human_likeness": 1.0,
+        "components": {
+          "group_coherence": 0.8639,
+          "board_balance": 0.6778,
+          "evidence_quality": 1.0,
+          "weakest_group_support": 0.6509,
+          "ambiguity_penalty": 0.1282,
+          "leakage_penalty": 0.1314,
+          "alternative_group_penalty": 0.0,
+          "composer_ranking_score": 3.749,
+          "style_alignment_bonus": 0.0326,
+          "editorial_payoff_bonus": 0.0651,
+          "label_naturalness_bonus": 0.0264,
+          "wordplay_bonus": 0.0073,
+          "phonetic_showcase_bonus": 0.0034,
+          "mixed_mechanism_bonus": 0.0075,
+          "style_monotony_penalty": 0.0125,
+          "style_out_of_band_penalty": 0.0,
+          "formulaic_mix_penalty": 0.007,
+          "family_repetition_penalty": 0.0,
+          "surface_wordplay_penalty": 0.015,
+          "editorial_flatness_penalty": 0.0047,
+          "microtheme_overuse_penalty": 0.0,
+          "repeated_pattern_family_penalty": 0.0,
+          "decision_penalty": 0.0
+        }
+      },
+      "ambiguity_risk_level": "low",
+      "ambiguity_penalty_hint": 0.1282,
+      "solver_agreement_ratio": 0.5,
+      "solver_disagreement_flags": [
+        "target_mismatch",
+        "alternative_solution_proposed",
+        "structural_disagreement",
+        "confidence_spread"
+      ],
+      "style_archetype": "balanced_mixed",
+      "nyt_likeness_placeholder": 1.0,
+      "style_alignment_score": 1.0,
+      "style_out_of_band_flags": [
+        "overly_surface_wordplay"
+      ],
+      "ranking_influence_notes": [
+        "Top review ranking is built from the persisted request-level candidate pool.",
+        "Board-level dedupe is supplemented with editorial family-diversity caps."
+      ],
+      "trace_id": null,
+      "reject_risk_flags": [
+        "weak_group_support"
+      ],
+      "notes": [
+        "Deduped by board signature, then ranked by decision class, overall score, editorial payoff, ambiguity penalty, and composer score."
+      ]
+    },
+    {
+      "rank": 2,
+      "puzzle_id": "puzzle_f931b6627c4c",
+      "accepted": true,
+      "verification_decision": "accept",
+      "board_words": [
+        "TOPAZ",
+        "INKY",
+        "BAKE",
+        "EARTH",
+        "JADE",
+        "PINKY",
+        "CAKE",
+        "MARS",
+        "OPAL",
+        "BLINKY",
+        "LAKE",
+        "MERCURY",
+        "RUBY",
+        "CLYDE",
+        "RAKE",
+        "VENUS"
+      ],
+      "group_labels": [
+        "Gemstones",
+        "Pac-Man ghosts",
+        "Ends with -AKE",
+        "Planets"
+      ],
+      "group_word_sets": [
+        [
+          "TOPAZ",
+          "JADE",
+          "OPAL",
+          "RUBY"
+        ],
+        [
+          "INKY",
+          "PINKY",
+          "BLINKY",
+          "CLYDE"
+        ],
+        [
+          "BAKE",
+          "CAKE",
+          "LAKE",
+          "RAKE"
+        ],
+        [
+          "EARTH",
+          "MARS",
+          "MERCURY",
+          "VENUS"
+        ]
+      ],
+      "group_types": [
+        "semantic",
+        "semantic",
+        "lexical",
+        "theme"
+      ],
+      "mechanism_mix_summary": {
+        "lexical": 1,
+        "semantic": 2,
+        "theme": 1
+      },
+      "mixed_board": true,
+      "group_family_signatures": [
+        "semantic:gemstone",
+        "theme:ghost",
+        "lexical:shared_suffix:ake",
+        "theme:classical_planets"
+      ],
+      "board_family_signature": "board_family_0529a7559106",
+      "editorial_family_signature": "editorial_family_943f06a602e9",
+      "theme_family_signatures": [
+        "theme:classical_planets"
+      ],
+      "surface_wordplay_family_signatures": [
+        "lexical:shared_suffix:ake"
+      ],
+      "editorial_flags": [],
+      "score_breakdown": {
+        "overall": 0.8744,
+        "coherence": 0.8864,
+        "ambiguity_penalty": 0.1088,
+        "human_likeness": 0.9167,
+        "components": {
+          "group_coherence": 0.8864,
+          "board_balance": 0.768,
+          "evidence_quality": 1.0,
+          "weakest_group_support": 0.7411,
+          "ambiguity_penalty": 0.1088,
+          "leakage_penalty": 0.1314,
+          "alternative_group_penalty": 0.0,
+          "composer_ranking_score": 3.7645,
+          "style_alignment_bonus": 0.0279,
+          "editorial_payoff_bonus": 0.0608,
+          "label_naturalness_bonus": 0.0264,
+          "wordplay_bonus": 0.003,
+          "phonetic_showcase_bonus": 0.0,
+          "mixed_mechanism_bonus": 0.0075,
+          "style_monotony_penalty": 0.0125,
+          "style_out_of_band_penalty": 0.04,
+          "formulaic_mix_penalty": 0.01,
+          "family_repetition_penalty": 0.0,
+          "surface_wordplay_penalty": 0.012,
+          "editorial_flatness_penalty": 0.0053,
+          "microtheme_overuse_penalty": 0.0,
+          "repeated_pattern_family_penalty": 0.0,
+          "decision_penalty": 0.0
+        }
+      },
+      "ambiguity_risk_level": "low",
+      "ambiguity_penalty_hint": 0.1088,
+      "solver_agreement_ratio": 0.5,
+      "solver_disagreement_flags": [
+        "target_mismatch",
+        "alternative_solution_proposed",
+        "structural_disagreement",
+        "confidence_spread"
+      ],
+      "style_archetype": "balanced_mixed",
+      "nyt_likeness_placeholder": 0.9167,
+      "style_alignment_score": 0.9167,
+      "style_out_of_band_flags": [
+        "coherence_trickiness_balance_low",
+        "overly_surface_wordplay",
+        "too_formulaic"
+      ],
+      "ranking_influence_notes": [
+        "Top review ranking is built from the persisted request-level candidate pool.",
+        "Board-level dedupe is supplemented with editorial family-diversity caps."
+      ],
+      "trace_id": null,
+      "reject_risk_flags": [],
+      "notes": [
+        "Deduped by board signature, then ranked by decision class, overall score, editorial payoff, ambiguity penalty, and composer score."
+      ]
+    },
+    {
+      "rank": 3,
+      "puzzle_id": "puzzle_8dd9faa636b2",
+      "accepted": true,
+      "verification_decision": "accept",
+      "board_words": [
+        "TOPAZ",
+        "INKY",
+        "BASH",
+        "EARTH",
+        "JADE",
+        "PINKY",
+        "CASH",
+        "MARS",
+        "OPAL",
+        "BLINKY",
+        "DASH",
+        "MERCURY",
+        "RUBY",
+        "CLYDE",
+        "MASH",
+        "VENUS"
+      ],
+      "group_labels": [
+        "Gemstones",
+        "Pac-Man ghosts",
+        "Rhymes with -ASH",
+        "Planets"
+      ],
+      "group_word_sets": [
+        [
+          "TOPAZ",
+          "JADE",
+          "OPAL",
+          "RUBY"
+        ],
+        [
+          "INKY",
+          "PINKY",
+          "BLINKY",
+          "CLYDE"
+        ],
+        [
+          "BASH",
+          "CASH",
+          "DASH",
+          "MASH"
+        ],
+        [
+          "EARTH",
+          "MARS",
+          "MERCURY",
+          "VENUS"
+        ]
+      ],
+      "group_types": [
+        "semantic",
+        "semantic",
+        "phonetic",
+        "theme"
+      ],
+      "mechanism_mix_summary": {
+        "phonetic": 1,
+        "semantic": 2,
+        "theme": 1
+      },
+      "mixed_board": true,
+      "group_family_signatures": [
+        "semantic:gemstone",
+        "theme:ghost",
+        "phonetic:perfect_rhyme:ae1_sh",
+        "theme:classical_planets"
+      ],
+      "board_family_signature": "board_family_d44cca46f77c",
+      "editorial_family_signature": "editorial_family_948103a25f7c",
+      "theme_family_signatures": [
+        "theme:classical_planets"
+      ],
+      "surface_wordplay_family_signatures": [
+        "phonetic:perfect_rhyme:ae1_sh"
+      ],
+      "editorial_flags": [],
+      "score_breakdown": {
+        "overall": 0.8551,
+        "coherence": 0.8694,
+        "ambiguity_penalty": 0.119,
+        "human_likeness": 0.9167,
+        "components": {
+          "group_coherence": 0.8694,
+          "board_balance": 0.6999,
+          "evidence_quality": 1.0,
+          "weakest_group_support": 0.673,
+          "ambiguity_penalty": 0.119,
+          "leakage_penalty": 0.1314,
+          "alternative_group_penalty": 0.0,
+          "composer_ranking_score": 3.7551,
+          "style_alignment_bonus": 0.0299,
+          "editorial_payoff_bonus": 0.0651,
+          "label_naturalness_bonus": 0.0264,
+          "wordplay_bonus": 0.0073,
+          "phonetic_showcase_bonus": 0.0034,
+          "mixed_mechanism_bonus": 0.0075,
+          "style_monotony_penalty": 0.0125,
+          "style_out_of_band_penalty": 0.04,
+          "formulaic_mix_penalty": 0.007,
+          "family_repetition_penalty": 0.0,
+          "surface_wordplay_penalty": 0.015,
+          "editorial_flatness_penalty": 0.0047,
+          "microtheme_overuse_penalty": 0.0,
+          "repeated_pattern_family_penalty": 0.0,
+          "decision_penalty": 0.0
+        }
+      },
+      "ambiguity_risk_level": "low",
+      "ambiguity_penalty_hint": 0.119,
+      "solver_agreement_ratio": 0.5,
+      "solver_disagreement_flags": [
+        "target_mismatch",
+        "alternative_solution_proposed",
+        "structural_disagreement",
+        "confidence_spread"
+      ],
+      "style_archetype": "balanced_mixed",
+      "nyt_likeness_placeholder": 0.9167,
+      "style_alignment_score": 0.9167,
+      "style_out_of_band_flags": [
+        "coherence_trickiness_balance_low",
+        "overly_surface_wordplay"
+      ],
+      "ranking_influence_notes": [
+        "Top review ranking is built from the persisted request-level candidate pool.",
+        "Board-level dedupe is supplemented with editorial family-diversity caps."
+      ],
+      "trace_id": null,
+      "reject_risk_flags": [
+        "weak_group_support"
+      ],
+      "notes": [
+        "Deduped by board signature, then ranked by decision class, overall score, editorial payoff, ambiguity penalty, and composer score."
+      ]
+    },
+    {
+      "rank": 4,
+      "puzzle_id": "puzzle_f789f19e8e49",
+      "accepted": true,
+      "verification_decision": "accept",
+      "board_words": [
+        "INKY",
+        "LEONARDO",
+        "HEEL",
+        "EARTH",
+        "PINKY",
+        "RAPHAEL",
+        "KEEL",
+        "MARS",
+        "BLINKY",
+        "DONATELLO",
+        "PEEL",
+        "MERCURY",
+        "CLYDE",
+        "MICHELANGELO",
+        "REEL",
+        "VENUS"
+      ],
+      "group_labels": [
+        "Pac-Man ghosts",
+        "Teenage Mutant Ninja Turtles",
+        "Ends with -EEL",
+        "Planets"
+      ],
+      "group_word_sets": [
+        [
+          "INKY",
+          "PINKY",
+          "BLINKY",
+          "CLYDE"
+        ],
+        [
+          "LEONARDO",
+          "RAPHAEL",
+          "DONATELLO",
+          "MICHELANGELO"
+        ],
+        [
+          "HEEL",
+          "KEEL",
+          "PEEL",
+          "REEL"
+        ],
+        [
+          "EARTH",
+          "MARS",
+          "MERCURY",
+          "VENUS"
+        ]
+      ],
+      "group_types": [
+        "semantic",
+        "semantic",
+        "lexical",
+        "theme"
+      ],
+      "mechanism_mix_summary": {
+        "lexical": 1,
+        "semantic": 2,
+        "theme": 1
+      },
+      "mixed_board": true,
+      "group_family_signatures": [
+        "theme:ghost",
+        "theme:fictional_character",
+        "lexical:shared_suffix:eel",
+        "theme:classical_planets"
+      ],
+      "board_family_signature": "board_family_acf1f2ce4d15",
+      "editorial_family_signature": "editorial_family_6f92bbc05394",
+      "theme_family_signatures": [
+        "theme:classical_planets"
+      ],
+      "surface_wordplay_family_signatures": [
+        "lexical:shared_suffix:eel"
+      ],
+      "editorial_flags": [],
+      "score_breakdown": {
+        "overall": 0.8125,
+        "coherence": 0.8388,
+        "ambiguity_penalty": 0.1883,
+        "human_likeness": 0.9167,
+        "components": {
+          "group_coherence": 0.8388,
+          "board_balance": 0.7301,
+          "evidence_quality": 1.0,
+          "weakest_group_support": 0.7009,
+          "ambiguity_penalty": 0.1883,
+          "leakage_penalty": 0.2764,
+          "alternative_group_penalty": 0.0,
+          "composer_ranking_score": 3.7042,
+          "style_alignment_bonus": 0.0282,
+          "editorial_payoff_bonus": 0.0615,
+          "label_naturalness_bonus": 0.0271,
+          "wordplay_bonus": 0.0031,
+          "phonetic_showcase_bonus": 0.0,
+          "mixed_mechanism_bonus": 0.0075,
+          "style_monotony_penalty": 0.0125,
+          "style_out_of_band_penalty": 0.04,
+          "formulaic_mix_penalty": 0.01,
+          "family_repetition_penalty": 0.0,
+          "surface_wordplay_penalty": 0.012,
+          "editorial_flatness_penalty": 0.0049,
+          "microtheme_overuse_penalty": 0.0,
+          "repeated_pattern_family_penalty": 0.0,
+          "decision_penalty": 0.0
+        }
+      },
+      "ambiguity_risk_level": "medium",
+      "ambiguity_penalty_hint": 0.1883,
+      "solver_agreement_ratio": 0.5,
+      "solver_disagreement_flags": [
+        "target_mismatch",
+        "alternative_solution_proposed",
+        "structural_disagreement",
+        "confidence_spread"
+      ],
+      "style_archetype": "balanced_mixed",
+      "nyt_likeness_placeholder": 0.9167,
+      "style_alignment_score": 0.9167,
+      "style_out_of_band_flags": [
+        "overly_surface_wordplay",
+        "redundancy_score_high",
+        "too_formulaic"
+      ],
+      "ranking_influence_notes": [
+        "Top review ranking is built from the persisted request-level candidate pool.",
+        "Board-level dedupe is supplemented with editorial family-diversity caps."
+      ],
+      "trace_id": null,
+      "reject_risk_flags": [],
+      "notes": [
+        "Deduped by board signature, then ranked by decision class, overall score, editorial payoff, ambiguity penalty, and composer score."
+      ]
+    },
+    {
+      "rank": 5,
+      "puzzle_id": "puzzle_7d7484cca955",
+      "accepted": true,
+      "verification_decision": "accept",
+      "board_words": [
+        "TOPAZ",
+        "LEONARDO",
+        "BASH",
+        "EARTH",
+        "JADE",
+        "RAPHAEL",
+        "CASH",
+        "MARS",
+        "OPAL",
+        "DONATELLO",
+        "DASH",
+        "MERCURY",
+        "RUBY",
+        "MICHELANGELO",
+        "MASH",
+        "VENUS"
+      ],
+      "group_labels": [
+        "Gemstones",
+        "Teenage Mutant Ninja Turtles",
+        "Ends with -ASH",
+        "Planets"
+      ],
+      "group_word_sets": [
+        [
+          "TOPAZ",
+          "JADE",
+          "OPAL",
+          "RUBY"
+        ],
+        [
+          "LEONARDO",
+          "RAPHAEL",
+          "DONATELLO",
+          "MICHELANGELO"
+        ],
+        [
+          "BASH",
+          "CASH",
+          "DASH",
+          "MASH"
+        ],
+        [
+          "EARTH",
+          "MARS",
+          "MERCURY",
+          "VENUS"
+        ]
+      ],
+      "group_types": [
+        "semantic",
+        "semantic",
+        "lexical",
+        "theme"
+      ],
+      "mechanism_mix_summary": {
+        "lexical": 1,
+        "semantic": 2,
+        "theme": 1
+      },
+      "mixed_board": true,
+      "group_family_signatures": [
+        "semantic:gemstone",
+        "theme:fictional_character",
+        "lexical:shared_suffix:ash",
+        "theme:classical_planets"
+      ],
+      "board_family_signature": "board_family_e57e876493aa",
+      "editorial_family_signature": "editorial_family_9e1186dd286e",
+      "theme_family_signatures": [
+        "theme:classical_planets"
+      ],
+      "surface_wordplay_family_signatures": [
+        "lexical:shared_suffix:ash"
+      ],
+      "editorial_flags": [],
+      "score_breakdown": {
+        "overall": 0.7741,
+        "coherence": 0.8724,
+        "ambiguity_penalty": 0.1155,
+        "human_likeness": 0.75,
+        "components": {
+          "group_coherence": 0.8724,
+          "board_balance": 0.7499,
+          "evidence_quality": 1.0,
+          "weakest_group_support": 0.723,
+          "ambiguity_penalty": 0.1155,
+          "leakage_penalty": 0.1408,
+          "alternative_group_penalty": 0.0,
+          "composer_ranking_score": 3.7402,
+          "style_alignment_bonus": 0.0228,
+          "editorial_payoff_bonus": 0.0608,
+          "label_naturalness_bonus": 0.0264,
+          "wordplay_bonus": 0.003,
+          "phonetic_showcase_bonus": 0.0,
+          "mixed_mechanism_bonus": 0.0075,
+          "style_monotony_penalty": 0.0125,
+          "style_out_of_band_penalty": 0.12,
+          "formulaic_mix_penalty": 0.01,
+          "family_repetition_penalty": 0.0,
+          "surface_wordplay_penalty": 0.012,
+          "editorial_flatness_penalty": 0.0053,
+          "microtheme_overuse_penalty": 0.0,
+          "repeated_pattern_family_penalty": 0.0,
+          "decision_penalty": 0.0
+        }
+      },
+      "ambiguity_risk_level": "low",
+      "ambiguity_penalty_hint": 0.1155,
+      "solver_agreement_ratio": 0.5,
+      "solver_disagreement_flags": [
+        "target_mismatch",
+        "alternative_solution_proposed",
+        "structural_disagreement",
+        "confidence_spread"
+      ],
+      "style_archetype": "balanced_mixed",
+      "nyt_likeness_placeholder": 0.75,
+      "style_alignment_score": 0.75,
+      "style_out_of_band_flags": [
+        "coherence_trickiness_balance_low",
+        "label_token_std_high",
+        "overly_surface_wordplay",
+        "redundancy_score_high",
+        "too_formulaic"
+      ],
+      "ranking_influence_notes": [
+        "Top review ranking is built from the persisted request-level candidate pool.",
+        "Board-level dedupe is supplemented with editorial family-diversity caps."
+      ],
+      "trace_id": null,
+      "reject_risk_flags": [],
+      "notes": [
+        "Deduped by board signature, then ranked by decision class, overall score, editorial payoff, ambiguity penalty, and composer score."
+      ]
+    },
+    {
+      "rank": 6,
+      "puzzle_id": "puzzle_afecfe79f9bd",
+      "accepted": true,
+      "verification_decision": "borderline",
+      "board_words": [
+        "TOPAZ",
+        "LEONARDO",
+        "BAKE",
+        "EARTH",
+        "JADE",
+        "RAPHAEL",
+        "CAKE",
+        "MARS",
+        "OPAL",
+        "DONATELLO",
+        "LAKE",
+        "MERCURY",
+        "RUBY",
+        "MICHELANGELO",
+        "RAKE",
+        "VENUS"
+      ],
+      "group_labels": [
+        "Gemstones",
+        "Teenage Mutant Ninja Turtles",
+        "Rhymes with -AKE",
+        "Planets"
+      ],
+      "group_word_sets": [
+        [
+          "TOPAZ",
+          "JADE",
+          "OPAL",
+          "RUBY"
+        ],
+        [
+          "LEONARDO",
+          "RAPHAEL",
+          "DONATELLO",
+          "MICHELANGELO"
+        ],
+        [
+          "BAKE",
+          "CAKE",
+          "LAKE",
+          "RAKE"
+        ],
+        [
+          "EARTH",
+          "MARS",
+          "MERCURY",
+          "VENUS"
+        ]
+      ],
+      "group_types": [
+        "semantic",
+        "semantic",
+        "phonetic",
+        "theme"
+      ],
+      "mechanism_mix_summary": {
+        "phonetic": 1,
+        "semantic": 2,
+        "theme": 1
+      },
+      "mixed_board": true,
+      "group_family_signatures": [
+        "semantic:gemstone",
+        "theme:fictional_character",
+        "phonetic:perfect_rhyme:ey1_k",
+        "theme:classical_planets"
+      ],
+      "board_family_signature": "board_family_a08695b79afe",
+      "editorial_family_signature": "editorial_family_f8f09752850c",
+      "theme_family_signatures": [
+        "theme:classical_planets"
+      ],
+      "surface_wordplay_family_signatures": [
+        "phonetic:perfect_rhyme:ey1_k"
+      ],
+      "editorial_flags": [],
+      "score_breakdown": {
+        "overall": 0.7039,
+        "coherence": 0.8644,
+        "ambiguity_penalty": 0.3016,
+        "human_likeness": 0.8333,
+        "components": {
+          "group_coherence": 0.8644,
+          "board_balance": 0.718,
+          "evidence_quality": 1.0,
+          "weakest_group_support": 0.6911,
+          "ambiguity_penalty": 0.3016,
+          "leakage_penalty": 0.4807,
+          "alternative_group_penalty": 0.0,
+          "composer_ranking_score": 3.7208,
+          "style_alignment_bonus": 0.0271,
+          "editorial_payoff_bonus": 0.0651,
+          "label_naturalness_bonus": 0.0264,
+          "wordplay_bonus": 0.0073,
+          "phonetic_showcase_bonus": 0.0034,
+          "mixed_mechanism_bonus": 0.0075,
+          "style_monotony_penalty": 0.0125,
+          "style_out_of_band_penalty": 0.08,
+          "formulaic_mix_penalty": 0.007,
+          "family_repetition_penalty": 0.0,
+          "surface_wordplay_penalty": 0.015,
+          "editorial_flatness_penalty": 0.0047,
+          "microtheme_overuse_penalty": 0.0,
+          "repeated_pattern_family_penalty": 0.0,
+          "decision_penalty": 0.05
+        }
+      },
+      "ambiguity_risk_level": "medium",
+      "ambiguity_penalty_hint": 0.3016,
+      "solver_agreement_ratio": 0.5,
+      "solver_disagreement_flags": [
+        "target_mismatch",
+        "alternative_solution_proposed",
+        "structural_disagreement",
+        "confidence_spread"
+      ],
+      "style_archetype": "balanced_mixed",
+      "nyt_likeness_placeholder": 0.8333,
+      "style_alignment_score": 0.8333,
+      "style_out_of_band_flags": [
+        "label_token_std_high",
+        "overly_surface_wordplay",
+        "redundancy_score_high"
+      ],
+      "ranking_influence_notes": [
+        "Top review ranking is built from the persisted request-level candidate pool.",
+        "Board-level dedupe is supplemented with editorial family-diversity caps."
+      ],
+      "trace_id": null,
+      "reject_risk_flags": [
+        "weak_group_support"
+      ],
+      "notes": [
+        "Deduped by board signature, then ranked by decision class, overall score, editorial payoff, ambiguity penalty, and composer score."
+      ]
+    },
+    {
+      "rank": 7,
+      "puzzle_id": "puzzle_01c93ba2960c",
+      "accepted": true,
+      "verification_decision": "borderline",
+      "board_words": [
+        "TOPAZ",
+        "LEONARDO",
+        "SNAP",
+        "EARTH",
+        "JADE",
+        "RAPHAEL",
+        "SNIP",
+        "MARS",
+        "OPAL",
+        "DONATELLO",
+        "SNOW",
+        "MERCURY",
+        "RUBY",
+        "MICHELANGELO",
+        "SNUG",
+        "VENUS"
+      ],
+      "group_labels": [
+        "Gemstones",
+        "Teenage Mutant Ninja Turtles",
+        "Starts with SN",
+        "Planets"
+      ],
+      "group_word_sets": [
+        [
+          "TOPAZ",
+          "JADE",
+          "OPAL",
+          "RUBY"
+        ],
+        [
+          "LEONARDO",
+          "RAPHAEL",
+          "DONATELLO",
+          "MICHELANGELO"
+        ],
+        [
+          "SNAP",
+          "SNIP",
+          "SNOW",
+          "SNUG"
+        ],
+        [
+          "EARTH",
+          "MARS",
+          "MERCURY",
+          "VENUS"
+        ]
+      ],
+      "group_types": [
+        "semantic",
+        "semantic",
+        "lexical",
+        "theme"
+      ],
+      "mechanism_mix_summary": {
+        "lexical": 1,
+        "semantic": 2,
+        "theme": 1
+      },
+      "mixed_board": true,
+      "group_family_signatures": [
+        "semantic:gemstone",
+        "theme:fictional_character",
+        "lexical:shared_prefix:sn",
+        "theme:classical_planets"
+      ],
+      "board_family_signature": "board_family_9157ba859241",
+      "editorial_family_signature": "editorial_family_53d27f6eda4c",
+      "theme_family_signatures": [
+        "theme:classical_planets"
+      ],
+      "surface_wordplay_family_signatures": [
+        "lexical:shared_prefix:sn"
+      ],
+      "editorial_flags": [],
+      "score_breakdown": {
+        "overall": 0.6972,
+        "coherence": 0.8589,
+        "ambiguity_penalty": 0.1244,
+        "human_likeness": 0.75,
+        "components": {
+          "group_coherence": 0.8589,
+          "board_balance": 0.6961,
+          "evidence_quality": 1.0,
+          "weakest_group_support": 0.6692,
+          "ambiguity_penalty": 0.1244,
+          "leakage_penalty": 0.1408,
+          "alternative_group_penalty": 0.0,
+          "composer_ranking_score": 3.6834,
+          "style_alignment_bonus": 0.0228,
+          "editorial_payoff_bonus": 0.0608,
+          "label_naturalness_bonus": 0.0264,
+          "wordplay_bonus": 0.003,
+          "phonetic_showcase_bonus": 0.0,
+          "mixed_mechanism_bonus": 0.0075,
+          "style_monotony_penalty": 0.0125,
+          "style_out_of_band_penalty": 0.12,
+          "formulaic_mix_penalty": 0.01,
+          "family_repetition_penalty": 0.0,
+          "surface_wordplay_penalty": 0.012,
+          "editorial_flatness_penalty": 0.0053,
+          "microtheme_overuse_penalty": 0.0,
+          "repeated_pattern_family_penalty": 0.0,
+          "decision_penalty": 0.05
+        }
+      },
+      "ambiguity_risk_level": "low",
+      "ambiguity_penalty_hint": 0.1244,
+      "solver_agreement_ratio": 0.5,
+      "solver_disagreement_flags": [
+        "target_mismatch",
+        "alternative_solution_proposed",
+        "structural_disagreement",
+        "confidence_spread"
+      ],
+      "style_archetype": "balanced_mixed",
+      "nyt_likeness_placeholder": 0.75,
+      "style_alignment_score": 0.75,
+      "style_out_of_band_flags": [
+        "coherence_trickiness_balance_low",
+        "label_token_std_high",
+        "overly_surface_wordplay",
+        "redundancy_score_high",
+        "too_formulaic"
+      ],
+      "ranking_influence_notes": [
+        "Top review ranking is built from the persisted request-level candidate pool.",
+        "Board-level dedupe is supplemented with editorial family-diversity caps."
+      ],
+      "trace_id": null,
+      "reject_risk_flags": [
+        "weak_group_support"
+      ],
+      "notes": [
+        "Deduped by board signature, then ranked by decision class, overall score, editorial payoff, ambiguity penalty, and composer score."
+      ]
+    },
+    {
+      "rank": 8,
+      "puzzle_id": "puzzle_9aa253dc9c81",
+      "accepted": true,
+      "verification_decision": "borderline",
+      "board_words": [
+        "TOPAZ",
+        "EARTH",
+        "INKY",
+        "LEONARDO",
+        "JADE",
+        "VENUS",
+        "PINKY",
+        "RAPHAEL",
+        "OPAL",
+        "MARS",
+        "BLINKY",
+        "DONATELLO",
+        "RUBY",
+        "MERCURY",
+        "CLYDE",
+        "MICHELANGELO"
+      ],
+      "group_labels": [
+        "Gemstones",
+        "Planets",
+        "Pac-Man ghosts",
+        "Teenage Mutant Ninja Turtles"
+      ],
+      "group_word_sets": [
+        [
+          "TOPAZ",
+          "JADE",
+          "OPAL",
+          "RUBY"
+        ],
+        [
+          "EARTH",
+          "VENUS",
+          "MARS",
+          "MERCURY"
+        ],
+        [
+          "INKY",
+          "PINKY",
+          "BLINKY",
+          "CLYDE"
+        ],
+        [
+          "LEONARDO",
+          "RAPHAEL",
+          "DONATELLO",
+          "MICHELANGELO"
+        ]
+      ],
+      "group_types": [
+        "semantic",
+        "semantic",
+        "semantic",
+        "semantic"
+      ],
+      "mechanism_mix_summary": {
+        "semantic": 4
+      },
+      "mixed_board": false,
+      "group_family_signatures": [
+        "semantic:gemstone",
+        "semantic:astronomy",
+        "theme:ghost",
+        "theme:fictional_character"
+      ],
+      "board_family_signature": "board_family_b5809e1b73a2",
+      "editorial_family_signature": "editorial_family_e7d4f3fb5758",
+      "theme_family_signatures": [],
+      "surface_wordplay_family_signatures": [],
+      "editorial_flags": [],
+      "score_breakdown": {
+        "overall": 0.5685,
+        "coherence": 0.9068,
+        "ambiguity_penalty": 0.1005,
+        "human_likeness": 0.4167,
+        "components": {
+          "group_coherence": 0.9068,
+          "board_balance": 0.8496,
+          "evidence_quality": 1.0,
+          "weakest_group_support": 0.8227,
+          "ambiguity_penalty": 0.1005,
+          "leakage_penalty": 0.1408,
+          "alternative_group_penalty": 0.0,
+          "composer_ranking_score": 3.7395,
+          "style_alignment_bonus": 0.0137,
+          "editorial_payoff_bonus": 0.0658,
+          "label_naturalness_bonus": 0.0264,
+          "wordplay_bonus": 0.0,
+          "phonetic_showcase_bonus": 0.0,
+          "mixed_mechanism_bonus": 0.0025,
+          "style_monotony_penalty": 0.0375,
+          "style_out_of_band_penalty": 0.32,
+          "formulaic_mix_penalty": 0.0,
+          "family_repetition_penalty": 0.0,
+          "surface_wordplay_penalty": 0.0,
+          "editorial_flatness_penalty": 0.0,
+          "microtheme_overuse_penalty": 0.0,
+          "repeated_pattern_family_penalty": 0.0,
+          "decision_penalty": 0.05
+        }
+      },
+      "ambiguity_risk_level": "low",
+      "ambiguity_penalty_hint": 0.1005,
+      "solver_agreement_ratio": 0.5,
+      "solver_disagreement_flags": [
+        "target_mismatch",
+        "alternative_solution_proposed",
+        "structural_disagreement",
+        "confidence_spread"
+      ],
+      "style_archetype": "semantic_heavy",
+      "nyt_likeness_placeholder": 0.4167,
+      "style_alignment_score": 0.4167,
+      "style_out_of_band_flags": [
+        "coherence_trickiness_balance_low",
+        "label_token_std_high",
+        "redundancy_score_high",
+        "semantic_group_count_high",
+        "semantic_wordplay_balance_low",
+        "style_alignment_score_low",
+        "unique_group_type_count_low",
+        "wordplay_group_count_low"
+      ],
+      "ranking_influence_notes": [
+        "Top review ranking is built from the persisted request-level candidate pool.",
+        "Board-level dedupe is supplemented with editorial family-diversity caps."
+      ],
+      "trace_id": null,
+      "reject_risk_flags": [],
+      "notes": [
+        "Deduped by board signature, then ranked by decision class, overall score, editorial payoff, ambiguity penalty, and composer score."
+      ]
+    }
+  ],
+  "notes": [
+    "Final-quality top-k is drawn from the persisted candidate pool, not only selected winners."
+  ]
+}

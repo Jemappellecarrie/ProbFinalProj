@@ -4,9 +4,9 @@ from __future__ import annotations
 
 from typing import Any
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 
-from app.core.enums import GroupType, RejectReasonCode
+from app.core.enums import GroupType, RejectReasonCode, VerificationDecision
 from app.schemas.evaluation_models import AmbiguityReport, EnsembleSolverResult, StyleAnalysisReport
 
 
@@ -29,7 +29,39 @@ class GroupCandidate(BaseModel):
     def validate_word_count(cls, value: list[str]) -> list[str]:
         if len(value) != 4:
             raise ValueError("GroupCandidate.words must contain exactly four items.")
+        if len(set(value)) != 4:
+            raise ValueError("GroupCandidate.words must contain four unique items.")
         return value
+
+    @field_validator("word_ids")
+    @classmethod
+    def validate_word_id_count(cls, value: list[str]) -> list[str]:
+        if len(value) != 4:
+            raise ValueError("GroupCandidate.word_ids must contain exactly four items.")
+        if len(set(value)) != 4:
+            raise ValueError("GroupCandidate.word_ids must contain four unique items.")
+        return value
+
+    @field_validator("label", "rationale")
+    @classmethod
+    def validate_text_fields(cls, value: str) -> str:
+        cleaned = value.strip()
+        if not cleaned:
+            raise ValueError("GroupCandidate label and rationale must be non-empty.")
+        return cleaned
+
+    @field_validator("confidence")
+    @classmethod
+    def validate_confidence(cls, value: float) -> float:
+        if not 0.0 <= value <= 1.0:
+            raise ValueError("GroupCandidate.confidence must be between 0.0 and 1.0.")
+        return value
+
+    @model_validator(mode="after")
+    def validate_word_alignment(self) -> GroupCandidate:
+        if len(self.words) != len(self.word_ids):
+            raise ValueError("GroupCandidate.words and GroupCandidate.word_ids must align.")
+        return self
 
 
 class PuzzleCandidate(BaseModel):
@@ -46,6 +78,8 @@ class PuzzleCandidate(BaseModel):
     def validate_board_word_count(cls, value: list[str]) -> list[str]:
         if len(value) != 16:
             raise ValueError("PuzzleCandidate.board_words must contain exactly sixteen items.")
+        if len(set(value)) != 16:
+            raise ValueError("PuzzleCandidate.board_words must contain sixteen unique items.")
         return value
 
     @field_validator("groups")
@@ -54,6 +88,15 @@ class PuzzleCandidate(BaseModel):
         if len(value) != 4:
             raise ValueError("PuzzleCandidate.groups must contain exactly four groups.")
         return value
+
+    @model_validator(mode="after")
+    def validate_group_words_match_board(self) -> PuzzleCandidate:
+        grouped_words = [word for group in self.groups for word in group.words]
+        if sorted(grouped_words) != sorted(self.board_words):
+            raise ValueError(
+                "PuzzleCandidate.board_words must match the flattened set of group words."
+            )
+        return self
 
 
 class RejectReason(BaseModel):
@@ -81,11 +124,16 @@ class VerificationResult(BaseModel):
     """Verifier output including rejection reasons and ambiguity metrics."""
 
     passed: bool
+    decision: VerificationDecision = VerificationDecision.ACCEPT
     reject_reasons: list[RejectReason] = Field(default_factory=list)
+    warning_flags: list[str] = Field(default_factory=list)
     leakage_estimate: float = 0.0
     ambiguity_score: float = 0.0
+    summary_metrics: dict[str, float] = Field(default_factory=dict)
+    evidence_refs: list[str] = Field(default_factory=list)
     ambiguity_report: AmbiguityReport | None = None
     ensemble_result: EnsembleSolverResult | None = None
+    style_analysis: StyleAnalysisReport | None = None
     notes: list[str] = Field(default_factory=list)
     metadata: dict[str, Any] = Field(default_factory=dict)
 

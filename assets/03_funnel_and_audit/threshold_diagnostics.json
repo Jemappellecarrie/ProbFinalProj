@@ -1,0 +1,32 @@
+[
+  {
+    "code": "rejected_label_token_mean_low",
+    "severity": "warning",
+    "message": "rejected.label_token_mean drifted low relative to the Stage 3 reference band.",
+    "metric_name": "rejected.label_token_mean",
+    "actual_value": 0.0,
+    "target_min": 1.0,
+    "target_max": 3.0,
+    "metadata": {}
+  },
+  {
+    "code": "accepted_archetype_balanced_mixed_share_high",
+    "severity": "warning",
+    "message": "accepted.archetype_balanced_mixed_share drifted high relative to the Stage 3 reference band.",
+    "metric_name": "accepted.archetype_balanced_mixed_share",
+    "actual_value": 1.0,
+    "target_min": 0.3,
+    "target_max": 0.9,
+    "metadata": {}
+  },
+  {
+    "code": "top_k_archetype_balanced_mixed_share_high",
+    "severity": "warning",
+    "message": "top_k.archetype_balanced_mixed_share drifted high relative to the Stage 3 reference band.",
+    "metric_name": "top_k.archetype_balanced_mixed_share",
+    "actual_value": 1.0,
+    "target_min": 0.3,
+    "target_max": 0.9,
+    "metadata": {}
+  }
+]

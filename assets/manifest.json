@@ -1,0 +1,272 @@
+[
+  {
+    "relative_path": "README_FOR_REVIEW.md",
+    "original_source_path": "generated",
+    "description": "Reviewer-facing overview of the bundle and recommended review order.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "01_run_summary/summary.json",
+    "original_source_path": "data/processed/final_quality_acceptance/post_calibration_run/summary.json",
+    "description": "Primary post-calibration run summary.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "01_run_summary/batch_config.json",
+    "original_source_path": "data/processed/final_quality_acceptance/post_calibration_run/batch_config.json",
+    "description": "Fixed batch configuration for the primary run.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "01_run_summary/seed_manifest.json",
+    "original_source_path": "data/processed/final_quality_acceptance/post_calibration_run/seed_manifest.json",
+    "description": "Seed manifest for deterministic generation requests.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "01_run_summary/policy_snapshot.json",
+    "original_source_path": "data/processed/final_quality_acceptance/post_calibration_run/policy_snapshot.json",
+    "description": "Policy snapshot for the primary run.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "01_run_summary/pre_calibration_summary.json",
+    "original_source_path": "data/processed/final_quality_acceptance/pre_calibration_run/summary.json",
+    "description": "Pre-calibration summary included for quick comparison context.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "02_topk_and_candidates/top_k.json",
+    "original_source_path": "data/processed/final_quality_acceptance/post_calibration_run/top_k.json",
+    "description": "Current post-calibration ranked top-k generated boards.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "02_topk_and_candidates/accepted.json",
+    "original_source_path": "data/processed/final_quality_acceptance/post_calibration_run/accepted.json",
+    "description": "Accepted-board export from the primary run.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "02_topk_and_candidates/borderline.json",
+    "original_source_path": "data/processed/final_quality_acceptance/post_calibration_run/borderline.json",
+    "description": "Borderline-board export from the primary run.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "02_topk_and_candidates/candidate_pool_sample.json",
+    "original_source_path": "data/processed/final_quality_acceptance/post_calibration_run/candidate_pool.json",
+    "description": "Reviewer-oriented sample from the oversized candidate pool.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "03_funnel_and_audit/funnel_report.json",
+    "original_source_path": "data/processed/final_quality_acceptance/post_calibration_run/funnel_report.json",
+    "description": "Machine-readable funnel report for the primary run.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "03_funnel_and_audit/funnel_report.md",
+    "original_source_path": "data/processed/final_quality_acceptance/post_calibration_run/funnel_report.md",
+    "description": "Narrative funnel report for the primary run.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "03_funnel_and_audit/quality_audit_report.json",
+    "original_source_path": "data/processed/final_quality_acceptance/post_calibration_run/quality_audit_report.json",
+    "description": "Benchmark quality audit for the primary run.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "03_funnel_and_audit/quality_audit_report.md",
+    "original_source_path": "data/processed/final_quality_acceptance/post_calibration_run/quality_audit_report.md",
+    "description": "Human-readable benchmark quality audit for the primary run.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "03_funnel_and_audit/calibration_summary.json",
+    "original_source_path": "data/processed/final_quality_acceptance/post_calibration_run/calibration_summary.json",
+    "description": "Calibration summary emitted with the primary run.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "03_funnel_and_audit/style_summary.json",
+    "original_source_path": "data/processed/final_quality_acceptance/post_calibration_run/style_summary.json",
+    "description": "Style summary for the primary run.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "03_funnel_and_audit/mechanism_mix_summary.json",
+    "original_source_path": "data/processed/final_quality_acceptance/post_calibration_run/mechanism_mix_summary.json",
+    "description": "Mechanism mix summary for generated boards.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "03_funnel_and_audit/threshold_diagnostics.json",
+    "original_source_path": "data/processed/final_quality_acceptance/post_calibration_run/threshold_diagnostics.json",
+    "description": "Threshold diagnostics for the primary run.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "03_funnel_and_audit/before_after_funnel_comparison.json",
+    "original_source_path": "data/processed/final_quality_acceptance/reports/before_after_funnel_comparison.json",
+    "description": "Stored before/after funnel comparison artifact.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "03_funnel_and_audit/before_after_funnel_comparison.md",
+    "original_source_path": "data/processed/final_quality_acceptance/reports/before_after_funnel_comparison.md",
+    "description": "Stored before/after funnel comparison summary.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "03_funnel_and_audit/calibration_before_after_summary.json",
+    "original_source_path": "data/processed/final_quality_acceptance/reports/calibration_before_after_summary.json",
+    "description": "Stored calibration before/after summary.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "03_funnel_and_audit/calibration_diff.json",
+    "original_source_path": "data/processed/final_quality_acceptance/reports/calibration_diff.json",
+    "description": "Focused calibration knob diff.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "03_funnel_and_audit/calibration_pass_notes.md",
+    "original_source_path": "data/processed/final_quality_acceptance/reports/calibration_pass_notes.md",
+    "description": "Calibration-pass rationale and notes.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "04_blind_review/blind_review_packet.json",
+    "original_source_path": "data/processed/final_quality_acceptance/blind_review/blind_review_packet.json",
+    "description": "Blind-review packet payload.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "04_blind_review/blind_review_packet.csv",
+    "original_source_path": "data/processed/final_quality_acceptance/blind_review/blind_review_packet.csv",
+    "description": "CSV view of the blind-review packet.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "04_blind_review/blind_review_instructions.md",
+    "original_source_path": "data/processed/final_quality_acceptance/blind_review/blind_review_instructions.md",
+    "description": "Reviewer instructions for blind evaluation.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "04_blind_review/reviewer_template.csv",
+    "original_source_path": "data/processed/final_quality_acceptance/blind_review/reviewer_template.csv",
+    "description": "Blank reviewer response template.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "04_blind_review/blind_review_results.json",
+    "original_source_path": "data/processed/final_quality_acceptance/blind_review/blind_review_results.json",
+    "description": "Current blind-review scoring output.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "04_blind_review/blind_review_results.md",
+    "original_source_path": "data/processed/final_quality_acceptance/blind_review/blind_review_results.md",
+    "description": "Human-readable blind-review scoring output.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "04_blind_review/final_quality_gate.json",
+    "original_source_path": "data/processed/final_quality_acceptance/blind_review/final_quality_gate.json",
+    "description": "Current formal gate status artifact.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "04_blind_review/final_quality_gate.md",
+    "original_source_path": "data/processed/final_quality_acceptance/blind_review/final_quality_gate.md",
+    "description": "Human-readable gate status summary.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "04_blind_review/HIDDEN_answer_key/blind_review_key.json",
+    "original_source_path": "data/processed/final_quality_acceptance/blind_review/blind_review_key.json",
+    "description": "Blind-review answer key, intentionally hidden during first-pass analysis.",
+    "hidden_during_first_blind_pass": true
+  },
+  {
+    "relative_path": "05_solve_playtest/solve_playtest_packet.json",
+    "original_source_path": "data/processed/final_quality_acceptance/solve_playtest/solve_playtest_packet.json",
+    "description": "Solve-playtest packet bundle.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "05_solve_playtest/solve_playtest_instructions.md",
+    "original_source_path": "data/processed/final_quality_acceptance/solve_playtest/solve_playtest_instructions.md",
+    "description": "Tester instructions for solve playtests.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "05_solve_playtest/solve_playtest_template.csv",
+    "original_source_path": "data/processed/final_quality_acceptance/solve_playtest/solve_playtest_template.csv",
+    "description": "Blank solve-playtest logging template.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "05_solve_playtest/solve_playtest_results.json",
+    "original_source_path": "data/processed/final_quality_acceptance/solve_playtest/solve_playtest_results.json",
+    "description": "Current solve-playtest scoring output.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "05_solve_playtest/solve_playtest_results.md",
+    "original_source_path": "data/processed/final_quality_acceptance/solve_playtest/solve_playtest_results.md",
+    "description": "Human-readable solve-playtest scoring output.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "05_solve_playtest/HIDDEN_answer_key/solve_playtest_key.json",
+    "original_source_path": "data/processed/final_quality_acceptance/solve_playtest/solve_playtest_key.json",
+    "description": "Solve-playtest answer key, intentionally hidden during initial review.",
+    "hidden_during_first_blind_pass": true
+  },
+  {
+    "relative_path": "06_reference_context/evaluation_methodology.md",
+    "original_source_path": "docs/evaluation_methodology.md",
+    "description": "Evaluation methodology reference.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "06_reference_context/final_quality_acceptance_sprint.md",
+    "original_source_path": "docs/final_quality_acceptance_sprint.md",
+    "description": "Final quality acceptance sprint note.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "06_reference_context/nyt_benchmark_quality_audit.md",
+    "original_source_path": "docs/nyt_benchmark_quality_audit.md",
+    "description": "NYT benchmark audit reference.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "06_reference_context/submission_checklist.md",
+    "original_source_path": "docs/submission_checklist.md",
+    "description": "Submission checklist reference.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "06_reference_context/release_candidate_validation.md",
+    "original_source_path": "docs/release_candidate_validation.md",
+    "description": "Release-candidate validation reference.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "07_missing_or_optional_notes/large_artifact_note.md",
+    "original_source_path": "generated",
+    "description": "Note about the omitted full candidate pool and included sample.",
+    "hidden_during_first_blind_pass": false
+  },
+  {
+    "relative_path": "07_missing_or_optional_notes/comparison_context_note.md",
+    "original_source_path": "generated",
+    "description": "Note explaining provenance of stored before/after comparison artifacts.",
+    "hidden_during_first_blind_pass": false
+  }
+]

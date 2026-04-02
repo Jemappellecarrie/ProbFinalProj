@@ -1,0 +1,87 @@
+{
+  "total_generation_requests": 200,
+  "persisted_candidate_count": 6000,
+  "selected_board_count": 200,
+  "top_review_candidate_count": 20,
+  "total_puzzle_candidates_seen": 273000,
+  "structurally_valid_count": 168000,
+  "structurally_invalid_count": 105000,
+  "structurally_invalid_reason_breakdown": {
+    "overlapping_words": 105000
+  },
+  "unique_board_count": 30,
+  "duplicate_board_count": 5970,
+  "duplicate_signature_breakdown": {
+    "board_0788be1f19f7": 200,
+    "board_09934ed52e12": 200,
+    "board_0b38cfcf1865": 200,
+    "board_0ec4b9e7e4ff": 200,
+    "board_125689a84d8c": 200,
+    "board_195c7aef5345": 200,
+    "board_1e7e0d30872a": 200,
+    "board_2608c37f5dbd": 200,
+    "board_34088dea2b37": 200,
+    "board_410b820eaba0": 200,
+    "board_488f5bd32ab1": 200,
+    "board_4de8a3a750bc": 200,
+    "board_4ebde038ab67": 200,
+    "board_543cb77c02e9": 200,
+    "board_6c73cc9a6d39": 200,
+    "board_6d856ceea097": 200,
+    "board_72229135b2bf": 200,
+    "board_877d58ff86b8": 200,
+    "board_8f71dfad2f62": 200,
+    "board_8f80925fcb75": 200,
+    "board_b6a4e2701ff4": 200,
+    "board_be87928bef6e": 200,
+    "board_bfa7cc13a9ad": 200,
+    "board_c03cf7eb3307": 200,
+    "board_c0f035f3b5ef": 200,
+    "board_d45ff05a8a2f": 200,
+    "board_e1c84aa82ee7": 200,
+    "board_e6545465f52d": 200,
+    "board_f9110fa9642c": 200,
+    "board_fba15d73dcee": 200
+  },
+  "selected_unique_board_count": 1,
+  "accepted_count": 0,
+  "borderline_count": 6000,
+  "rejected_count": 0,
+  "accepted_unique_count": 0,
+  "borderline_unique_count": 30,
+  "rejected_unique_count": 0,
+  "decision_percentages": {
+    "accept": 0.0,
+    "borderline": 1.0,
+    "reject": 0.0
+  },
+  "reject_reason_breakdown": {},
+  "warning_flag_breakdown": {
+    "Ambiguity analysis, verification, and ranking use the Stage 1 core plus Stage 3 phonetic, style-analysis, and calibration-aware bonuses.": 6000,
+    "Feature extraction, semantic generation, lexical/theme diversity, composition, and Stage 1 quality-control are active.": 6000,
+    "Stage 2 mixed-generation mode is active.": 6000
+  },
+  "top_cooccurring_reject_reasons": {},
+  "mechanism_mix_by_decision": {
+    "accept": {},
+    "borderline": {
+      "lexical+phonetic+semantic+theme": 5600,
+      "phonetic+semantic+theme": 400
+    },
+    "reject": {}
+  },
+  "mechanism_family_breakdown": {
+    "mixed": 6000,
+    "phonetic_inclusive": 6000
+  },
+  "top_k_unique_count": 20,
+  "collapse_diagnostics": {
+    "top_board_signature_share": 0.0333,
+    "top_solution_signature_share": 0.0333,
+    "top_mechanism_signature_share": 0.9333,
+    "repeated_top_k_pattern_count": 0
+  },
+  "diagnosis_notes": [
+    "Mechanism mix is concentrated in a narrow family of boards."
+  ]
+}

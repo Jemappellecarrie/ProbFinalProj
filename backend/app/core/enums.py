@@ -2,10 +2,10 @@
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 
-class GroupType(str, Enum):
+class GroupType(StrEnum):
     """High-level group generator families supported by the system."""
 
     SEMANTIC = "semantic"
@@ -14,18 +14,26 @@ class GroupType(str, Enum):
     THEME = "theme"
 
     @classmethod
-    def ordered(cls) -> list["GroupType"]:
+    def ordered(cls) -> list[GroupType]:
         return [cls.SEMANTIC, cls.LEXICAL, cls.PHONETIC, cls.THEME]
 
 
-class GenerationMode(str, Enum):
+class GenerationMode(StrEnum):
     """Execution mode for pipeline components."""
 
     DEMO = "demo"
     HUMAN_MIXED = "human_mixed"
 
 
-class RejectReasonCode(str, Enum):
+class VerificationDecision(StrEnum):
+    """Stage 1 verification classes used by ranking and batch evaluation."""
+
+    ACCEPT = "accept"
+    BORDERLINE = "borderline"
+    REJECT = "reject"
+
+
+class RejectReasonCode(StrEnum):
     """Machine-readable rejection categories for filtering/verifier steps."""
 
     DUPLICATE_WORD = "duplicate_word"

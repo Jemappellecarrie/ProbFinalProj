@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "response_count": 0,
+    "generated_publishable_rate": 0.0,
+    "benchmark_publishable_rate": 0.0,
+    "solved_rate": 0.0
+  },
+  "notes": [
+    "Solve-playtest summaries are descriptive and do not replace the blind-review gate."
+  ]
+}

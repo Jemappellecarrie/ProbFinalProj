@@ -6,13 +6,18 @@ from app.core.enums import GenerationMode
 from app.domain.value_objects import ComponentSelection
 from app.schemas.evaluation_models import AmbiguityReport, EnsembleSolverResult, StyleAnalysisReport
 from app.schemas.trace_models import GenerationTrace, TraceEvent
-from app.utils.ids import new_id
+from app.utils.ids import stable_id
 
 
 class TraceRecorder:
     """Collect lightweight pipeline events and build a trace payload."""
 
-    def __init__(self, request_id: str, mode: GenerationMode, components: ComponentSelection) -> None:
+    def __init__(
+        self,
+        request_id: str,
+        mode: GenerationMode,
+        components: ComponentSelection,
+    ) -> None:
         self._request_id = request_id
         self._mode = mode
         self._components = components
@@ -28,7 +33,14 @@ class TraceRecorder:
         style_analysis: StyleAnalysisReport | None = None,
     ) -> GenerationTrace:
         return GenerationTrace(
-            trace_id=new_id("trace"),
+            trace_id=stable_id(
+                "trace",
+                self._request_id,
+                self._mode.value,
+                self._components.feature_extractor,
+                self._components.generators,
+                len(self._events),
+            ),
             request_id=self._request_id,
             mode=self._mode,
             feature_extractor=self._components.feature_extractor,

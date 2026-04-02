@@ -1,0 +1,87 @@
+{
+  "total_generation_requests": 200,
+  "persisted_candidate_count": 1600,
+  "selected_board_count": 200,
+  "top_review_candidate_count": 8,
+  "total_puzzle_candidates_seen": 273000,
+  "structurally_valid_count": 168000,
+  "structurally_invalid_count": 105000,
+  "structurally_invalid_reason_breakdown": {
+    "overlapping_words": 105000
+  },
+  "unique_board_count": 8,
+  "unique_family_count": 8,
+  "duplicate_board_count": 1592,
+  "duplicate_signature_breakdown": {
+    "board_153093e2334b": 200,
+    "board_6d2c66e73399": 200,
+    "board_877d58ff86b8": 200,
+    "board_b50303b9f255": 200,
+    "board_b9719c8eba19": 200,
+    "board_cc069f091bba": 200,
+    "board_d45ff05a8a2f": 200,
+    "board_df02f0b05e2a": 200
+  },
+  "family_repetition_histogram": {
+    "editorial_family_4cc7692ee6a9": 200,
+    "editorial_family_53d27f6eda4c": 200,
+    "editorial_family_6f92bbc05394": 200,
+    "editorial_family_943f06a602e9": 200,
+    "editorial_family_948103a25f7c": 200,
+    "editorial_family_9e1186dd286e": 200,
+    "editorial_family_e7d4f3fb5758": 200,
+    "editorial_family_f8f09752850c": 200
+  },
+  "selected_unique_board_count": 1,
+  "accepted_count": 1000,
+  "borderline_count": 600,
+  "rejected_count": 0,
+  "accepted_unique_count": 5,
+  "borderline_unique_count": 3,
+  "rejected_unique_count": 0,
+  "decision_percentages": {
+    "accept": 0.625,
+    "borderline": 0.375,
+    "reject": 0.0
+  },
+  "reject_reason_breakdown": {},
+  "warning_flag_breakdown": {
+    "Ambiguity analysis, verification, and ranking use the Stage 1 core plus Stage 3 phonetic, style-analysis, and calibration-aware bonuses.": 1600,
+    "Feature extraction, semantic generation, lexical/theme diversity, composition, and Stage 1 quality-control are active.": 1600,
+    "Stage 2 mixed-generation mode is active.": 1600
+  },
+  "top_cooccurring_reject_reasons": {},
+  "mechanism_mix_by_decision": {
+    "accept": {
+      "lexical+semantic+theme": 600,
+      "phonetic+semantic+theme": 400
+    },
+    "borderline": {
+      "lexical+semantic+theme": 200,
+      "phonetic+semantic+theme": 200,
+      "semantic": 200
+    },
+    "reject": {}
+  },
+  "mechanism_family_breakdown": {
+    "mixed": 1400,
+    "phonetic_inclusive": 600,
+    "semantic_only": 200
+  },
+  "top_k_unique_count": 8,
+  "top_k_unique_family_count": 8,
+  "repeated_theme_family_count": 3,
+  "repeated_surface_wordplay_family_count": 7,
+  "formulaic_board_rate": 0.0,
+  "repeated_family_rate": 1.0,
+  "collapse_diagnostics": {
+    "top_board_signature_share": 0.125,
+    "top_solution_signature_share": 0.125,
+    "top_mechanism_signature_share": 0.5,
+    "top_editorial_family_share": 0.125,
+    "repeated_top_k_pattern_count": 0
+  },
+  "diagnosis_notes": [
+    "No dominant collapse mode crossed the report heuristics."
+  ]
+}

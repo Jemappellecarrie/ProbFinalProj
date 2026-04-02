@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# ruff: noqa: E402
 """Build processed demo feature artifacts from seed data."""
 
 from __future__ import annotations

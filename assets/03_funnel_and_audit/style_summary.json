@@ -1,0 +1,50 @@
+{
+  "target_version": "style_targets_v1",
+  "accepted": {
+    "style_metric_averages": {
+      "ambiguity_score": 0.119,
+      "coherence_trickiness_balance": 0.738,
+      "evidence_interpretability": 0.9625,
+      "label_token_mean": 2.0,
+      "label_token_std": 1.0,
+      "phonetic_group_count": 1.0,
+      "redundancy_score": 0.1,
+      "semantic_group_count": 1.0,
+      "semantic_wordplay_balance": 0.6667,
+      "style_alignment_score": 1.0,
+      "theme_group_count": 1.0,
+      "unique_group_type_count": 4.0,
+      "wordplay_group_count": 2.0
+    },
+    "board_archetype_counts": {
+      "balanced_mixed": 200
+    },
+    "out_of_band_flag_counts": {}
+  },
+  "rejected": {
+    "style_metric_averages": {},
+    "board_archetype_counts": {},
+    "out_of_band_flag_counts": {}
+  },
+  "top_k": {
+    "style_metric_averages": {
+      "ambiguity_score": 0.1202,
+      "coherence_trickiness_balance": 0.7403,
+      "evidence_interpretability": 0.9625,
+      "label_token_mean": 2.375,
+      "label_token_std": 0.9286,
+      "phonetic_group_count": 1.0,
+      "redundancy_score": 0.0929,
+      "semantic_group_count": 1.0,
+      "semantic_wordplay_balance": 0.6667,
+      "style_alignment_score": 1.0,
+      "theme_group_count": 1.0,
+      "unique_group_type_count": 4.0,
+      "wordplay_group_count": 2.0
+    },
+    "board_archetype_counts": {
+      "balanced_mixed": 20
+    },
+    "out_of_band_flag_counts": {}
+  }
+}

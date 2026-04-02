@@ -1,0 +1,149 @@
+{
+  "version": "style_targets_v1",
+  "notes": [
+    "These are local, benchmark-anchored target bands for Stage 3 calibration.",
+    "They are not claims of editorial truth or a solved NYT style model.",
+    "The purpose is to center style analysis on semantic-majority benchmark behavior and make inflation visible."
+  ],
+  "board_metrics": {
+    "unique_group_type_count": {
+      "min": 1.0,
+      "max": 2.0,
+      "description": "Benchmark holdout boards are usually semantic-majority rather than four-way mixed."
+    },
+    "semantic_group_count": {
+      "min": 2.5,
+      "max": 4.0,
+      "description": "Semantic-majority is the default healthy editorial prior."
+    },
+    "theme_group_count": {
+      "min": 0.0,
+      "max": 0.5,
+      "description": "Theme groups are allowed but rare in the benchmark center."
+    },
+    "phonetic_group_count": {
+      "min": 0.0,
+      "max": 0.5,
+      "description": "Phonetic groups should remain uncommon showcase mechanisms."
+    },
+    "wordplay_group_count": {
+      "min": 0.0,
+      "max": 1.0,
+      "description": "Wordplay is acceptable, but benchmark boards usually have zero or one wordplay group."
+    },
+    "label_token_mean": {
+      "min": 2.0,
+      "max": 3.5,
+      "description": "Category labels should feel natural and benchmark-like, not machine-short by default."
+    },
+    "label_token_std": {
+      "min": 0.8,
+      "max": 1.8,
+      "description": "Label shape can vary naturally across semantic-majority boards."
+    },
+    "evidence_interpretability": {
+      "min": 0.7,
+      "max": 1.0,
+      "description": "Groups should expose explicit evidence and understandable rule provenance."
+    },
+    "semantic_wordplay_balance": {
+      "min": 0.0,
+      "max": 0.35,
+      "description": "Benchmark holdout boards skew strongly toward semantic mass."
+    },
+    "coherence_trickiness_balance": {
+      "min": 0.2,
+      "max": 0.7,
+      "description": "Benchmark boards are often more straightforward than machine-mixed boards."
+    },
+    "ambiguity_score": {
+      "min": 0.0,
+      "max": 0.35,
+      "description": "High ambiguity remains undesirable even when style looks promising."
+    },
+    "earned_wordplay_score": {
+      "min": 0.0,
+      "max": 0.45,
+      "description": "Earned wordplay is allowed but should not dominate the board prior."
+    },
+    "editorial_flatness_score": {
+      "min": 0.0,
+      "max": 0.35,
+      "description": "Flat, mechanism-first boards should sit outside the benchmark center."
+    },
+    "family_repetition_risk": {
+      "min": 0.0,
+      "max": 0.25,
+      "description": "Benchmark-centered boards should not look like repeated machine families."
+    },
+    "family_saturation": {
+      "min": 0.0,
+      "max": 0.2,
+      "description": "Family saturation should stay low when the run is editorially healthy."
+    },
+    "formulaic_mix_score": {
+      "min": 0.0,
+      "max": 0.35,
+      "description": "Formulaic mixed templates should land outside the target center."
+    },
+    "microtheme_smallness": {
+      "min": 0.0,
+      "max": 0.25,
+      "description": "Tiny curated themes should be rare rather than a default ingredient."
+    },
+    "redundancy_score": {
+      "min": 0.6,
+      "max": 1.0,
+      "description": "Redundancy here reflects natural mechanism concentration in semantic-majority benchmark boards."
+    },
+    "surface_wordplay_group_count": {
+      "min": 0.0,
+      "max": 0.5,
+      "description": "Surface-only wordplay should stay uncommon."
+    },
+    "surface_wordplay_score": {
+      "min": 0.0,
+      "max": 0.4,
+      "description": "Surface-only lexical and phonetic families should rarely define the board."
+    },
+    "style_alignment_score": {
+      "min": 0.45,
+      "max": 0.85,
+      "description": "Boards should land near the benchmark-centered Stage 3 style bands without trivial inflation."
+    }
+  },
+  "distribution_targets": {
+    "group_mechanisms": {
+      "semantic": {
+        "min_share": 0.7,
+        "max_share": 1.0
+      },
+      "lexical": {
+        "min_share": 0.0,
+        "max_share": 0.2
+      },
+      "phonetic": {
+        "min_share": 0.0,
+        "max_share": 0.15
+      },
+      "theme": {
+        "min_share": 0.0,
+        "max_share": 0.15
+      }
+    },
+    "board_archetypes": {
+      "balanced_mixed": {
+        "min_share": 0.0,
+        "max_share": 0.2
+      },
+      "wordplay_showcase": {
+        "min_share": 0.0,
+        "max_share": 0.15
+      },
+      "semantic_heavy": {
+        "min_share": 0.7,
+        "max_share": 1.0
+      }
+    }
+  }
+}

@@ -1,0 +1,2732 @@
+{
+  "packet_name": "blind_review_seed_17",
+  "seed": 17,
+  "entries": [
+    {
+      "packet_board_id": "blind_board_001",
+      "review_order": 1,
+      "board_words": [
+        "DAYS",
+        "DONUT",
+        "PADDLE",
+        "RHYTHM",
+        "REGISTER",
+        "CATCH",
+        "TIME",
+        "CLOCK",
+        "METER",
+        "INCH",
+        "NOTICE",
+        "JUROR",
+        "MONTH",
+        "TIRED",
+        "BEAT",
+        "TAG"
+      ],
+      "solution_groups": [
+        {
+          "label": "CADENCE",
+          "words": [
+            "RHYTHM",
+            "BEAT",
+            "TIME",
+            "METER"
+          ]
+        },
+        {
+          "label": "ONE IN A GROUP OF TWELVE",
+          "words": [
+            "MONTH",
+            "JUROR",
+            "DONUT",
+            "INCH"
+          ]
+        },
+        {
+          "label": "PERCEIVE",
+          "words": [
+            "NOTICE",
+            "CLOCK",
+            "REGISTER",
+            "CATCH"
+          ]
+        },
+        {
+          "label": "DOG ___",
+          "words": [
+            "TAG",
+            "TIRED",
+            "DAYS",
+            "PADDLE"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_002",
+      "review_order": 2,
+      "board_words": [
+        "YIELD",
+        "GROSS",
+        "SLOW",
+        "MUTE",
+        "CALM",
+        "OIL",
+        "SNARE",
+        "SLEEPY",
+        "MAKE",
+        "STOP",
+        "QUIET",
+        "HOME",
+        "NET",
+        "EAR",
+        "VOLUME",
+        "KETTLE"
+      ],
+      "solution_groups": [
+        {
+          "label": "WORDS BEFORE \u201cDRUM\u201d",
+          "words": [
+            "SNARE",
+            "KETTLE",
+            "EAR",
+            "OIL"
+          ]
+        },
+        {
+          "label": "EARN",
+          "words": [
+            "YIELD",
+            "GROSS",
+            "MAKE",
+            "NET"
+          ]
+        },
+        {
+          "label": "HARDLY BUSTLING",
+          "words": [
+            "CALM",
+            "QUIET",
+            "SLOW",
+            "SLEEPY"
+          ]
+        },
+        {
+          "label": "REMOTE CONTROL FUNCTIONS",
+          "words": [
+            "VOLUME",
+            "STOP",
+            "HOME",
+            "MUTE"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_003",
+      "review_order": 3,
+      "board_words": [
+        "CONTROL",
+        "CHEESE",
+        "PROGRESSIVE",
+        "OPTION",
+        "SPILL",
+        "PAN",
+        "TELL",
+        "SHORT",
+        "CUP",
+        "DISH",
+        "RETURN",
+        "EMOTIONAL",
+        "COMMAND",
+        "POPULAR",
+        "BLAB",
+        "ALTERNATIVE"
+      ],
+      "solution_groups": [
+        {
+          "label": "___CAKE",
+          "words": [
+            "CUP",
+            "CHEESE",
+            "PAN",
+            "SHORT"
+          ]
+        },
+        {
+          "label": "DIVULGE",
+          "words": [
+            "SPILL",
+            "DISH",
+            "BLAB",
+            "TELL"
+          ]
+        },
+        {
+          "label": "WORDS ON A MAC KEYBOARD",
+          "words": [
+            "OPTION",
+            "CONTROL",
+            "RETURN",
+            "COMMAND"
+          ]
+        },
+        {
+          "label": "WORDS SHORTENED IN ROCK GENRES",
+          "words": [
+            "ALTERNATIVE",
+            "PROGRESSIVE",
+            "POPULAR",
+            "EMOTIONAL"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_004",
+      "review_order": 4,
+      "board_words": [
+        "MILK",
+        "PICKLE",
+        "FREEZE",
+        "SYRUP",
+        "BEANS",
+        "GRATE",
+        "GUTS",
+        "GNASH",
+        "HOT SAUCE",
+        "JAM",
+        "FERMENT",
+        "GRIND",
+        "TEA",
+        "CAN",
+        "SCRAPE",
+        "BUTTER"
+      ],
+      "solution_groups": [
+        {
+          "label": "BREAKFAST CONDIMENTS",
+          "words": [
+            "BUTTER",
+            "SYRUP",
+            "JAM",
+            "HOT SAUCE"
+          ]
+        },
+        {
+          "label": "WAYS TO PRESERVE FOOD",
+          "words": [
+            "PICKLE",
+            "FERMENT",
+            "FREEZE",
+            "CAN"
+          ]
+        },
+        {
+          "label": "RUB TOGETHER",
+          "words": [
+            "GRIND",
+            "SCRAPE",
+            "GNASH",
+            "GRATE"
+          ]
+        },
+        {
+          "label": "PROVERBIAL THINGS THAT ARE SPILLED",
+          "words": [
+            "TEA",
+            "GUTS",
+            "BEANS",
+            "MILK"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_005",
+      "review_order": 5,
+      "board_words": [
+        "MICHELANGELO",
+        "CASH",
+        "MERCURY",
+        "LEONARDO",
+        "VENUS",
+        "DONATELLO",
+        "EARTH",
+        "HEEL",
+        "MARS",
+        "RAPHAEL",
+        "MASH",
+        "KEEL",
+        "PEEL",
+        "REEL",
+        "BASH",
+        "DASH"
+      ],
+      "solution_groups": [
+        {
+          "label": "Teenage Mutant Ninja Turtles",
+          "words": [
+            "MICHELANGELO",
+            "LEONARDO",
+            "DONATELLO",
+            "RAPHAEL"
+          ]
+        },
+        {
+          "label": "Ends with -ASH",
+          "words": [
+            "DASH",
+            "CASH",
+            "MASH",
+            "BASH"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MARS",
+            "EARTH",
+            "VENUS",
+            "MERCURY"
+          ]
+        },
+        {
+          "label": "Rhymes with -EEL",
+          "words": [
+            "KEEL",
+            "PEEL",
+            "HEEL",
+            "REEL"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_006",
+      "review_order": 6,
+      "board_words": [
+        "MARS",
+        "CASH",
+        "SNOW",
+        "SNAP",
+        "TOPAZ",
+        "OPAL",
+        "JADE",
+        "MASH",
+        "SNUG",
+        "VENUS",
+        "EARTH",
+        "MERCURY",
+        "DASH",
+        "BASH",
+        "SNIP",
+        "RUBY"
+      ],
+      "solution_groups": [
+        {
+          "label": "Rhymes with -ASH",
+          "words": [
+            "BASH",
+            "CASH",
+            "DASH",
+            "MASH"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MERCURY",
+            "EARTH",
+            "MARS",
+            "VENUS"
+          ]
+        },
+        {
+          "label": "Starts with SN",
+          "words": [
+            "SNAP",
+            "SNUG",
+            "SNIP",
+            "SNOW"
+          ]
+        },
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_007",
+      "review_order": 7,
+      "board_words": [
+        "MICHELANGELO",
+        "RAPHAEL",
+        "LEONARDO",
+        "CAKE",
+        "CASH",
+        "MASH",
+        "MERCURY",
+        "EARTH",
+        "BASH",
+        "VENUS",
+        "LAKE",
+        "RAKE",
+        "MARS",
+        "DONATELLO",
+        "DASH",
+        "BAKE"
+      ],
+      "solution_groups": [
+        {
+          "label": "Planets",
+          "words": [
+            "MARS",
+            "EARTH",
+            "VENUS",
+            "MERCURY"
+          ]
+        },
+        {
+          "label": "Rhymes with -ASH",
+          "words": [
+            "BASH",
+            "CASH",
+            "DASH",
+            "MASH"
+          ]
+        },
+        {
+          "label": "Ends with -AKE",
+          "words": [
+            "BAKE",
+            "CAKE",
+            "RAKE",
+            "LAKE"
+          ]
+        },
+        {
+          "label": "Teenage Mutant Ninja Turtles",
+          "words": [
+            "MICHELANGELO",
+            "LEONARDO",
+            "DONATELLO",
+            "RAPHAEL"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_008",
+      "review_order": 8,
+      "board_words": [
+        "MULTI",
+        "SHOEBOX",
+        "BRICK",
+        "MUCHO",
+        "PICKLE",
+        "LIME",
+        "MOLTO",
+        "RELISH",
+        "ZEST",
+        "BEAUCOUP",
+        "MORTAR",
+        "GUSTO",
+        "MICROWAVE",
+        "JENNY",
+        "PASSION",
+        "FISH TANK"
+      ],
+      "solution_groups": [
+        {
+          "label": "RECTANGULAR PRISMS",
+          "words": [
+            "BRICK",
+            "SHOEBOX",
+            "MICROWAVE",
+            "FISH TANK"
+          ]
+        },
+        {
+          "label": "RHYME WITH U.S. COINS",
+          "words": [
+            "LIME",
+            "JENNY",
+            "MORTAR",
+            "PICKLE"
+          ]
+        },
+        {
+          "label": "\u201cMANY\u201d IN DIFFERENT LANGUAGES",
+          "words": [
+            "MUCHO",
+            "MULTI",
+            "BEAUCOUP",
+            "MOLTO"
+          ]
+        },
+        {
+          "label": "ENTHUSIASM",
+          "words": [
+            "PASSION",
+            "RELISH",
+            "GUSTO",
+            "ZEST"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_009",
+      "review_order": 9,
+      "board_words": [
+        "BROOD",
+        "LITTER",
+        "CABBAGE",
+        "SOUL",
+        "WORK",
+        "ROUGH",
+        "REFLECT",
+        "PONDER",
+        "CRAFT",
+        "POINT",
+        "NICOTINE",
+        "INTERRUPT",
+        "STARE",
+        "MUSE",
+        "TRADE",
+        "LINE"
+      ],
+      "solution_groups": [
+        {
+          "label": "CONTEMPLATE",
+          "words": [
+            "REFLECT",
+            "PONDER",
+            "MUSE",
+            "BROOD"
+          ]
+        },
+        {
+          "label": "RUDE THINGS TO DO",
+          "words": [
+            "STARE",
+            "LITTER",
+            "INTERRUPT",
+            "POINT"
+          ]
+        },
+        {
+          "label": "VOCATION",
+          "words": [
+            "WORK",
+            "CRAFT",
+            "TRADE",
+            "LINE"
+          ]
+        },
+        {
+          "label": "___ PATCH",
+          "words": [
+            "CABBAGE",
+            "SOUL",
+            "ROUGH",
+            "NICOTINE"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_010",
+      "review_order": 10,
+      "board_words": [
+        "JADE",
+        "MASH",
+        "SNIP",
+        "MICHELANGELO",
+        "CASH",
+        "SNUG",
+        "BASH",
+        "LEONARDO",
+        "DONATELLO",
+        "TOPAZ",
+        "DASH",
+        "SNAP",
+        "RAPHAEL",
+        "OPAL",
+        "RUBY",
+        "SNOW"
+      ],
+      "solution_groups": [
+        {
+          "label": "Teenage Mutant Ninja Turtles",
+          "words": [
+            "MICHELANGELO",
+            "LEONARDO",
+            "DONATELLO",
+            "RAPHAEL"
+          ]
+        },
+        {
+          "label": "Rhymes with -ASH",
+          "words": [
+            "BASH",
+            "CASH",
+            "DASH",
+            "MASH"
+          ]
+        },
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        },
+        {
+          "label": "Starts with SN",
+          "words": [
+            "SNAP",
+            "SNUG",
+            "SNIP",
+            "SNOW"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_011",
+      "review_order": 11,
+      "board_words": [
+        "RUBY",
+        "SNOW",
+        "SNAP",
+        "SNIP",
+        "PEEL",
+        "EARTH",
+        "SNUG",
+        "VENUS",
+        "JADE",
+        "MERCURY",
+        "HEEL",
+        "TOPAZ",
+        "KEEL",
+        "MARS",
+        "OPAL",
+        "REEL"
+      ],
+      "solution_groups": [
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        },
+        {
+          "label": "Rhymes with -EEL",
+          "words": [
+            "KEEL",
+            "PEEL",
+            "HEEL",
+            "REEL"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MERCURY",
+            "EARTH",
+            "MARS",
+            "VENUS"
+          ]
+        },
+        {
+          "label": "Starts with SN",
+          "words": [
+            "SNAP",
+            "SNUG",
+            "SNIP",
+            "SNOW"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_012",
+      "review_order": 12,
+      "board_words": [
+        "KEEP",
+        "STICKY",
+        "SAND",
+        "CHICKEN",
+        "FILE",
+        "SAVE",
+        "FAVORITE",
+        "BUTTER",
+        "STORE",
+        "PRESERVE",
+        "UNDER",
+        "SPREAD",
+        "GRIND",
+        "PARLAY",
+        "BUFF",
+        "LADY"
+      ],
+      "solution_groups": [
+        {
+          "label": "SPORTS GAMBLING TERMS",
+          "words": [
+            "PARLAY",
+            "SPREAD",
+            "UNDER",
+            "FAVORITE"
+          ]
+        },
+        {
+          "label": "SMOOTH USING FRICTION",
+          "words": [
+            "GRIND",
+            "SAND",
+            "BUFF",
+            "FILE"
+          ]
+        },
+        {
+          "label": "CONSERVE",
+          "words": [
+            "PRESERVE",
+            "SAVE",
+            "STORE",
+            "KEEP"
+          ]
+        },
+        {
+          "label": "WORDS BEFORE \u201cFINGERS\u201d",
+          "words": [
+            "BUTTER",
+            "CHICKEN",
+            "STICKY",
+            "LADY"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_013",
+      "review_order": 13,
+      "board_words": [
+        "OPAL",
+        "RAKE",
+        "JADE",
+        "MERCURY",
+        "RUBY",
+        "MARS",
+        "CAKE",
+        "HEEL",
+        "REEL",
+        "VENUS",
+        "PEEL",
+        "EARTH",
+        "KEEL",
+        "TOPAZ",
+        "LAKE",
+        "BAKE"
+      ],
+      "solution_groups": [
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        },
+        {
+          "label": "Ends with -AKE",
+          "words": [
+            "BAKE",
+            "CAKE",
+            "RAKE",
+            "LAKE"
+          ]
+        },
+        {
+          "label": "Rhymes with -EEL",
+          "words": [
+            "KEEL",
+            "PEEL",
+            "HEEL",
+            "REEL"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MERCURY",
+            "EARTH",
+            "MARS",
+            "VENUS"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_014",
+      "review_order": 14,
+      "board_words": [
+        "PEEL",
+        "HEEL",
+        "BLINKY",
+        "INKY",
+        "TOPAZ",
+        "REEL",
+        "PINKY",
+        "BAKE",
+        "OPAL",
+        "RUBY",
+        "CAKE",
+        "RAKE",
+        "CLYDE",
+        "KEEL",
+        "JADE",
+        "LAKE"
+      ],
+      "solution_groups": [
+        {
+          "label": "Ends with -AKE",
+          "words": [
+            "BAKE",
+            "CAKE",
+            "RAKE",
+            "LAKE"
+          ]
+        },
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        },
+        {
+          "label": "Rhymes with -EEL",
+          "words": [
+            "KEEL",
+            "PEEL",
+            "HEEL",
+            "REEL"
+          ]
+        },
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "PINKY",
+            "INKY",
+            "CLYDE",
+            "BLINKY"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_015",
+      "review_order": 15,
+      "board_words": [
+        "AIR",
+        "STREAM",
+        "BAY",
+        "STIR",
+        "TREE",
+        "BARK",
+        "SNARL",
+        "HOWL",
+        "GARNISH",
+        "CHAIN",
+        "PYRAMID",
+        "MUDDLE",
+        "STRAIN",
+        "LADDER",
+        "RUN",
+        "PLAY"
+      ],
+      "solution_groups": [
+        {
+          "label": "SOUND LIKE A DOG",
+          "words": [
+            "BAY",
+            "HOWL",
+            "BARK",
+            "SNARL"
+          ]
+        },
+        {
+          "label": "ORGANIZATIONAL STRUCTURES, METAPHORICALLY",
+          "words": [
+            "TREE",
+            "CHAIN",
+            "PYRAMID",
+            "LADDER"
+          ]
+        },
+        {
+          "label": "BROADCAST, AS ONLINE MEDIA",
+          "words": [
+            "RUN",
+            "AIR",
+            "STREAM",
+            "PLAY"
+          ]
+        },
+        {
+          "label": "COCKTAIL-MAKING VERBS",
+          "words": [
+            "STIR",
+            "STRAIN",
+            "MUDDLE",
+            "GARNISH"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_016",
+      "review_order": 16,
+      "board_words": [
+        "STAR",
+        "SPONGE",
+        "POLO",
+        "OXFORD",
+        "ZIT",
+        "BUBBLE",
+        "CORAL",
+        "FETT",
+        "PENN",
+        "PEARL",
+        "TEE",
+        "BOBA",
+        "FLANNEL",
+        "TORTE",
+        "TAPIOCA",
+        "JELLY"
+      ],
+      "solution_groups": [
+        {
+          "label": "MARINE INVERTEBRATES, FAMILIARLY",
+          "words": [
+            "SPONGE",
+            "STAR",
+            "JELLY",
+            "CORAL"
+          ]
+        },
+        {
+          "label": "STARTS OF PASTA NAMES",
+          "words": [
+            "TORTE",
+            "FETT",
+            "ZIT",
+            "PENN"
+          ]
+        },
+        {
+          "label": "KINDS OF SHIRTS",
+          "words": [
+            "POLO",
+            "OXFORD",
+            "FLANNEL",
+            "TEE"
+          ]
+        },
+        {
+          "label": "SPHERES IN MILK TEA",
+          "words": [
+            "BUBBLE",
+            "TAPIOCA",
+            "BOBA",
+            "PEARL"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_017",
+      "review_order": 17,
+      "board_words": [
+        "WRENCH",
+        "MAD",
+        "NIGHT",
+        "STRAP",
+        "BUD",
+        "YANK",
+        "HUB",
+        "MAN",
+        "BLOCK",
+        "JACK",
+        "BUB",
+        "TUG",
+        "KNEE",
+        "BOLSTER",
+        "JERK",
+        "MAT"
+      ],
+      "solution_groups": [
+        {
+          "label": "BUSTER",
+          "words": [
+            "BUD",
+            "JACK",
+            "BUB",
+            "MAN"
+          ]
+        },
+        {
+          "label": "WREST",
+          "words": [
+            "WRENCH",
+            "TUG",
+            "JERK",
+            "YANK"
+          ]
+        },
+        {
+          "label": "___CAP",
+          "words": [
+            "NIGHT",
+            "HUB",
+            "KNEE",
+            "MAD"
+          ]
+        },
+        {
+          "label": "YOGA ACCESSORIES",
+          "words": [
+            "STRAP",
+            "MAT",
+            "BOLSTER",
+            "BLOCK"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_018",
+      "review_order": 18,
+      "board_words": [
+        "MARS",
+        "CLYDE",
+        "TOPAZ",
+        "REEL",
+        "HEEL",
+        "PINKY",
+        "BLINKY",
+        "MERCURY",
+        "VENUS",
+        "KEEL",
+        "OPAL",
+        "PEEL",
+        "INKY",
+        "JADE",
+        "RUBY",
+        "EARTH"
+      ],
+      "solution_groups": [
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MARS",
+            "EARTH",
+            "VENUS",
+            "MERCURY"
+          ]
+        },
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "PINKY",
+            "INKY",
+            "CLYDE",
+            "BLINKY"
+          ]
+        },
+        {
+          "label": "Rhymes with -EEL",
+          "words": [
+            "KEEL",
+            "PEEL",
+            "HEEL",
+            "REEL"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_019",
+      "review_order": 19,
+      "board_words": [
+        "FRIDGE",
+        "COUNCIL",
+        "DROP",
+        "MOUNTAIN CLIMBER",
+        "BOAT",
+        "PANEL",
+        "RANGE",
+        "CABINET",
+        "CHANDELIER",
+        "PLANK",
+        "COUNTER",
+        "BOARD",
+        "CRUNCH",
+        "SINK",
+        "STUD",
+        "HOOP"
+      ],
+      "solution_groups": [
+        {
+          "label": "CORE EXERCISES",
+          "words": [
+            "PLANK",
+            "MOUNTAIN CLIMBER",
+            "BOAT",
+            "CRUNCH"
+          ]
+        },
+        {
+          "label": "KINDS OF EARRINGS",
+          "words": [
+            "STUD",
+            "DROP",
+            "HOOP",
+            "CHANDELIER"
+          ]
+        },
+        {
+          "label": "GROUP OF ADVISORS",
+          "words": [
+            "BOARD",
+            "COUNCIL",
+            "PANEL",
+            "CABINET"
+          ]
+        },
+        {
+          "label": "SEEN IN A KITCHEN",
+          "words": [
+            "FRIDGE",
+            "SINK",
+            "RANGE",
+            "COUNTER"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_020",
+      "review_order": 20,
+      "board_words": [
+        "SHRED",
+        "SIGNATURE",
+        "SYRUP",
+        "POWDER",
+        "TOTAL",
+        "EMPTY",
+        "GRAIN",
+        "EXHAUST",
+        "CUBE",
+        "TIP",
+        "ROCK",
+        "GROOVE",
+        "DRAIN",
+        "JAM",
+        "TAX",
+        "SAP"
+      ],
+      "solution_groups": [
+        {
+          "label": "DEPLETE",
+          "words": [
+            "DRAIN",
+            "EXHAUST",
+            "SAP",
+            "EMPTY"
+          ]
+        },
+        {
+          "label": "WORDS ON A RESTAURANT RECEIPT",
+          "words": [
+            "TAX",
+            "TIP",
+            "TOTAL",
+            "SIGNATURE"
+          ]
+        },
+        {
+          "label": "FORMS OF SUGAR",
+          "words": [
+            "POWDER",
+            "SYRUP",
+            "CUBE",
+            "GRAIN"
+          ]
+        },
+        {
+          "label": "PLAY MUSIC WITH PASSION",
+          "words": [
+            "JAM",
+            "GROOVE",
+            "SHRED",
+            "ROCK"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_021",
+      "review_order": 21,
+      "board_words": [
+        "INKY",
+        "TOPAZ",
+        "CAKE",
+        "BASH",
+        "OPAL",
+        "JADE",
+        "RUBY",
+        "CLYDE",
+        "PINKY",
+        "CASH",
+        "RAKE",
+        "LAKE",
+        "BLINKY",
+        "BAKE",
+        "MASH",
+        "DASH"
+      ],
+      "solution_groups": [
+        {
+          "label": "Ends with -AKE",
+          "words": [
+            "BAKE",
+            "CAKE",
+            "RAKE",
+            "LAKE"
+          ]
+        },
+        {
+          "label": "Rhymes with -ASH",
+          "words": [
+            "BASH",
+            "CASH",
+            "DASH",
+            "MASH"
+          ]
+        },
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        },
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "PINKY",
+            "INKY",
+            "CLYDE",
+            "BLINKY"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_022",
+      "review_order": 22,
+      "board_words": [
+        "LAKE",
+        "DONATELLO",
+        "MICHELANGELO",
+        "RAKE",
+        "TOPAZ",
+        "CASH",
+        "CAKE",
+        "RAPHAEL",
+        "JADE",
+        "LEONARDO",
+        "OPAL",
+        "DASH",
+        "BAKE",
+        "MASH",
+        "BASH",
+        "RUBY"
+      ],
+      "solution_groups": [
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        },
+        {
+          "label": "Ends with -AKE",
+          "words": [
+            "BAKE",
+            "CAKE",
+            "RAKE",
+            "LAKE"
+          ]
+        },
+        {
+          "label": "Rhymes with -ASH",
+          "words": [
+            "BASH",
+            "CASH",
+            "DASH",
+            "MASH"
+          ]
+        },
+        {
+          "label": "Teenage Mutant Ninja Turtles",
+          "words": [
+            "MICHELANGELO",
+            "LEONARDO",
+            "DONATELLO",
+            "RAPHAEL"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_023",
+      "review_order": 23,
+      "board_words": [
+        "PEEL",
+        "OPAL",
+        "TOPAZ",
+        "BLINKY",
+        "SNUG",
+        "INKY",
+        "SNOW",
+        "SNIP",
+        "JADE",
+        "HEEL",
+        "REEL",
+        "KEEL",
+        "PINKY",
+        "CLYDE",
+        "SNAP",
+        "RUBY"
+      ],
+      "solution_groups": [
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "PINKY",
+            "INKY",
+            "CLYDE",
+            "BLINKY"
+          ]
+        },
+        {
+          "label": "Rhymes with -EEL",
+          "words": [
+            "KEEL",
+            "PEEL",
+            "HEEL",
+            "REEL"
+          ]
+        },
+        {
+          "label": "Starts with SN",
+          "words": [
+            "SNAP",
+            "SNUG",
+            "SNIP",
+            "SNOW"
+          ]
+        },
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_024",
+      "review_order": 24,
+      "board_words": [
+        "TICK",
+        "CLOCK",
+        "ANT",
+        "CROSS",
+        "STRIKE",
+        "CRUMPLE",
+        "CLIP",
+        "SCRUNCH",
+        "CHECK",
+        "BUCKLE",
+        "BRANCH",
+        "MELTING",
+        "WAD",
+        "BALL",
+        "SNAP",
+        "HOOK"
+      ],
+      "solution_groups": [
+        {
+          "label": "FASTENERS",
+          "words": [
+            "CLIP",
+            "BUCKLE",
+            "SNAP",
+            "HOOK"
+          ]
+        },
+        {
+          "label": "DEPICTED IN DAL\u00cd\u2019S \u201cTHE PERSISTENCE OF MEMORY\u201d",
+          "words": [
+            "BRANCH",
+            "ANT",
+            "MELTING",
+            "CLOCK"
+          ]
+        },
+        {
+          "label": "CRUSH INTO A COMPACT SHAPE",
+          "words": [
+            "BALL",
+            "WAD",
+            "CRUMPLE",
+            "SCRUNCH"
+          ]
+        },
+        {
+          "label": "MARK AS COMPLETED",
+          "words": [
+            "CHECK",
+            "TICK",
+            "CROSS",
+            "STRIKE"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_025",
+      "review_order": 25,
+      "board_words": [
+        "MASH",
+        "CASH",
+        "DASH",
+        "BASH",
+        "JADE",
+        "BAKE",
+        "MARS",
+        "MERCURY",
+        "CAKE",
+        "LAKE",
+        "RAKE",
+        "RUBY",
+        "TOPAZ",
+        "EARTH",
+        "OPAL",
+        "VENUS"
+      ],
+      "solution_groups": [
+        {
+          "label": "Planets",
+          "words": [
+            "MERCURY",
+            "EARTH",
+            "MARS",
+            "VENUS"
+          ]
+        },
+        {
+          "label": "Ends with -AKE",
+          "words": [
+            "BAKE",
+            "CAKE",
+            "RAKE",
+            "LAKE"
+          ]
+        },
+        {
+          "label": "Rhymes with -ASH",
+          "words": [
+            "BASH",
+            "CASH",
+            "DASH",
+            "MASH"
+          ]
+        },
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_026",
+      "review_order": 26,
+      "board_words": [
+        "CASH",
+        "MARS",
+        "HEEL",
+        "KEEL",
+        "OPAL",
+        "VENUS",
+        "MASH",
+        "PEEL",
+        "TOPAZ",
+        "JADE",
+        "REEL",
+        "RUBY",
+        "EARTH",
+        "DASH",
+        "BASH",
+        "MERCURY"
+      ],
+      "solution_groups": [
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MERCURY",
+            "EARTH",
+            "MARS",
+            "VENUS"
+          ]
+        },
+        {
+          "label": "Ends with -ASH",
+          "words": [
+            "DASH",
+            "CASH",
+            "MASH",
+            "BASH"
+          ]
+        },
+        {
+          "label": "Rhymes with -EEL",
+          "words": [
+            "KEEL",
+            "PEEL",
+            "HEEL",
+            "REEL"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_027",
+      "review_order": 27,
+      "board_words": [
+        "KEEL",
+        "SNOW",
+        "VENUS",
+        "RAPHAEL",
+        "LEONARDO",
+        "MICHELANGELO",
+        "DONATELLO",
+        "HEEL",
+        "PEEL",
+        "SNUG",
+        "SNIP",
+        "REEL",
+        "MERCURY",
+        "EARTH",
+        "MARS",
+        "SNAP"
+      ],
+      "solution_groups": [
+        {
+          "label": "Teenage Mutant Ninja Turtles",
+          "words": [
+            "MICHELANGELO",
+            "LEONARDO",
+            "DONATELLO",
+            "RAPHAEL"
+          ]
+        },
+        {
+          "label": "Rhymes with -EEL",
+          "words": [
+            "KEEL",
+            "PEEL",
+            "HEEL",
+            "REEL"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MARS",
+            "EARTH",
+            "VENUS",
+            "MERCURY"
+          ]
+        },
+        {
+          "label": "Starts with SN",
+          "words": [
+            "SNAP",
+            "SNUG",
+            "SNIP",
+            "SNOW"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_028",
+      "review_order": 28,
+      "board_words": [
+        "LAMP",
+        "EARRING",
+        "BLUE",
+        "BULL",
+        "RUN",
+        "HEAD",
+        "TIRE",
+        "ERASER",
+        "VELVET",
+        "GALOSH",
+        "DIRECT",
+        "LEAD",
+        "CROSS",
+        "BALLOON",
+        "WISHES",
+        "HERRING"
+      ],
+      "solution_groups": [
+        {
+          "label": "RED ___",
+          "words": [
+            "HERRING",
+            "BULL",
+            "VELVET",
+            "CROSS"
+          ]
+        },
+        {
+          "label": "ASSOCIATED WITH THE GENIE IN \u201cALADDIN\u201d",
+          "words": [
+            "LAMP",
+            "EARRING",
+            "WISHES",
+            "BLUE"
+          ]
+        },
+        {
+          "label": "THINGS MADE OF RUBBER",
+          "words": [
+            "GALOSH",
+            "TIRE",
+            "ERASER",
+            "BALLOON"
+          ]
+        },
+        {
+          "label": "BE IN CHARGE OF",
+          "words": [
+            "HEAD",
+            "RUN",
+            "DIRECT",
+            "LEAD"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_029",
+      "review_order": 29,
+      "board_words": [
+        "EARTH",
+        "PINKY",
+        "CLYDE",
+        "KEEL",
+        "BLINKY",
+        "MERCURY",
+        "MARS",
+        "INKY",
+        "SNOW",
+        "REEL",
+        "SNAP",
+        "HEEL",
+        "VENUS",
+        "SNUG",
+        "SNIP",
+        "PEEL"
+      ],
+      "solution_groups": [
+        {
+          "label": "Rhymes with -EEL",
+          "words": [
+            "KEEL",
+            "PEEL",
+            "HEEL",
+            "REEL"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MARS",
+            "EARTH",
+            "VENUS",
+            "MERCURY"
+          ]
+        },
+        {
+          "label": "Starts with SN",
+          "words": [
+            "SNAP",
+            "SNUG",
+            "SNIP",
+            "SNOW"
+          ]
+        },
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "PINKY",
+            "INKY",
+            "CLYDE",
+            "BLINKY"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_030",
+      "review_order": 30,
+      "board_words": [
+        "RELATE",
+        "FELLOW",
+        "EQUATE",
+        "BOW",
+        "AFFILIATE",
+        "CHUM",
+        "LEGS",
+        "LIBERTY",
+        "WINGS",
+        "BAIT",
+        "STORM",
+        "ASSOCIATE",
+        "SUN",
+        "LURE",
+        "FLY",
+        "HORN"
+      ],
+      "solution_groups": [
+        {
+          "label": "THINK OF TOGETHER",
+          "words": [
+            "AFFILIATE",
+            "RELATE",
+            "EQUATE",
+            "ASSOCIATE"
+          ]
+        },
+        {
+          "label": "W.N.B.A. TEAMS",
+          "words": [
+            "LIBERTY",
+            "SUN",
+            "WINGS",
+            "STORM"
+          ]
+        },
+        {
+          "label": "LONG___",
+          "words": [
+            "BOW",
+            "FELLOW",
+            "HORN",
+            "LEGS"
+          ]
+        },
+        {
+          "label": "WAYS TO ATTRACT FISH",
+          "words": [
+            "CHUM",
+            "LURE",
+            "BAIT",
+            "FLY"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_031",
+      "review_order": 31,
+      "board_words": [
+        "CLOVE",
+        "GRUMBLE",
+        "STALK",
+        "SPEAR",
+        "CARP",
+        "BELLYACHE",
+        "BLINDFOLD",
+        "RESOLUTION",
+        "ROBE",
+        "RAM",
+        "CRAB",
+        "STORAGE",
+        "SCALES",
+        "SWORD",
+        "FLORET",
+        "SPEED"
+      ],
+      "solution_groups": [
+        {
+          "label": "LAPTOP SPECS",
+          "words": [
+            "STORAGE",
+            "SPEED",
+            "RESOLUTION",
+            "RAM"
+          ]
+        },
+        {
+          "label": "VEGETABLE UNITS",
+          "words": [
+            "FLORET",
+            "SPEAR",
+            "CLOVE",
+            "STALK"
+          ]
+        },
+        {
+          "label": "COMPLAIN",
+          "words": [
+            "GRUMBLE",
+            "CRAB",
+            "CARP",
+            "BELLYACHE"
+          ]
+        },
+        {
+          "label": "FEATURES OF JUSTICE PERSONIFIED",
+          "words": [
+            "BLINDFOLD",
+            "ROBE",
+            "SCALES",
+            "SWORD"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_032",
+      "review_order": 32,
+      "board_words": [
+        "MICHELANGELO",
+        "MARS",
+        "MERCURY",
+        "SNOW",
+        "CASH",
+        "VENUS",
+        "DASH",
+        "SNUG",
+        "LEONARDO",
+        "SNAP",
+        "EARTH",
+        "BASH",
+        "RAPHAEL",
+        "MASH",
+        "DONATELLO",
+        "SNIP"
+      ],
+      "solution_groups": [
+        {
+          "label": "Planets",
+          "words": [
+            "MARS",
+            "EARTH",
+            "VENUS",
+            "MERCURY"
+          ]
+        },
+        {
+          "label": "Teenage Mutant Ninja Turtles",
+          "words": [
+            "MICHELANGELO",
+            "LEONARDO",
+            "DONATELLO",
+            "RAPHAEL"
+          ]
+        },
+        {
+          "label": "Starts with SN",
+          "words": [
+            "SNAP",
+            "SNUG",
+            "SNIP",
+            "SNOW"
+          ]
+        },
+        {
+          "label": "Rhymes with -ASH",
+          "words": [
+            "BASH",
+            "CASH",
+            "DASH",
+            "MASH"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_033",
+      "review_order": 33,
+      "board_words": [
+        "BARB",
+        "MINIATURE",
+        "FIGURE",
+        "SHOVEL",
+        "DIG",
+        "OCTOPUS",
+        "SAND",
+        "SLIGHT",
+        "PEPPER",
+        "MODEL",
+        "SALT",
+        "DOLL",
+        "CRACK",
+        "WHO",
+        "NO",
+        "PLOW"
+      ],
+      "solution_groups": [
+        {
+          "label": "USED TO CLEAR SNOW",
+          "words": [
+            "SAND",
+            "SHOVEL",
+            "PLOW",
+            "SALT"
+          ]
+        },
+        {
+          "label": "SMALL LIKENESS",
+          "words": [
+            "MINIATURE",
+            "FIGURE",
+            "MODEL",
+            "DOLL"
+          ]
+        },
+        {
+          "label": "PUTDOWN",
+          "words": [
+            "DIG",
+            "SLIGHT",
+            "CRACK",
+            "BARB"
+          ]
+        },
+        {
+          "label": "DOCTORS IN POP CULTURE",
+          "words": [
+            "NO",
+            "PEPPER",
+            "WHO",
+            "OCTOPUS"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_034",
+      "review_order": 34,
+      "board_words": [
+        "FISH",
+        "CLOISTER",
+        "SEPARATE",
+        "PROMO",
+        "HUNT",
+        "SILO",
+        "TRACTOR",
+        "GATHER",
+        "RAVEN",
+        "FARM",
+        "DISCOG",
+        "BALLY",
+        "AXLES",
+        "HITCH",
+        "SECLUDE",
+        "TRAILER"
+      ],
+      "solution_groups": [
+        {
+          "label": "WAYS TO GET FOOD",
+          "words": [
+            "GATHER",
+            "FISH",
+            "FARM",
+            "HUNT"
+          ]
+        },
+        {
+          "label": "KEEP APART",
+          "words": [
+            "SILO",
+            "SEPARATE",
+            "CLOISTER",
+            "SECLUDE"
+          ]
+        },
+        {
+          "label": "PARTS OF A BIG RIG",
+          "words": [
+            "HITCH",
+            "TRAILER",
+            "AXLES",
+            "TRACTOR"
+          ]
+        },
+        {
+          "label": "DANCE EVENTS PLUS A LETTER",
+          "words": [
+            "DISCOG",
+            "RAVEN",
+            "BALLY",
+            "PROMO"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_035",
+      "review_order": 35,
+      "board_words": [
+        "DASH",
+        "BASH",
+        "SNAP",
+        "JADE",
+        "OPAL",
+        "MASH",
+        "TOPAZ",
+        "CLYDE",
+        "CASH",
+        "RUBY",
+        "INKY",
+        "SNUG",
+        "BLINKY",
+        "SNOW",
+        "PINKY",
+        "SNIP"
+      ],
+      "solution_groups": [
+        {
+          "label": "Rhymes with -ASH",
+          "words": [
+            "BASH",
+            "CASH",
+            "DASH",
+            "MASH"
+          ]
+        },
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "PINKY",
+            "INKY",
+            "CLYDE",
+            "BLINKY"
+          ]
+        },
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        },
+        {
+          "label": "Starts with SN",
+          "words": [
+            "SNAP",
+            "SNUG",
+            "SNIP",
+            "SNOW"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_036",
+      "review_order": 36,
+      "board_words": [
+        "BAR",
+        "LIGHT BULB",
+        "KNOCK-KNOCK",
+        "CHICKEN",
+        "PILLOW",
+        "YODEL",
+        "SNOWBALL",
+        "DEVIL DOG",
+        "AM",
+        "HAM",
+        "SATELLITE",
+        "WALKIE-TALKIE",
+        "WATER BALLOON",
+        "HOHO",
+        "DING DONG",
+        "FOOD"
+      ],
+      "solution_groups": [
+        {
+          "label": "CLASSIC JOKE STAPLES",
+          "words": [
+            "KNOCK-KNOCK",
+            "CHICKEN",
+            "BAR",
+            "LIGHT BULB"
+          ]
+        },
+        {
+          "label": "SNACK CAKES",
+          "words": [
+            "HOHO",
+            "YODEL",
+            "DING DONG",
+            "DEVIL DOG"
+          ]
+        },
+        {
+          "label": "KINDS OF PLAY FIGHTS",
+          "words": [
+            "SNOWBALL",
+            "WATER BALLOON",
+            "FOOD",
+            "PILLOW"
+          ]
+        },
+        {
+          "label": "TYPES OF RADIO",
+          "words": [
+            "WALKIE-TALKIE",
+            "HAM",
+            "SATELLITE",
+            "AM"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_037",
+      "review_order": 37,
+      "board_words": [
+        "BAKE",
+        "RAKE",
+        "EARTH",
+        "MICHELANGELO",
+        "VENUS",
+        "SNOW",
+        "MERCURY",
+        "LAKE",
+        "CAKE",
+        "SNAP",
+        "MARS",
+        "SNIP",
+        "RAPHAEL",
+        "SNUG",
+        "LEONARDO",
+        "DONATELLO"
+      ],
+      "solution_groups": [
+        {
+          "label": "Rhymes with -AKE",
+          "words": [
+            "RAKE",
+            "LAKE",
+            "BAKE",
+            "CAKE"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MARS",
+            "EARTH",
+            "VENUS",
+            "MERCURY"
+          ]
+        },
+        {
+          "label": "Starts with SN",
+          "words": [
+            "SNAP",
+            "SNUG",
+            "SNIP",
+            "SNOW"
+          ]
+        },
+        {
+          "label": "Teenage Mutant Ninja Turtles",
+          "words": [
+            "MICHELANGELO",
+            "LEONARDO",
+            "DONATELLO",
+            "RAPHAEL"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_038",
+      "review_order": 38,
+      "board_words": [
+        "EARTH",
+        "LAKE",
+        "BLINKY",
+        "INKY",
+        "PINKY",
+        "RAKE",
+        "BAKE",
+        "MERCURY",
+        "SNUG",
+        "CLYDE",
+        "VENUS",
+        "SNOW",
+        "SNIP",
+        "SNAP",
+        "MARS",
+        "CAKE"
+      ],
+      "solution_groups": [
+        {
+          "label": "Starts with SN",
+          "words": [
+            "SNAP",
+            "SNUG",
+            "SNIP",
+            "SNOW"
+          ]
+        },
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "PINKY",
+            "INKY",
+            "CLYDE",
+            "BLINKY"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MARS",
+            "EARTH",
+            "VENUS",
+            "MERCURY"
+          ]
+        },
+        {
+          "label": "Rhymes with -AKE",
+          "words": [
+            "RAKE",
+            "LAKE",
+            "BAKE",
+            "CAKE"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_039",
+      "review_order": 39,
+      "board_words": [
+        "SNUG",
+        "BLINKY",
+        "CASH",
+        "MARS",
+        "MERCURY",
+        "SNOW",
+        "BASH",
+        "CLYDE",
+        "SNIP",
+        "PINKY",
+        "INKY",
+        "MASH",
+        "VENUS",
+        "DASH",
+        "SNAP",
+        "EARTH"
+      ],
+      "solution_groups": [
+        {
+          "label": "Starts with SN",
+          "words": [
+            "SNAP",
+            "SNUG",
+            "SNIP",
+            "SNOW"
+          ]
+        },
+        {
+          "label": "Rhymes with -ASH",
+          "words": [
+            "BASH",
+            "CASH",
+            "DASH",
+            "MASH"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MARS",
+            "EARTH",
+            "VENUS",
+            "MERCURY"
+          ]
+        },
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "PINKY",
+            "INKY",
+            "CLYDE",
+            "BLINKY"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    },
+    {
+      "packet_board_id": "blind_board_040",
+      "review_order": 40,
+      "board_words": [
+        "SIGN",
+        "INSURANCE",
+        "INVOICE",
+        "VACATION",
+        "BANKNOTE",
+        "SALARY",
+        "CUT",
+        "GIVEAWAY",
+        "BEAK",
+        "TELL",
+        "WILLIAM",
+        "BONUS",
+        "DEAL",
+        "FAN",
+        "FLAG",
+        "SHUFFLE"
+      ],
+      "solution_groups": [
+        {
+          "label": "WHAT \u201cBILL\u201d MIGHT REFER TO",
+          "words": [
+            "BEAK",
+            "BANKNOTE",
+            "INVOICE",
+            "WILLIAM"
+          ]
+        },
+        {
+          "label": "THINGS TO DO WITH A DECK OF CARDS",
+          "words": [
+            "CUT",
+            "SHUFFLE",
+            "DEAL",
+            "FAN"
+          ]
+        },
+        {
+          "label": "PARTS OF A COMPENSATION PACKAGE",
+          "words": [
+            "INSURANCE",
+            "VACATION",
+            "SALARY",
+            "BONUS"
+          ]
+        },
+        {
+          "label": "INDICATION",
+          "words": [
+            "TELL",
+            "SIGN",
+            "FLAG",
+            "GIVEAWAY"
+          ]
+        }
+      ],
+      "review_fields": [
+        "unique_clear_grouping",
+        "fair_not_forced",
+        "labels_feel_natural",
+        "aha_satisfaction",
+        "publishable",
+        "notes"
+      ]
+    }
+  ],
+  "notes": [
+    "Reviewer-facing packet hides each board's source.",
+    "Board word order and solution-group order are deterministically shuffled.",
+    "Requested 40 boards and used 40 available boards.",
+    "No packet shortfall for the requested sample sizes."
+  ]
+}

@@ -1,0 +1,23 @@
+# Submission Checklist
+
+- [ ] Repository link is correct and accessible.
+- [ ] `README.md` explains setup, running, tests, evaluation, artifacts, and current scope.
+- [ ] `docs/ai_usage.md` is complete and accurate for the final submission.
+- [ ] `docs/demo_walkthrough.md` reflects the final demo flow.
+- [ ] `docs/evaluation_methodology.md` matches the current artifact bundle and decision semantics.
+- [ ] `docs/release_candidate_validation.md` matches the final validation commands.
+- [ ] Backend tests pass.
+- [ ] Ruff lint passes.
+- [ ] Ruff format check passes.
+- [ ] Frontend build passes.
+- [ ] A non-demo batch evaluation run has been produced.
+- [ ] A final quality acceptance pre/post run bundle exists under `data/processed/final_quality_acceptance/`.
+- [ ] `funnel_report.json` / `funnel_report.md` exist for the acceptance run.
+- [ ] Blind review packet materials exist, or the generated-board shortfall is documented honestly.
+- [ ] Solve-playtest packet materials exist.
+- [ ] The final quality gate is either scored from real reviewer input or explicitly marked unresolved.
+- [ ] `release_summary.json` and `release_summary.md` exist for the final evaluation run.
+- [ ] Artifact locations for screenshots, traces, and evaluation outputs are known to the team.
+- [ ] Group-member and submission-form reporting is complete.
+- [ ] Any additional AI usage outside the tracked Stage 4 pass has been appended to `docs/ai_usage.md`.
+- [ ] Final claims remain honest about heuristics, thresholds, and unresolved editorial judgment.

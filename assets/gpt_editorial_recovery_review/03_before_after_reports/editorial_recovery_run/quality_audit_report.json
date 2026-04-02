@@ -1,0 +1,295 @@
+{
+  "report_version": "quality_audit_v1",
+  "generated_run_id": "final_quality_acceptance",
+  "generated_top_k_count": 8,
+  "benchmark_calibration_count": 502,
+  "benchmark_holdout_count": 126,
+  "split_policy": "primary oldest 80% calibration / newest 20% holdout; newer supplement-only boards freshness split",
+  "generated_quality_buckets": {
+    "accepted_high_confidence": 5,
+    "accepted_borderline": 3,
+    "rejected": 0
+  },
+  "benchmark_quality_buckets": {
+    "accepted_high_confidence": 34,
+    "accepted_borderline": 83,
+    "rejected": 9
+  },
+  "comparison_sections": {
+    "verification_decision_distribution": {
+      "generated_counts": {
+        "accept": 5,
+        "borderline": 3
+      },
+      "benchmark_counts": {
+        "accept": 34,
+        "borderline": 83,
+        "reject": 9
+      },
+      "generated_shares": {
+        "accept": 0.625,
+        "borderline": 0.375
+      },
+      "benchmark_shares": {
+        "accept": 0.2698,
+        "borderline": 0.6587,
+        "reject": 0.0714
+      },
+      "l1_distance": 0.7103
+    },
+    "score_distribution_summary": {
+      "ambiguity_penalty_mean": {
+        "generated": 0.1483,
+        "benchmark": 0.151,
+        "absolute_delta": 0.0027
+      },
+      "coherence_mean": {
+        "generated": 0.8701,
+        "benchmark": 0.7786,
+        "absolute_delta": 0.0915
+      },
+      "human_likeness_mean": {
+        "generated": 0.8125,
+        "benchmark": 0.5053,
+        "absolute_delta": 0.3072
+      },
+      "overall_mean": {
+        "generated": 0.7714,
+        "benchmark": 0.5108,
+        "absolute_delta": 0.2606
+      }
+    },
+    "mechanism_mix_distribution": {
+      "generated_counts": {
+        "lexical": 4,
+        "phonetic": 3,
+        "semantic": 18,
+        "theme": 7
+      },
+      "benchmark_counts": {
+        "lexical": 19,
+        "phonetic": 8,
+        "semantic": 469,
+        "theme": 8
+      },
+      "generated_shares": {
+        "lexical": 0.125,
+        "phonetic": 0.0938,
+        "semantic": 0.5625,
+        "theme": 0.2188
+      },
+      "benchmark_shares": {
+        "lexical": 0.0377,
+        "phonetic": 0.0159,
+        "semantic": 0.9306,
+        "theme": 0.0159
+      },
+      "l1_distance": 0.7362
+    },
+    "style_distance_summary": {
+      "ambiguity_score": {
+        "generated": 0.1483,
+        "benchmark": 0.151,
+        "absolute_delta": 0.0027
+      },
+      "coherence_trickiness_balance": {
+        "generated": 0.5591,
+        "benchmark": 0.3369,
+        "absolute_delta": 0.2222
+      },
+      "earned_wordplay_score": {
+        "generated": 0.2687,
+        "benchmark": 0.0915,
+        "absolute_delta": 0.1772
+      },
+      "editorial_flatness_score": {
+        "generated": 0.5484,
+        "benchmark": 0.1541,
+        "absolute_delta": 0.3943
+      },
+      "editorial_payoff_score": {
+        "generated": 0.7894,
+        "benchmark": 0.7934,
+        "absolute_delta": 0.004
+      },
+      "evidence_interpretability": {
+        "generated": 0.9547,
+        "benchmark": 0.9508,
+        "absolute_delta": 0.0039
+      },
+      "family_repetition_risk": {
+        "generated": 0.3073,
+        "benchmark": 0.0867,
+        "absolute_delta": 0.2206
+      },
+      "family_saturation": {
+        "generated": 0.3594,
+        "benchmark": 0.052,
+        "absolute_delta": 0.3074
+      },
+      "formulaic_mix_score": {
+        "generated": 0.5953,
+        "benchmark": 0.1566,
+        "absolute_delta": 0.4387
+      },
+      "label_naturalness_score": {
+        "generated": 0.8828,
+        "benchmark": 0.8129,
+        "absolute_delta": 0.0699
+      },
+      "label_token_mean": {
+        "generated": 2.0625,
+        "benchmark": 2.9226,
+        "absolute_delta": 0.8601
+      },
+      "label_token_std": {
+        "generated": 1.1439,
+        "benchmark": 1.6523,
+        "absolute_delta": 0.5084
+      },
+      "microtheme_smallness": {
+        "generated": 0.1313,
+        "benchmark": 0.054,
+        "absolute_delta": 0.0773
+      },
+      "phonetic_group_count": {
+        "generated": 0.375,
+        "benchmark": 0.0635,
+        "absolute_delta": 0.3115
+      },
+      "phrase_template_payoff_score": {
+        "generated": 0.7894,
+        "benchmark": 0.7934,
+        "absolute_delta": 0.004
+      },
+      "redundancy_score": {
+        "generated": 0.5311,
+        "benchmark": 0.9491,
+        "absolute_delta": 0.418
+      },
+      "repeated_pattern_family_score": {
+        "generated": 0.0,
+        "benchmark": 0.0,
+        "absolute_delta": 0.0
+      },
+      "semantic_group_count": {
+        "generated": 2.25,
+        "benchmark": 3.7222,
+        "absolute_delta": 1.4722
+      },
+      "semantic_wordplay_balance": {
+        "generated": 0.2916,
+        "benchmark": 0.0549,
+        "absolute_delta": 0.2367
+      },
+      "style_alignment_score": {
+        "generated": 0.8125,
+        "benchmark": 0.5053,
+        "absolute_delta": 0.3072
+      },
+      "surface_wordplay_group_count": {
+        "generated": 0.875,
+        "benchmark": 0.0,
+        "absolute_delta": 0.875
+      },
+      "surface_wordplay_score": {
+        "generated": 0.8063,
+        "benchmark": 0.1165,
+        "absolute_delta": 0.6898
+      },
+      "theme_group_count": {
+        "generated": 0.875,
+        "benchmark": 0.0635,
+        "absolute_delta": 0.8115
+      },
+      "unique_group_type_count": {
+        "generated": 2.75,
+        "benchmark": 1.2778,
+        "absolute_delta": 1.4722
+      },
+      "weak_label_naturalness_score": {
+        "generated": 0.1172,
+        "benchmark": 0.1871,
+        "absolute_delta": 0.0699
+      },
+      "wordplay_group_count": {
+        "generated": 0.875,
+        "benchmark": 0.2143,
+        "absolute_delta": 0.6607
+      }
+    },
+    "label_shape_summary": {
+      "label_token_mean": {
+        "generated": 2.0625,
+        "benchmark": 2.9226,
+        "absolute_delta": 0.8601
+      },
+      "label_token_std": {
+        "generated": 1.1439,
+        "benchmark": 1.6523,
+        "absolute_delta": 0.5084
+      }
+    },
+    "board_diversity_summary": {
+      "phonetic_group_count": {
+        "generated": 0.375,
+        "benchmark": 0.0635,
+        "absolute_delta": 0.3115
+      },
+      "semantic_group_count": {
+        "generated": 2.25,
+        "benchmark": 3.7222,
+        "absolute_delta": 1.4722
+      },
+      "theme_group_count": {
+        "generated": 0.875,
+        "benchmark": 0.0635,
+        "absolute_delta": 0.8115
+      },
+      "unique_group_type_count": {
+        "generated": 2.75,
+        "benchmark": 1.2778,
+        "absolute_delta": 1.4722
+      },
+      "wordplay_group_count": {
+        "generated": 0.875,
+        "benchmark": 0.2143,
+        "absolute_delta": 0.6607
+      }
+    },
+    "ambiguity_summary": {
+      "alternative_group_pressure_mean": {
+        "generated": 0.0,
+        "benchmark": 0.0223,
+        "absolute_delta": 0.0223
+      },
+      "board_pressure_mean": {
+        "generated": 0.1483,
+        "benchmark": 0.151,
+        "absolute_delta": 0.0027
+      },
+      "leakage_penalty_mean": {
+        "generated": 0.1483,
+        "benchmark": 0.151,
+        "absolute_delta": 0.0027
+      }
+    }
+  },
+  "quality_gate_summary": {
+    "machine_publishable_proxy": {
+      "rate": 0.625,
+      "definition": "Share of generated top-k boards with verifier decision 'accept'.",
+      "not_human_gate": true
+    },
+    "default_human_gate": {
+      "threshold_rate": 0.4,
+      "definition": "At least 40% of reviewed generated boards are publishable by majority vote.",
+      "human_rating_required": true
+    }
+  },
+  "notes": [
+    "Benchmark-side verifier and scorer outputs use an answer-aware local solver for audit only.",
+    "Mechanism proportions on the benchmark are based on conservative heuristic labeling.",
+    "Automatic audit supports review prioritization but does not satisfy the final publishable-rate claim."
+  ]
+}

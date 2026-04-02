@@ -185,6 +185,11 @@ input {
   color: var(--danger);
 }
 
+.pill:not(.passed):not(.failed) {
+  background: rgba(215, 164, 80, 0.16);
+  color: var(--ink);
+}
+
 .board-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

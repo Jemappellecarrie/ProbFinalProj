@@ -1,0 +1,12 @@
+{
+  "gate_name": "generated_publishable_majority_40_percent",
+  "threshold_rate": 0.4,
+  "actual_rate": null,
+  "passed": null,
+  "resolved": false,
+  "evaluated_board_count": 0,
+  "notes": [
+    "No completed generated-board reviews were provided.",
+    "The final 40% gate remains unresolved until real reviewer forms are scored."
+  ]
+}

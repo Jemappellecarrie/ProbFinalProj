@@ -1,0 +1,647 @@
+{
+  "target_version": "style_targets_v1",
+  "accepted": {
+    "slice_name": "accepted",
+    "puzzle_count": 200,
+    "verification_decision_counts": {
+      "borderline": 200
+    },
+    "mechanism_mix_counts": {
+      "lexical": 200,
+      "phonetic": 200,
+      "semantic": 200,
+      "theme": 200
+    },
+    "average_group_type_counts": {
+      "lexical": 1.0,
+      "phonetic": 1.0,
+      "semantic": 1.0,
+      "theme": 1.0
+    },
+    "board_type_signature_counts": {
+      "lexical+phonetic+semantic+theme": 200
+    },
+    "mixed_board_rate": 1.0,
+    "ambiguity_metrics": {
+      "ambiguity_score": 0.119
+    },
+    "scorer_component_averages": {
+      "alternative_group_penalty": 0.0,
+      "ambiguity_penalty": 0.119,
+      "board_balance": 0.6999,
+      "composer_ranking_score": 4.0746,
+      "decision_penalty": 0.05,
+      "evidence_quality": 1.0,
+      "group_coherence": 0.8395,
+      "leakage_penalty": 0.1314,
+      "mixed_mechanism_bonus": 0.03,
+      "phonetic_showcase_bonus": 0.03,
+      "style_alignment_bonus": 0.08,
+      "style_monotony_penalty": 0.0,
+      "style_out_of_band_penalty": 0.0,
+      "weakest_group_support": 0.673,
+      "wordplay_bonus": 0.08
+    },
+    "label_shape_summary": {
+      "label_token_mean": 2.0,
+      "label_token_std": 1.0
+    },
+    "board_diversity_summary": {
+      "phonetic_group_count": 1.0,
+      "semantic_group_count": 1.0,
+      "theme_group_count": 1.0,
+      "unique_group_type_count": 4.0,
+      "wordplay_group_count": 2.0
+    },
+    "style_metric_averages": {
+      "ambiguity_score": 0.119,
+      "coherence_trickiness_balance": 0.738,
+      "evidence_interpretability": 0.9625,
+      "label_token_mean": 2.0,
+      "label_token_std": 1.0,
+      "phonetic_group_count": 1.0,
+      "redundancy_score": 0.1,
+      "semantic_group_count": 1.0,
+      "semantic_wordplay_balance": 0.6667,
+      "style_alignment_score": 1.0,
+      "theme_group_count": 1.0,
+      "unique_group_type_count": 4.0,
+      "wordplay_group_count": 2.0
+    },
+    "board_archetype_counts": {
+      "balanced_mixed": 200
+    },
+    "out_of_band_flag_counts": {},
+    "notes": [
+      "Stage 3 calibration slice built from accepted records."
+    ]
+  },
+  "rejected": {
+    "slice_name": "rejected",
+    "puzzle_count": 0,
+    "verification_decision_counts": {},
+    "mechanism_mix_counts": {},
+    "average_group_type_counts": {},
+    "board_type_signature_counts": {},
+    "mixed_board_rate": 0.0,
+    "ambiguity_metrics": {
+      "ambiguity_score": 0.0
+    },
+    "scorer_component_averages": {},
+    "label_shape_summary": {
+      "label_token_mean": 0.0,
+      "label_token_std": 0.0
+    },
+    "board_diversity_summary": {},
+    "style_metric_averages": {},
+    "board_archetype_counts": {},
+    "out_of_band_flag_counts": {},
+    "notes": [
+      "Stage 3 calibration slice built from rejected records."
+    ]
+  },
+  "top_k": {
+    "slice_name": "top_k",
+    "puzzle_count": 20,
+    "verification_decision_counts": {
+      "borderline": 20
+    },
+    "mechanism_mix_counts": {
+      "lexical": 20,
+      "phonetic": 20,
+      "semantic": 20,
+      "theme": 20
+    },
+    "average_group_type_counts": {
+      "lexical": 1.0,
+      "phonetic": 1.0,
+      "semantic": 1.0,
+      "theme": 1.0
+    },
+    "board_type_signature_counts": {
+      "lexical+phonetic+semantic+theme": 20
+    },
+    "mixed_board_rate": 1.0,
+    "ambiguity_metrics": {
+      "ambiguity_score": 0.1202
+    },
+    "scorer_component_averages": {
+      "alternative_group_penalty": 0.0,
+      "ambiguity_penalty": 0.1202,
+      "board_balance": 0.6892,
+      "composer_ranking_score": 4.061,
+      "decision_penalty": 0.05,
+      "evidence_quality": 1.0,
+      "group_coherence": 0.8037,
+      "leakage_penalty": 0.1148,
+      "mixed_mechanism_bonus": 0.03,
+      "phonetic_showcase_bonus": 0.03,
+      "style_alignment_bonus": 0.08,
+      "style_monotony_penalty": 0.0,
+      "style_out_of_band_penalty": 0.0,
+      "weakest_group_support": 0.6615,
+      "wordplay_bonus": 0.08
+    },
+    "label_shape_summary": {
+      "label_token_mean": 2.225,
+      "label_token_std": 0.9351
+    },
+    "board_diversity_summary": {
+      "phonetic_group_count": 1.0,
+      "semantic_group_count": 1.0,
+      "theme_group_count": 1.0,
+      "unique_group_type_count": 4.0,
+      "wordplay_group_count": 2.0
+    },
+    "style_metric_averages": {
+      "ambiguity_score": 0.1202,
+      "coherence_trickiness_balance": 0.7403,
+      "evidence_interpretability": 0.9625,
+      "label_token_mean": 2.375,
+      "label_token_std": 0.9286,
+      "phonetic_group_count": 1.0,
+      "redundancy_score": 0.0929,
+      "semantic_group_count": 1.0,
+      "semantic_wordplay_balance": 0.6667,
+      "style_alignment_score": 1.0,
+      "theme_group_count": 1.0,
+      "unique_group_type_count": 4.0,
+      "wordplay_group_count": 2.0
+    },
+    "board_archetype_counts": {
+      "balanced_mixed": 20
+    },
+    "out_of_band_flag_counts": {},
+    "notes": [
+      "Stage 3 calibration slice built from top_k records."
+    ]
+  },
+  "target_comparison": [
+    {
+      "metric_name": "accepted.ambiguity_score",
+      "actual_value": 0.119,
+      "target_min": 0.0,
+      "target_max": 0.35,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "High ambiguity remains undesirable even when style looks promising.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "accepted.coherence_trickiness_balance",
+      "actual_value": 0.738,
+      "target_min": 0.55,
+      "target_max": 1.0,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Boards should feel coherent while still offering some trickiness.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "accepted.evidence_interpretability",
+      "actual_value": 0.9625,
+      "target_min": 0.7,
+      "target_max": 1.0,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Groups should expose explicit evidence and understandable rule provenance.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "accepted.label_token_mean",
+      "actual_value": 2.0,
+      "target_min": 1.0,
+      "target_max": 3.0,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Category labels should stay concise and interpretable.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "accepted.label_token_std",
+      "actual_value": 1.0,
+      "target_min": 0.0,
+      "target_max": 1.2,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Label shape should feel consistent across the board without becoming uniform.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "accepted.phonetic_group_count",
+      "actual_value": 1.0,
+      "target_min": 0.0,
+      "target_max": 1.0,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Phonetic groups should remain a precise showcase mechanism rather than a majority.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "accepted.redundancy_score",
+      "actual_value": 0.1,
+      "target_min": 0.0,
+      "target_max": 0.45,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Avoid repeated mechanism families and repetitive label shapes.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "accepted.semantic_group_count",
+      "actual_value": 1.0,
+      "target_min": 1.0,
+      "target_max": 3.0,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Keep semantic groups central without letting them dominate every board.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "accepted.semantic_wordplay_balance",
+      "actual_value": 0.6667,
+      "target_min": 0.25,
+      "target_max": 0.8,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Balance semantic categories against lexical and phonetic wordplay.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "accepted.style_alignment_score",
+      "actual_value": 1.0,
+      "target_min": 0.55,
+      "target_max": 1.0,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Boards should land within a majority of the explicit Stage 3 style bands.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "accepted.theme_group_count",
+      "actual_value": 1.0,
+      "target_min": 0.0,
+      "target_max": 1.5,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Theme groups are allowed but should stay occasional.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "accepted.unique_group_type_count",
+      "actual_value": 4.0,
+      "target_min": 2.0,
+      "target_max": 4.0,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Prefer mixed boards over single-mechanism monotony.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "accepted.wordplay_group_count",
+      "actual_value": 2.0,
+      "target_min": 1.0,
+      "target_max": 2.0,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Top boards should usually include at least one lexical or phonetic wordplay group.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "rejected.ambiguity_score",
+      "actual_value": 0.0,
+      "target_min": 0.0,
+      "target_max": 0.35,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "High ambiguity remains undesirable even when style looks promising.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "rejected.label_token_mean",
+      "actual_value": 0.0,
+      "target_min": 1.0,
+      "target_max": 3.0,
+      "within_band": false,
+      "drift": "low",
+      "explanation": "Category labels should stay concise and interpretable.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "rejected.label_token_std",
+      "actual_value": 0.0,
+      "target_min": 0.0,
+      "target_max": 1.2,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Label shape should feel consistent across the board without becoming uniform.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.ambiguity_score",
+      "actual_value": 0.1202,
+      "target_min": 0.0,
+      "target_max": 0.35,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "High ambiguity remains undesirable even when style looks promising.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.coherence_trickiness_balance",
+      "actual_value": 0.7403,
+      "target_min": 0.55,
+      "target_max": 1.0,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Boards should feel coherent while still offering some trickiness.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.evidence_interpretability",
+      "actual_value": 0.9625,
+      "target_min": 0.7,
+      "target_max": 1.0,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Groups should expose explicit evidence and understandable rule provenance.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.label_token_mean",
+      "actual_value": 2.375,
+      "target_min": 1.0,
+      "target_max": 3.0,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Category labels should stay concise and interpretable.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.label_token_std",
+      "actual_value": 0.9286,
+      "target_min": 0.0,
+      "target_max": 1.2,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Label shape should feel consistent across the board without becoming uniform.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.phonetic_group_count",
+      "actual_value": 1.0,
+      "target_min": 0.0,
+      "target_max": 1.0,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Phonetic groups should remain a precise showcase mechanism rather than a majority.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.redundancy_score",
+      "actual_value": 0.0929,
+      "target_min": 0.0,
+      "target_max": 0.45,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Avoid repeated mechanism families and repetitive label shapes.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.semantic_group_count",
+      "actual_value": 1.0,
+      "target_min": 1.0,
+      "target_max": 3.0,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Keep semantic groups central without letting them dominate every board.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.semantic_wordplay_balance",
+      "actual_value": 0.6667,
+      "target_min": 0.25,
+      "target_max": 0.8,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Balance semantic categories against lexical and phonetic wordplay.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.style_alignment_score",
+      "actual_value": 1.0,
+      "target_min": 0.55,
+      "target_max": 1.0,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Boards should land within a majority of the explicit Stage 3 style bands.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.theme_group_count",
+      "actual_value": 1.0,
+      "target_min": 0.0,
+      "target_max": 1.5,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Theme groups are allowed but should stay occasional.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.unique_group_type_count",
+      "actual_value": 4.0,
+      "target_min": 2.0,
+      "target_max": 4.0,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Prefer mixed boards over single-mechanism monotony.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.wordplay_group_count",
+      "actual_value": 2.0,
+      "target_min": 1.0,
+      "target_max": 2.0,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Top boards should usually include at least one lexical or phonetic wordplay group.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "accepted.mechanism_lexical_share",
+      "actual_value": 0.25,
+      "target_min": 0.0,
+      "target_max": 0.35,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Compared lexical share in accepted against the Stage 3 distribution target.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "accepted.mechanism_phonetic_share",
+      "actual_value": 0.25,
+      "target_min": 0.0,
+      "target_max": 0.25,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Compared phonetic share in accepted against the Stage 3 distribution target.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "accepted.mechanism_semantic_share",
+      "actual_value": 0.25,
+      "target_min": 0.25,
+      "target_max": 0.75,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Compared semantic share in accepted against the Stage 3 distribution target.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "accepted.mechanism_theme_share",
+      "actual_value": 0.25,
+      "target_min": 0.0,
+      "target_max": 0.35,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Compared theme share in accepted against the Stage 3 distribution target.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "accepted.archetype_balanced_mixed_share",
+      "actual_value": 1.0,
+      "target_min": 0.3,
+      "target_max": 0.9,
+      "within_band": false,
+      "drift": "high",
+      "explanation": "Compared balanced_mixed share in accepted against the Stage 3 distribution target.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "accepted.archetype_semantic_heavy_share",
+      "actual_value": 0.0,
+      "target_min": 0.0,
+      "target_max": 0.5,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Compared semantic_heavy share in accepted against the Stage 3 distribution target.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "accepted.archetype_wordplay_showcase_share",
+      "actual_value": 0.0,
+      "target_min": 0.0,
+      "target_max": 0.35,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Compared wordplay_showcase share in accepted against the Stage 3 distribution target.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.mechanism_lexical_share",
+      "actual_value": 0.25,
+      "target_min": 0.0,
+      "target_max": 0.35,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Compared lexical share in top_k against the Stage 3 distribution target.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.mechanism_phonetic_share",
+      "actual_value": 0.25,
+      "target_min": 0.0,
+      "target_max": 0.25,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Compared phonetic share in top_k against the Stage 3 distribution target.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.mechanism_semantic_share",
+      "actual_value": 0.25,
+      "target_min": 0.25,
+      "target_max": 0.75,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Compared semantic share in top_k against the Stage 3 distribution target.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.mechanism_theme_share",
+      "actual_value": 0.25,
+      "target_min": 0.0,
+      "target_max": 0.35,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Compared theme share in top_k against the Stage 3 distribution target.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.archetype_balanced_mixed_share",
+      "actual_value": 1.0,
+      "target_min": 0.3,
+      "target_max": 0.9,
+      "within_band": false,
+      "drift": "high",
+      "explanation": "Compared balanced_mixed share in top_k against the Stage 3 distribution target.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.archetype_semantic_heavy_share",
+      "actual_value": 0.0,
+      "target_min": 0.0,
+      "target_max": 0.5,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Compared semantic_heavy share in top_k against the Stage 3 distribution target.",
+      "metadata": {}
+    },
+    {
+      "metric_name": "top_k.archetype_wordplay_showcase_share",
+      "actual_value": 0.0,
+      "target_min": 0.0,
+      "target_max": 0.35,
+      "within_band": true,
+      "drift": "within_band",
+      "explanation": "Compared wordplay_showcase share in top_k against the Stage 3 distribution target.",
+      "metadata": {}
+    }
+  ],
+  "threshold_diagnostics": [
+    {
+      "code": "rejected_label_token_mean_low",
+      "severity": "warning",
+      "message": "rejected.label_token_mean drifted low relative to the Stage 3 reference band.",
+      "metric_name": "rejected.label_token_mean",
+      "actual_value": 0.0,
+      "target_min": 1.0,
+      "target_max": 3.0,
+      "metadata": {}
+    },
+    {
+      "code": "accepted_archetype_balanced_mixed_share_high",
+      "severity": "warning",
+      "message": "accepted.archetype_balanced_mixed_share drifted high relative to the Stage 3 reference band.",
+      "metric_name": "accepted.archetype_balanced_mixed_share",
+      "actual_value": 1.0,
+      "target_min": 0.3,
+      "target_max": 0.9,
+      "metadata": {}
+    },
+    {
+      "code": "top_k_archetype_balanced_mixed_share_high",
+      "severity": "warning",
+      "message": "top_k.archetype_balanced_mixed_share drifted high relative to the Stage 3 reference band.",
+      "metric_name": "top_k.archetype_balanced_mixed_share",
+      "actual_value": 1.0,
+      "target_min": 0.3,
+      "target_max": 0.9,
+      "metadata": {}
+    }
+  ],
+  "notes": [
+    "Stage 3 calibration summary compares batch slices against explicit local target bands.",
+    "These comparisons are intended for offline review, not hidden optimization."
+  ]
+}

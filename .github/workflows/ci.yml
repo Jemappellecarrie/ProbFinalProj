@@ -1,0 +1,64 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install backend dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e "./backend[dev]"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install frontend dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Bootstrap demo artifacts
+        run: python scripts/bootstrap_demo_data.py
+
+      - name: Ruff check
+        run: python -m ruff check backend/app/services/evaluation_service.py backend/tests scripts
+
+      - name: Ruff format check
+        run: python -m ruff format --check backend/app/services/evaluation_service.py backend/tests scripts
+
+      - name: Backend tests
+        run: python -m pytest backend/tests -q
+
+      - name: Frontend build
+        working-directory: frontend
+        run: npm run build
+
+      - name: Non-demo evaluation smoke
+        env:
+          CONNECTIONS_DEMO_MODE: "false"
+        run: |
+          python scripts/evaluate_batch.py \
+            --num-puzzles 2 \
+            --top-k 1 \
+            --output-dir data/processed/release_validation/ci_smoke \
+            --no-traces \
+            --no-demo-mode
+
+      - name: Build release summary
+        run: python scripts/build_release_summary.py --run-dir data/processed/release_validation/ci_smoke

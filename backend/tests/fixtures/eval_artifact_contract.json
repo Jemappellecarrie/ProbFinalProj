@@ -1,0 +1,91 @@
+{
+  "summary": [
+    "run_id",
+    "created_at",
+    "total_generated",
+    "accepted_count",
+    "rejected_count",
+    "acceptance_rate",
+    "generator_mix.group_type_counts",
+    "generator_mix.board_mix_counts",
+    "score_distribution.average_overall",
+    "ambiguity_risk_distribution",
+    "solver_agreement_statistics.average_agreement_ratio",
+    "top_k.requested_k",
+    "top_k.ranked_puzzles",
+    "calibration_summary.target_version",
+    "calibration_summary.accepted.puzzle_count",
+    "output_dir"
+  ],
+  "accepted_record": [
+    "puzzle_id",
+    "group_labels",
+    "group_types",
+    "mechanism_mix_summary",
+    "verification_decision",
+    "score_breakdown.overall",
+    "ambiguity_report.risk_level",
+    "style_analysis.analyzer_name",
+    "style_analysis.board_style_summary.style_alignment_score",
+    "selected_components.generators"
+  ],
+  "rejected_record": [
+    "puzzle_id",
+    "group_labels",
+    "group_types",
+    "mechanism_mix_summary",
+    "verification_decision",
+    "reject_reasons",
+    "score_breakdown.ambiguity_penalty",
+    "ambiguity_report.evidence.board_summary",
+    "style_analysis.analyzer_name",
+    "selected_components.generators"
+  ],
+  "top_k_record": [
+    "rank",
+    "puzzle_id",
+    "verification_decision",
+    "mechanism_mix_summary",
+    "score_breakdown.overall",
+    "ambiguity_penalty_hint",
+    "style_archetype",
+    "style_alignment_score",
+    "ranking_influence_notes"
+  ],
+  "trace": [
+    "trace_id",
+    "request_id",
+    "feature_extractor",
+    "generators",
+    "events",
+    "ambiguity_report.summary",
+    "style_analysis.analyzer_name",
+    "metadata.selection_summary.verification_decision",
+    "metadata.selection_summary.mechanism_mix_summary"
+  ],
+  "calibration_summary_file": [
+    "target_version",
+    "accepted.puzzle_count",
+    "rejected.puzzle_count",
+    "top_k.puzzle_count",
+    "target_comparison",
+    "threshold_diagnostics"
+  ],
+  "style_summary_file": [
+    "target_version",
+    "accepted.style_metric_averages",
+    "rejected.style_metric_averages",
+    "top_k.style_metric_averages"
+  ],
+  "mechanism_mix_summary_file": [
+    "target_version",
+    "accepted.mechanism_mix_counts",
+    "rejected.mechanism_mix_counts",
+    "top_k.mechanism_mix_counts"
+  ],
+  "threshold_diagnostics_file": [
+    "0.code",
+    "0.message",
+    "0.severity"
+  ]
+}

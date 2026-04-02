@@ -1,0 +1,944 @@
+{
+  "entries": [
+    {
+      "packet_board_id": "playtest_board_001",
+      "tester_id": "tester_01",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2025-02-17_655",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "FOLLOW A MEANDERING COURSE",
+          "words": [
+            "CURVE",
+            "SNAKE",
+            "WEAVE",
+            "WIND"
+          ]
+        },
+        {
+          "label": "BOWLING RESULTS",
+          "words": [
+            "STRIKE",
+            "DOUBLE",
+            "SPARE",
+            "TURKEY"
+          ]
+        },
+        {
+          "label": "___FISH",
+          "words": [
+            "BLOW",
+            "GOLD",
+            "SWORD",
+            "CAT"
+          ]
+        },
+        {
+          "label": "TIME OFF",
+          "words": [
+            "LEAVE",
+            "VACATION",
+            "BREAK",
+            "REST"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_002",
+      "tester_id": "tester_01",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_f789f19e8e49",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Planets",
+          "words": [
+            "MARS",
+            "MERCURY",
+            "EARTH",
+            "VENUS"
+          ]
+        },
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "INKY",
+            "PINKY",
+            "BLINKY",
+            "CLYDE"
+          ]
+        },
+        {
+          "label": "Teenage Mutant Ninja Turtles",
+          "words": [
+            "LEONARDO",
+            "RAPHAEL",
+            "DONATELLO",
+            "MICHELANGELO"
+          ]
+        },
+        {
+          "label": "Ends with -EEL",
+          "words": [
+            "KEEL",
+            "REEL",
+            "PEEL",
+            "HEEL"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_003",
+      "tester_id": "tester_01",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2025-01-11_610",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "THINGS TO DO AT A WORK EVENT",
+          "words": [
+            "NETWORK",
+            "CONVERSE",
+            "CIRCULATE",
+            "MINGLE"
+          ]
+        },
+        {
+          "label": "___ COURT",
+          "words": [
+            "KANGAROO",
+            "TENNIS",
+            "FOOD",
+            "SUPREME"
+          ]
+        },
+        {
+          "label": "OLYMPIC EVENTS SINCE 2000",
+          "words": [
+            "TAEKWONDO",
+            "BREAKING",
+            "SURFING",
+            "TRAMPOLINE"
+          ]
+        },
+        {
+          "label": "DISPLAY OF ROWS AND COLUMNS",
+          "words": [
+            "MATRIX",
+            "TABLE",
+            "ARRAY",
+            "GRID"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_004",
+      "tester_id": "tester_01",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_f931b6627c4c",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Ends with -AKE",
+          "words": [
+            "BAKE",
+            "CAKE",
+            "LAKE",
+            "RAKE"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MARS",
+            "MERCURY",
+            "EARTH",
+            "VENUS"
+          ]
+        },
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "INKY",
+            "PINKY",
+            "BLINKY",
+            "CLYDE"
+          ]
+        },
+        {
+          "label": "Gemstones",
+          "words": [
+            "OPAL",
+            "RUBY",
+            "TOPAZ",
+            "JADE"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_005",
+      "tester_id": "tester_02",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_7d7484cca955",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MERCURY",
+            "EARTH",
+            "MARS",
+            "VENUS"
+          ]
+        },
+        {
+          "label": "Ends with -ASH",
+          "words": [
+            "DASH",
+            "CASH",
+            "MASH",
+            "BASH"
+          ]
+        },
+        {
+          "label": "Teenage Mutant Ninja Turtles",
+          "words": [
+            "DONATELLO",
+            "RAPHAEL",
+            "LEONARDO",
+            "MICHELANGELO"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_006",
+      "tester_id": "tester_02",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_53efb25c8b81",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Planets",
+          "words": [
+            "MERCURY",
+            "EARTH",
+            "MARS",
+            "VENUS"
+          ]
+        },
+        {
+          "label": "Rhymes with -EEL",
+          "words": [
+            "KEEL",
+            "PEEL",
+            "HEEL",
+            "REEL"
+          ]
+        },
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        },
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "CLYDE",
+            "BLINKY",
+            "PINKY",
+            "INKY"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_007",
+      "tester_id": "tester_02",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-11-08_543",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "CUT THE ___",
+          "words": [
+            "CHEESE",
+            "DECK",
+            "MUSTARD",
+            "CORD"
+          ]
+        },
+        {
+          "label": "RISQU\u00c9",
+          "words": [
+            "SPICY",
+            "BLUE",
+            "ADULT",
+            "SUGGESTIVE"
+          ]
+        },
+        {
+          "label": "KINDS OF PICKLES",
+          "words": [
+            "SWEET",
+            "KOSHER",
+            "SOUR",
+            "DILL"
+          ]
+        },
+        {
+          "label": "ESCAPADE",
+          "words": [
+            "EXPLOIT",
+            "STUNT",
+            "ANTIC",
+            "CAPER"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_008",
+      "tester_id": "tester_02",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-12-31_599",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "NAME ___",
+          "words": [
+            "GAME",
+            "DROP",
+            "NAMES",
+            "BRAND"
+          ]
+        },
+        {
+          "label": "FUN TIME",
+          "words": [
+            "THRILL",
+            "BALL",
+            "KICK",
+            "BLAST"
+          ]
+        },
+        {
+          "label": "WORDS BEFORE AN ADDRESSEE",
+          "words": [
+            "FOR",
+            "DEAR",
+            "ATTENTION",
+            "TO"
+          ]
+        },
+        {
+          "label": "MOVE QUICKLY",
+          "words": [
+            "DART",
+            "DASH",
+            "BOLT",
+            "FLY"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_009",
+      "tester_id": "tester_03",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_afecfe79f9bd",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Planets",
+          "words": [
+            "MERCURY",
+            "EARTH",
+            "MARS",
+            "VENUS"
+          ]
+        },
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        },
+        {
+          "label": "Teenage Mutant Ninja Turtles",
+          "words": [
+            "DONATELLO",
+            "RAPHAEL",
+            "LEONARDO",
+            "MICHELANGELO"
+          ]
+        },
+        {
+          "label": "Rhymes with -AKE",
+          "words": [
+            "RAKE",
+            "LAKE",
+            "BAKE",
+            "CAKE"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_010",
+      "tester_id": "tester_03",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2025-01-14_618",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "OPERATING",
+          "words": [
+            "FUNCTIONAL",
+            "WORKING",
+            "ACTIVE",
+            "RUNNING"
+          ]
+        },
+        {
+          "label": "TERM",
+          "words": [
+            "SESSION",
+            "SITTING",
+            "PERIOD",
+            "MEETING"
+          ]
+        },
+        {
+          "label": "BIRD PLUS LETTER",
+          "words": [
+            "CROWD",
+            "GULLY",
+            "PUFFING",
+            "SWANK"
+          ]
+        },
+        {
+          "label": "THINGS IN A CAMERA KIT",
+          "words": [
+            "FLASH",
+            "STRAP",
+            "LENS",
+            "BODY"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_011",
+      "tester_id": "tester_03",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-11-28_568",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "___ TUESDAY",
+          "words": [
+            "FAT",
+            "GIVING",
+            "TACO",
+            "SUPER"
+          ]
+        },
+        {
+          "label": "EAT VORACIOUSLY",
+          "words": [
+            "GOBBLE",
+            "BOLT",
+            "DOWN",
+            "SCARF"
+          ]
+        },
+        {
+          "label": "FRAUDSTER",
+          "words": [
+            "QUACK",
+            "CHEAT",
+            "FAKE",
+            "CON"
+          ]
+        },
+        {
+          "label": "APPRECIATION",
+          "words": [
+            "CREDIT",
+            "THANKS",
+            "PRAISE",
+            "RECOGNITION"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_012",
+      "tester_id": "tester_03",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_8dd9faa636b2",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Planets",
+          "words": [
+            "MERCURY",
+            "EARTH",
+            "MARS",
+            "VENUS"
+          ]
+        },
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "CLYDE",
+            "BLINKY",
+            "PINKY",
+            "INKY"
+          ]
+        },
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        },
+        {
+          "label": "Rhymes with -ASH",
+          "words": [
+            "BASH",
+            "CASH",
+            "DASH",
+            "MASH"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_013",
+      "tester_id": "tester_04",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-10-31_523",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "TERMS OF ENDEARMENT",
+          "words": [
+            "DARLING",
+            "PUMPKIN",
+            "TREASURE",
+            "LOVE"
+          ]
+        },
+        {
+          "label": "THINGS YOU CAN DO WITH YOUR EYELIDS",
+          "words": [
+            "FLUTTER",
+            "BAT",
+            "BLINK",
+            "WINK"
+          ]
+        },
+        {
+          "label": "___ HUNT",
+          "words": [
+            "EGG",
+            "SCAVENGER",
+            "JOB",
+            "WITCH"
+          ]
+        },
+        {
+          "label": "SPORTS CARS",
+          "words": [
+            "MUSTANG",
+            "SPIDER",
+            "VIPER",
+            "DIABLO"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_014",
+      "tester_id": "tester_04",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_01c93ba2960c",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MERCURY",
+            "EARTH",
+            "MARS",
+            "VENUS"
+          ]
+        },
+        {
+          "label": "Teenage Mutant Ninja Turtles",
+          "words": [
+            "DONATELLO",
+            "RAPHAEL",
+            "LEONARDO",
+            "MICHELANGELO"
+          ]
+        },
+        {
+          "label": "Starts with SN",
+          "words": [
+            "SNAP",
+            "SNUG",
+            "SNIP",
+            "SNOW"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_015",
+      "tester_id": "tester_04",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_9aa253dc9c81",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "CLYDE",
+            "BLINKY",
+            "PINKY",
+            "INKY"
+          ]
+        },
+        {
+          "label": "Teenage Mutant Ninja Turtles",
+          "words": [
+            "DONATELLO",
+            "RAPHAEL",
+            "LEONARDO",
+            "MICHELANGELO"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MARS",
+            "EARTH",
+            "VENUS",
+            "MERCURY"
+          ]
+        },
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_016",
+      "tester_id": "tester_04",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-12-09_578",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "USED TO VIEW A BIOLOGICAL SAMPLE",
+          "words": [
+            "SPECIMEN",
+            "SLIDE",
+            "STAIN",
+            "MICROSCOPE"
+          ]
+        },
+        {
+          "label": "WORDS AFTER \u201cX\u201d",
+          "words": [
+            "RAY",
+            "FILES",
+            "FACTOR",
+            "GAMES"
+          ]
+        },
+        {
+          "label": "USED IN STARTING A FIRE",
+          "words": [
+            "MAGNIFYING GLASS",
+            "MATCHES",
+            "FLINT",
+            "LIGHTER"
+          ]
+        },
+        {
+          "label": "DELIBERATION",
+          "words": [
+            "REFLECTION",
+            "SCRUTINY",
+            "THOUGHT",
+            "CONSIDERATION"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_017",
+      "tester_id": "tester_05",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_f931b6627c4c",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Ends with -AKE",
+          "words": [
+            "BAKE",
+            "CAKE",
+            "LAKE",
+            "RAKE"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MARS",
+            "MERCURY",
+            "EARTH",
+            "VENUS"
+          ]
+        },
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "INKY",
+            "PINKY",
+            "BLINKY",
+            "CLYDE"
+          ]
+        },
+        {
+          "label": "Gemstones",
+          "words": [
+            "OPAL",
+            "RUBY",
+            "TOPAZ",
+            "JADE"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_018",
+      "tester_id": "tester_05",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-12-06_576",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "CURSE",
+          "words": [
+            "SPELL",
+            "POX",
+            "HEX",
+            "JINX"
+          ]
+        },
+        {
+          "label": "BAFFLE",
+          "words": [
+            "PERPLEX",
+            "VEX",
+            "PUZZLE",
+            "STUMP"
+          ]
+        },
+        {
+          "label": "COLLOQUIAL SUFFIXES",
+          "words": [
+            "GATE",
+            "PILLED",
+            "CORE",
+            "MANIA"
+          ]
+        },
+        {
+          "label": "\u201cTOY STORY\u201d CHARACTERS, FAMILIARLY",
+          "words": [
+            "REX",
+            "SLINKY",
+            "HAMM",
+            "BUZZ"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_019",
+      "tester_id": "tester_05",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_f789f19e8e49",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Planets",
+          "words": [
+            "MARS",
+            "MERCURY",
+            "EARTH",
+            "VENUS"
+          ]
+        },
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "INKY",
+            "PINKY",
+            "BLINKY",
+            "CLYDE"
+          ]
+        },
+        {
+          "label": "Teenage Mutant Ninja Turtles",
+          "words": [
+            "LEONARDO",
+            "RAPHAEL",
+            "DONATELLO",
+            "MICHELANGELO"
+          ]
+        },
+        {
+          "label": "Ends with -EEL",
+          "words": [
+            "KEEL",
+            "REEL",
+            "PEEL",
+            "HEEL"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_020",
+      "tester_id": "tester_05",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2025-02-27_663",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "ENDING WITH UNITS OF MEASURE",
+          "words": [
+            "INSTAGRAM",
+            "THERMOMETER",
+            "COMPOUND",
+            "BIGFOOT"
+          ]
+        },
+        {
+          "label": "CONTACT VIA TELEPHONE",
+          "words": [
+            "RING",
+            "CALL",
+            "PHONE",
+            "DIAL"
+          ]
+        },
+        {
+          "label": "PARTS OF A CAR",
+          "words": [
+            "WHEEL",
+            "HORN",
+            "MIRROR",
+            "BELT"
+          ]
+        },
+        {
+          "label": "LEVELS OF BIOLOGICAL ORGANIZATION",
+          "words": [
+            "TISSUE",
+            "ORGAN",
+            "CELL",
+            "ATOM"
+          ]
+        }
+      ]
+    }
+  ]
+}

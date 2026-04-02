@@ -9,13 +9,13 @@ claim that ambiguity or style judgment has been solved.
 from __future__ import annotations
 
 from datetime import UTC, datetime
-from enum import Enum
+from enum import StrEnum
 from typing import Any
 
 from pydantic import BaseModel, Field
 
 
-class AmbiguityRiskLevel(str, Enum):
+class AmbiguityRiskLevel(StrEnum):
     """Coarse ambiguity risk levels for scaffold reporting."""
 
     LOW = "low"
@@ -24,7 +24,7 @@ class AmbiguityRiskLevel(str, Enum):
     CRITICAL = "critical"
 
 
-class SolverDisagreementFlag(str, Enum):
+class SolverDisagreementFlag(StrEnum):
     """Machine-readable disagreement categories for solver ensemble reporting."""
 
     TARGET_MISMATCH = "target_mismatch"
@@ -46,6 +46,33 @@ class WordGroupLeakage(BaseModel):
     metadata: dict[str, Any] = Field(default_factory=dict)
 
 
+class WordFitSummary(BaseModel):
+    """Per-word fit summary used for Stage 1 leakage analysis."""
+
+    word: str
+    word_id: str | None = None
+    assigned_group_label: str
+    assigned_support: float = 0.0
+    strongest_competing_group_label: str | None = None
+    strongest_competing_support: float = 0.0
+    leakage_margin: float = 0.0
+    severity: str = "low"
+    notes: list[str] = Field(default_factory=list)
+    metadata: dict[str, Any] = Field(default_factory=dict)
+
+
+class GroupCoherenceSummary(BaseModel):
+    """Compact support summary for one true group."""
+
+    group_label: str
+    support_score: float = 0.0
+    mean_pairwise_similarity: float = 0.0
+    weakest_member_support: float = 0.0
+    strongest_competing_fit: float = 0.0
+    notes: list[str] = Field(default_factory=list)
+    metadata: dict[str, Any] = Field(default_factory=dict)
+
+
 class CrossGroupCompatibility(BaseModel):
     """Pairwise compatibility record for groups that may leak into each other."""
 
@@ -63,19 +90,41 @@ class AlternativeGroupingCandidate(BaseModel):
 
     candidate_id: str
     source_solver: str
+    words: list[str] = Field(default_factory=list)
+    word_ids: list[str] = Field(default_factory=list)
     proposed_groups: list[list[str]] = Field(default_factory=list)
     matched_target_solution: bool = False
     overlap_ratio: float = 0.0
+    label_hint: str | None = None
+    coherence_score: float = 0.0
+    shared_signal_score: float = 0.0
+    source_group_count: int = 0
+    suspicion_score: float = 0.0
     notes: list[str] = Field(default_factory=list)
     metadata: dict[str, Any] = Field(default_factory=dict)
+
+
+class BoardAmbiguitySummary(BaseModel):
+    """Board-level ambiguity summary consumed by verifier and scorer."""
+
+    board_pressure: float = 0.0
+    max_alternative_group_pressure: float = 0.0
+    high_leakage_word_count: int = 0
+    strongest_confusing_pair: str | None = None
+    severity: str = "low"
+    warning_flags: list[str] = Field(default_factory=list)
+    metrics: dict[str, float] = Field(default_factory=dict)
 
 
 class AmbiguityEvidence(BaseModel):
     """Structured evidence bundle used to justify ambiguity-related outcomes."""
 
+    group_coherence_summaries: list[GroupCoherenceSummary] = Field(default_factory=list)
+    word_fit_summaries: list[WordFitSummary] = Field(default_factory=list)
     word_group_leakage: list[WordGroupLeakage] = Field(default_factory=list)
     cross_group_compatibility: list[CrossGroupCompatibility] = Field(default_factory=list)
     alternative_groupings: list[AlternativeGroupingCandidate] = Field(default_factory=list)
+    board_summary: BoardAmbiguitySummary | None = None
     triggered_flags: list[str] = Field(default_factory=list)
     notes: list[str] = Field(default_factory=list)
 
@@ -153,6 +202,75 @@ class NYTLikenessPlaceholderScore(BaseModel):
     notes: list[str] = Field(default_factory=list)
 
 
+class StyleMetricComparison(BaseModel):
+    """Comparison between an observed style metric and a reference band."""
+
+    metric_name: str
+    actual_value: float
+    target_min: float | None = None
+    target_max: float | None = None
+    within_band: bool = True
+    drift: str = "within_band"
+    explanation: str = ""
+    metadata: dict[str, Any] = Field(default_factory=dict)
+
+
+class GroupStyleSummary(BaseModel):
+    """Interpretable style summary for one group."""
+
+    group_label: str
+    group_type: str
+    archetype: str
+    label_token_count: int = 0
+    label_clarity: float = 0.0
+    label_specificity: float = 0.0
+    evidence_interpretability: float = 0.0
+    wordplay_indicator: float = 0.0
+    redundancy_flags: list[str] = Field(default_factory=list)
+    novelty_flags: list[str] = Field(default_factory=list)
+    notes: list[str] = Field(default_factory=list)
+    metadata: dict[str, Any] = Field(default_factory=dict)
+
+
+class MechanismMixProfile(BaseModel):
+    """Board-level mix summary over the supported generator families."""
+
+    counts: dict[str, int] = Field(default_factory=dict)
+    shares: dict[str, float] = Field(default_factory=dict)
+    unique_group_type_count: int = 0
+    semantic_group_count: int = 0
+    lexical_group_count: int = 0
+    phonetic_group_count: int = 0
+    theme_group_count: int = 0
+    wordplay_group_count: int = 0
+    mixed_board: bool = False
+
+
+class BoardStyleSummary(BaseModel):
+    """Interpretable board-level style summary."""
+
+    board_archetype: str
+    mechanism_mix_profile: MechanismMixProfile
+    group_archetypes: list[str] = Field(default_factory=list)
+    label_token_mean: float = 0.0
+    label_token_std: float = 0.0
+    label_consistency: float = 0.0
+    evidence_interpretability: float = 0.0
+    semantic_wordplay_balance: float = 0.0
+    archetype_diversity: float = 0.0
+    redundancy_score: float = 0.0
+    monotony_score: float = 0.0
+    coherence_trickiness_balance: float = 0.0
+    style_alignment_score: float = 0.0
+    group_family_signatures: list[str] = Field(default_factory=list)
+    board_family_signature: str | None = None
+    editorial_family_signature: str | None = None
+    editorial_flags: list[str] = Field(default_factory=list)
+    out_of_band_flags: list[str] = Field(default_factory=list)
+    notes: list[str] = Field(default_factory=list)
+    metrics: dict[str, float] = Field(default_factory=dict)
+
+
 class StyleAnalysisReport(BaseModel):
     """Style-analysis scaffold output.
 
@@ -165,6 +283,11 @@ class StyleAnalysisReport(BaseModel):
     archetype: PuzzleArchetypeSummary
     nyt_likeness: NYTLikenessPlaceholderScore
     signals: list[StyleSignal] = Field(default_factory=list)
+    group_style_summaries: list[GroupStyleSummary] = Field(default_factory=list)
+    board_style_summary: BoardStyleSummary | None = None
+    mechanism_mix_profile: MechanismMixProfile | None = None
+    style_target_comparison: list[StyleMetricComparison] = Field(default_factory=list)
+    out_of_band_flags: list[str] = Field(default_factory=list)
     notes: list[str] = Field(default_factory=list)
     metadata: dict[str, Any] = Field(default_factory=dict)
 
@@ -185,9 +308,19 @@ class RankedPuzzleRecord(BaseModel):
     rank: int
     puzzle_id: str
     accepted: bool
+    verification_decision: str | None = None
     board_words: list[str]
     group_labels: list[str] = Field(default_factory=list)
+    group_word_sets: list[list[str]] = Field(default_factory=list)
     group_types: list[str] = Field(default_factory=list)
+    mechanism_mix_summary: dict[str, int] = Field(default_factory=dict)
+    mixed_board: bool = False
+    group_family_signatures: list[str] = Field(default_factory=list)
+    board_family_signature: str | None = None
+    editorial_family_signature: str | None = None
+    theme_family_signatures: list[str] = Field(default_factory=list)
+    surface_wordplay_family_signatures: list[str] = Field(default_factory=list)
+    editorial_flags: list[str] = Field(default_factory=list)
     score_breakdown: ScoreBreakdownView
     ambiguity_risk_level: AmbiguityRiskLevel | None = None
     ambiguity_penalty_hint: float = 0.0
@@ -195,6 +328,9 @@ class RankedPuzzleRecord(BaseModel):
     solver_disagreement_flags: list[SolverDisagreementFlag] = Field(default_factory=list)
     style_archetype: str | None = None
     nyt_likeness_placeholder: float | None = None
+    style_alignment_score: float | None = None
+    style_out_of_band_flags: list[str] = Field(default_factory=list)
+    ranking_influence_notes: list[str] = Field(default_factory=list)
     trace_id: str | None = None
     reject_risk_flags: list[str] = Field(default_factory=list)
     notes: list[str] = Field(default_factory=list)
@@ -217,7 +353,17 @@ class AcceptedPuzzleRecord(BaseModel):
     puzzle_id: str
     board_words: list[str]
     group_labels: list[str]
+    group_word_sets: list[list[str]] = Field(default_factory=list)
     group_types: list[str]
+    mechanism_mix_summary: dict[str, int] = Field(default_factory=dict)
+    mixed_board: bool = False
+    group_family_signatures: list[str] = Field(default_factory=list)
+    board_family_signature: str | None = None
+    editorial_family_signature: str | None = None
+    theme_family_signatures: list[str] = Field(default_factory=list)
+    surface_wordplay_family_signatures: list[str] = Field(default_factory=list)
+    editorial_flags: list[str] = Field(default_factory=list)
+    verification_decision: str | None = None
     score_breakdown: ScoreBreakdownView
     ambiguity_report: AmbiguityReport | None = None
     ensemble_result: EnsembleSolverResult | None = None
@@ -236,7 +382,17 @@ class RejectedPuzzleRecord(BaseModel):
     puzzle_id: str
     board_words: list[str]
     group_labels: list[str]
+    group_word_sets: list[list[str]] = Field(default_factory=list)
     group_types: list[str]
+    mechanism_mix_summary: dict[str, int] = Field(default_factory=dict)
+    mixed_board: bool = False
+    group_family_signatures: list[str] = Field(default_factory=list)
+    board_family_signature: str | None = None
+    editorial_family_signature: str | None = None
+    theme_family_signatures: list[str] = Field(default_factory=list)
+    surface_wordplay_family_signatures: list[str] = Field(default_factory=list)
+    editorial_flags: list[str] = Field(default_factory=list)
+    verification_decision: str | None = None
     score_breakdown: ScoreBreakdownView
     reject_reasons: list[str] = Field(default_factory=list)
     ambiguity_report: AmbiguityReport | None = None
@@ -259,6 +415,8 @@ class GeneratorMixSummary(BaseModel):
 
     group_type_counts: dict[str, int] = Field(default_factory=dict)
     generator_strategy_counts: dict[str, int] = Field(default_factory=dict)
+    board_mix_counts: dict[str, int] = Field(default_factory=dict)
+    board_type_signature_counts: dict[str, int] = Field(default_factory=dict)
 
 
 class ScoreDistributionSummary(BaseModel):
@@ -292,6 +450,96 @@ class BatchEvaluationConfig(BaseModel):
     base_seed: int = 17
 
 
+class CandidatePoolPuzzleRecord(BaseModel):
+    """Persisted record for one ranked candidate surfaced within a request."""
+
+    iteration_index: int
+    request_seed: int
+    request_rank: int
+    selected: bool = False
+    puzzle_id: str
+    board_words: list[str]
+    group_labels: list[str]
+    group_word_sets: list[list[str]] = Field(default_factory=list)
+    group_types: list[str]
+    mechanism_mix_summary: dict[str, int] = Field(default_factory=dict)
+    mixed_board: bool = False
+    group_family_signatures: list[str] = Field(default_factory=list)
+    board_family_signature: str | None = None
+    editorial_family_signature: str | None = None
+    theme_family_signatures: list[str] = Field(default_factory=list)
+    surface_wordplay_family_signatures: list[str] = Field(default_factory=list)
+    editorial_flags: list[str] = Field(default_factory=list)
+    verification_decision: str | None = None
+    score_breakdown: ScoreBreakdownView
+    reject_reasons: list[str] = Field(default_factory=list)
+    ambiguity_report: AmbiguityReport | None = None
+    ensemble_result: EnsembleSolverResult | None = None
+    style_analysis: StyleAnalysisReport | None = None
+    trace_id: str | None = None
+    warnings: list[str] = Field(default_factory=list)
+    selected_components: dict[str, Any] = Field(default_factory=dict)
+    candidate_source: str = "request_candidate_pool"
+    notes: list[str] = Field(default_factory=list)
+
+
+class FinalQualityBatchConfig(BaseModel):
+    """Deterministic batch config for the final quality acceptance sprint."""
+
+    num_requests: int = 200
+    output_dir: str
+    demo_mode: bool = False
+    save_traces: bool = False
+    top_k_size: int = 20
+    base_seed: int = 17
+    candidate_pool_limit: int = 10
+
+
+class BatchSliceCalibrationSummary(BaseModel):
+    """Aggregate summary for one batch slice such as accepted or top-k."""
+
+    slice_name: str
+    puzzle_count: int = 0
+    verification_decision_counts: dict[str, int] = Field(default_factory=dict)
+    mechanism_mix_counts: dict[str, int] = Field(default_factory=dict)
+    average_group_type_counts: dict[str, float] = Field(default_factory=dict)
+    board_type_signature_counts: dict[str, int] = Field(default_factory=dict)
+    mixed_board_rate: float = 0.0
+    ambiguity_metrics: dict[str, float] = Field(default_factory=dict)
+    scorer_component_averages: dict[str, float] = Field(default_factory=dict)
+    label_shape_summary: dict[str, float] = Field(default_factory=dict)
+    board_diversity_summary: dict[str, float] = Field(default_factory=dict)
+    style_metric_averages: dict[str, float] = Field(default_factory=dict)
+    board_archetype_counts: dict[str, int] = Field(default_factory=dict)
+    out_of_band_flag_counts: dict[str, int] = Field(default_factory=dict)
+    notes: list[str] = Field(default_factory=list)
+
+
+class ThresholdDiagnostic(BaseModel):
+    """Evidence-backed diagnostic surfaced by batch calibration."""
+
+    code: str
+    severity: str = "info"
+    message: str
+    metric_name: str | None = None
+    actual_value: float | None = None
+    target_min: float | None = None
+    target_max: float | None = None
+    metadata: dict[str, Any] = Field(default_factory=dict)
+
+
+class CalibrationSummary(BaseModel):
+    """Top-level batch calibration summary tied to a reference target version."""
+
+    target_version: str
+    accepted: BatchSliceCalibrationSummary
+    rejected: BatchSliceCalibrationSummary
+    top_k: BatchSliceCalibrationSummary
+    target_comparison: list[StyleMetricComparison] = Field(default_factory=list)
+    threshold_diagnostics: list[ThresholdDiagnostic] = Field(default_factory=list)
+    notes: list[str] = Field(default_factory=list)
+
+
 class BatchEvaluationSummary(BaseModel):
     """High-level summary persisted for an evaluation run."""
 
@@ -307,6 +555,7 @@ class BatchEvaluationSummary(BaseModel):
     ambiguity_risk_distribution: dict[str, int] = Field(default_factory=dict)
     solver_agreement_statistics: SolverAgreementStatistics
     top_k: TopKSummary
+    calibration_summary: CalibrationSummary | None = None
     output_dir: str
     notes: list[str] = Field(default_factory=list)
 

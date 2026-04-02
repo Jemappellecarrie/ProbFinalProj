@@ -1,0 +1,19 @@
+{
+  "changed": true,
+  "changes": {
+    "stage2_composer": {
+      "max_candidates_per_type": {
+        "before": 8,
+        "after": 16
+      },
+      "max_ranked_puzzles": {
+        "before": 10,
+        "after": 60
+      },
+      "near_duplicate_board_overlap_threshold": {
+        "before": 17,
+        "after": 14
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "before_run": "data/processed/final_quality_acceptance/pre_calibration_run",
+  "after_run": "data/processed/final_quality_acceptance/sanity_post2",
+  "policy_changed": true,
+  "policy_changes": {
+    "stage2_composer": {
+      "max_candidates_per_type": {
+        "before": 8,
+        "after": 16
+      },
+      "max_ranked_puzzles": {
+        "before": 10,
+        "after": 60
+      },
+      "near_duplicate_board_overlap_threshold": {
+        "before": 17,
+        "after": 14
+      }
+    }
+  },
+  "before_top_k_unique_count": 6,
+  "after_top_k_unique_count": 30,
+  "before_generated_top_k_count": 6,
+  "after_generated_top_k_count": 30
+}

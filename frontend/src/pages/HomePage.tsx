@@ -61,11 +61,12 @@ export function HomePage() {
     <main className="page-shell">
       <section className="hero panel">
         <p className="eyebrow">Connections Generator</p>
-        <h1>Production-style scaffold with an honest demo mode</h1>
+        <h1>Stage 3 puzzle generator with release-grade debug surfaces</h1>
         <p className="hero-copy">
-          This UI is intentionally transparent: it runs a complete mock/baseline pipeline,
-          surfaces score and trace metadata, and leaves the puzzle-defining quality logic
-          explicitly human-owned.
+          This UI stays honest about the current system: it can exercise the demo baseline or the
+          mixed semantic, lexical, phonetic, and theme pipeline, and it surfaces Stage 1 verifier
+          decisions, Stage 3 style analysis, calibration-aware batch outputs, and trace metadata
+          for review.
         </p>
         <div className="control-row">
           <button className="primary-button" onClick={handleGenerate} disabled={loading}>

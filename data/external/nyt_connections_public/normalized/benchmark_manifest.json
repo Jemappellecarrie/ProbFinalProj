@@ -1,0 +1,31 @@
+{
+  "benchmark_version": "boards_v1",
+  "primary_source_dataset": "eric27n/NYT-Connections",
+  "board_count": 1014,
+  "primary_board_count": 628,
+  "supplement_board_count": 386,
+  "repaired_board_count": 1,
+  "invalid_board_ids": [
+    "nyt_connections_2023-08-12_62",
+    "nyt_connections_2025-04-01_660"
+  ],
+  "load_notes": [
+    "parquet_loaded",
+    "skipped_invalid_supplement:660:ValueError"
+  ],
+  "date_min": "2023-06-12",
+  "date_max": "2026-03-25",
+  "split_policy": "primary oldest 80% calibration / newest 20% holdout; newer supplement-only boards freshness split",
+  "artifact_paths": {
+    "boards_jsonl": "/Users/zoe/ProbFinal/ProbFinalProj/data/external/nyt_connections_public/normalized/boards_v1.jsonl",
+    "boards_parquet": "/Users/zoe/ProbFinal/ProbFinalProj/data/external/nyt_connections_public/normalized/boards_v1.parquet",
+    "manifest": "/Users/zoe/ProbFinal/ProbFinalProj/data/external/nyt_connections_public/normalized/benchmark_manifest.json",
+    "calibration_split": "/Users/zoe/ProbFinal/ProbFinalProj/data/external/nyt_connections_public/normalized/calibration_split.json",
+    "holdout_split": "/Users/zoe/ProbFinal/ProbFinalProj/data/external/nyt_connections_public/normalized/holdout_split.json",
+    "freshness_split": "/Users/zoe/ProbFinal/ProbFinalProj/data/external/nyt_connections_public/normalized/freshness_split.json"
+  },
+  "notes": [
+    "Primary benchmark source remains the local Hugging Face export.",
+    "Supplement data only repairs missing fields or adds newer explicitly supplemental boards."
+  ]
+}

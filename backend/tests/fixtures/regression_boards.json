@@ -1,0 +1,399 @@
+{
+  "semantic_accept": {
+    "expected_decision": "accept",
+    "expected_risk_level": "low",
+    "expected_mechanism_mix": {
+      "semantic": 4
+    },
+    "expected_mixed_board": false,
+    "expected_archetype": "semantic_heavy",
+    "minimum_score": 0.65,
+    "ranking_score": 4.2,
+    "groups": [
+      {
+        "group_type": "semantic",
+        "label": "Planets",
+        "confidence": 0.94,
+        "shared_tags": ["planet", "astronomy"],
+        "metadata": {
+          "normalized_label": "planets",
+          "rule_signature": "semantic:planets"
+        },
+        "members": [
+          {"word": "MERCURY", "word_id": "planet_a", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["planet", "astronomy"]},
+          {"word": "VENUS", "word_id": "planet_b", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["planet", "astronomy"]},
+          {"word": "EARTH", "word_id": "planet_c", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["planet", "astronomy"]},
+          {"word": "MARS", "word_id": "planet_d", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["planet", "astronomy"]}
+        ]
+      },
+      {
+        "group_type": "semantic",
+        "label": "Gemstones",
+        "confidence": 0.93,
+        "shared_tags": ["gemstone", "mineral"],
+        "metadata": {
+          "normalized_label": "gemstones",
+          "rule_signature": "semantic:gemstones"
+        },
+        "members": [
+          {"word": "RUBY", "word_id": "gem_a", "vector": [0.0, 1.0, 0.0, 0.0], "semantic_tags": ["gemstone", "mineral"]},
+          {"word": "OPAL", "word_id": "gem_b", "vector": [0.0, 1.0, 0.0, 0.0], "semantic_tags": ["gemstone", "mineral"]},
+          {"word": "JADE", "word_id": "gem_c", "vector": [0.0, 1.0, 0.0, 0.0], "semantic_tags": ["gemstone", "mineral"]},
+          {"word": "TOPAZ", "word_id": "gem_d", "vector": [0.0, 1.0, 0.0, 0.0], "semantic_tags": ["gemstone", "mineral"]}
+        ]
+      },
+      {
+        "group_type": "semantic",
+        "label": "Birds",
+        "confidence": 0.92,
+        "shared_tags": ["bird", "airborne"],
+        "metadata": {
+          "normalized_label": "birds",
+          "rule_signature": "semantic:birds"
+        },
+        "members": [
+          {"word": "FALCON", "word_id": "bird_a", "vector": [0.0, 0.0, 1.0, 0.0], "semantic_tags": ["bird", "airborne"]},
+          {"word": "EAGLE", "word_id": "bird_b", "vector": [0.0, 0.0, 1.0, 0.0], "semantic_tags": ["bird", "airborne"]},
+          {"word": "HAWK", "word_id": "bird_c", "vector": [0.0, 0.0, 1.0, 0.0], "semantic_tags": ["bird", "airborne"]},
+          {"word": "OWL", "word_id": "bird_d", "vector": [0.0, 0.0, 1.0, 0.0], "semantic_tags": ["bird", "airborne"]}
+        ]
+      },
+      {
+        "group_type": "semantic",
+        "label": "Fish",
+        "confidence": 0.91,
+        "shared_tags": ["fish", "aquatic"],
+        "metadata": {
+          "normalized_label": "fish",
+          "rule_signature": "semantic:fish"
+        },
+        "members": [
+          {"word": "SALMON", "word_id": "fish_a", "vector": [0.0, 0.0, 0.0, 1.0], "semantic_tags": ["fish", "aquatic"]},
+          {"word": "TROUT", "word_id": "fish_b", "vector": [0.0, 0.0, 0.0, 1.0], "semantic_tags": ["fish", "aquatic"]},
+          {"word": "CARP", "word_id": "fish_c", "vector": [0.0, 0.0, 0.0, 1.0], "semantic_tags": ["fish", "aquatic"]},
+          {"word": "EEL", "word_id": "fish_d", "vector": [0.0, 0.0, 0.0, 1.0], "semantic_tags": ["fish", "aquatic"]}
+        ]
+      }
+    ]
+  },
+  "mixed_accept": {
+    "expected_decision": "accept",
+    "expected_risk_level": "low",
+    "expected_mechanism_mix": {
+      "lexical": 1,
+      "semantic": 2,
+      "theme": 1
+    },
+    "expected_mixed_board": true,
+    "expected_archetype": "balanced_mixed",
+    "minimum_score": 0.85,
+    "ranking_score": 4.4,
+    "groups": [
+      {
+        "group_type": "semantic",
+        "label": "Planets",
+        "confidence": 0.94,
+        "shared_tags": ["planet", "astronomy"],
+        "metadata": {
+          "normalized_label": "planets",
+          "rule_signature": "semantic:planets"
+        },
+        "members": [
+          {"word": "MERCURY", "word_id": "mix_planet_a", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["planet", "astronomy"]},
+          {"word": "VENUS", "word_id": "mix_planet_b", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["planet", "astronomy"]},
+          {"word": "EARTH", "word_id": "mix_planet_c", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["planet", "astronomy"]},
+          {"word": "MARS", "word_id": "mix_planet_d", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["planet", "astronomy"]}
+        ]
+      },
+      {
+        "group_type": "lexical",
+        "label": "Starts with SN",
+        "confidence": 0.9,
+        "shared_tags": ["prefix:sn"],
+        "metadata": {
+          "normalized_label": "starts_with_sn",
+          "pattern_type": "shared_prefix",
+          "normalized_pattern": "sn",
+          "rule_signature": "lexical:shared_prefix:sn"
+        },
+        "members": [
+          {"word": "SNAP", "word_id": "sn_a", "vector": [0.0, 1.0, 0.0, 0.0], "lexical_signals": ["prefix:sn"]},
+          {"word": "SNIP", "word_id": "sn_b", "vector": [0.0, 1.0, 0.0, 0.0], "lexical_signals": ["prefix:sn"]},
+          {"word": "SNOW", "word_id": "sn_c", "vector": [0.0, 1.0, 0.0, 0.0], "lexical_signals": ["prefix:sn"]},
+          {"word": "SNUG", "word_id": "sn_d", "vector": [0.0, 1.0, 0.0, 0.0], "lexical_signals": ["prefix:sn"]}
+        ]
+      },
+      {
+        "group_type": "theme",
+        "label": "Pac-Man ghosts",
+        "confidence": 0.91,
+        "shared_tags": ["pacman", "ghost"],
+        "metadata": {
+          "normalized_label": "pac_man_ghosts",
+          "theme_name": "pac_man_ghosts",
+          "theme_source": "curated_theme_inventory_v1",
+          "rule_signature": "theme:pac_man_ghosts"
+        },
+        "members": [
+          {"word": "BLINKY", "word_id": "ghost_a", "vector": [0.0, 0.0, 1.0, 0.0], "theme_tags": ["pacman", "ghost"]},
+          {"word": "INKY", "word_id": "ghost_b", "vector": [0.0, 0.0, 1.0, 0.0], "theme_tags": ["pacman", "ghost"]},
+          {"word": "PINKY", "word_id": "ghost_c", "vector": [0.0, 0.0, 1.0, 0.0], "theme_tags": ["pacman", "ghost"]},
+          {"word": "CLYDE", "word_id": "ghost_d", "vector": [0.0, 0.0, 1.0, 0.0], "theme_tags": ["pacman", "ghost"]}
+        ]
+      },
+      {
+        "group_type": "semantic",
+        "label": "Gemstones",
+        "confidence": 0.92,
+        "shared_tags": ["gemstone", "mineral"],
+        "metadata": {
+          "normalized_label": "gemstones",
+          "rule_signature": "semantic:gemstones"
+        },
+        "members": [
+          {"word": "RUBY", "word_id": "mix_gem_a", "vector": [0.0, 0.0, 0.0, 1.0], "semantic_tags": ["gemstone", "mineral"]},
+          {"word": "OPAL", "word_id": "mix_gem_b", "vector": [0.0, 0.0, 0.0, 1.0], "semantic_tags": ["gemstone", "mineral"]},
+          {"word": "JADE", "word_id": "mix_gem_c", "vector": [0.0, 0.0, 0.0, 1.0], "semantic_tags": ["gemstone", "mineral"]},
+          {"word": "TOPAZ", "word_id": "mix_gem_d", "vector": [0.0, 0.0, 0.0, 1.0], "semantic_tags": ["gemstone", "mineral"]}
+        ]
+      }
+    ]
+  },
+  "phonetic_accept": {
+    "expected_decision": "accept",
+    "expected_risk_level": "low",
+    "expected_mechanism_mix": {
+      "phonetic": 1,
+      "semantic": 2,
+      "theme": 1
+    },
+    "expected_mixed_board": true,
+    "expected_archetype": "balanced_mixed",
+    "minimum_score": 0.88,
+    "ranking_score": 4.5,
+    "groups": [
+      {
+        "group_type": "semantic",
+        "label": "Planets",
+        "confidence": 0.94,
+        "shared_tags": ["planet", "astronomy"],
+        "metadata": {
+          "normalized_label": "planets",
+          "rule_signature": "semantic:planets"
+        },
+        "members": [
+          {"word": "MERCURY", "word_id": "phon_planet_a", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["planet", "astronomy"]},
+          {"word": "VENUS", "word_id": "phon_planet_b", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["planet", "astronomy"]},
+          {"word": "EARTH", "word_id": "phon_planet_c", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["planet", "astronomy"]},
+          {"word": "MARS", "word_id": "phon_planet_d", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["planet", "astronomy"]}
+        ]
+      },
+      {
+        "group_type": "phonetic",
+        "label": "Rhymes with -AKE",
+        "confidence": 0.9,
+        "shared_tags": ["rhyme:ake"],
+        "metadata": {
+          "normalized_label": "rhymes_with_ake",
+          "phonetic_pattern_type": "perfect_rhyme",
+          "normalized_phonetic_signature": "perfect_rhyme:ey1_k",
+          "rule_signature": "phonetic:perfect_rhyme:ey1_k"
+        },
+        "members": [
+          {"word": "BAKE", "word_id": "ake_a", "vector": [0.0, 1.0, 0.0, 0.0], "phonetic_signals": ["rhyme:ake"]},
+          {"word": "CAKE", "word_id": "ake_b", "vector": [0.0, 1.0, 0.0, 0.0], "phonetic_signals": ["rhyme:ake"]},
+          {"word": "LAKE", "word_id": "ake_c", "vector": [0.0, 1.0, 0.0, 0.0], "phonetic_signals": ["rhyme:ake"]},
+          {"word": "RAKE", "word_id": "ake_d", "vector": [0.0, 1.0, 0.0, 0.0], "phonetic_signals": ["rhyme:ake"]}
+        ]
+      },
+      {
+        "group_type": "theme",
+        "label": "Pac-Man ghosts",
+        "confidence": 0.91,
+        "shared_tags": ["pacman", "ghost"],
+        "metadata": {
+          "normalized_label": "pac_man_ghosts",
+          "theme_name": "pac_man_ghosts",
+          "theme_source": "curated_theme_inventory_v1",
+          "rule_signature": "theme:pac_man_ghosts"
+        },
+        "members": [
+          {"word": "BLINKY", "word_id": "phon_ghost_a", "vector": [0.0, 0.0, 1.0, 0.0], "theme_tags": ["pacman", "ghost"]},
+          {"word": "INKY", "word_id": "phon_ghost_b", "vector": [0.0, 0.0, 1.0, 0.0], "theme_tags": ["pacman", "ghost"]},
+          {"word": "PINKY", "word_id": "phon_ghost_c", "vector": [0.0, 0.0, 1.0, 0.0], "theme_tags": ["pacman", "ghost"]},
+          {"word": "CLYDE", "word_id": "phon_ghost_d", "vector": [0.0, 0.0, 1.0, 0.0], "theme_tags": ["pacman", "ghost"]}
+        ]
+      },
+      {
+        "group_type": "semantic",
+        "label": "Gemstones",
+        "confidence": 0.92,
+        "shared_tags": ["gemstone", "mineral"],
+        "metadata": {
+          "normalized_label": "gemstones",
+          "rule_signature": "semantic:gemstones"
+        },
+        "members": [
+          {"word": "RUBY", "word_id": "phon_gem_a", "vector": [0.0, 0.0, 0.0, 1.0], "semantic_tags": ["gemstone", "mineral"]},
+          {"word": "OPAL", "word_id": "phon_gem_b", "vector": [0.0, 0.0, 0.0, 1.0], "semantic_tags": ["gemstone", "mineral"]},
+          {"word": "JADE", "word_id": "phon_gem_c", "vector": [0.0, 0.0, 0.0, 1.0], "semantic_tags": ["gemstone", "mineral"]},
+          {"word": "TOPAZ", "word_id": "phon_gem_d", "vector": [0.0, 0.0, 0.0, 1.0], "semantic_tags": ["gemstone", "mineral"]}
+        ]
+      }
+    ]
+  },
+  "borderline": {
+    "expected_decision": "borderline",
+    "expected_risk_level": "high",
+    "expected_mechanism_mix": {
+      "semantic": 4
+    },
+    "expected_mixed_board": false,
+    "expected_archetype": "semantic_heavy",
+    "minimum_score": 0.35,
+    "ranking_score": 3.6,
+    "groups": [
+      {
+        "group_type": "semantic",
+        "label": "Birds",
+        "confidence": 0.85,
+        "shared_tags": ["bird", "airborne"],
+        "metadata": {
+          "normalized_label": "birds",
+          "rule_signature": "semantic:birds"
+        },
+        "members": [
+          {"word": "FALCON", "word_id": "bird_border_a", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["bird", "airborne"]},
+          {"word": "EAGLE", "word_id": "bird_border_b", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["bird", "airborne"]},
+          {"word": "HAWK", "word_id": "bird_border_c", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["bird", "airborne"]},
+          {"word": "OWL", "word_id": "bird_border_d", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["bird", "airborne"]}
+        ]
+      },
+      {
+        "group_type": "semantic",
+        "label": "Aircraft",
+        "confidence": 0.81,
+        "shared_tags": ["machine", "airborne"],
+        "metadata": {
+          "normalized_label": "aircraft",
+          "rule_signature": "semantic:aircraft"
+        },
+        "members": [
+          {"word": "JET", "word_id": "air_border_a", "vector": [0.82, 0.572, 0.0, 0.0], "semantic_tags": ["machine", "airborne"]},
+          {"word": "DRONE", "word_id": "air_border_b", "vector": [0.82, 0.572, 0.0, 0.0], "semantic_tags": ["machine", "airborne"]},
+          {"word": "GLIDER", "word_id": "air_border_c", "vector": [0.82, 0.572, 0.0, 0.0], "semantic_tags": ["machine", "airborne"]},
+          {"word": "ROCKET", "word_id": "air_border_d", "vector": [0.82, 0.572, 0.0, 0.0], "semantic_tags": ["machine", "airborne"]}
+        ]
+      },
+      {
+        "group_type": "semantic",
+        "label": "Trees",
+        "confidence": 0.9,
+        "shared_tags": ["tree", "plant"],
+        "metadata": {
+          "normalized_label": "trees",
+          "rule_signature": "semantic:trees"
+        },
+        "members": [
+          {"word": "PINE", "word_id": "tree_border_a", "vector": [0.0, 1.0, 0.0, 0.0], "semantic_tags": ["tree", "plant"]},
+          {"word": "MAPLE", "word_id": "tree_border_b", "vector": [0.0, 1.0, 0.0, 0.0], "semantic_tags": ["tree", "plant"]},
+          {"word": "OAK", "word_id": "tree_border_c", "vector": [0.0, 1.0, 0.0, 0.0], "semantic_tags": ["tree", "plant"]},
+          {"word": "BIRCH", "word_id": "tree_border_d", "vector": [0.0, 1.0, 0.0, 0.0], "semantic_tags": ["tree", "plant"]}
+        ]
+      },
+      {
+        "group_type": "semantic",
+        "label": "Fish",
+        "confidence": 0.89,
+        "shared_tags": ["fish", "aquatic"],
+        "metadata": {
+          "normalized_label": "fish",
+          "rule_signature": "semantic:fish"
+        },
+        "members": [
+          {"word": "SALMON", "word_id": "fish_border_a", "vector": [0.0, 0.0, 1.0, 0.0], "semantic_tags": ["fish", "aquatic"]},
+          {"word": "TROUT", "word_id": "fish_border_b", "vector": [0.0, 0.0, 1.0, 0.0], "semantic_tags": ["fish", "aquatic"]},
+          {"word": "CARP", "word_id": "fish_border_c", "vector": [0.0, 0.0, 1.0, 0.0], "semantic_tags": ["fish", "aquatic"]},
+          {"word": "EEL", "word_id": "fish_border_d", "vector": [0.0, 0.0, 1.0, 0.0], "semantic_tags": ["fish", "aquatic"]}
+        ]
+      }
+    ]
+  },
+  "reject": {
+    "expected_decision": "reject",
+    "expected_risk_level": "critical",
+    "expected_mechanism_mix": {
+      "semantic": 4
+    },
+    "expected_mixed_board": false,
+    "expected_archetype": "semantic_heavy",
+    "minimum_score": 0.0,
+    "ranking_score": 3.1,
+    "groups": [
+      {
+        "group_type": "semantic",
+        "label": "Birds",
+        "confidence": 0.78,
+        "shared_tags": ["bird", "airborne"],
+        "metadata": {
+          "normalized_label": "birds",
+          "rule_signature": "semantic:birds"
+        },
+        "members": [
+          {"word": "FALCON", "word_id": "bird_reject_a", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["bird", "airborne"]},
+          {"word": "EAGLE", "word_id": "bird_reject_b", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["bird", "airborne"]},
+          {"word": "HAWK", "word_id": "bird_reject_c", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["bird", "airborne"]},
+          {"word": "OWL", "word_id": "bird_reject_d", "vector": [1.0, 0.0, 0.0, 0.0], "semantic_tags": ["bird", "airborne"]}
+        ]
+      },
+      {
+        "group_type": "semantic",
+        "label": "Aircraft",
+        "confidence": 0.74,
+        "shared_tags": ["machine", "airborne"],
+        "metadata": {
+          "normalized_label": "aircraft",
+          "rule_signature": "semantic:aircraft"
+        },
+        "members": [
+          {"word": "JET", "word_id": "air_reject_a", "vector": [0.97, 0.243, 0.0, 0.0], "semantic_tags": ["machine", "airborne"]},
+          {"word": "DRONE", "word_id": "air_reject_b", "vector": [0.97, 0.243, 0.0, 0.0], "semantic_tags": ["machine", "airborne"]},
+          {"word": "GLIDER", "word_id": "air_reject_c", "vector": [0.97, 0.243, 0.0, 0.0], "semantic_tags": ["machine", "airborne"]},
+          {"word": "ROCKET", "word_id": "air_reject_d", "vector": [0.97, 0.243, 0.0, 0.0], "semantic_tags": ["machine", "airborne"]}
+        ]
+      },
+      {
+        "group_type": "semantic",
+        "label": "Trees",
+        "confidence": 0.9,
+        "shared_tags": ["tree", "plant"],
+        "metadata": {
+          "normalized_label": "trees",
+          "rule_signature": "semantic:trees"
+        },
+        "members": [
+          {"word": "PINE", "word_id": "tree_reject_a", "vector": [0.0, 1.0, 0.0, 0.0], "semantic_tags": ["tree", "plant"]},
+          {"word": "MAPLE", "word_id": "tree_reject_b", "vector": [0.0, 1.0, 0.0, 0.0], "semantic_tags": ["tree", "plant"]},
+          {"word": "OAK", "word_id": "tree_reject_c", "vector": [0.0, 1.0, 0.0, 0.0], "semantic_tags": ["tree", "plant"]},
+          {"word": "BIRCH", "word_id": "tree_reject_d", "vector": [0.0, 1.0, 0.0, 0.0], "semantic_tags": ["tree", "plant"]}
+        ]
+      },
+      {
+        "group_type": "semantic",
+        "label": "Fish",
+        "confidence": 0.89,
+        "shared_tags": ["fish", "aquatic"],
+        "metadata": {
+          "normalized_label": "fish",
+          "rule_signature": "semantic:fish"
+        },
+        "members": [
+          {"word": "SALMON", "word_id": "fish_reject_a", "vector": [0.0, 0.0, 1.0, 0.0], "semantic_tags": ["fish", "aquatic"]},
+          {"word": "TROUT", "word_id": "fish_reject_b", "vector": [0.0, 0.0, 1.0, 0.0], "semantic_tags": ["fish", "aquatic"]},
+          {"word": "CARP", "word_id": "fish_reject_c", "vector": [0.0, 0.0, 1.0, 0.0], "semantic_tags": ["fish", "aquatic"]},
+          {"word": "EEL", "word_id": "fish_reject_d", "vector": [0.0, 0.0, 1.0, 0.0], "semantic_tags": ["fish", "aquatic"]}
+        ]
+      }
+    ]
+  }
+}

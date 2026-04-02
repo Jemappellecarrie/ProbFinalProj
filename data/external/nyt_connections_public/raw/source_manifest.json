@@ -1,0 +1,15 @@
+{
+  "source": "huggingface",
+  "dataset_id": "eric27n/NYT-Connections",
+  "rows": 10048,
+  "games": 628,
+  "columns": [
+    "Game ID",
+    "Puzzle Date",
+    "Word",
+    "Group Name",
+    "Group Level",
+    "Starting Row",
+    "Starting Column"
+  ]
+}

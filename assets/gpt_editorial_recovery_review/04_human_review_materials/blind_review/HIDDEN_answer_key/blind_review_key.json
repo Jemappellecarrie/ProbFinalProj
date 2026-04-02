@@ -1,0 +1,229 @@
+{
+  "packet_name": "blind_review_seed_17",
+  "entries": [
+    {
+      "packet_board_id": "blind_board_001",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-11-09_546",
+        "source_run_id": null
+      }
+    },
+    {
+      "packet_board_id": "blind_board_002",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-12-11_572",
+        "source_run_id": null
+      }
+    },
+    {
+      "packet_board_id": "blind_board_003",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_9aa253dc9c81",
+        "source_run_id": "final_quality_acceptance"
+      }
+    },
+    {
+      "packet_board_id": "blind_board_004",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_8dd9faa636b2",
+        "source_run_id": "final_quality_acceptance"
+      }
+    },
+    {
+      "packet_board_id": "blind_board_005",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_53efb25c8b81",
+        "source_run_id": "final_quality_acceptance"
+      }
+    },
+    {
+      "packet_board_id": "blind_board_006",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2025-02-07_641",
+        "source_run_id": null
+      }
+    },
+    {
+      "packet_board_id": "blind_board_007",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2025-02-25_651",
+        "source_run_id": null
+      }
+    },
+    {
+      "packet_board_id": "blind_board_008",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-12-31_599",
+        "source_run_id": null
+      }
+    },
+    {
+      "packet_board_id": "blind_board_009",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_afecfe79f9bd",
+        "source_run_id": "final_quality_acceptance"
+      }
+    },
+    {
+      "packet_board_id": "blind_board_010",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_f789f19e8e49",
+        "source_run_id": "final_quality_acceptance"
+      }
+    },
+    {
+      "packet_board_id": "blind_board_011",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2025-02-06_635",
+        "source_run_id": null
+      }
+    },
+    {
+      "packet_board_id": "blind_board_012",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2025-01-29_624",
+        "source_run_id": null
+      }
+    },
+    {
+      "packet_board_id": "blind_board_013",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2025-02-20_656",
+        "source_run_id": null
+      }
+    },
+    {
+      "packet_board_id": "blind_board_014",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-11-26_563",
+        "source_run_id": null
+      }
+    },
+    {
+      "packet_board_id": "blind_board_015",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-12-03_569",
+        "source_run_id": null
+      }
+    },
+    {
+      "packet_board_id": "blind_board_016",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2025-01-03_602",
+        "source_run_id": null
+      }
+    },
+    {
+      "packet_board_id": "blind_board_017",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_01c93ba2960c",
+        "source_run_id": "final_quality_acceptance"
+      }
+    },
+    {
+      "packet_board_id": "blind_board_018",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2025-02-01_629",
+        "source_run_id": null
+      }
+    },
+    {
+      "packet_board_id": "blind_board_019",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_f931b6627c4c",
+        "source_run_id": "final_quality_acceptance"
+      }
+    },
+    {
+      "packet_board_id": "blind_board_020",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-12-18_588",
+        "source_run_id": null
+      }
+    },
+    {
+      "packet_board_id": "blind_board_021",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_7d7484cca955",
+        "source_run_id": "final_quality_acceptance"
+      }
+    },
+    {
+      "packet_board_id": "blind_board_022",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-11-30_565",
+        "source_run_id": null
+      }
+    },
+    {
+      "packet_board_id": "blind_board_023",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2025-01-24_623",
+        "source_run_id": null
+      }
+    },
+    {
+      "packet_board_id": "blind_board_024",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2025-01-18_615",
+        "source_run_id": null
+      }
+    },
+    {
+      "packet_board_id": "blind_board_025",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-11-17_554",
+        "source_run_id": null
+      }
+    },
+    {
+      "packet_board_id": "blind_board_026",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-12-14_581",
+        "source_run_id": null
+      }
+    },
+    {
+      "packet_board_id": "blind_board_027",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-10-29_532",
+        "source_run_id": null
+      }
+    },
+    {
+      "packet_board_id": "blind_board_028",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-12-02_566",
+        "source_run_id": null
+      }
+    }
+  ]
+}

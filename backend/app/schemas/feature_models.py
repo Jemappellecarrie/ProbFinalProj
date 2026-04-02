@@ -20,6 +20,39 @@ class WordEntry(BaseModel):
     metadata: dict[str, Any] = Field(default_factory=dict)
 
 
+class CanonicalFormEvidence(BaseModel):
+    """Canonicalization details attached to semantic baseline feature records."""
+
+    original_surface: str
+    display_form: str
+    normalized_source: str
+    canonical_normalized: str
+    tokenized_words: list[str] = Field(default_factory=list)
+    collision_count: int = 1
+    colliding_word_ids: list[str] = Field(default_factory=list)
+
+
+class RawSemanticSourceFacts(BaseModel):
+    """Raw metadata facts preserved before baseline derivation."""
+
+    semantic_metadata: list[str] = Field(default_factory=list)
+    theme_metadata: list[str] = Field(default_factory=list)
+    lexical_metadata: list[str] = Field(default_factory=list)
+    phonetic_metadata: list[str] = Field(default_factory=list)
+    group_hints: dict[str, str] = Field(default_factory=dict)
+    label_hint_sources: list[str] = Field(default_factory=list)
+
+
+class SemanticSupportSummary(BaseModel):
+    """Coarse support accounting for explainability and sparse-feature honesty."""
+
+    semantic_signal_count: int = 0
+    theme_signal_count: int = 0
+    label_hint_count: int = 0
+    support_level: str = "surface_only"
+    notes: list[str] = Field(default_factory=list)
+
+
 class WordFeatures(BaseModel):
     """Normalized feature bundle for a single word."""
 

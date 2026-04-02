@@ -1,0 +1,228 @@
+{
+  "report_version": "quality_audit_v1",
+  "generated_run_id": "final_quality_acceptance",
+  "generated_top_k_count": 20,
+  "benchmark_calibration_count": 502,
+  "benchmark_holdout_count": 126,
+  "split_policy": "primary oldest 80% calibration / newest 20% holdout; newer supplement-only boards freshness split",
+  "generated_quality_buckets": {
+    "accepted_high_confidence": 0,
+    "accepted_borderline": 20,
+    "rejected": 0
+  },
+  "benchmark_quality_buckets": {
+    "accepted_high_confidence": 34,
+    "accepted_borderline": 83,
+    "rejected": 9
+  },
+  "comparison_sections": {
+    "verification_decision_distribution": {
+      "generated_counts": {
+        "borderline": 20
+      },
+      "benchmark_counts": {
+        "accept": 34,
+        "borderline": 83,
+        "reject": 9
+      },
+      "generated_shares": {
+        "borderline": 1.0
+      },
+      "benchmark_shares": {
+        "accept": 0.2698,
+        "borderline": 0.6587,
+        "reject": 0.0714
+      },
+      "l1_distance": 0.6825
+    },
+    "score_distribution_summary": {
+      "ambiguity_penalty_mean": {
+        "generated": 0.1202,
+        "benchmark": 0.151,
+        "absolute_delta": 0.0308
+      },
+      "coherence_mean": {
+        "generated": 0.8037,
+        "benchmark": 0.7786,
+        "absolute_delta": 0.0251
+      },
+      "human_likeness_mean": {
+        "generated": 1.0,
+        "benchmark": 0.5053,
+        "absolute_delta": 0.4947
+      },
+      "overall_mean": {
+        "generated": 0.9294,
+        "benchmark": 0.4572,
+        "absolute_delta": 0.4722
+      }
+    },
+    "mechanism_mix_distribution": {
+      "generated_counts": {
+        "lexical": 20,
+        "phonetic": 20,
+        "semantic": 20,
+        "theme": 20
+      },
+      "benchmark_counts": {
+        "lexical": 19,
+        "phonetic": 8,
+        "semantic": 469,
+        "theme": 8
+      },
+      "generated_shares": {
+        "lexical": 0.25,
+        "phonetic": 0.25,
+        "semantic": 0.25,
+        "theme": 0.25
+      },
+      "benchmark_shares": {
+        "lexical": 0.0377,
+        "phonetic": 0.0159,
+        "semantic": 0.9306,
+        "theme": 0.0159
+      },
+      "l1_distance": 1.3611
+    },
+    "style_distance_summary": {
+      "ambiguity_score": {
+        "generated": 0.1202,
+        "benchmark": 0.151,
+        "absolute_delta": 0.0308
+      },
+      "coherence_trickiness_balance": {
+        "generated": 0.7403,
+        "benchmark": 0.3369,
+        "absolute_delta": 0.4034
+      },
+      "evidence_interpretability": {
+        "generated": 0.9625,
+        "benchmark": 0.9508,
+        "absolute_delta": 0.0117
+      },
+      "label_token_mean": {
+        "generated": 2.225,
+        "benchmark": 2.9226,
+        "absolute_delta": 0.6976
+      },
+      "label_token_std": {
+        "generated": 0.9351,
+        "benchmark": 1.6523,
+        "absolute_delta": 0.7172
+      },
+      "phonetic_group_count": {
+        "generated": 1.0,
+        "benchmark": 0.0635,
+        "absolute_delta": 0.9365
+      },
+      "redundancy_score": {
+        "generated": 0.0929,
+        "benchmark": 0.9491,
+        "absolute_delta": 0.8562
+      },
+      "semantic_group_count": {
+        "generated": 1.0,
+        "benchmark": 3.7222,
+        "absolute_delta": 2.7222
+      },
+      "semantic_wordplay_balance": {
+        "generated": 0.6667,
+        "benchmark": 0.0549,
+        "absolute_delta": 0.6118
+      },
+      "style_alignment_score": {
+        "generated": 1.0,
+        "benchmark": 0.5053,
+        "absolute_delta": 0.4947
+      },
+      "theme_group_count": {
+        "generated": 1.0,
+        "benchmark": 0.0635,
+        "absolute_delta": 0.9365
+      },
+      "unique_group_type_count": {
+        "generated": 4.0,
+        "benchmark": 1.2778,
+        "absolute_delta": 2.7222
+      },
+      "wordplay_group_count": {
+        "generated": 2.0,
+        "benchmark": 0.2143,
+        "absolute_delta": 1.7857
+      }
+    },
+    "label_shape_summary": {
+      "label_token_mean": {
+        "generated": 2.225,
+        "benchmark": 2.9226,
+        "absolute_delta": 0.6976
+      },
+      "label_token_std": {
+        "generated": 0.9351,
+        "benchmark": 1.6523,
+        "absolute_delta": 0.7172
+      }
+    },
+    "board_diversity_summary": {
+      "phonetic_group_count": {
+        "generated": 1.0,
+        "benchmark": 0.0635,
+        "absolute_delta": 0.9365
+      },
+      "semantic_group_count": {
+        "generated": 1.0,
+        "benchmark": 3.7222,
+        "absolute_delta": 2.7222
+      },
+      "theme_group_count": {
+        "generated": 1.0,
+        "benchmark": 0.0635,
+        "absolute_delta": 0.9365
+      },
+      "unique_group_type_count": {
+        "generated": 4.0,
+        "benchmark": 1.2778,
+        "absolute_delta": 2.7222
+      },
+      "wordplay_group_count": {
+        "generated": 2.0,
+        "benchmark": 0.2143,
+        "absolute_delta": 1.7857
+      }
+    },
+    "ambiguity_summary": {
+      "alternative_group_pressure_mean": {
+        "generated": 0.0,
+        "benchmark": 0.0223,
+        "absolute_delta": 0.0223
+      },
+      "board_pressure_mean": {
+        "generated": 0.1202,
+        "benchmark": 0.151,
+        "absolute_delta": 0.0308
+      },
+      "leakage_penalty_mean": {
+        "generated": 0.1202,
+        "benchmark": 0.151,
+        "absolute_delta": 0.0308
+      }
+    }
+  },
+  "quality_gate_summary": {
+    "machine_publishable_proxy": {
+      "rate": 0.0,
+      "definition": "Share of generated top-k boards with verifier decision 'accept'.",
+      "not_human_gate": true
+    },
+    "default_human_gate": {
+      "threshold_rate": 0.4,
+      "definition": "At least 40% of reviewed generated boards are publishable by majority vote.",
+      "human_rating_required": true
+    }
+  },
+  "notes": [
+    "Benchmark-side verifier and scorer outputs use an answer-aware local solver for audit only.",
+    "Mechanism proportions on the benchmark are based on conservative heuristic labeling.",
+    "Automatic audit supports review prioritization but does not satisfy the final publishable-rate claim."
+  ]
+}

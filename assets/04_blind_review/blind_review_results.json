@@ -1,0 +1,21 @@
+{
+  "generated_publishable_rate": 0.0,
+  "benchmark_publishable_rate": 0.0,
+  "inter_rater_agreement": {
+    "publishable_pairwise_agreement": 0.0
+  },
+  "failure_modes": {},
+  "final_quality_gate": {
+    "gate_name": "generated_publishable_majority_40_percent",
+    "threshold_rate": 0.4,
+    "actual_rate": null,
+    "passed": null,
+    "resolved": false,
+    "evaluated_board_count": 0,
+    "notes": [
+      "No completed generated-board reviews were provided.",
+      "The final 40% gate remains unresolved until real reviewer forms are scored."
+    ]
+  },
+  "output_files": {}
+}

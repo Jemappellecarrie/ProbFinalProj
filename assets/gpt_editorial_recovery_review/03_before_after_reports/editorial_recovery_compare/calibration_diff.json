@@ -1,0 +1,107 @@
+{
+  "changed": true,
+  "changes": {
+    "stage3_editorial_selection": {
+      "composer_editorial_family_cap": {
+        "before": null,
+        "after": 1
+      },
+      "composer_surface_wordplay_family_cap": {
+        "before": null,
+        "after": 1
+      },
+      "composer_theme_family_cap": {
+        "before": null,
+        "after": 1
+      },
+      "top_k_editorial_family_cap": {
+        "before": null,
+        "after": 1
+      },
+      "top_k_surface_wordplay_family_cap": {
+        "before": null,
+        "after": 1
+      },
+      "top_k_theme_family_cap": {
+        "before": null,
+        "after": 1
+      }
+    },
+    "stage3_scoring": {
+      "editorial_flatness_penalty_weight": {
+        "before": null,
+        "after": 0.08
+      },
+      "editorial_payoff_bonus_weight": {
+        "before": null,
+        "after": 0.08
+      },
+      "family_repetition_penalty_weight": {
+        "before": null,
+        "after": 0.07
+      },
+      "formulaic_mix_penalty_weight": {
+        "before": null,
+        "after": 0.08
+      },
+      "label_naturalness_bonus_weight": {
+        "before": null,
+        "after": 0.03
+      },
+      "microtheme_overuse_penalty_weight": {
+        "before": null,
+        "after": 0.06
+      },
+      "mixed_mechanism_bonus_weight": {
+        "before": 0.03,
+        "after": 0.01
+      },
+      "phonetic_showcase_bonus_weight": {
+        "before": 0.03,
+        "after": 0.015
+      },
+      "repeated_pattern_family_penalty_weight": {
+        "before": null,
+        "after": 0.05
+      },
+      "style_alignment_bonus_weight": {
+        "before": 0.08,
+        "after": 0.04
+      },
+      "surface_wordplay_penalty_weight": {
+        "before": null,
+        "after": 0.06
+      },
+      "wordplay_bonus_weight": {
+        "before": 0.04,
+        "after": 0.02
+      }
+    },
+    "stage3_verifier": {
+      "editorial_flatness_borderline_threshold": {
+        "before": null,
+        "after": 0.62
+      },
+      "family_repetition_warning_threshold": {
+        "before": null,
+        "after": 0.55
+      },
+      "formulaic_mix_warning_threshold": {
+        "before": null,
+        "after": 0.65
+      },
+      "microtheme_trivia_warning_threshold": {
+        "before": null,
+        "after": 0.65
+      },
+      "surface_wordplay_warning_threshold": {
+        "before": null,
+        "after": 0.75
+      },
+      "weak_label_naturalness_warning_threshold": {
+        "before": null,
+        "after": 0.4
+      }
+    }
+  }
+}

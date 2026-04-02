@@ -1,0 +1,944 @@
+{
+  "entries": [
+    {
+      "packet_board_id": "playtest_board_001",
+      "tester_id": "tester_01",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-11-04_539",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "EQUIP",
+          "words": [
+            "FURNISH",
+            "STOCK",
+            "OUTFIT",
+            "PROVISION"
+          ]
+        },
+        {
+          "label": "INDIVIDUALITY",
+          "words": [
+            "BEING",
+            "SELF",
+            "CHARACTER",
+            "EGO"
+          ]
+        },
+        {
+          "label": "FURNITURE",
+          "words": [
+            "VANITY",
+            "WARDROBE",
+            "CONSOLE",
+            "CHEST"
+          ]
+        },
+        {
+          "label": "WORDS WITH APOSTROPHES REMOVED",
+          "words": [
+            "WERE",
+            "CANT",
+            "SHELL",
+            "ID"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_002",
+      "tester_id": "tester_01",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_8cd74af15959",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Rhymes with -AKE",
+          "words": [
+            "RAKE",
+            "LAKE",
+            "BAKE",
+            "CAKE"
+          ]
+        },
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        },
+        {
+          "label": "Starts with SN",
+          "words": [
+            "SNAP",
+            "SNUG",
+            "SNIP",
+            "SNOW"
+          ]
+        },
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "PINKY",
+            "INKY",
+            "CLYDE",
+            "BLINKY"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_003",
+      "tester_id": "tester_01",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_6811c9df41b6",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Starts with SN",
+          "words": [
+            "SNAP",
+            "SNUG",
+            "SNIP",
+            "SNOW"
+          ]
+        },
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "PINKY",
+            "INKY",
+            "CLYDE",
+            "BLINKY"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MARS",
+            "EARTH",
+            "VENUS",
+            "MERCURY"
+          ]
+        },
+        {
+          "label": "Rhymes with -AKE",
+          "words": [
+            "RAKE",
+            "LAKE",
+            "BAKE",
+            "CAKE"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_004",
+      "tester_id": "tester_01",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-12-05_571",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "___STONE",
+          "words": [
+            "BRIM",
+            "RHINE",
+            "LIME",
+            "YELLOW"
+          ]
+        },
+        {
+          "label": "TECH COMPANIES",
+          "words": [
+            "INTUIT",
+            "ORACLE",
+            "AMAZON",
+            "APPLE"
+          ]
+        },
+        {
+          "label": "EXTERIOR",
+          "words": [
+            "OUTSIDE",
+            "FRONT",
+            "SURFACE",
+            "FACE"
+          ]
+        },
+        {
+          "label": "APTITUDE",
+          "words": [
+            "FLAIR",
+            "INSTINCT",
+            "GIFT",
+            "NOSE"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_005",
+      "tester_id": "tester_02",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_206b903d8268",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Ends with -AKE",
+          "words": [
+            "BAKE",
+            "CAKE",
+            "RAKE",
+            "LAKE"
+          ]
+        },
+        {
+          "label": "Rhymes with -EEL",
+          "words": [
+            "KEEL",
+            "PEEL",
+            "HEEL",
+            "REEL"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MARS",
+            "EARTH",
+            "VENUS",
+            "MERCURY"
+          ]
+        },
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "PINKY",
+            "INKY",
+            "CLYDE",
+            "BLINKY"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_006",
+      "tester_id": "tester_02",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-11-06_540",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "DVR BUTTONS",
+          "words": [
+            "PLAY",
+            "STOP",
+            "PAUSE",
+            "RECORD"
+          ]
+        },
+        {
+          "label": "COMMUNICATE THROUGH WRITING",
+          "words": [
+            "CORRESPOND",
+            "WRITE",
+            "MESSAGE",
+            "TEXT"
+          ]
+        },
+        {
+          "label": "THINGS WITH FEET",
+          "words": [
+            "FURNITURE",
+            "BIPED",
+            "POEM",
+            "YARDSTICK"
+          ]
+        },
+        {
+          "label": "GROUNDBREAKING",
+          "words": [
+            "ORIGINAL",
+            "NOVEL",
+            "DIFFERENT",
+            "NEW"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_007",
+      "tester_id": "tester_02",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_d0222f9f4632",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "PINKY",
+            "INKY",
+            "CLYDE",
+            "BLINKY"
+          ]
+        },
+        {
+          "label": "Rhymes with -EEL",
+          "words": [
+            "KEEL",
+            "PEEL",
+            "HEEL",
+            "REEL"
+          ]
+        },
+        {
+          "label": "Starts with SN",
+          "words": [
+            "SNAP",
+            "SNUG",
+            "SNIP",
+            "SNOW"
+          ]
+        },
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_008",
+      "tester_id": "tester_02",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-11-18_555",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "MONTHLY EXPENSES",
+          "words": [
+            "PHONE",
+            "GAS",
+            "INTERNET",
+            "RENT"
+          ]
+        },
+        {
+          "label": "USED IN HAIR CARE",
+          "words": [
+            "DRYER",
+            "COMB",
+            "ROLLERS",
+            "HAIRSPRAY"
+          ]
+        },
+        {
+          "label": "___ CRAB",
+          "words": [
+            "FIDDLER",
+            "SPIDER",
+            "HERMIT",
+            "HORSESHOE"
+          ]
+        },
+        {
+          "label": "THINGS WITH SPOTS",
+          "words": [
+            "DOMINO",
+            "DALMATIAN",
+            "DIE",
+            "LADYBUG"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_009",
+      "tester_id": "tester_03",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_841d6c77b633",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Ends with -AKE",
+          "words": [
+            "BAKE",
+            "CAKE",
+            "RAKE",
+            "LAKE"
+          ]
+        },
+        {
+          "label": "Rhymes with -ASH",
+          "words": [
+            "BASH",
+            "CASH",
+            "DASH",
+            "MASH"
+          ]
+        },
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        },
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "PINKY",
+            "INKY",
+            "CLYDE",
+            "BLINKY"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_010",
+      "tester_id": "tester_03",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_f175eeb7f260",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        },
+        {
+          "label": "Ends with -AKE",
+          "words": [
+            "BAKE",
+            "CAKE",
+            "RAKE",
+            "LAKE"
+          ]
+        },
+        {
+          "label": "Rhymes with -EEL",
+          "words": [
+            "KEEL",
+            "PEEL",
+            "HEEL",
+            "REEL"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MERCURY",
+            "EARTH",
+            "MARS",
+            "VENUS"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_011",
+      "tester_id": "tester_03",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2025-02-08_640",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "TIME ADVERBS",
+          "words": [
+            "NOW",
+            "THEN",
+            "LATER",
+            "SOON"
+          ]
+        },
+        {
+          "label": "SCRUNCH, AS FABRIC",
+          "words": [
+            "GATHER",
+            "PUCKER",
+            "BUNCH",
+            "RUFFLE"
+          ]
+        },
+        {
+          "label": "INFO ON A BASEBALL CARD",
+          "words": [
+            "TEAM",
+            "STAT",
+            "BIO",
+            "PLAYER"
+          ]
+        },
+        {
+          "label": "___ FOOD",
+          "words": [
+            "SOUL",
+            "FAST",
+            "FINGER",
+            "JUNK"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_012",
+      "tester_id": "tester_03",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2025-02-06_635",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "THINGS WITH NECKS",
+          "words": [
+            "LAMP",
+            "GUITAR",
+            "BOTTLE",
+            "GIRAFFE"
+          ]
+        },
+        {
+          "label": "MAGNANIMOUS",
+          "words": [
+            "NOBLE",
+            "GRAND",
+            "LOFTY",
+            "GREAT"
+          ]
+        },
+        {
+          "label": "FIRST NAMES IN JAZZ",
+          "words": [
+            "CAB",
+            "COUNT",
+            "DIZZY",
+            "DUKE"
+          ]
+        },
+        {
+          "label": "DELICATE",
+          "words": [
+            "LIGHT",
+            "FAINT",
+            "SOFT",
+            "MILD"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_013",
+      "tester_id": "tester_04",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_27c4ca67a88e",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Starts with SN",
+          "words": [
+            "SNAP",
+            "SNUG",
+            "SNIP",
+            "SNOW"
+          ]
+        },
+        {
+          "label": "Rhymes with -ASH",
+          "words": [
+            "BASH",
+            "CASH",
+            "DASH",
+            "MASH"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MARS",
+            "EARTH",
+            "VENUS",
+            "MERCURY"
+          ]
+        },
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "PINKY",
+            "INKY",
+            "CLYDE",
+            "BLINKY"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_014",
+      "tester_id": "tester_04",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2025-01-06_604",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "BREATHE HARD",
+          "words": [
+            "PUFF",
+            "GASP",
+            "PANT",
+            "HEAVE"
+          ]
+        },
+        {
+          "label": "SYNONYMS FOR REAR END MINUS LAST LETTER",
+          "words": [
+            "ARS",
+            "BUT",
+            "RUM",
+            "BOOT"
+          ]
+        },
+        {
+          "label": "CATCHALL",
+          "words": [
+            "UMBRELLA",
+            "GENERAL",
+            "BROAD",
+            "BLANKET"
+          ]
+        },
+        {
+          "label": "METAPHORS FOR EASY THINGS",
+          "words": [
+            "BREEZE",
+            "PIE",
+            "ABC",
+            "PICNIC"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_015",
+      "tester_id": "tester_04",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_f2cffe5bf2a9",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Planets",
+          "words": [
+            "MERCURY",
+            "EARTH",
+            "MARS",
+            "VENUS"
+          ]
+        },
+        {
+          "label": "Ends with -AKE",
+          "words": [
+            "BAKE",
+            "CAKE",
+            "RAKE",
+            "LAKE"
+          ]
+        },
+        {
+          "label": "Rhymes with -ASH",
+          "words": [
+            "BASH",
+            "CASH",
+            "DASH",
+            "MASH"
+          ]
+        },
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_016",
+      "tester_id": "tester_04",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2025-01-20_612",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "___ SHEET",
+          "words": [
+            "CHEAT",
+            "FITTED",
+            "BALANCE",
+            "COOKIE"
+          ]
+        },
+        {
+          "label": "TAKE ON, AS A RESPONSIBILITY",
+          "words": [
+            "ASSUME",
+            "SHOULDER",
+            "HANDLE",
+            "BEAR"
+          ]
+        },
+        {
+          "label": "CORNERS",
+          "words": [
+            "ANGLE",
+            "ELBOW",
+            "BEND",
+            "CROOK"
+          ]
+        },
+        {
+          "label": "ASSOCIATED WITH POPEYE",
+          "words": [
+            "FOREARM",
+            "ANCHOR",
+            "PIPE",
+            "SPINACH"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_017",
+      "tester_id": "tester_05",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_7baf6b3b3b42",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Rhymes with -ASH",
+          "words": [
+            "BASH",
+            "CASH",
+            "DASH",
+            "MASH"
+          ]
+        },
+        {
+          "label": "Planets",
+          "words": [
+            "MERCURY",
+            "EARTH",
+            "MARS",
+            "VENUS"
+          ]
+        },
+        {
+          "label": "Starts with SN",
+          "words": [
+            "SNAP",
+            "SNUG",
+            "SNIP",
+            "SNOW"
+          ]
+        },
+        {
+          "label": "Gemstones",
+          "words": [
+            "JADE",
+            "OPAL",
+            "RUBY",
+            "TOPAZ"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_018",
+      "tester_id": "tester_05",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2025-01-17_614",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "FRANKFURTER",
+          "words": [
+            "BRAT",
+            "LINK",
+            "BANGER",
+            "SAUSAGE"
+          ]
+        },
+        {
+          "label": "STRIKE",
+          "words": [
+            "HIT",
+            "BOP",
+            "KNOCK",
+            "TAP"
+          ]
+        },
+        {
+          "label": "ENDING WITH BEER BRANDS",
+          "words": [
+            "AUTOHARP",
+            "ROSEBUD",
+            "PEPPERONI",
+            "CONTRABASS"
+          ]
+        },
+        {
+          "label": "WEB BROWSERS",
+          "words": [
+            "OPERA",
+            "CHROME",
+            "SAFARI",
+            "EDGE"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_019",
+      "tester_id": "tester_05",
+      "hidden_source": {
+        "source_label": "generated",
+        "source_board_id": "puzzle_88954dc66b1f",
+        "source_run_id": "final_quality_acceptance"
+      },
+      "solution_groups": [
+        {
+          "label": "Planets",
+          "words": [
+            "MARS",
+            "EARTH",
+            "VENUS",
+            "MERCURY"
+          ]
+        },
+        {
+          "label": "Rhymes with -ASH",
+          "words": [
+            "BASH",
+            "CASH",
+            "DASH",
+            "MASH"
+          ]
+        },
+        {
+          "label": "Ends with -AKE",
+          "words": [
+            "BAKE",
+            "CAKE",
+            "RAKE",
+            "LAKE"
+          ]
+        },
+        {
+          "label": "Pac-Man ghosts",
+          "words": [
+            "PINKY",
+            "INKY",
+            "CLYDE",
+            "BLINKY"
+          ]
+        }
+      ]
+    },
+    {
+      "packet_board_id": "playtest_board_020",
+      "tester_id": "tester_05",
+      "hidden_source": {
+        "source_label": "benchmark",
+        "source_board_id": "nyt_connections_2024-12-15_589",
+        "source_run_id": null
+      },
+      "solution_groups": [
+        {
+          "label": "PERFORM POORLY",
+          "words": [
+            "FLAIL",
+            "FLOP",
+            "TANK",
+            "FLOUNDER"
+          ]
+        },
+        {
+          "label": "SKIM THROUGH, AS PAGES",
+          "words": [
+            "FLIP",
+            "THUMB",
+            "RIFFLE",
+            "LEAF"
+          ]
+        },
+        {
+          "label": "SPICES",
+          "words": [
+            "MACE",
+            "NUTMEG",
+            "CLOVE",
+            "PEPPER"
+          ]
+        },
+        {
+          "label": "POP SINGERS MINUS \u201cS\u201d",
+          "words": [
+            "STYLE",
+            "SPEAR",
+            "KEY",
+            "MAR"
+          ]
+        }
+      ]
+    }
+  ]
+}

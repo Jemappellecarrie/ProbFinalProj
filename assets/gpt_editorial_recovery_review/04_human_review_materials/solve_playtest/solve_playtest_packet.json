@@ -1,0 +1,476 @@
+{
+  "seed": 17,
+  "tester_count": 5,
+  "boards_per_tester": 4,
+  "tester_packets": [
+    {
+      "tester_id": "tester_01",
+      "boards": [
+        {
+          "packet_board_id": "playtest_board_001",
+          "board_words": [
+            "REST",
+            "DOUBLE",
+            "WEAVE",
+            "BLOW",
+            "LEAVE",
+            "SNAKE",
+            "BREAK",
+            "CAT",
+            "SWORD",
+            "SPARE",
+            "TURKEY",
+            "STRIKE",
+            "VACATION",
+            "WIND",
+            "GOLD",
+            "CURVE"
+          ],
+          "group_count": 4
+        },
+        {
+          "packet_board_id": "playtest_board_002",
+          "board_words": [
+            "MERCURY",
+            "PEEL",
+            "VENUS",
+            "LEONARDO",
+            "MARS",
+            "MICHELANGELO",
+            "BLINKY",
+            "RAPHAEL",
+            "KEEL",
+            "EARTH",
+            "HEEL",
+            "CLYDE",
+            "DONATELLO",
+            "PINKY",
+            "REEL",
+            "INKY"
+          ],
+          "group_count": 4
+        },
+        {
+          "packet_board_id": "playtest_board_003",
+          "board_words": [
+            "CONVERSE",
+            "ARRAY",
+            "CIRCULATE",
+            "KANGAROO",
+            "SUPREME",
+            "TRAMPOLINE",
+            "MINGLE",
+            "BREAKING",
+            "SURFING",
+            "NETWORK",
+            "FOOD",
+            "TAEKWONDO",
+            "MATRIX",
+            "GRID",
+            "TABLE",
+            "TENNIS"
+          ],
+          "group_count": 4
+        },
+        {
+          "packet_board_id": "playtest_board_004",
+          "board_words": [
+            "CLYDE",
+            "VENUS",
+            "RAKE",
+            "MARS",
+            "BLINKY",
+            "RUBY",
+            "PINKY",
+            "TOPAZ",
+            "EARTH",
+            "BAKE",
+            "JADE",
+            "OPAL",
+            "CAKE",
+            "INKY",
+            "LAKE",
+            "MERCURY"
+          ],
+          "group_count": 4
+        }
+      ]
+    },
+    {
+      "tester_id": "tester_02",
+      "boards": [
+        {
+          "packet_board_id": "playtest_board_005",
+          "board_words": [
+            "RUBY",
+            "CASH",
+            "OPAL",
+            "RAPHAEL",
+            "MARS",
+            "DASH",
+            "MERCURY",
+            "LEONARDO",
+            "MASH",
+            "MICHELANGELO",
+            "EARTH",
+            "BASH",
+            "DONATELLO",
+            "JADE",
+            "TOPAZ",
+            "VENUS"
+          ],
+          "group_count": 4
+        },
+        {
+          "packet_board_id": "playtest_board_006",
+          "board_words": [
+            "BLINKY",
+            "JADE",
+            "RUBY",
+            "TOPAZ",
+            "INKY",
+            "VENUS",
+            "MARS",
+            "PINKY",
+            "MERCURY",
+            "REEL",
+            "KEEL",
+            "PEEL",
+            "OPAL",
+            "HEEL",
+            "CLYDE",
+            "EARTH"
+          ],
+          "group_count": 4
+        },
+        {
+          "packet_board_id": "playtest_board_007",
+          "board_words": [
+            "SPICY",
+            "SUGGESTIVE",
+            "DILL",
+            "ADULT",
+            "SWEET",
+            "CAPER",
+            "CHEESE",
+            "EXPLOIT",
+            "BLUE",
+            "ANTIC",
+            "MUSTARD",
+            "STUNT",
+            "DECK",
+            "CORD",
+            "KOSHER",
+            "SOUR"
+          ],
+          "group_count": 4
+        },
+        {
+          "packet_board_id": "playtest_board_008",
+          "board_words": [
+            "BRAND",
+            "NAMES",
+            "DROP",
+            "BLAST",
+            "GAME",
+            "THRILL",
+            "DART",
+            "FOR",
+            "ATTENTION",
+            "BALL",
+            "BOLT",
+            "FLY",
+            "DEAR",
+            "KICK",
+            "DASH",
+            "TO"
+          ],
+          "group_count": 4
+        }
+      ]
+    },
+    {
+      "tester_id": "tester_03",
+      "boards": [
+        {
+          "packet_board_id": "playtest_board_009",
+          "board_words": [
+            "MARS",
+            "RAPHAEL",
+            "LEONARDO",
+            "RUBY",
+            "MICHELANGELO",
+            "OPAL",
+            "JADE",
+            "VENUS",
+            "DONATELLO",
+            "TOPAZ",
+            "BAKE",
+            "LAKE",
+            "EARTH",
+            "RAKE",
+            "MERCURY",
+            "CAKE"
+          ],
+          "group_count": 4
+        },
+        {
+          "packet_board_id": "playtest_board_010",
+          "board_words": [
+            "SESSION",
+            "ACTIVE",
+            "RUNNING",
+            "GULLY",
+            "MEETING",
+            "PUFFING",
+            "STRAP",
+            "FUNCTIONAL",
+            "BODY",
+            "FLASH",
+            "WORKING",
+            "SITTING",
+            "PERIOD",
+            "CROWD",
+            "SWANK",
+            "LENS"
+          ],
+          "group_count": 4
+        },
+        {
+          "packet_board_id": "playtest_board_011",
+          "board_words": [
+            "CHEAT",
+            "QUACK",
+            "TACO",
+            "THANKS",
+            "DOWN",
+            "SUPER",
+            "CON",
+            "PRAISE",
+            "GOBBLE",
+            "FAKE",
+            "CREDIT",
+            "FAT",
+            "BOLT",
+            "SCARF",
+            "GIVING",
+            "RECOGNITION"
+          ],
+          "group_count": 4
+        },
+        {
+          "packet_board_id": "playtest_board_012",
+          "board_words": [
+            "JADE",
+            "VENUS",
+            "CLYDE",
+            "MERCURY",
+            "RUBY",
+            "EARTH",
+            "CASH",
+            "MARS",
+            "TOPAZ",
+            "BASH",
+            "MASH",
+            "BLINKY",
+            "DASH",
+            "INKY",
+            "PINKY",
+            "OPAL"
+          ],
+          "group_count": 4
+        }
+      ]
+    },
+    {
+      "tester_id": "tester_04",
+      "boards": [
+        {
+          "packet_board_id": "playtest_board_013",
+          "board_words": [
+            "TREASURE",
+            "MUSTANG",
+            "BAT",
+            "JOB",
+            "SPIDER",
+            "SCAVENGER",
+            "VIPER",
+            "LOVE",
+            "PUMPKIN",
+            "WINK",
+            "DIABLO",
+            "DARLING",
+            "EGG",
+            "BLINK",
+            "WITCH",
+            "FLUTTER"
+          ],
+          "group_count": 4
+        },
+        {
+          "packet_board_id": "playtest_board_014",
+          "board_words": [
+            "OPAL",
+            "RUBY",
+            "VENUS",
+            "MERCURY",
+            "TOPAZ",
+            "SNOW",
+            "JADE",
+            "RAPHAEL",
+            "SNIP",
+            "LEONARDO",
+            "DONATELLO",
+            "MICHELANGELO",
+            "SNAP",
+            "MARS",
+            "SNUG",
+            "EARTH"
+          ],
+          "group_count": 4
+        },
+        {
+          "packet_board_id": "playtest_board_015",
+          "board_words": [
+            "JADE",
+            "PINKY",
+            "RUBY",
+            "EARTH",
+            "MERCURY",
+            "MICHELANGELO",
+            "LEONARDO",
+            "TOPAZ",
+            "RAPHAEL",
+            "OPAL",
+            "VENUS",
+            "CLYDE",
+            "BLINKY",
+            "INKY",
+            "MARS",
+            "DONATELLO"
+          ],
+          "group_count": 4
+        },
+        {
+          "packet_board_id": "playtest_board_016",
+          "board_words": [
+            "STAIN",
+            "LIGHTER",
+            "MATCHES",
+            "REFLECTION",
+            "GAMES",
+            "SPECIMEN",
+            "FLINT",
+            "SLIDE",
+            "CONSIDERATION",
+            "MICROSCOPE",
+            "FACTOR",
+            "THOUGHT",
+            "MAGNIFYING GLASS",
+            "FILES",
+            "RAY",
+            "SCRUTINY"
+          ],
+          "group_count": 4
+        }
+      ]
+    },
+    {
+      "tester_id": "tester_05",
+      "boards": [
+        {
+          "packet_board_id": "playtest_board_017",
+          "board_words": [
+            "CLYDE",
+            "VENUS",
+            "RAKE",
+            "MARS",
+            "BLINKY",
+            "RUBY",
+            "PINKY",
+            "TOPAZ",
+            "EARTH",
+            "BAKE",
+            "JADE",
+            "OPAL",
+            "CAKE",
+            "INKY",
+            "LAKE",
+            "MERCURY"
+          ],
+          "group_count": 4
+        },
+        {
+          "packet_board_id": "playtest_board_018",
+          "board_words": [
+            "BUZZ",
+            "PUZZLE",
+            "SPELL",
+            "VEX",
+            "PERPLEX",
+            "SLINKY",
+            "STUMP",
+            "HAMM",
+            "PILLED",
+            "MANIA",
+            "GATE",
+            "REX",
+            "JINX",
+            "POX",
+            "CORE",
+            "HEX"
+          ],
+          "group_count": 4
+        },
+        {
+          "packet_board_id": "playtest_board_019",
+          "board_words": [
+            "MERCURY",
+            "PEEL",
+            "VENUS",
+            "LEONARDO",
+            "MARS",
+            "MICHELANGELO",
+            "BLINKY",
+            "RAPHAEL",
+            "KEEL",
+            "EARTH",
+            "HEEL",
+            "CLYDE",
+            "DONATELLO",
+            "PINKY",
+            "REEL",
+            "INKY"
+          ],
+          "group_count": 4
+        },
+        {
+          "packet_board_id": "playtest_board_020",
+          "board_words": [
+            "CELL",
+            "TISSUE",
+            "WHEEL",
+            "MIRROR",
+            "ORGAN",
+            "BIGFOOT",
+            "THERMOMETER",
+            "CALL",
+            "BELT",
+            "DIAL",
+            "PHONE",
+            "COMPOUND",
+            "HORN",
+            "RING",
+            "INSTAGRAM",
+            "ATOM"
+          ],
+          "group_count": 4
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Solve-playtest packets hide each board's source.",
+    "Board word order is deterministically shuffled."
+  ]
+}

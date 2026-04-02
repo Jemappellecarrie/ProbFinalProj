@@ -1,0 +1,42 @@
+{
+  "target_version": "style_targets_v1",
+  "accepted": {
+    "mechanism_mix_counts": {
+      "lexical": 200,
+      "phonetic": 200,
+      "semantic": 200,
+      "theme": 200
+    },
+    "average_group_type_counts": {
+      "lexical": 1.0,
+      "phonetic": 1.0,
+      "semantic": 1.0,
+      "theme": 1.0
+    },
+    "board_type_signature_counts": {
+      "lexical+phonetic+semantic+theme": 200
+    }
+  },
+  "rejected": {
+    "mechanism_mix_counts": {},
+    "average_group_type_counts": {},
+    "board_type_signature_counts": {}
+  },
+  "top_k": {
+    "mechanism_mix_counts": {
+      "lexical": 20,
+      "phonetic": 20,
+      "semantic": 20,
+      "theme": 20
+    },
+    "average_group_type_counts": {
+      "lexical": 1.0,
+      "phonetic": 1.0,
+      "semantic": 1.0,
+      "theme": 1.0
+    },
+    "board_type_signature_counts": {
+      "lexical+phonetic+semantic+theme": 20
+    }
+  }
+}

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# ruff: noqa: E402
 """Run an offline batch evaluation and persist accepted/rejected/top-k artifacts."""
 
 from __future__ import annotations
@@ -20,15 +21,21 @@ from app.services.evaluation_service import EvaluationService
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--num-puzzles", type=int, default=10, help="Number of puzzles to evaluate.")
+    parser.add_argument(
+        "--num-puzzles", type=int, default=10, help="Number of puzzles to evaluate."
+    )
     parser.add_argument(
         "--output-dir",
         type=str,
         default=None,
         help="Optional output directory. Defaults to data/processed/eval_runs/<run_id>.",
     )
-    parser.add_argument("--base-seed", type=int, default=17, help="Base seed for deterministic runs.")
-    parser.add_argument("--top-k", type=int, default=5, help="Number of top accepted puzzles to keep.")
+    parser.add_argument(
+        "--base-seed", type=int, default=17, help="Base seed for deterministic runs."
+    )
+    parser.add_argument(
+        "--top-k", type=int, default=5, help="Number of top accepted puzzles to keep."
+    )
     parser.add_argument(
         "--no-traces",
         action="store_true",
@@ -45,7 +52,7 @@ def parse_args() -> argparse.Namespace:
         "--no-demo-mode",
         dest="demo_mode",
         action="store_false",
-        help="Disable demo mode. This path remains intentionally unimplemented.",
+        help="Disable demo mode and run the Stage 3 mixed-generation path.",
     )
     return parser.parse_args()
 

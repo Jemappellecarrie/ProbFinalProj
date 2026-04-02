@@ -25,3 +25,4 @@ backend/.mypy_cache/
 backend/.venv/
 data/processed/*.jsonl
 data/processed/*.sqlite3
+data/processed/

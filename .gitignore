@@ -22,7 +22,7 @@ frontend/dist/
 backend/.pytest_cache/
 backend/.ruff_cache/
 backend/.mypy_cache/
-backend/.venv/
+backend/.venv*/
 data/processed/*.jsonl
 data/processed/*.sqlite3
 data/processed/

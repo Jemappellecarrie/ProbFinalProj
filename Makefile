@@ -10,10 +10,10 @@ PYTHON_CHECK_PATHS ?= backend/app/services/evaluation_service.py backend/tests s
 backend-venv:
 	cd backend && $(PYTHON) -m venv .venv
 	$(BACKEND_PYTHON) -m pip install --upgrade pip
-	$(BACKEND_PYTHON) -m pip install -e ".[dev]"
+	$(BACKEND_PYTHON) -m pip install -e "./backend[dev]"
 
 backend-install:
-	cd backend && $(PYTHON) -m pip install -e ".[dev]"
+	$(PYTHON) -m pip install -e "./backend[dev]"
 
 frontend-install:
 	cd frontend && $(NPM) install

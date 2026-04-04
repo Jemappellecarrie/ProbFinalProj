@@ -318,6 +318,12 @@ class HumanStyleAnalyzer(BaseStyleAnalyzer):
         editorial_payoff_score: float,
     ) -> str:
         if (
+            profile.unique_group_type_count >= 3
+            and profile.theme_group_count >= 1
+            and profile.wordplay_group_count >= 1
+        ):
+            return "balanced_mixed"
+        if (
             profile.semantic_group_count >= 3
             or (
                 profile.semantic_group_count >= 2
@@ -326,12 +332,6 @@ class HumanStyleAnalyzer(BaseStyleAnalyzer):
             )
         ):
             return "semantic_heavy"
-        if (
-            profile.unique_group_type_count >= 3
-            and profile.theme_group_count >= 1
-            and profile.wordplay_group_count >= 1
-        ):
-            return "balanced_mixed"
         if profile.wordplay_group_count >= 2 or profile.phonetic_group_count >= 1:
             return "wordplay_showcase"
         return "mixed_standard"

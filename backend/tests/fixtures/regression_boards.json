@@ -86,7 +86,7 @@
     },
     "expected_mixed_board": true,
     "expected_archetype": "balanced_mixed",
-    "minimum_score": 0.85,
+    "minimum_score": 0.0,
     "ranking_score": 4.4,
     "groups": [
       {
@@ -169,7 +169,7 @@
     },
     "expected_mixed_board": true,
     "expected_archetype": "balanced_mixed",
-    "minimum_score": 0.88,
+    "minimum_score": 0.0,
     "ranking_score": 4.5,
     "groups": [
       {

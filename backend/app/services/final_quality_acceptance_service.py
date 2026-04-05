@@ -429,6 +429,7 @@ class FinalQualityAcceptanceService:
                 {
                     "iteration_index": iteration_index,
                     "request_seed": request_seed,
+                    "generator_diagnostics": result.generator_diagnostics,
                     **result.composition_diagnostics,
                 }
             )

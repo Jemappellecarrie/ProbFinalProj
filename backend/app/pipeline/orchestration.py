@@ -39,6 +39,7 @@ class PipelineRunResult:
     warnings: list[str]
     components: ComponentSelection
     candidate_results: list[CandidateEvaluationResult] = field(default_factory=list)
+    generator_diagnostics: dict[str, Any] = field(default_factory=dict)
     composition_diagnostics: dict[str, Any] = field(default_factory=dict)
 
 
@@ -239,15 +240,20 @@ class PuzzleGenerationPipeline:
         clue_payoff_bonus_applied = float(style_metrics.get("clue_payoff_bonus_applied", 0.0))
         label_naturalness_score = float(style_metrics.get("label_naturalness_score", 0.0))
         low_payoff_pattern_flags = float(style_metrics.get("low_payoff_pattern_flags", 0.0))
+        label_family_fragility_signals = sum(
+            (
+                style_alignment_score < 0.88,
+                weakest_group_support < 0.82,
+                score.overall < 0.975,
+                semantic_group_count < 3.0,
+                surface_wordplay_score >= 0.45,
+                float(style_metrics.get("formulaic_mix_score", 0.0)) >= 0.28,
+            )
+        )
         repeated_label_family_fragile_accept = int(
             selection_decision_rank == verification_decision_rank("accept")
-            and recent_label_family_repeat_count >= 2
-            and (
-                style_alignment_score < 0.92
-                or weakest_group_support < 0.84
-                or score.overall < 0.985
-                or semantic_group_count < 3.0
-            )
+            and recent_label_family_repeat_count >= 3
+            and label_family_fragility_signals >= 2
         )
         if repeated_label_family_fragile_accept:
             selection_decision_rank = verification_decision_rank("borderline")
@@ -546,6 +552,18 @@ class PuzzleGenerationPipeline:
             selected_score.components.get("weakest_group_support", 0.0)
         )
         selected_semantic_group_count = float(style_metrics.get("semantic_group_count", 0.0))
+        selected_surface_wordplay_score = float(style_metrics.get("surface_wordplay_score", 0.0))
+        selected_formulaic_mix_score = float(style_metrics.get("formulaic_mix_score", 0.0))
+        selected_label_family_fragility_signals = sum(
+            (
+                selected_style_alignment_score < 0.88,
+                selected_weakest_group_support < 0.82,
+                selected_score.overall < 0.975,
+                selected_semantic_group_count < 3.0,
+                selected_surface_wordplay_score >= 0.45,
+                selected_formulaic_mix_score >= 0.28,
+            )
+        )
         repeated_label_family_fragile_accept = int(
             selected_verification.decision.value == "accept"
             and recent_winner_history_count(
@@ -553,13 +571,8 @@ class PuzzleGenerationPipeline:
                 bucket="label",
                 signature=str(selected_puzzle.metadata.get("label_family_signature", "")),
             )
-            >= 2
-            and (
-                selected_style_alignment_score < 0.92
-                or selected_weakest_group_support < 0.84
-                or selected_score.overall < 0.985
-                or selected_semantic_group_count < 3.0
-            )
+            >= 3
+            and selected_label_family_fragility_signals >= 2
         )
         selection_summary = {
             "selection_policy": [
@@ -751,5 +764,6 @@ class PuzzleGenerationPipeline:
             warnings=warnings,
             components=self._components,
             candidate_results=candidate_results,
+            generator_diagnostics=dict(context.run_metadata.get("generator_diagnostics", {})),
             composition_diagnostics=dict(composition_diagnostics),
         )

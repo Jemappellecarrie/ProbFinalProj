@@ -77,7 +77,7 @@
     ]
   },
   "mixed_accept": {
-    "expected_decision": "accept",
+    "expected_decision": "borderline",
     "expected_risk_level": "low",
     "expected_mechanism_mix": {
       "lexical": 1,
@@ -160,7 +160,7 @@
     ]
   },
   "phonetic_accept": {
-    "expected_decision": "accept",
+    "expected_decision": "borderline",
     "expected_risk_level": "low",
     "expected_mechanism_mix": {
       "phonetic": 1,

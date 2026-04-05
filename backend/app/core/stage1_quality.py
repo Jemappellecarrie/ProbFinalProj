@@ -41,7 +41,7 @@ class Stage1Thresholds:
     board_pressure_borderline: float = 0.48
     board_pressure_reject: float = 0.7
 
-    weak_group_support_borderline: float = 0.7
+    weak_group_support_borderline: float = 0.78
     weak_group_support_reject: float = 0.58
 
     high_leakage_word_borderline: int = 2

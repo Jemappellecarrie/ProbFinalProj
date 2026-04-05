@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -388,6 +389,11 @@ class FinalQualityAcceptanceService:
         request_diagnostics: list[dict[str, object]] = []
 
         for iteration_index, request_seed in enumerate(seeds):
+            print(
+                f"[final-quality] starting request {iteration_index + 1}/{len(seeds)} seed={request_seed}",
+                file=sys.stderr,
+                flush=True,
+            )
             result = self._generation_service.run_generation(
                 PuzzleGenerationRequest(
                     seed=request_seed,
@@ -416,6 +422,15 @@ class FinalQualityAcceptanceService:
                     "request_seed": request_seed,
                     **result.composition_diagnostics,
                 }
+            )
+            print(
+                (
+                    f"[final-quality] finished request {iteration_index + 1}/{len(seeds)} "
+                    f"seed={request_seed} candidates={len(result.candidate_results)} "
+                    f"selected={sum(1 for candidate in result.candidate_results if candidate.selected)}"
+                ),
+                file=sys.stderr,
+                flush=True,
             )
             for candidate in result.candidate_results[: config.candidate_pool_limit]:
                 response = type(

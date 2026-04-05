@@ -14,16 +14,16 @@ class Stage3StyleScoringWeights:
     label_naturalness_bonus_weight: float = 0.04
     wordplay_bonus_weight: float = 0.004
     phonetic_showcase_bonus_weight: float = 0.01
-    mixed_mechanism_bonus_weight: float = 0.004
+    mixed_mechanism_bonus_weight: float = 0.015
     semantic_majority_bonus_weight: float = 0.07
     monotony_penalty_weight: float = 0.05
     out_of_band_penalty_weight: float = 0.04
-    formulaic_mix_penalty_weight: float = 0.22
+    formulaic_mix_penalty_weight: float = 0.14
     family_repetition_penalty_weight: float = 0.18
-    family_saturation_penalty_weight: float = 0.17
-    surface_wordplay_penalty_weight: float = 0.18
-    repeated_surface_wordplay_penalty_weight: float = 0.13
-    editorial_flatness_penalty_weight: float = 0.18
+    family_saturation_penalty_weight: float = 0.11
+    surface_wordplay_penalty_weight: float = 0.12
+    repeated_surface_wordplay_penalty_weight: float = 0.1
+    editorial_flatness_penalty_weight: float = 0.12
     microtheme_overuse_penalty_weight: float = 0.15
     repeated_pattern_family_penalty_weight: float = 0.13
 

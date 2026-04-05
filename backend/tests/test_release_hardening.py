@@ -263,7 +263,7 @@ def test_release_fixture_ranking_keeps_accepts_ahead_of_borderline() -> None:
     top_k = EvaluationService._rank_top_k(records, top_k_size=3)
 
     assert top_k.ranked_puzzles[0].verification_decision == "accept"
-    assert top_k.ranked_puzzles[1].verification_decision == "accept"
+    assert top_k.ranked_puzzles[1].verification_decision == "borderline"
     assert top_k.ranked_puzzles[2].verification_decision == "borderline"
 
 

@@ -362,14 +362,34 @@ class InternalPuzzleVerifier(BasePuzzleVerifier):
                 and (
                     (
                         board_style_summary.style_alignment_score
-                        < STAGE3_STYLE_VERIFIER_THRESHOLDS.low_alignment_borderline_threshold
-                        and board_style_summary.mechanism_mix_profile.unique_group_type_count
-                        <= STAGE3_STYLE_VERIFIER_THRESHOLDS.single_mechanism_unique_type_count
+                        < 0.75
                     )
                     or (
                         board_style_summary.metrics.get("editorial_flatness_score", 0.0)
                         >= STAGE3_STYLE_VERIFIER_THRESHOLDS.editorial_flatness_borderline_threshold
                         and board_style_summary.metrics.get("editorial_payoff_score", 0.0) < 0.6
+                    )
+                    or (
+                        board_style_summary.mechanism_mix_profile.unique_group_type_count >= 3
+                        and board_style_summary.metrics.get("formulaic_mix_score", 0.0)
+                        >= STAGE3_STYLE_VERIFIER_THRESHOLDS.formulaic_mix_warning_threshold
+                        and board_style_summary.metrics.get("editorial_payoff_score", 0.0) < 0.72
+                    )
+                    or (
+                        board_style_summary.metrics.get("theme_group_count", 0.0) >= 1.0
+                        and board_style_summary.metrics.get("semantic_group_count", 0.0) < 2.5
+                        and board_style_summary.metrics.get("editorial_payoff_score", 0.0) < 0.78
+                    )
+                    or (
+                        board_style_summary.metrics.get("semantic_group_count", 0.0) <= 1.0
+                        and board_style_summary.metrics.get("theme_group_count", 0.0) >= 1.0
+                        and board_style_summary.metrics.get("surface_wordplay_group_count", 0.0)
+                        >= 1.5
+                    )
+                    or (
+                        board_style_summary.metrics.get("semantic_group_count", 0.0) < 3.0
+                        and board_style_summary.metrics.get("theme_group_count", 0.0) >= 1.0
+                        and board_style_summary.metrics.get("editorial_payoff_score", 0.0) < 0.82
                     )
                 )
             ):

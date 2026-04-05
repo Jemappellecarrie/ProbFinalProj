@@ -75,6 +75,36 @@ class PuzzleGenerationPipeline:
         self._components = components
 
     @staticmethod
+    def _selection_decision_rank(
+        verification: VerificationResult,
+        *,
+        style_metrics: dict[str, float],
+        score: PuzzleScore,
+    ) -> int:
+        """Return a request-level selection rank that can soften fragile accepts."""
+
+        decision = verification.decision.value
+        if decision != "accept":
+            return verification_decision_rank(decision)
+
+        weakest_group_support = float(score.components.get("weakest_group_support", 0.0))
+        style_alignment_score = float(style_metrics.get("style_alignment_score", 0.0))
+        semantic_group_count = float(style_metrics.get("semantic_group_count", 0.0))
+        theme_group_count = float(style_metrics.get("theme_group_count", 0.0))
+        editorial_payoff_score = float(style_metrics.get("editorial_payoff_score", 0.0))
+        surface_wordplay_group_count = float(style_metrics.get("surface_wordplay_group_count", 0.0))
+
+        if weakest_group_support < 0.8:
+            return verification_decision_rank("borderline")
+        if style_alignment_score < 0.75:
+            return verification_decision_rank("borderline")
+        if semantic_group_count < 3.0 and theme_group_count >= 1.0 and editorial_payoff_score < 0.82:
+            return verification_decision_rank("borderline")
+        if semantic_group_count <= 1.0 and theme_group_count >= 1.0 and surface_wordplay_group_count >= 1.5:
+            return verification_decision_rank("borderline")
+        return verification_decision_rank(decision)
+
+    @staticmethod
     def _selection_key(
         puzzle: PuzzleCandidate,
         verification: VerificationResult,
@@ -96,6 +126,11 @@ class PuzzleGenerationPipeline:
             if verification.style_analysis is not None
             and verification.style_analysis.board_style_summary is not None
             else {}
+        )
+        selection_decision_rank = PuzzleGenerationPipeline._selection_decision_rank(
+            verification,
+            style_metrics=style_metrics,
+            score=score,
         )
         run_state = ensure_run_family_accounting(context.run_metadata.get("editorial_run_state"))
         board_family_signature = str(puzzle.metadata.get("board_family_signature", ""))
@@ -210,7 +245,7 @@ class PuzzleGenerationPipeline:
             )
         )
         return (
-            -verification_decision_rank(verification.decision.value),
+            -selection_decision_rank,
             recent_board_repeat_count,
             recent_editorial_family_repeat_count,
             recent_template_repeat_count,

@@ -12,6 +12,7 @@ from app.core.editorial_quality import (
     empty_run_family_accounting,
     ensure_run_family_accounting,
     record_editorial_family_signature,
+    record_label_family_signature,
     record_mechanism_template_signature,
     record_semantic_majority_board,
     record_surface_wordplay_family_signatures,
@@ -202,10 +203,17 @@ class FinalQualityAcceptanceService:
         selected: list[CandidatePoolPuzzleRecord],
     ) -> bool:
         editorial_family_signature = record_editorial_family_signature(record)
+        label_family_signature = record_label_family_signature(record)
         theme_family_signatures = set(record_theme_family_signatures(record))
         surface_wordplay_family_signatures = set(record_surface_wordplay_family_signatures(record))
         editorial_flags = set(record.editorial_flags or [])
         mechanism_template_signature = record_mechanism_template_signature(record)
+
+        if (
+            sum(record_label_family_signature(existing) == label_family_signature for existing in selected)
+            >= 1
+        ):
+            return False
 
         if (
             sum(

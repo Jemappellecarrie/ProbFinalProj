@@ -134,6 +134,7 @@ class PuzzleGenerationPipeline:
         )
         run_state = ensure_run_family_accounting(context.run_metadata.get("editorial_run_state"))
         board_family_signature = str(puzzle.metadata.get("board_family_signature", ""))
+        label_family_signature = str(puzzle.metadata.get("label_family_signature", ""))
         editorial_family_signature = str(puzzle.metadata.get("editorial_family_signature", ""))
         template_signature = str(puzzle.metadata.get("mechanism_template_signature", ""))
         theme_family_signatures = list(puzzle.metadata.get("theme_family_signatures", []))
@@ -149,6 +150,11 @@ class PuzzleGenerationPipeline:
             run_state,
             bucket="editorial",
             signature=editorial_family_signature,
+        )
+        recent_label_family_repeat_count = recent_winner_history_count(
+            run_state,
+            bucket="label",
+            signature=label_family_signature,
         )
         recent_template_repeat_count = recent_winner_history_count(
             run_state,
@@ -183,6 +189,12 @@ class PuzzleGenerationPipeline:
             bucket="editorial",
             signature=editorial_family_signature,
         )
+        winner_label_family_repeat_count = run_family_count(
+            run_state,
+            parent_key="winner_family_count_by_run",
+            bucket="label",
+            signature=label_family_signature,
+        )
         winner_template_repeat_count = run_family_count(
             run_state,
             parent_key="winner_family_count_by_run",
@@ -214,6 +226,8 @@ class PuzzleGenerationPipeline:
             default=0,
         )
         semantic_majority_preference = 1 if puzzle.metadata.get("semantic_majority_board") else 0
+        weakest_group_support = float(score.components.get("weakest_group_support", 0.0))
+        style_alignment_score = float(style_metrics.get("style_alignment_score", 0.0))
         semantic_group_count = float(style_metrics.get("semantic_group_count", 0.0))
         wordplay_group_count = float(style_metrics.get("wordplay_group_count", 0.0))
         theme_group_count = float(style_metrics.get("theme_group_count", 0.0))
@@ -225,6 +239,18 @@ class PuzzleGenerationPipeline:
         clue_payoff_bonus_applied = float(style_metrics.get("clue_payoff_bonus_applied", 0.0))
         label_naturalness_score = float(style_metrics.get("label_naturalness_score", 0.0))
         low_payoff_pattern_flags = float(style_metrics.get("low_payoff_pattern_flags", 0.0))
+        repeated_label_family_fragile_accept = int(
+            selection_decision_rank == verification_decision_rank("accept")
+            and recent_label_family_repeat_count >= 2
+            and (
+                style_alignment_score < 0.92
+                or weakest_group_support < 0.84
+                or score.overall < 0.985
+                or semantic_group_count < 3.0
+            )
+        )
+        if repeated_label_family_fragile_accept:
+            selection_decision_rank = verification_decision_rank("borderline")
         one_semantic_plus_microtheme_surface = int(
             semantic_group_count <= 1
             and theme_group_count >= 1
@@ -247,10 +273,13 @@ class PuzzleGenerationPipeline:
         return (
             -selection_decision_rank,
             recent_board_repeat_count,
+            repeated_label_family_fragile_accept,
+            recent_label_family_repeat_count,
             recent_editorial_family_repeat_count,
             recent_template_repeat_count,
             recent_microtheme_repeat_count,
             recent_surface_repeat_count,
+            winner_label_family_repeat_count,
             winner_editorial_family_repeat_count,
             winner_template_repeat_count,
             winner_microtheme_repeat_count,
@@ -396,6 +425,12 @@ class PuzzleGenerationPipeline:
             bucket="editorial",
             signature=str(selected_puzzle.metadata.get("editorial_family_signature", "")),
         )
+        winner_label_family_repeat_count = run_family_count(
+            run_state,
+            parent_key="winner_family_count_by_run",
+            bucket="label",
+            signature=str(selected_puzzle.metadata.get("label_family_signature", "")),
+        )
         winner_template_repeat_count = run_family_count(
             run_state,
             parent_key="winner_family_count_by_run",
@@ -461,6 +496,7 @@ class PuzzleGenerationPipeline:
             )
         for bucket, signature in (
             ("board", str(selected_puzzle.metadata.get("board_family_signature", ""))),
+            ("label", str(selected_puzzle.metadata.get("label_family_signature", ""))),
             ("editorial", str(selected_puzzle.metadata.get("editorial_family_signature", ""))),
             ("template", str(selected_puzzle.metadata.get("mechanism_template_signature", ""))),
         ):
@@ -505,14 +541,37 @@ class PuzzleGenerationPipeline:
             and selected_score.style_analysis.board_style_summary is not None
             else {}
         )
+        selected_style_alignment_score = float(style_metrics.get("style_alignment_score", 0.0))
+        selected_weakest_group_support = float(
+            selected_score.components.get("weakest_group_support", 0.0)
+        )
+        selected_semantic_group_count = float(style_metrics.get("semantic_group_count", 0.0))
+        repeated_label_family_fragile_accept = int(
+            selected_verification.decision.value == "accept"
+            and recent_winner_history_count(
+                run_state,
+                bucket="label",
+                signature=str(selected_puzzle.metadata.get("label_family_signature", "")),
+            )
+            >= 2
+            and (
+                selected_style_alignment_score < 0.92
+                or selected_weakest_group_support < 0.84
+                or selected_score.overall < 0.985
+                or selected_semantic_group_count < 3.0
+            )
+        )
         selection_summary = {
             "selection_policy": [
                 "verification_decision",
                 "recent_board_repeat_count",
+                "repeated_label_family_fragile_accept",
+                "recent_winner_label_family_repeat_count",
                 "recent_winner_editorial_family_repeat_count",
                 "recent_winner_template_repeat_count",
                 "recent_winner_microtheme_repeat_count",
                 "recent_winner_surface_repeat_count",
+                "winner_label_family_repeat_count",
                 "winner_editorial_family_repeat_count",
                 "winner_template_repeat_count",
                 "winner_microtheme_repeat_count",
@@ -545,6 +604,12 @@ class PuzzleGenerationPipeline:
                 run_state,
                 bucket="board",
                 signature=str(selected_puzzle.metadata.get("board_family_signature", "")),
+            ),
+            "repeated_label_family_fragile_accept": repeated_label_family_fragile_accept,
+            "recent_winner_label_family_repeat_count": recent_winner_history_count(
+                run_state,
+                bucket="label",
+                signature=str(selected_puzzle.metadata.get("label_family_signature", "")),
             ),
             "recent_winner_editorial_family_repeat_count": recent_winner_history_count(
                 run_state,
@@ -579,6 +644,7 @@ class PuzzleGenerationPipeline:
                 default=0,
             ),
             "winner_editorial_family_repeat_count": winner_editorial_family_repeat_count,
+            "winner_label_family_repeat_count": winner_label_family_repeat_count,
             "winner_template_repeat_count": winner_template_repeat_count,
             "winner_microtheme_repeat_count": winner_microtheme_repeat_count,
             "winner_surface_repeat_count": winner_surface_repeat_count,
@@ -605,12 +671,7 @@ class PuzzleGenerationPipeline:
             ),
             "phrase_payoff_score": float(style_metrics.get("phrase_payoff_score", 0.0)),
             "label_naturalness_score": float(style_metrics.get("label_naturalness_score", 0.0)),
-            "style_alignment_score": (
-                selected_score.style_analysis.board_style_summary.style_alignment_score
-                if selected_score.style_analysis is not None
-                and selected_score.style_analysis.board_style_summary is not None
-                else None
-            ),
+            "style_alignment_score": selected_style_alignment_score,
             "composer_ranking_score": selected_puzzle.metadata.get("ranking_score", 0.0),
             "selection_reason": selection_reason,
             "puzzle_id": selected_puzzle.puzzle_id,

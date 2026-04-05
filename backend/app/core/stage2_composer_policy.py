@@ -14,16 +14,16 @@ class Stage2ComposerPolicy:
     max_rejected_combinations: int = 12
     max_ranked_puzzles: int = 60
     near_duplicate_board_overlap_threshold: int = 14
-    semantic_majority_bonus: float = 0.24
+    semantic_majority_bonus: float = 0.16
     balanced_mixed_penalty: float = 0.18
     microtheme_plus_wordplay_penalty: float = 0.22
-    repeated_surface_family_penalty: float = 0.15
-    repeated_theme_family_penalty: float = 0.18
-    repeated_editorial_family_penalty: float = 0.12
-    repeated_template_penalty: float = 0.12
+    repeated_surface_family_penalty: float = 0.18
+    repeated_theme_family_penalty: float = 0.24
+    repeated_editorial_family_penalty: float = 0.2
+    repeated_template_penalty: float = 0.16
     run_small_theme_family_cap: int = 1
     run_surface_wordplay_family_cap: int = 1
-    run_editorial_family_cap: int = 2
+    run_editorial_family_cap: int = 1
     run_balanced_mixed_template_cap: int = 3
 
 

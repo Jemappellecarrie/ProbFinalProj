@@ -20,8 +20,8 @@ SURFACE_PHONETIC_PATTERN_TYPES = {"perfect_rhyme"}
 HIGH_PAYOFF_PHONETIC_PATTERN_TYPES = {"exact_homophone"}
 TAXONOMY_LABEL_STARTS = ("starts with", "starting with", "ends with", "ending in", "contains")
 TAXONOMY_LABEL_CONTAINS = ("rhymes with", "rhyming with")
-RUN_FAMILY_BUCKETS = ("group", "board", "editorial", "theme", "surface", "template")
-WINNER_FAMILY_BUCKETS = ("board", "editorial", "theme", "surface", "template")
+RUN_FAMILY_BUCKETS = ("group", "board", "editorial", "label", "theme", "surface", "template")
+WINNER_FAMILY_BUCKETS = ("board", "editorial", "label", "theme", "surface", "template")
 WINNER_RECENT_HISTORY_LIMIT = 24
 WINNER_RECENT_WINDOW = 6
 
@@ -290,6 +290,10 @@ def build_editorial_family_metadata(groups: Sequence[Any]) -> dict[str, object]:
     """Build deterministic family metadata for one puzzle board."""
 
     family_signatures = [group_family_signature(group) for group in groups]
+    label_signatures = [
+        normalize_signal(_group_metadata(group).get("normalized_label", _group_label(group)))
+        for group in groups
+    ]
     group_types = [_group_type_value(group) for group in groups]
     group_type_counts = Counter(group_types)
     theme_family_signatures = [
@@ -367,6 +371,7 @@ def build_editorial_family_metadata(groups: Sequence[Any]) -> dict[str, object]:
 
     mechanism_signature = "+".join(sorted(Counter(group_types)))
     board_family_signature = stable_id("board_family", sorted(family_signatures))
+    label_family_signature = stable_id("label_family", sorted(label_signatures))
     editorial_family_signature = stable_id(
         "editorial_family",
         mechanism_signature,
@@ -377,6 +382,7 @@ def build_editorial_family_metadata(groups: Sequence[Any]) -> dict[str, object]:
     return {
         "group_family_signatures": family_signatures,
         "board_family_signature": board_family_signature,
+        "label_family_signature": label_family_signature,
         "editorial_family_signature": editorial_family_signature,
         "theme_family_signatures": theme_family_signatures,
         "surface_wordplay_family_signatures": surface_wordplay_family_signatures,
@@ -714,6 +720,14 @@ def record_board_family_signature(record: Any) -> str:
     if existing:
         return str(existing)
     return stable_id("board_family", sorted(record_group_family_signatures(record)))
+
+
+def record_label_family_signature(record: Any) -> str:
+    existing = getattr(record, "label_family_signature", None)
+    if existing:
+        return str(existing)
+    labels = [normalize_signal(label) for label in (getattr(record, "group_labels", []) or [])]
+    return stable_id("label_family", sorted(labels))
 
 
 def record_editorial_family_signature(record: Any) -> str:

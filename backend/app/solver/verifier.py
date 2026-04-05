@@ -391,6 +391,22 @@ class InternalPuzzleVerifier(BasePuzzleVerifier):
                         and board_style_summary.metrics.get("theme_group_count", 0.0) >= 1.0
                         and board_style_summary.metrics.get("editorial_payoff_score", 0.0) < 0.82
                     )
+                    or (
+                        board_style_summary.metrics.get("semantic_group_count", 0.0) < 3.0
+                        and board_style_summary.metrics.get("wordplay_group_count", 0.0) >= 1.0
+                        and board_style_summary.metrics.get("style_alignment_score", 1.0) < 0.72
+                    )
+                    or (
+                        board_style_summary.metrics.get("formulaic_mix_score", 0.0) >= 0.38
+                        and board_style_summary.metrics.get("surface_wordplay_group_count", 0.0)
+                        >= 1.0
+                        and board_style_summary.metrics.get("semantic_group_count", 0.0) < 3.0
+                    )
+                    or (
+                        board_style_summary.metrics.get("surface_wordplay_score", 0.0) >= 0.5
+                        and board_style_summary.metrics.get("semantic_group_count", 0.0) < 3.0
+                        and board_style_summary.metrics.get("editorial_payoff_score", 0.0) < 0.78
+                    )
                 )
             ):
                 decision = VerificationDecision.BORDERLINE

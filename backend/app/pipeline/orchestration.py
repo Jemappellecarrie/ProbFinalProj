@@ -240,6 +240,8 @@ class PuzzleGenerationPipeline:
         clue_payoff_bonus_applied = float(style_metrics.get("clue_payoff_bonus_applied", 0.0))
         label_naturalness_score = float(style_metrics.get("label_naturalness_score", 0.0))
         low_payoff_pattern_flags = float(style_metrics.get("low_payoff_pattern_flags", 0.0))
+        formulaic_mix_score = float(style_metrics.get("formulaic_mix_score", 0.0))
+        editorial_payoff_score = float(style_metrics.get("editorial_payoff_score", 0.0))
         label_family_fragility_signals = sum(
             (
                 style_alignment_score < 0.88,
@@ -256,6 +258,19 @@ class PuzzleGenerationPipeline:
             and label_family_fragility_signals >= 2
         )
         if repeated_label_family_fragile_accept:
+            selection_decision_rank = verification_decision_rank("borderline")
+        formulaic_mixed_accept = int(
+            selection_decision_rank == verification_decision_rank("accept")
+            and semantic_group_count < 3.0
+            and wordplay_group_count >= 1.0
+            and (
+                style_alignment_score < 0.74
+                or formulaic_mix_score >= 0.36
+                or surface_wordplay_score >= 0.5
+                or editorial_payoff_score < 0.78
+            )
+        )
+        if formulaic_mixed_accept:
             selection_decision_rank = verification_decision_rank("borderline")
         one_semantic_plus_microtheme_surface = int(
             semantic_group_count <= 1
@@ -279,6 +294,7 @@ class PuzzleGenerationPipeline:
         return (
             -selection_decision_rank,
             recent_board_repeat_count,
+            formulaic_mixed_accept,
             repeated_label_family_fragile_accept,
             recent_label_family_repeat_count,
             recent_editorial_family_repeat_count,
@@ -552,6 +568,10 @@ class PuzzleGenerationPipeline:
             selected_score.components.get("weakest_group_support", 0.0)
         )
         selected_semantic_group_count = float(style_metrics.get("semantic_group_count", 0.0))
+        selected_wordplay_group_count = float(style_metrics.get("wordplay_group_count", 0.0))
+        selected_editorial_payoff_score = float(
+            style_metrics.get("editorial_payoff_score", 0.0)
+        )
         selected_surface_wordplay_score = float(style_metrics.get("surface_wordplay_score", 0.0))
         selected_formulaic_mix_score = float(style_metrics.get("formulaic_mix_score", 0.0))
         selected_label_family_fragility_signals = sum(
@@ -574,10 +594,22 @@ class PuzzleGenerationPipeline:
             >= 3
             and selected_label_family_fragility_signals >= 2
         )
+        formulaic_mixed_accept = int(
+            selected_verification.decision.value == "accept"
+            and selected_semantic_group_count < 3.0
+            and selected_wordplay_group_count >= 1.0
+            and (
+                selected_style_alignment_score < 0.74
+                or selected_formulaic_mix_score >= 0.36
+                or selected_surface_wordplay_score >= 0.5
+                or selected_editorial_payoff_score < 0.78
+            )
+        )
         selection_summary = {
             "selection_policy": [
                 "verification_decision",
                 "recent_board_repeat_count",
+                "formulaic_mixed_accept",
                 "repeated_label_family_fragile_accept",
                 "recent_winner_label_family_repeat_count",
                 "recent_winner_editorial_family_repeat_count",
@@ -618,6 +650,7 @@ class PuzzleGenerationPipeline:
                 bucket="board",
                 signature=str(selected_puzzle.metadata.get("board_family_signature", "")),
             ),
+            "formulaic_mixed_accept": formulaic_mixed_accept,
             "repeated_label_family_fragile_accept": repeated_label_family_fragile_accept,
             "recent_winner_label_family_repeat_count": recent_winner_history_count(
                 run_state,
@@ -672,8 +705,8 @@ class PuzzleGenerationPipeline:
             ),
             "scorer_overall": selected_score.overall,
             "ambiguity_penalty": selected_verification.ambiguity_score,
-            "formulaic_mix_score": float(style_metrics.get("formulaic_mix_score", 0.0)),
-            "surface_wordplay_score": float(style_metrics.get("surface_wordplay_score", 0.0)),
+            "formulaic_mix_score": selected_formulaic_mix_score,
+            "surface_wordplay_score": selected_surface_wordplay_score,
             "surface_wordplay_penalty_applied": float(
                 style_metrics.get("surface_wordplay_penalty_applied", 0.0)
             ),

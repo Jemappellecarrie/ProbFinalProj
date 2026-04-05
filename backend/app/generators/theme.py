@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from random import Random
 
 from app.core.enums import GroupType
 from app.core.stage1_quality import clamp_unit
@@ -19,6 +20,7 @@ from app.schemas.puzzle_models import GroupCandidate
 from app.utils.ids import stable_id
 
 THEME_SOURCE = "curated_theme_inventory_v1"
+MAX_CURATED_THEME_PACKS_PER_REQUEST = 2
 
 
 @dataclass(frozen=True, slots=True)
@@ -176,6 +178,24 @@ class HumanThemeGroupGenerator(MockFeatureGroupedGenerator):
             },
         )
 
+    @staticmethod
+    def _active_packs(context: GenerationContext) -> tuple[ThemePack, ...]:
+        if (
+            not bool(context.run_metadata.get("limit_curated_theme_packs"))
+            or context.seed is None
+            or len(CURATED_THEME_PACKS) <= MAX_CURATED_THEME_PACKS_PER_REQUEST
+        ):
+            return CURATED_THEME_PACKS
+
+        indexed_packs = list(enumerate(CURATED_THEME_PACKS))
+        rng = Random(context.seed)
+        rng.shuffle(indexed_packs)
+        chosen = sorted(
+            indexed_packs[:MAX_CURATED_THEME_PACKS_PER_REQUEST],
+            key=lambda item: item[0],
+        )
+        return tuple(pack for _, pack in chosen)
+
     def generate(
         self,
         entries: list[WordEntry],
@@ -187,9 +207,10 @@ class HumanThemeGroupGenerator(MockFeatureGroupedGenerator):
             for entry in sorted(entries, key=lambda item: (item.surface_form, item.word_id))
             if entry.word_id in features_by_word_id
         }
+        active_packs = self._active_packs(context)
 
         deduped: dict[tuple[str, ...], GroupCandidate] = {}
-        for pack in CURATED_THEME_PACKS:
+        for pack in active_packs:
             candidate = self._candidate_for_pack(pack, entries_by_normalized, features_by_word_id)
             if candidate is None:
                 continue
@@ -201,7 +222,8 @@ class HumanThemeGroupGenerator(MockFeatureGroupedGenerator):
         selected = sorted(deduped.values(), key=self._candidate_sort_key)
         context.run_metadata.setdefault("generator_diagnostics", {})[self.strategy_name] = {
             "candidate_count": len(selected),
-            "packs_considered": [pack.theme_name for pack in CURATED_THEME_PACKS],
+            "packs_considered": [pack.theme_name for pack in active_packs],
+            "packs_available": [pack.theme_name for pack in CURATED_THEME_PACKS],
             "packs_matched": [candidate.metadata["theme_name"] for candidate in selected],
         }
         return selected

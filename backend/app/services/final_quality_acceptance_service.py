@@ -412,6 +412,7 @@ class FinalQualityAcceptanceService:
                     "editorial_run_state": run_family_accounting,
                     "run_iteration_index": iteration_index,
                     "run_seed_schedule": seeds,
+                    "limit_curated_theme_packs": True,
                 },
             )
             selected_components = {

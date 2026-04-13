@@ -27,7 +27,7 @@ from sentence_transformers import SentenceTransformer
 
 # --------------- Configuration ---------------
 
-MODEL = "gpt-4o-mini"
+MODEL = "GPT 4.1 Mini"
 TEMPERATURE = 1.0
 NUM_FEWSHOT = 3
 DATASET_PATH = os.path.join(
@@ -71,6 +71,17 @@ def pick_seed_words(dataset: list[dict], n: int = 4) -> list[str]:
 
 # --------------- LLM Calls ---------------
 
+def make_client() -> OpenAI:
+    token = os.getenv("LITELLM_TOKEN")
+    if not token:
+        raise RuntimeError(
+            "LITELLM_TOKEN not set. Please set the Duke AI Gateway token。"
+        )
+
+    return OpenAI(
+        api_key=token,
+        base_url="https://litellm.oit.duke.edu/v1",
+    )
 
 def call_gpt4(client: OpenAI, messages: list[dict]) -> str:
     response = client.chat.completions.create(
@@ -560,94 +571,96 @@ def print_assembled_puzzle(result: dict):
 # --------------- Main ---------------
 
 
+def generate_one_puzzle(client: OpenAI, dataset: list[dict], embed_model: SentenceTransformer) -> dict | None:
+    """Generate a single puzzle end-to-end. Returns puzzle dict or None on failure."""
+    try:
+        fewshot_examples = pick_fewshot_examples(dataset)
+        fewshot_text = format_fewshot_examples(fewshot_examples)
+        seed_words = pick_seed_words(dataset)
+
+        story = generate_diversity_story(client, seed_words)
+
+        root = generate_root_group(client, fewshot_text, story)
+        groups = [root]
+
+        used_overlap_words = []
+        for i in range(2, 5):
+            followup = generate_followup_group(
+                client, fewshot_text, groups, i, used_overlap_words
+            )
+            groups.append(followup)
+            used_overlap_words.append(followup.get("overlap_word", "").upper())
+
+        # Deduplicate pools
+        for g in groups:
+            g["words"] = list(dict.fromkeys(g["words"]))
+
+        result = assemble_puzzle(groups, embed_model, target_difficulty="Yellow (Easiest)")
+        if result is None:
+            return None
+
+        # Build output structure
+        overlaps = find_overlaps(groups)
+        shared = {w: gis for w, gis in overlaps.items() if len(gis) > 1}
+
+        all_words = [w for p in result["puzzle"] for w in p["words"]]
+        shuffled = all_words[:]
+        random.shuffle(shuffled)
+
+        return {
+            "seed_words": seed_words,
+            "story": story,
+            "groups": [
+                {
+                    "category": g["category"],
+                    "candidates": g["words"],
+                    "overlap_word": g.get("overlap_word"),
+                    "source_group": g.get("source_group"),
+                }
+                for g in groups
+            ],
+            "overlap_words": {
+                w: [groups[gi]["category"] for gi in gis]
+                for w, gis in shared.items()
+            },
+            "puzzle": result["puzzle"],
+            "valid": result["valid"],
+            "ambiguous_words": result["ambiguous_words"],
+            "shuffled_grid": shuffled,
+        }
+    except Exception as e:
+        print(f"  [ERROR] {e}")
+        return None
+
+
 def main():
-    api_key = os.environ.get("OPENAI_API_KEY")
-    if not api_key:
-        print("Error: OPENAI_API_KEY environment variable is not set.")
-        print("Set it with: export OPENAI_API_KEY=<your-key>")
-        sys.exit(1)
+    NUM_PUZZLES = 100
+    OUTPUT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "puzzles.json")
 
-    client = OpenAI(api_key=api_key)
-
-    # Step 1: Load data
-    print("Loading dataset...")
+    client = make_client()
     dataset = load_dataset(DATASET_PATH)
-    fewshot_examples = pick_fewshot_examples(dataset)
-    fewshot_text = format_fewshot_examples(fewshot_examples)
-    seed_words = pick_seed_words(dataset)
 
-    # Step 2: Generate diversity story
-    print("Generating diversity story...")
-    story = generate_diversity_story(client, seed_words)
-    print_header(seed_words, story)
-
-    # Step 3: Generate root group
-    print("Generating root group (1/4)...")
-    root = generate_root_group(client, fewshot_text, story)
-    groups = [root]
-    print_group(root, 1)
-
-    # Step 4: Generate follow-up groups
-    used_overlap_words = []
-    for i in range(2, 5):
-        print(f"Generating follow-up group ({i}/4)...")
-        followup = generate_followup_group(
-            client, fewshot_text, groups, i, used_overlap_words
-        )
-        groups.append(followup)
-        used_overlap_words.append(followup.get("overlap_word", "").upper())
-        print_group(followup, i)
-
-    # Final summary (8-word pools)
-    print_results(groups)
-
-    # Step 5: Embedding-based word selection
-    print("Loading embedding model (all-mpnet-base-v2)...")
+    print("Loading embedding model...")
     embed_model = load_embedding_model()
 
-    print("\n" + "=" * 60)
-    print("  EMBEDDING-BASED 4-WORD SELECTION (by difficulty)")
-    print("=" * 60)
+    puzzles = []
+    failures = 0
 
-    for i, g in enumerate(groups, 1):
-        variants = select_difficulty_variants(g["words"], embed_model)
-        print(f"\n  Group {i}: {g['category']}")
-        print(f"  Pool: {', '.join(g['words'])}")
-        print()
-        for color, info in variants.items():
-            words_str = ", ".join(info["words"])
-            print(f"    {color:20s} (sim={info['similarity']:.4f}): {words_str}")
-    print()
+    print(f"Generating {NUM_PUZZLES} puzzles...")
+    for i in range(1, NUM_PUZZLES + 1):
+        result = generate_one_puzzle(client, dataset, embed_model)
+        if result is not None:
+            puzzles.append(result)
+            status = "valid" if result["valid"] else "invalid"
+            print(f"  [{i}/{NUM_PUZZLES}] {status} — {len(puzzles)} saved")
+        else:
+            failures += 1
+            print(f"  [{i}/{NUM_PUZZLES}] FAILED — skipped")
 
-    # Step 6: Assemble valid 16-word puzzle
-    print("=" * 60)
-    print("  PUZZLE ASSEMBLY & VALIDATION")
-    print("=" * 60)
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(puzzles, f, ensure_ascii=False, indent=2)
 
-    # Deduplicate pools
-    for g in groups:
-        g["words"] = list(dict.fromkeys(g["words"]))
-
-    # Show overlap analysis
-    overlaps = find_overlaps(groups)
-    shared = {w: gis for w, gis in overlaps.items() if len(gis) > 1}
-    if shared:
-        print(f"\n  Overlap words found: {len(shared)}")
-        for w, gis in shared.items():
-            group_names = [groups[gi]["category"] for gi in gis]
-            print(f"    '{w}' in: {', '.join(group_names)}")
-    else:
-        print("\n  No overlap words found.")
-
-    # Assemble puzzle
-    print("\n  Assembling puzzle...")
-    result = assemble_puzzle(groups, embed_model, target_difficulty="Yellow (Easiest)")
-
-    if result is None:
-        print("\n  [ERROR] Could not assemble a valid puzzle from these groups.")
-        print("  Consider re-running to generate new groups.")
-    else:
-        print_assembled_puzzle(result)
+    print(f"\nDone. {len(puzzles)} puzzles saved to {OUTPUT_FILE} ({failures} failures)")
 
 
 if __name__ == "__main__":

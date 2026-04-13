@@ -7,10 +7,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Duke University Spring 2026 course project for Probability & Machine Learning. Implements the "Intentional Overlap" pipeline from the paper "Making New Connections: LLMs as Puzzle Generators for The New York Times' Connections Word Game" (arXiv 2407.11240) to generate NYT Connections-style word puzzles.
 
 ## How to Run
-
+Bash:
 ```bash
 pip install -r requirements.txt
-export OPENAI_API_KEY=<key>
+export LITELLM_TOKEN="your-dukeapi"
+python generate_puzzle.py
+```
+
+Powershell:
+```bash
+pip install -r requirements.txt
+$env:LITELLM_TOKEN="your-dukeapi"
 python generate_puzzle.py
 ```
 
@@ -33,7 +40,7 @@ Category styles constrained to: Synonyms/Slang, Wordplay, Fill-in-the-blank.
 
 ## Key Dependencies
 
-- `openai` — GPT-4o-mini API (model configurable via `MODEL` constant)
+- `openai`
 - `sentence-transformers` — MPNet embeddings for difficulty calibration
 
 ## Reference

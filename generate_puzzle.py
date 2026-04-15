@@ -276,7 +276,7 @@ def avg_pairwise_cosine(embeddings: np.ndarray) -> float:
     # Sum upper triangle (excluding diagonal), divide by number of pairs
     total = np.sum(np.triu(sim_matrix, k=1))
     pairs = n * (n - 1) / 2
-    return total / pairs
+    return float(total / pairs)
 
 
 def rank_combinations(words: list[str], model: SentenceTransformer) -> list[tuple]:

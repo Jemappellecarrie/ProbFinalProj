@@ -634,8 +634,8 @@ def generate_one_puzzle(client: OpenAI, dataset: list[dict], embed_model: Senten
 
 
 def main():
-    NUM_PUZZLES = 100
-    OUTPUT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "puzzles.json")
+    # NUM_PUZZLES = 100
+    # OUTPUT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "puzzles.json")
 
     client = make_client()
     dataset = load_dataset(DATASET_PATH)
@@ -643,25 +643,72 @@ def main():
     print("Loading embedding model...")
     embed_model = load_embedding_model()
 
-    puzzles = []
-    failures = 0
+    result = generate_one_puzzle(client, dataset, embed_model)
+    if result is not None:
+        print_header(result["seed_words"], result["story"])
+        for i, g in enumerate(result["groups"], 1):
+            print_group(g, i)
+        print_results(result["groups"])
+        print_assembled_puzzle(result)
+    else:
+        print("Failed to generate a valid puzzle.")
+        
+    # puzzles = []
+    # failures = 0
 
-    print(f"Generating {NUM_PUZZLES} puzzles...")
-    for i in range(1, NUM_PUZZLES + 1):
-        result = generate_one_puzzle(client, dataset, embed_model)
-        if result is not None:
-            puzzles.append(result)
-            status = "valid" if result["valid"] else "invalid"
-            print(f"  [{i}/{NUM_PUZZLES}] {status} — {len(puzzles)} saved")
-        else:
-            failures += 1
-            print(f"  [{i}/{NUM_PUZZLES}] FAILED — skipped")
+    # print(f"Generating {NUM_PUZZLES} puzzles...")
+    # for i in range(1, NUM_PUZZLES + 1):
+    #     result = generate_one_puzzle(client, dataset, embed_model)
+    #     if result is not None:
+    #         puzzles.append(result)
+    #         status = "valid" if result["valid"] else "invalid"
+    #         print(f"  [{i}/{NUM_PUZZLES}] {status} — {len(puzzles)} saved")
+    #     else:
+    #         failures += 1
+    #         print(f"  [{i}/{NUM_PUZZLES}] FAILED — skipped")
 
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(puzzles, f, ensure_ascii=False, indent=2)
+    # with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    #     json.dump(puzzles, f, ensure_ascii=False, indent=2)
 
-    print(f"\nDone. {len(puzzles)} puzzles saved to {OUTPUT_FILE} ({failures} failures)")
-
+    # print(f"\nDone. {len(puzzles)} puzzles saved to {OUTPUT_FILE} ({failures} failures)")
 
 if __name__ == "__main__":
     main()
+
+import json
+import os
+from functools import lru_cache
+
+from openai import OpenAI
+from sentence_transformers import SentenceTransformer
+
+@lru_cache(maxsize=1)
+def load_web_resources():
+    """
+    只在第一次请求时加载资源，后面复用。
+    你可以按你自己的项目情况改这里。
+    """
+    client = make_client()
+
+    dataset_path = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)),
+        "NYT-Connections",
+        "ConnectionsFinalDataset.json",
+    )
+
+    with open(dataset_path, "r", encoding="utf-8") as f:
+        dataset = json.load(f)
+
+    embed_model = SentenceTransformer("all-MiniLM-L6-v2")
+
+    return client, dataset, embed_model
+
+
+def generate_one_puzzle_for_web():
+    client, dataset, embed_model = load_web_resources()
+    result = generate_one_puzzle(client, dataset, embed_model)
+
+    if result is None:
+        raise RuntimeError("Failed to generate puzzle.")
+
+    return result

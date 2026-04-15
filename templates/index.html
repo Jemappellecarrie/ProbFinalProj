@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NYT Connections Generator</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --panel: #ffffff;
+      --border: #dbe3ee;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #111827;
+      --accent: #2563eb;
+      --accent-2: #0ea5e9;
+      --success: #059669;
+      --success-bg: #ecfdf5;
+      --warn: #d97706;
+      --warn-bg: #fffbeb;
+      --danger: #dc2626;
+      --danger-bg: #fef2f2;
+      --shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+      --radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(255,255,255,0.9), rgba(244,247,251,0.95)),
+        var(--bg);
+    }
+
+    .page {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 28px 20px 40px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #111827, #1f2937, #0f172a);
+      color: white;
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 22px;
+    }
+
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #d1d5db;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 8px 0;
+      font-size: 34px;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      margin: 0;
+      color: #cbd5e1;
+      max-width: 800px;
+      line-height: 1.7;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 16px;
+      padding: 13px 18px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+    }
+
+    button:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #111827;
+    }
+
+    .btn-success {
+      background: #10b981;
+      color: white;
+    }
+
+    .btn-ghost {
+      background: rgba(255,255,255,0.08);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 22px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      padding: 20px;
+    }
+
+    .panel h2, .panel h3 {
+      margin: 0;
+    }
+
+    .sub {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .status {
+      margin-bottom: 18px;
+      border-radius: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      background: #fff;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .status.success {
+      background: var(--success-bg);
+      border-color: #a7f3d0;
+      color: #065f46;
+    }
+
+    .status.warn {
+      background: var(--warn-bg);
+      border-color: #fde68a;
+      color: #92400e;
+    }
+
+    .status.error {
+      background: var(--danger-bg);
+      border-color: #fecaca;
+      color: #991b1b;
+    }
+
+    .status.info {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+      color: #1d4ed8;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .mini-card {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 16px;
+      background: #f8fafc;
+    }
+
+    .mini-card .label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+    }
+
+    .mini-card .value {
+      font-size: 28px;
+      font-weight: 800;
+    }
+
+    .word-bank-dropzone {
+      margin-top: 14px;
+      min-height: 180px;
+      border: 2px dashed var(--border);
+      border-radius: 20px;
+      background: #f8fafc;
+      padding: 16px;
+    }
+
+    .bank-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .tile {
+      user-select: none;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px 12px;
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+      cursor: grab;
+      transition: 0.18s ease;
+    }
+
+    .tile:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+    }
+
+    .tile:active {
+      cursor: grabbing;
+    }
+
+    .bucket-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .bucket {
+      border: 2px solid var(--border);
+      background: #f8fafc;
+      border-radius: 22px;
+      padding: 16px;
+      min-height: 320px;
+      transition: 0.2s ease;
+    }
+
+    .bucket.drag-over {
+      border-color: #60a5fa;
+      background: #eff6ff;
+    }
+
+    .bucket.correct {
+      border-color: #6ee7b7;
+      background: #ecfdf5;
+    }
+
+    .bucket-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .bucket-label {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .bucket-category {
+      font-size: 15px;
+      font-weight: 800;
+      min-height: 20px;
+    }
+
+    .bucket-count {
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      background: white;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .bucket.correct .bucket-count {
+      background: #d1fae5;
+      border-color: #a7f3d0;
+      color: #065f46;
+    }
+
+    .bucket-slots {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .placeholder {
+      min-height: 78px;
+      border-radius: 16px;
+      border: 1px dashed #cbd5e1;
+      background: rgba(255,255,255,0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #94a3b8;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .meta-box {
+      margin-top: 16px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 14px;
+      background: #f8fafc;
+    }
+
+    .meta-title {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 10px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      border-radius: 999px;
+      padding: 7px 11px;
+      background: white;
+      border: 1px solid var(--border);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .story {
+      line-height: 1.7;
+      color: #374151;
+      white-space: pre-wrap;
+    }
+
+    .empty-note {
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+      padding: 32px 10px;
+    }
+
+    @media (max-width: 1100px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .bank-grid,
+      .bucket-slots,
+      .bucket-grid,
+      .cards {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .bank-grid,
+      .bucket-slots,
+      .bucket-grid,
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 20px;
+      }
+
+      .panel {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <div class="hero-top">
+        <div>
+          <div class="badge">NYT Connections Game</div>
+          <h1>AI Generated Connections Puzzle</h1>
+          <p>
+            Click "Generate Puzzle" to have the system create a new set of 16 words. Drag them into the four containers below, grouping them into sets of 4, then submit to check your answers.
+          </p>
+        </div>
+
+        <div class="toolbar">
+            <button id="generateBtn" class="btn-primary">Generate Puzzle</button>
+            <button id="randomPuzzleBtn" class="btn-primary">Load Random Prebuilt Puzzle</button>
+            <button id="submitBtn" class="btn-success" disabled>Submit</button>
+            <button id="resetBtn" class="btn-ghost" disabled>Reset</button>
+            <button id="showAnswerBtn" class="btn-ghost" disabled>Show Answer</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="layout">
+      <section class="panel">
+        <div id="statusBox" class="status">No puzzles generated yet.</div>
+
+        <div class="cards">
+          <div class="mini-card">
+            <div class="label">Placed</div>
+            <div id="placedCount" class="value">0/16</div>
+          </div>
+          <div class="mini-card">
+            <div class="label">Filled Buckets</div>
+            <div id="filledBuckets" class="value">0/4</div>
+          </div>
+          <div class="mini-card">
+            <div class="label">Mode</div>
+            <div id="modeText" class="value" style="font-size:20px;">Idle</div>
+          </div>
+        </div>
+
+        <h2>Word Bank</h2>
+        <div class="sub">Drag words to the containers below. You can also drag words back from the containers here.</div>
+
+        <div id="wordBankDropzone" class="word-bank-dropzone">
+          <div id="bankGrid" class="bank-grid"></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Containers</h2>
+        <div class="sub">Each container must contain exactly 4 words.</div>
+
+        <div id="bucketGrid" class="bucket-grid"></div>
+
+      </section>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

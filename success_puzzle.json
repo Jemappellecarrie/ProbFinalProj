@@ -1,0 +1,2070 @@
+[
+  {
+    "seed_words": [
+      "CROSS",
+      "FICTION",
+      "BUZZ",
+      "TEND"
+    ],
+    "story": "At the CROSS of midnight streets and forgotten constellations, a librarian stitched FICTION into the sky like bandages over old wounds, and the city began to BUZZ as if every lamppost had grown a heartbeat. She stayed to TEND the glowing seams, only to discover the stars were healing her back—threading her shadow into something alive and unafraid.",
+    "groups": [
+      {
+        "category": "NIGHT-SKY OBJECTS (ASTRONOMY)",
+        "candidates": [
+          "NEBULA",
+          "QUASAR",
+          "PULSAR",
+          "GALAXY",
+          "COMET",
+          "ASTEROID",
+          "METEOR",
+          "SUPERNOVA"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "ATHLETIC TEAMS NAMED “___S”",
+        "candidates": [
+          "COMET",
+          "JET",
+          "DOLPHIN",
+          "PANTHER",
+          "TITAN",
+          "HURRICANE",
+          "WILDCAT",
+          "SPARTAN"
+        ],
+        "overlap_word": "COMET",
+        "source_group": "NIGHT-SKY OBJECTS (ASTRONOMY)"
+      },
+      {
+        "category": "THINGS YOU MIGHT “JET” (LEAVE QUICKLY) FROM",
+        "candidates": [
+          "JET",
+          "BOLT",
+          "BOUNCE",
+          "BOOK",
+          "SKEDADDLE",
+          "SCRAM",
+          "VAMOOSE",
+          "SPLIT"
+        ],
+        "overlap_word": "JET",
+        "source_group": "ATHLETIC TEAMS NAMED “___S”"
+      },
+      {
+        "category": "SATURNS MOONS (NASA/ASTRONOMY)",
+        "candidates": [
+          "TITAN",
+          "ENCELADUS",
+          "MIMAS",
+          "IAPETUS",
+          "RHEA",
+          "DIONE",
+          "TETHYS",
+          "HYPERION"
+        ],
+        "overlap_word": "TITAN",
+        "source_group": "ATHLETIC TEAMS NAMED “___S”"
+      }
+    ],
+    "overlap_words": {
+      "COMET": [
+        "NIGHT-SKY OBJECTS (ASTRONOMY)",
+        "ATHLETIC TEAMS NAMED “___S”"
+      ],
+      "JET": [
+        "ATHLETIC TEAMS NAMED “___S”",
+        "THINGS YOU MIGHT “JET” (LEAVE QUICKLY) FROM"
+      ],
+      "TITAN": [
+        "ATHLETIC TEAMS NAMED “___S”",
+        "SATURNS MOONS (NASA/ASTRONOMY)"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "THINGS YOU MIGHT “JET” (LEAVE QUICKLY) FROM",
+        "words": [
+          "BOLT",
+          "BOUNCE",
+          "SKEDADDLE",
+          "SCRAM"
+        ],
+        "similarity": 0.3289,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "NIGHT-SKY OBJECTS (ASTRONOMY)",
+        "words": [
+          "NEBULA",
+          "QUASAR",
+          "GALAXY",
+          "SUPERNOVA"
+        ],
+        "similarity": 0.5421,
+        "color": "Green"
+      },
+      {
+        "category": "ATHLETIC TEAMS NAMED “___S”",
+        "words": [
+          "DOLPHIN",
+          "PANTHER",
+          "HURRICANE",
+          "WILDCAT"
+        ],
+        "similarity": 0.4274,
+        "color": "Blue"
+      },
+      {
+        "category": "SATURNS MOONS (NASA/ASTRONOMY)",
+        "words": [
+          "TITAN",
+          "RHEA",
+          "TETHYS",
+          "HYPERION"
+        ],
+        "similarity": 0.4209,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "shuffled_grid": [
+      "SKEDADDLE",
+      "TITAN",
+      "SUPERNOVA",
+      "RHEA",
+      "DOLPHIN",
+      "NEBULA",
+      "SCRAM",
+      "GALAXY",
+      "QUASAR",
+      "BOLT",
+      "TETHYS",
+      "HURRICANE",
+      "HYPERION",
+      "BOUNCE",
+      "WILDCAT",
+      "PANTHER"
+    ],
+    "source": "saved_valid_batch",
+    "recovered_from_stdout": false
+  },
+  {
+    "seed_words": [
+      "POCKET",
+      "MAIL",
+      "CLUB",
+      "BLACK"
+    ],
+    "story": "In the deep **BLACK** of a moonless alley, I reached into my **POCKET** and pulled out a letter that hadn’t arrived through any ordinary **MAIL**, its seal warm like a heartbeat. Inside was an invitation to a midnight **CLUB** where lost memories danced in borrowed bodies—and when I stepped through the door, I realized the bouncer already knew my name because the letter had been written by the version of me I’d forgotten.",
+    "groups": [
+      {
+        "category": "THINGS YOU MIGHT SEE AT A CLUB ENTRANCE (SCENARIO)",
+        "candidates": [
+          "BOUNCER",
+          "VELVET ROPE",
+          "COVER",
+          "STAMP",
+          "ID",
+          "GUEST LIST",
+          "DOORMAN",
+          "WRISTBAND"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "UNDERSTUDY / SUBSTITUTE (SYNONYMS)",
+        "candidates": [
+          "COVER",
+          "SUB",
+          "STAND-IN",
+          "UNDERSTUDY",
+          "ALTERNATE",
+          "BACKUP",
+          "RELIEF",
+          "REPLACEMENT"
+        ],
+        "overlap_word": "COVER",
+        "source_group": "THINGS YOU MIGHT SEE AT A CLUB ENTRANCE (SCENARIO)"
+      },
+      {
+        "category": "TYPES OF POSTAGE STAMPS (PHILATELY)",
+        "candidates": [
+          "STAMP",
+          "FOREVER",
+          "COMMEMORATIVE",
+          "DEFINITIVE",
+          "AIRMIL",
+          "POSTAGE DUE",
+          "REGISTERED",
+          "SEMI-POSTAL"
+        ],
+        "overlap_word": "STAMP",
+        "source_group": "THINGS YOU MIGHT SEE AT A CLUB ENTRANCE (SCENARIO)"
+      },
+      {
+        "category": "NASA MARS LANDERS/ROVERS (MISSIONS)",
+        "candidates": [
+          "MARS PATHFINDER",
+          "SOJOURNER",
+          "SPIRIT",
+          "OPPORTUNITY",
+          "CURIOSITY",
+          "PERSEVERANCE",
+          "PHOENIX",
+          "INSIGHT"
+        ],
+        "overlap_word": "ID",
+        "source_group": "THINGS YOU MIGHT SEE AT A CLUB ENTRANCE (SCENARIO)"
+      }
+    ],
+    "overlap_words": {
+      "COVER": [
+        "THINGS YOU MIGHT SEE AT A CLUB ENTRANCE (SCENARIO)",
+        "UNDERSTUDY / SUBSTITUTE (SYNONYMS)"
+      ],
+      "STAMP": [
+        "THINGS YOU MIGHT SEE AT A CLUB ENTRANCE (SCENARIO)",
+        "TYPES OF POSTAGE STAMPS (PHILATELY)"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "UNDERSTUDY / SUBSTITUTE (SYNONYMS)",
+        "words": [
+          "STAND-IN",
+          "UNDERSTUDY",
+          "ALTERNATE",
+          "REPLACEMENT"
+        ],
+        "similarity": 0.4227,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "THINGS YOU MIGHT SEE AT A CLUB ENTRANCE (SCENARIO)",
+        "words": [
+          "BOUNCER",
+          "VELVET ROPE",
+          "DOORMAN",
+          "WRISTBAND"
+        ],
+        "similarity": 0.2842,
+        "color": "Green"
+      },
+      {
+        "category": "NASA MARS LANDERS/ROVERS (MISSIONS)",
+        "words": [
+          "SPIRIT",
+          "OPPORTUNITY",
+          "CURIOSITY",
+          "INSIGHT"
+        ],
+        "similarity": 0.4145,
+        "color": "Blue"
+      },
+      {
+        "category": "TYPES OF POSTAGE STAMPS (PHILATELY)",
+        "words": [
+          "STAMP",
+          "COMMEMORATIVE",
+          "POSTAGE DUE",
+          "SEMI-POSTAL"
+        ],
+        "similarity": 0.4334,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "shuffled_grid": [
+      "OPPORTUNITY",
+      "POSTAGE DUE",
+      "REPLACEMENT",
+      "COMMEMORATIVE",
+      "CURIOSITY",
+      "STAMP",
+      "UNDERSTUDY",
+      "VELVET ROPE",
+      "DOORMAN",
+      "SEMI-POSTAL",
+      "STAND-IN",
+      "WRISTBAND",
+      "ALTERNATE",
+      "INSIGHT",
+      "BOUNCER",
+      "SPIRIT"
+    ],
+    "source": "saved_valid_batch",
+    "recovered_from_stdout": false
+  },
+  {
+    "seed_words": [
+      "AFFECT",
+      "ALBUM",
+      "TEASE",
+      "PIPER"
+    ],
+    "story": "In the catacombs beneath the concert hall, a lone PIPER played a melody that could AFFECT the temperature of memories, frosting over grief until it rang like glass. I opened an old ALBUM and watched the photographs wriggle into motion, each one a gentle TEASE from a future I hadn’t lived—until the tune sharpened and the pages began choosing me back.",
+    "groups": [
+      {
+        "category": "WIND INSTRUMENTS (WOODWIND FAMILY)",
+        "candidates": [
+          "PIPER",
+          "OBOE",
+          "BASSOON",
+          "CLARINET",
+          "RECORDER",
+          "PICCOLO",
+          "SAXOPHONE",
+          "ENGLISH HORN"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "DEVICES THAT CAPTURE AUDIO/VIDEO",
+        "candidates": [
+          "RECORDER",
+          "CAMCORDER",
+          "DASHCAM",
+          "BODYCAM",
+          "WEBCAM",
+          "DICTAPHONE",
+          "VOICEMAIL",
+          "TAPE DECK"
+        ],
+        "overlap_word": "RECORDER",
+        "source_group": "WIND INSTRUMENTS (WOODWIND FAMILY)"
+      },
+      {
+        "category": "FICTIONAL PIPERS (CHARACTERS WITH “PIPER” AS A NAME)",
+        "candidates": [
+          "PIPER CHAPMAN",
+          "PIPER HALLIWELL",
+          "PIPER LAURIE",
+          "PIPER PERABO",
+          "PIPER GILLES",
+          "PIPER MCLAIN",
+          "PIPER WRIGHT",
+          "PIPER SHAW"
+        ],
+        "overlap_word": "PIPER",
+        "source_group": "WIND INSTRUMENTS (WOODWIND FAMILY)"
+      },
+      {
+        "category": "PARTS OF A CAR’S EXHAUST SYSTEM",
+        "candidates": [
+          "BASSOON",
+          "CATALYTIC CONVERTER",
+          "MUFFLER",
+          "RESONATOR",
+          "TAILPIPE",
+          "OXYGEN SENSOR",
+          "FLEX PIPE",
+          "EXHAUST MANIFOLD"
+        ],
+        "overlap_word": "BASSOON",
+        "source_group": "WIND INSTRUMENTS (WOODWIND FAMILY)"
+      }
+    ],
+    "overlap_words": {
+      "BASSOON": [
+        "WIND INSTRUMENTS (WOODWIND FAMILY)",
+        "PARTS OF A CAR’S EXHAUST SYSTEM"
+      ],
+      "RECORDER": [
+        "WIND INSTRUMENTS (WOODWIND FAMILY)",
+        "DEVICES THAT CAPTURE AUDIO/VIDEO"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "DEVICES THAT CAPTURE AUDIO/VIDEO",
+        "words": [
+          "CAMCORDER",
+          "DASHCAM",
+          "BODYCAM",
+          "WEBCAM"
+        ],
+        "similarity": 0.6843,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "WIND INSTRUMENTS (WOODWIND FAMILY)",
+        "words": [
+          "OBOE",
+          "BASSOON",
+          "CLARINET",
+          "SAXOPHONE"
+        ],
+        "similarity": 0.6886,
+        "color": "Green"
+      },
+      {
+        "category": "PARTS OF A CAR’S EXHAUST SYSTEM",
+        "words": [
+          "MUFFLER",
+          "TAILPIPE",
+          "FLEX PIPE",
+          "EXHAUST MANIFOLD"
+        ],
+        "similarity": 0.4768,
+        "color": "Blue"
+      },
+      {
+        "category": "FICTIONAL PIPERS (CHARACTERS WITH “PIPER” AS A NAME)",
+        "words": [
+          "PIPER CHAPMAN",
+          "PIPER HALLIWELL",
+          "PIPER LAURIE",
+          "PIPER WRIGHT"
+        ],
+        "similarity": 0.7724,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "shuffled_grid": [
+      "PIPER WRIGHT",
+      "EXHAUST MANIFOLD",
+      "CAMCORDER",
+      "OBOE",
+      "DASHCAM",
+      "SAXOPHONE",
+      "WEBCAM",
+      "PIPER LAURIE",
+      "PIPER HALLIWELL",
+      "BODYCAM",
+      "FLEX PIPE",
+      "BASSOON",
+      "PIPER CHAPMAN",
+      "TAILPIPE",
+      "CLARINET",
+      "MUFFLER"
+    ],
+    "source": "saved_valid_batch",
+    "recovered_from_stdout": false
+  },
+  {
+    "seed_words": [
+      "TWIN",
+      "CLEAN",
+      "TAP",
+      "POINTER"
+    ],
+    "story": "In the underlit subway chapel, my **TWIN** and I performed a **CLEAN** exorcism on the city’s noise—one gentle **TAP** on the tiled altar for each name we’d forgotten. When the last echo faded, a stray laser **POINTER** skittered across the ceiling like a nervous comet, and we realized it was tracing directions not to escape, but to where our future selves were waiting.",
+    "groups": [
+      {
+        "category": "SYNONYMS FOR “TOUCH LIGHTLY”",
+        "candidates": [
+          "TAP",
+          "DAB",
+          "GRAZE",
+          "BRUSH",
+          "SKIM",
+          "NICK",
+          "BUMP",
+          "NUDGE"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "THINGS YOU MIGHT DO ON A SMARTPHONE SCREEN",
+        "candidates": [
+          "TAP",
+          "SWIPE",
+          "SCROLL",
+          "PINCH",
+          "ZOOM",
+          "DRAG",
+          "PRESS",
+          "DOUBLE-TAP"
+        ],
+        "overlap_word": "TAP",
+        "source_group": "SYNONYMS FOR “TOUCH LIGHTLY”"
+      },
+      {
+        "category": "GRASSLAND ECOSYSTEMS (BIOMES)",
+        "candidates": [
+          "GRAZE",
+          "PRAIRIE",
+          "SAVANNA",
+          "STEPPE",
+          "PAMPAS",
+          "VELD",
+          "MEADOW",
+          "LLANO"
+        ],
+        "overlap_word": "GRAZE",
+        "source_group": "SYNONYMS FOR “TOUCH LIGHTLY”"
+      },
+      {
+        "category": "ADD A LETTER TO MAKE A DANCE STYLE",
+        "candidates": [
+          "STEPPE",
+          "TANG",
+          "SALSA",
+          "SWING",
+          "POLKA",
+          "WALTZ",
+          "SAMBA",
+          "TANGO"
+        ],
+        "overlap_word": "STEPPE",
+        "source_group": "GRASSLAND ECOSYSTEMS (BIOMES)"
+      }
+    ],
+    "overlap_words": {
+      "TAP": [
+        "SYNONYMS FOR “TOUCH LIGHTLY”",
+        "THINGS YOU MIGHT DO ON A SMARTPHONE SCREEN"
+      ],
+      "GRAZE": [
+        "SYNONYMS FOR “TOUCH LIGHTLY”",
+        "GRASSLAND ECOSYSTEMS (BIOMES)"
+      ],
+      "STEPPE": [
+        "GRASSLAND ECOSYSTEMS (BIOMES)",
+        "ADD A LETTER TO MAKE A DANCE STYLE"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "THINGS YOU MIGHT DO ON A SMARTPHONE SCREEN",
+        "words": [
+          "TAP",
+          "SWIPE",
+          "PRESS",
+          "DOUBLE-TAP"
+        ],
+        "similarity": 0.5367,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "SYNONYMS FOR “TOUCH LIGHTLY”",
+        "words": [
+          "DAB",
+          "GRAZE",
+          "BRUSH",
+          "SKIM"
+        ],
+        "similarity": 0.3701,
+        "color": "Green"
+      },
+      {
+        "category": "GRASSLAND ECOSYSTEMS (BIOMES)",
+        "words": [
+          "PRAIRIE",
+          "SAVANNA",
+          "STEPPE",
+          "MEADOW"
+        ],
+        "similarity": 0.496,
+        "color": "Blue"
+      },
+      {
+        "category": "ADD A LETTER TO MAKE A DANCE STYLE",
+        "words": [
+          "SALSA",
+          "POLKA",
+          "WALTZ",
+          "TANGO"
+        ],
+        "similarity": 0.504,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "shuffled_grid": [
+      "SAVANNA",
+      "STEPPE",
+      "TAP",
+      "PRESS",
+      "WALTZ",
+      "DOUBLE-TAP",
+      "SKIM",
+      "SALSA",
+      "DAB",
+      "TANGO",
+      "SWIPE",
+      "MEADOW",
+      "PRAIRIE",
+      "BRUSH",
+      "POLKA",
+      "GRAZE"
+    ],
+    "source": "saved_valid_batch",
+    "recovered_from_stdout": false
+  },
+  {
+    "source": "recovered_valid_20_run",
+    "recovered_from_stdout": true,
+    "valid": true,
+    "story": null,
+    "seed_words": null,
+    "groups": null,
+    "overlap_words": null,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": null,
+    "puzzle": [
+      {
+        "color": "Yellow (Easiest)",
+        "category": "HURRICANE NAMES (ATLANTIC)",
+        "words": [
+          "KATRINA",
+          "SANDY",
+          "IRMA",
+          "MARIA"
+        ]
+      },
+      {
+        "color": "Green",
+        "category": "SHAKESPEARE CHARACTER NAMES",
+        "words": [
+          "IAGO",
+          "OPHELIA",
+          "DESDEMONA",
+          "PROSPERO"
+        ]
+      },
+      {
+        "color": "Blue",
+        "category": "CHURCH ARCHITECTURE FEATURES",
+        "words": [
+          "CHANCEL",
+          "STEEPLE",
+          "BELLTOWER",
+          "CLOISTER"
+        ]
+      },
+      {
+        "color": "Purple (Hardest)",
+        "category": "U.S. PRESIDENTS' NICKNAMES",
+        "words": [
+          "DUBYA",
+          "JIMMY",
+          "JEB",
+          "JACKSON"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "recovered_valid_20_run",
+    "recovered_from_stdout": true,
+    "valid": true,
+    "story": null,
+    "seed_words": null,
+    "groups": null,
+    "overlap_words": null,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": null,
+    "puzzle": [
+      {
+        "color": "Yellow (Easiest)",
+        "category": "APPROVE / \"GIVE THE OK\" (AS A BILL, PLAN, OR INSPECTION)",
+        "words": [
+          "PASS",
+          "APPROVE",
+          "RATIFY",
+          "ENDORSE"
+        ]
+      },
+      {
+        "color": "Green",
+        "category": "PUNISHMENT / PENALTY (AS A NOUN)",
+        "words": [
+          "SANCTION",
+          "PENALTY",
+          "CENSURE",
+          "REPRIMAND"
+        ]
+      },
+      {
+        "color": "Blue",
+        "category": "MAP FEATURES IN MOUNTAIN TERRAIN",
+        "words": [
+          "SADDLE",
+          "RIDGE",
+          "SUMMIT",
+          "COL"
+        ]
+      },
+      {
+        "color": "Purple (Hardest)",
+        "category": "BONES IN THE HUMAN ANKLE/FOOT (ANATOMY)",
+        "words": [
+          "TALUS",
+          "NAVICULAR",
+          "METATARSAL",
+          "TIBIA"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "recovered_valid_20_run",
+    "recovered_from_stdout": true,
+    "valid": true,
+    "story": null,
+    "seed_words": null,
+    "groups": null,
+    "overlap_words": null,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": null,
+    "puzzle": [
+      {
+        "color": "Yellow (Easiest)",
+        "category": "NASA SPACE SHUTTLES",
+        "words": [
+          "COLUMBIA",
+          "DISCOVERY",
+          "ATLANTIS",
+          "ENDEAVOUR"
+        ]
+      },
+      {
+        "color": "Green",
+        "category": "NEWSPAPER PARTS / ROLES",
+        "words": [
+          "HEADLINE",
+          "COLUMNIST",
+          "EDITORIAL",
+          "OBITUARY"
+        ]
+      },
+      {
+        "color": "Blue",
+        "category": "CATHEDRAL ARCHITECTURE FEATURES",
+        "words": [
+          "NAVE",
+          "CHANCEL",
+          "BUTTRESS",
+          "FLYING BUTTRESS"
+        ]
+      },
+      {
+        "color": "Purple (Hardest)",
+        "category": "HOMOPHONES OF NAVAL RANKS",
+        "words": [
+          "ADMIRAL",
+          "COLONEL",
+          "ENSIGN",
+          "LIEUTENANT"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "recovered_valid_20_run",
+    "recovered_from_stdout": true,
+    "valid": true,
+    "story": null,
+    "seed_words": null,
+    "groups": null,
+    "overlap_words": null,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": null,
+    "puzzle": [
+      {
+        "color": "Yellow (Easiest)",
+        "category": "HIGH-LEVEL PLAYING CARDS (A.K.A. \"HONORS\")",
+        "words": [
+          "ACE",
+          "KING",
+          "QUEEN",
+          "JACK"
+        ]
+      },
+      {
+        "color": "Green",
+        "category": "BATMAN VILLAINS",
+        "words": [
+          "JOKER",
+          "BANE",
+          "RIDDLER",
+          "SCARECROW"
+        ]
+      },
+      {
+        "color": "Blue",
+        "category": "FLIGHTLESS BIRDS (TAXONOMY)",
+        "words": [
+          "KIWI",
+          "CASSOWARY",
+          "KAKAPO",
+          "TAKAHE"
+        ]
+      },
+      {
+        "color": "Purple (Hardest)",
+        "category": "SUBWAY/L TRAIN LINES (NYC)",
+        "words": [
+          "BDFM",
+          "G",
+          "JZ",
+          "NQRW"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "recovered_valid_20_run",
+    "recovered_from_stdout": true,
+    "valid": true,
+    "story": null,
+    "seed_words": null,
+    "groups": null,
+    "overlap_words": null,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": null,
+    "puzzle": [
+      {
+        "color": "Yellow (Easiest)",
+        "category": "BRANCHES OF A COUNTRY'S ARMED FORCES",
+        "words": [
+          "NAVY",
+          "ARMY",
+          "AIR FORCE",
+          "MARINES"
+        ]
+      },
+      {
+        "color": "Green",
+        "category": "TYPES OF BEANS",
+        "words": [
+          "FAVA",
+          "LIMA",
+          "GARBANZO",
+          "CANNELLINI"
+        ]
+      },
+      {
+        "color": "Blue",
+        "category": "PROFESSIONAL SPORTS TEAMS (PLURAL NICKNAMES)",
+        "words": [
+          "GIANTS",
+          "JETS",
+          "KNICKS",
+          "KINGS"
+        ]
+      },
+      {
+        "color": "Purple (Hardest)",
+        "category": "WORDS THAT CAN FOLLOW \"JET\" (___ JET)",
+        "words": [
+          "LAG",
+          "ENGINE",
+          "STREAM",
+          "FUEL"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "recovered_valid_20_run",
+    "recovered_from_stdout": true,
+    "valid": true,
+    "story": null,
+    "seed_words": null,
+    "groups": null,
+    "overlap_words": null,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": null,
+    "puzzle": [
+      {
+        "color": "Yellow (Easiest)",
+        "category": "KNOWLEDGE-BASED (TAXONOMY): MUSCLE GROUPS",
+        "words": [
+          "HAMSTRING",
+          "CALF",
+          "BICEPS",
+          "TRICEPS"
+        ]
+      },
+      {
+        "color": "Green",
+        "category": "CAMPUS BUILDINGS/PLACES",
+        "words": [
+          "CAFETERIA",
+          "GYMNASIUM",
+          "AUDITORIUM",
+          "CHAPEL"
+        ]
+      },
+      {
+        "color": "Blue",
+        "category": "KNOWLEDGE-BASED (TAXONOMY): HUMAN BODY ORGANS",
+        "words": [
+          "ORGAN",
+          "LIVER",
+          "KIDNEY",
+          "LUNG"
+        ]
+      },
+      {
+        "color": "Purple (Hardest)",
+        "category": "WORDPLAY — REMOVE FIRST LETTER TO GET A MUSICAL INSTRUMENT",
+        "words": [
+          "HARP",
+          "VIOLA",
+          "CELLO",
+          "FLUTE"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "recovered_valid_20_run",
+    "recovered_from_stdout": true,
+    "valid": true,
+    "story": null,
+    "seed_words": null,
+    "groups": null,
+    "overlap_words": null,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": null,
+    "puzzle": [
+      {
+        "color": "Yellow (Easiest)",
+        "category": "SOUNDS A DOG MAKES",
+        "words": [
+          "BARK",
+          "GROWL",
+          "HOWL",
+          "SNARL"
+        ]
+      },
+      {
+        "color": "Green",
+        "category": "FAMILY HISTORY / LINEAGE",
+        "words": [
+          "ANCESTRY",
+          "LINEAGE",
+          "PEDIGREE",
+          "GENEALOGY"
+        ]
+      },
+      {
+        "color": "Blue",
+        "category": "KNOWLEDGE-BASED (POP CULTURE): CLASSIC UNIVERSAL MONSTERS / HORROR ICONS",
+        "words": [
+          "DRACULA",
+          "FRANKENSTEIN",
+          "MUMMY",
+          "CREATURE"
+        ]
+      },
+      {
+        "color": "Purple (Hardest)",
+        "category": "TREE PARTS (BOTANY)",
+        "words": [
+          "SAPWOOD",
+          "HEARTWOOD",
+          "PHLOEM",
+          "XYLEM"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "recovered_valid_20_run",
+    "recovered_from_stdout": true,
+    "valid": true,
+    "story": null,
+    "seed_words": null,
+    "groups": null,
+    "overlap_words": null,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": null,
+    "puzzle": [
+      {
+        "color": "Yellow (Easiest)",
+        "category": "ZODIAC SIGNS (ASTROLOGY)",
+        "words": [
+          "ARIES",
+          "VIRGO",
+          "LIBRA",
+          "SCORPIO"
+        ]
+      },
+      {
+        "color": "Green",
+        "category": "THINGS ASSOCIATED WITH VIKINGS (NORSE CULTURE)",
+        "words": [
+          "VIKING",
+          "AXE",
+          "RUNE",
+          "VALHALLA"
+        ]
+      },
+      {
+        "color": "Blue",
+        "category": "NASA SPACECRAFT WITH A \"TWIN\" THEME",
+        "words": [
+          "VOYAGER",
+          "PIONEER",
+          "GALILEO",
+          "KEPLER"
+        ]
+      },
+      {
+        "color": "Purple (Hardest)",
+        "category": "TYPE 2(d) WORDPLAY — REMOVE FIRST LETTER TO GET A MUSIC GENRE",
+        "words": [
+          "KORE",
+          "KAVE",
+          "KETAL",
+          "KOUSE"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "recovered_valid_20_run",
+    "recovered_from_stdout": true,
+    "valid": true,
+    "story": null,
+    "seed_words": null,
+    "groups": null,
+    "overlap_words": null,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": null,
+    "puzzle": [
+      {
+        "color": "Yellow (Easiest)",
+        "category": "SLANG TERMS FOR \"OKAY/ACCEPTABLE\"",
+        "words": [
+          "FINE",
+          "ALRIGHT",
+          "OKAY",
+          "ACCEPTABLE"
+        ]
+      },
+      {
+        "color": "Green",
+        "category": "GRADUATION REGALIA / CEREMONY ITEMS",
+        "words": [
+          "TASSEL",
+          "GOWN",
+          "DIPLOMA",
+          "HONOR CORD"
+        ]
+      },
+      {
+        "color": "Blue",
+        "category": "THINGS THAT HANG",
+        "words": [
+          "SWING",
+          "PENDULUM",
+          "HAMMOCK",
+          "NOOSE"
+        ]
+      },
+      {
+        "color": "Purple (Hardest)",
+        "category": "TYPES OF JAZZ (AS GENRES)",
+        "words": [
+          "HARD BOP",
+          "RAGTIME",
+          "FREE JAZZ",
+          "DIXIELAND"
+        ]
+      }
+    ]
+  },
+  {
+    "source": "recovered_valid_20_run",
+    "recovered_from_stdout": true,
+    "valid": true,
+    "story": null,
+    "seed_words": null,
+    "groups": null,
+    "overlap_words": null,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": null,
+    "puzzle": [
+      {
+        "color": "Yellow (Easiest)",
+        "category": "ADJECTIVES FOR INTENSE ANGER",
+        "words": [
+          "FURIOUS",
+          "ENRAGED",
+          "INCENSED",
+          "IRATE"
+        ]
+      },
+      {
+        "color": "Green",
+        "category": "COLORS/FINISHES IN PAINT NAMES",
+        "words": [
+          "TAUPE",
+          "TEAL",
+          "INDIGO",
+          "MAUVE"
+        ]
+      },
+      {
+        "color": "Blue",
+        "category": "TAX FORMS AND SCHEDULES (U.S.)",
+        "words": [
+          "W-2",
+          "1099",
+          "1040",
+          "W-4"
+        ]
+      },
+      {
+        "color": "Purple (Hardest)",
+        "category": "CRATER(S) ON MARS (I.A.U. FEATURE NAMES)",
+        "words": [
+          "GUSEV",
+          "ISIDIS",
+          "JEZERO",
+          "TIKHONRAVOV"
+        ]
+      }
+    ]
+  },
+  {
+    "seed_words": [
+      "QUID",
+      "TENDER",
+      "SHRED",
+      "PUFFS"
+    ],
+    "story": "In the midnight market of lost memories, I paid a single QUID for a jar of moonlight, and its TENDER glow clung to my fingers like a promise I wasn’t sure I deserved. When I unstoppered it, the darkness tore itself into one last SHRED of my old name, and the sky answered with cinnamon-sweet PUFFS of cloud that rained softly upward, as if grief had finally learned to float.",
+    "groups": [
+      {
+        "category": "BRITISH MONEY SLANG",
+        "candidates": [
+          "QUID",
+          "FIVER",
+          "TENNER",
+          "GRAND",
+          "NICKER",
+          "DOSH",
+          "READIES",
+          "LOLLIPOP"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "THINGS YOU MIGHT CALL “GRAND” (IMPRESSIVE)",
+        "candidates": [
+          "GRAND",
+          "MAJESTIC",
+          "SPLENDID",
+          "MAGNIFICENT",
+          "STATELY",
+          "REGAL",
+          "GLORIOUS",
+          "NOBLE"
+        ],
+        "overlap_word": "GRAND",
+        "source_group": "BRITISH MONEY SLANG"
+      },
+      {
+        "category": "LATIN PHRASES USED IN ENGLISH (TYPE 4: KNOWLEDGE-BASED — TAXONOMY)",
+        "candidates": [
+          "QUID",
+          "QUID PRO QUO",
+          "CARPE DIEM",
+          "CAVEAT EMPTOR",
+          "DE FACTO",
+          "PRIMA FACIE",
+          "AD HOC",
+          "PER SE"
+        ],
+        "overlap_word": "QUID",
+        "source_group": "BRITISH MONEY SLANG"
+      },
+      {
+        "category": "WORDS WITH A LATIN ABBREVIATION “HIDDEN” INSIDE (E.G., “PER”, “ET”, “EX”, “AD”)",
+        "candidates": [
+          "PER SE",
+          "EXPERT",
+          "ADVICE",
+          "ETCH",
+          "VEXED",
+          "PERSUADE",
+          "TICKET",
+          "ADEPT"
+        ],
+        "overlap_word": "PER SE",
+        "source_group": "LATIN PHRASES USED IN ENGLISH (TYPE 4: KNOWLEDGE-BASED — TAXONOMY)"
+      }
+    ],
+    "overlap_words": {
+      "QUID": [
+        "BRITISH MONEY SLANG",
+        "LATIN PHRASES USED IN ENGLISH (TYPE 4: KNOWLEDGE-BASED — TAXONOMY)"
+      ],
+      "GRAND": [
+        "BRITISH MONEY SLANG",
+        "THINGS YOU MIGHT CALL “GRAND” (IMPRESSIVE)"
+      ],
+      "PER SE": [
+        "LATIN PHRASES USED IN ENGLISH (TYPE 4: KNOWLEDGE-BASED — TAXONOMY)",
+        "WORDS WITH A LATIN ABBREVIATION “HIDDEN” INSIDE (E.G., “PER”, “ET”, “EX”, “AD”)"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "THINGS YOU MIGHT CALL “GRAND” (IMPRESSIVE)",
+        "words": [
+          "MAJESTIC",
+          "SPLENDID",
+          "MAGNIFICENT",
+          "GLORIOUS"
+        ],
+        "similarity": 0.6226,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "LATIN PHRASES USED IN ENGLISH (TYPE 4: KNOWLEDGE-BASED — TAXONOMY)",
+        "words": [
+          "DE FACTO",
+          "PRIMA FACIE",
+          "AD HOC",
+          "PER SE"
+        ],
+        "similarity": 0.363,
+        "color": "Green"
+      },
+      {
+        "category": "BRITISH MONEY SLANG",
+        "words": [
+          "QUID",
+          "FIVER",
+          "TENNER",
+          "NICKER"
+        ],
+        "similarity": 0.4654,
+        "color": "Blue"
+      },
+      {
+        "category": "WORDS WITH A LATIN ABBREVIATION “HIDDEN” INSIDE (E.G., “PER”, “ET”, “EX”, “AD”)",
+        "words": [
+          "EXPERT",
+          "ADVICE",
+          "PERSUADE",
+          "ADEPT"
+        ],
+        "similarity": 0.2976,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "SPLENDID",
+      "DE FACTO",
+      "PRIMA FACIE",
+      "EXPERT",
+      "PER SE",
+      "MAJESTIC",
+      "ADEPT",
+      "PERSUADE",
+      "AD HOC",
+      "FIVER",
+      "GLORIOUS",
+      "QUID",
+      "ADVICE",
+      "NICKER",
+      "MAGNIFICENT",
+      "TENNER"
+    ],
+    "source": "continued_valid_collection",
+    "recovered_from_stdout": false
+  },
+  {
+    "seed_words": [
+      "KEEL",
+      "SPIDER",
+      "MUG",
+      "SWIMMING"
+    ],
+    "story": "At dawn, the ship’s **KEEL** hummed like a buried hymn, and a brass **SPIDER** in the captain’s cabin spun a web of thin clockwork that mapped the tides as if they were memories. When I lifted my chipped **MUG**, the tea inside began **SWIMMING** in slow spirals, showing me a future where the ocean wasn’t water at all, but a sky that had forgotten how to fall.",
+    "groups": [
+      {
+        "category": "NAUTICAL PARTS OF A SHIP",
+        "candidates": [
+          "KEEL",
+          "RUDDER",
+          "HATCH",
+          "BOW",
+          "STERN",
+          "MAST",
+          "BULWARK",
+          "GALLEY"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "ARCHERY GEAR",
+        "candidates": [
+          "BOW",
+          "ARROW",
+          "QUIVER",
+          "FLETCHING",
+          "NOCK",
+          "STRING",
+          "RISER",
+          "BROADHEAD"
+        ],
+        "overlap_word": "BOW",
+        "source_group": "NAUTICAL PARTS OF A SHIP"
+      },
+      {
+        "category": "TYPES OF KITCHENS (BY CONTEXT/SETTING)",
+        "candidates": [
+          "GALLEY",
+          "TEST",
+          "CLOUD",
+          "COMMISSARY",
+          "DARKROOM",
+          "GHOST",
+          "HOME",
+          "TEACHING"
+        ],
+        "overlap_word": "GALLEY",
+        "source_group": "NAUTICAL PARTS OF A SHIP"
+      },
+      {
+        "category": "MUSIC-GEAR TERMS (NOT THE INSTRUMENT ITSELF)",
+        "candidates": [
+          "STRING",
+          "PICKUP",
+          "CAPO",
+          "TUNER",
+          "METRONOME",
+          "PEDAL",
+          "AMP",
+          "CABLE"
+        ],
+        "overlap_word": "STRING",
+        "source_group": "ARCHERY GEAR"
+      }
+    ],
+    "overlap_words": {
+      "BOW": [
+        "NAUTICAL PARTS OF A SHIP",
+        "ARCHERY GEAR"
+      ],
+      "GALLEY": [
+        "NAUTICAL PARTS OF A SHIP",
+        "TYPES OF KITCHENS (BY CONTEXT/SETTING)"
+      ],
+      "STRING": [
+        "ARCHERY GEAR",
+        "MUSIC-GEAR TERMS (NOT THE INSTRUMENT ITSELF)"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "ARCHERY GEAR",
+        "words": [
+          "BOW",
+          "ARROW",
+          "QUIVER",
+          "STRING"
+        ],
+        "similarity": 0.4612,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "MUSIC-GEAR TERMS (NOT THE INSTRUMENT ITSELF)",
+        "words": [
+          "TUNER",
+          "PEDAL",
+          "AMP",
+          "CABLE"
+        ],
+        "similarity": 0.3373,
+        "color": "Green"
+      },
+      {
+        "category": "NAUTICAL PARTS OF A SHIP",
+        "words": [
+          "KEEL",
+          "RUDDER",
+          "HATCH",
+          "GALLEY"
+        ],
+        "similarity": 0.4205,
+        "color": "Blue"
+      },
+      {
+        "category": "TYPES OF KITCHENS (BY CONTEXT/SETTING)",
+        "words": [
+          "CLOUD",
+          "DARKROOM",
+          "GHOST",
+          "HOME"
+        ],
+        "similarity": 0.3026,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "HOME",
+      "TUNER",
+      "GHOST",
+      "ARROW",
+      "PEDAL",
+      "CABLE",
+      "KEEL",
+      "GALLEY",
+      "HATCH",
+      "RUDDER",
+      "DARKROOM",
+      "BOW",
+      "QUIVER",
+      "AMP",
+      "CLOUD",
+      "STRING"
+    ],
+    "source": "continued_valid_collection",
+    "recovered_from_stdout": false
+  },
+  {
+    "seed_words": [
+      "PLANK",
+      "ROW",
+      "ORCHESTRA",
+      "CUCUMBER"
+    ],
+    "story": "On a moonlit pier, a lone **PLANK** began to hum, and the sea answered in a shimmering **ROW** of lantern-lit waves that marched toward shore like patient ghosts. Beneath them, an **ORCHESTRA** of barnacles and broken shells played a tide-worn symphony while a wandering **CUCUMBER**—green as envy, wise as driftwood—whispered to the sleeping fishermen that even the smallest, strangest thing can steer a life off its plotted course.",
+    "groups": [
+      {
+        "category": "PIER/DOCK STRUCTURES",
+        "candidates": [
+          "BOLLARD",
+          "CLEAT",
+          "GANGWAY",
+          "MOORING",
+          "PILON",
+          "PONTOON",
+          "PYLON",
+          "WHARF"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "SPORTS FOOTWEAR WITH STUDS/SPIKES",
+        "candidates": [
+          "CLEAT",
+          "BOOT",
+          "SNEAKER",
+          "TRAINER",
+          "LOAFER",
+          "SANDAL",
+          "MOCASSIN",
+          "OXFORD"
+        ],
+        "overlap_word": "CLEAT",
+        "source_group": "PIER/DOCK STRUCTURES"
+      },
+      {
+        "category": "COMMON COMPUTER STARTUP/RECOVERY OPTIONS (BOOT MENU)",
+        "candidates": [
+          "BOOT",
+          "SAFE MODE",
+          "BIOS",
+          "UEFI",
+          "RECOVERY",
+          "RESTORE",
+          "RESTART",
+          "DIAGNOSTICS"
+        ],
+        "overlap_word": "BOOT",
+        "source_group": "SPORTS FOOTWEAR WITH STUDS/SPIKES"
+      },
+      {
+        "category": "KNOWLEDGE-BASED — FICTIONAL DETECTIVES (FIRST OR LAST NAMES)",
+        "candidates": [
+          "WHARF",
+          "MARPLE",
+          "HOLMES",
+          "POIROT",
+          "SPENCER",
+          "MONTALBANO",
+          "COLOMBO",
+          "WALLANDER"
+        ],
+        "overlap_word": "WHARF",
+        "source_group": "PIER/DOCK STRUCTURES"
+      }
+    ],
+    "overlap_words": {
+      "CLEAT": [
+        "PIER/DOCK STRUCTURES",
+        "SPORTS FOOTWEAR WITH STUDS/SPIKES"
+      ],
+      "WHARF": [
+        "PIER/DOCK STRUCTURES",
+        "KNOWLEDGE-BASED — FICTIONAL DETECTIVES (FIRST OR LAST NAMES)"
+      ],
+      "BOOT": [
+        "SPORTS FOOTWEAR WITH STUDS/SPIKES",
+        "COMMON COMPUTER STARTUP/RECOVERY OPTIONS (BOOT MENU)"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "COMMON COMPUTER STARTUP/RECOVERY OPTIONS (BOOT MENU)",
+        "words": [
+          "BOOT",
+          "RECOVERY",
+          "RESTORE",
+          "RESTART"
+        ],
+        "similarity": 0.4661,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "KNOWLEDGE-BASED — FICTIONAL DETECTIVES (FIRST OR LAST NAMES)",
+        "words": [
+          "MARPLE",
+          "POIROT",
+          "MONTALBANO",
+          "COLOMBO"
+        ],
+        "similarity": 0.331,
+        "color": "Green"
+      },
+      {
+        "category": "PIER/DOCK STRUCTURES",
+        "words": [
+          "GANGWAY",
+          "MOORING",
+          "PONTOON",
+          "WHARF"
+        ],
+        "similarity": 0.4079,
+        "color": "Blue"
+      },
+      {
+        "category": "SPORTS FOOTWEAR WITH STUDS/SPIKES",
+        "words": [
+          "SNEAKER",
+          "TRAINER",
+          "LOAFER",
+          "SANDAL"
+        ],
+        "similarity": 0.488,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "COLOMBO",
+      "BOOT",
+      "PONTOON",
+      "MONTALBANO",
+      "RECOVERY",
+      "MOORING",
+      "RESTART",
+      "SANDAL",
+      "MARPLE",
+      "RESTORE",
+      "POIROT",
+      "SNEAKER",
+      "LOAFER",
+      "GANGWAY",
+      "WHARF",
+      "TRAINER"
+    ],
+    "source": "continued_valid_collection",
+    "recovered_from_stdout": false
+  },
+  {
+    "seed_words": [
+      "FELIX",
+      "RATCHED",
+      "DISH",
+      "STEP"
+    ],
+    "story": "FELIX climbed the lighthouse’s spiral stair, each STEP echoing like a heartbeat, until he found a single cracked DISH on the landing—holding not soup, but a small, trembling star. As the wind RATCHED the lantern mechanism above him, the star whispered that it had fallen from heaven on purpose, choosing loneliness over perfection, and Felix realized rescue sometimes means letting something stay broken long enough to become beautiful.",
+    "groups": [
+      {
+        "category": "PARTS OF A LIGHTHOUSE",
+        "candidates": [
+          "LANTERN",
+          "GALLERY",
+          "CUPOLA",
+          "CATWALK",
+          "TOWER",
+          "BEACON",
+          "LENS",
+          "FOGHORN"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "CAMERA GEAR / PHOTOGRAPHY TERMS",
+        "candidates": [
+          "LENS",
+          "APERTURE",
+          "SHUTTER",
+          "ISO",
+          "BOKEH",
+          "TRIPOD",
+          "VIEWFINDER",
+          "LIGHTMETER"
+        ],
+        "overlap_word": "LENS",
+        "source_group": "PARTS OF A LIGHTHOUSE"
+      },
+      {
+        "category": "WINDOW COVERINGS / PARTS OF WINDOW TREATMENTS",
+        "candidates": [
+          "SHUTTER",
+          "BLIND",
+          "DRAPE",
+          "SHADE",
+          "VALANCE",
+          "CORNICE",
+          "LOUVER",
+          "SASH"
+        ],
+        "overlap_word": "SHUTTER",
+        "source_group": "CAMERA GEAR / PHOTOGRAPHY TERMS"
+      },
+      {
+        "category": "TYPES OF POKER BETS / FORCED ACTIONS",
+        "candidates": [
+          "BLIND",
+          "ANTE",
+          "CALL",
+          "CHECK",
+          "RAISE",
+          "FOLD",
+          "ALL-IN",
+          "STRADDLE"
+        ],
+        "overlap_word": "BLIND",
+        "source_group": "WINDOW COVERINGS / PARTS OF WINDOW TREATMENTS"
+      }
+    ],
+    "overlap_words": {
+      "LENS": [
+        "PARTS OF A LIGHTHOUSE",
+        "CAMERA GEAR / PHOTOGRAPHY TERMS"
+      ],
+      "SHUTTER": [
+        "CAMERA GEAR / PHOTOGRAPHY TERMS",
+        "WINDOW COVERINGS / PARTS OF WINDOW TREATMENTS"
+      ],
+      "BLIND": [
+        "WINDOW COVERINGS / PARTS OF WINDOW TREATMENTS",
+        "TYPES OF POKER BETS / FORCED ACTIONS"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "TYPES OF POKER BETS / FORCED ACTIONS",
+        "words": [
+          "CALL",
+          "RAISE",
+          "FOLD",
+          "ALL-IN"
+        ],
+        "similarity": 0.2763,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "CAMERA GEAR / PHOTOGRAPHY TERMS",
+        "words": [
+          "LENS",
+          "APERTURE",
+          "SHUTTER",
+          "TRIPOD"
+        ],
+        "similarity": 0.4222,
+        "color": "Green"
+      },
+      {
+        "category": "WINDOW COVERINGS / PARTS OF WINDOW TREATMENTS",
+        "words": [
+          "DRAPE",
+          "SHADE",
+          "VALANCE",
+          "SASH"
+        ],
+        "similarity": 0.3225,
+        "color": "Blue"
+      },
+      {
+        "category": "PARTS OF A LIGHTHOUSE",
+        "words": [
+          "LANTERN",
+          "CUPOLA",
+          "TOWER",
+          "BEACON"
+        ],
+        "similarity": 0.3849,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "CALL",
+      "LANTERN",
+      "TRIPOD",
+      "LENS",
+      "CUPOLA",
+      "ALL-IN",
+      "SHADE",
+      "TOWER",
+      "RAISE",
+      "SASH",
+      "FOLD",
+      "BEACON",
+      "VALANCE",
+      "APERTURE",
+      "DRAPE",
+      "SHUTTER"
+    ],
+    "source": "continued_valid_collection",
+    "recovered_from_stdout": false
+  },
+  {
+    "seed_words": [
+      "EVENTUALLY",
+      "WHY",
+      "DANDELION",
+      "RYE"
+    ],
+    "story": "In the cracked clay of a forgotten battlefield, a single **DANDELION** pushed up beside a stalk of **RYE**, and the wind carried their seeds like tiny questions into the smoke-stained sky: **WHY** do we keep growing where we’ve been told to die? **EVENTUALLY**, the soldiers who returned found the field turned gold and green again, and in that quiet rebuke they tasted bread and bitterness in the same bite.",
+    "groups": [
+      {
+        "category": "BREAD-MAKING GRAINS",
+        "candidates": [
+          "RYE",
+          "SPELT",
+          "EMMER",
+          "DURUM",
+          "MILLET",
+          "BARLEY",
+          "SORGHUM",
+          "TEFF"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "ETHIOPIAN/ERITREAN DISHES & STAPLES",
+        "candidates": [
+          "TEFF",
+          "INJERA",
+          "DORO WAT",
+          "TIBS",
+          "KITFO",
+          "SHIRO",
+          "BERBERE",
+          "NITER KIBBEH"
+        ],
+        "overlap_word": "TEFF",
+        "source_group": "BREAD-MAKING GRAINS"
+      },
+      {
+        "category": "ACCENT MARKS/DIACRITICS (IN WRITING)",
+        "candidates": [
+          "DURUM",
+          "ACUTE",
+          "GRAVE",
+          "UMLAUT",
+          "TILDE",
+          "CEDILLA",
+          "MACRON",
+          "BREVE"
+        ],
+        "overlap_word": "DURUM",
+        "source_group": "BREAD-MAKING GRAINS"
+      },
+      {
+        "category": "HALLOWEEN SETTING/DECOR ELEMENTS",
+        "candidates": [
+          "GRAVE",
+          "TOMBSTONE",
+          "COFFIN",
+          "CRYPT",
+          "MAUSOLEUM",
+          "HEADSTONE",
+          "EPITAPH",
+          "CEMETERY"
+        ],
+        "overlap_word": "GRAVE",
+        "source_group": "ACCENT MARKS/DIACRITICS (IN WRITING)"
+      }
+    ],
+    "overlap_words": {
+      "DURUM": [
+        "BREAD-MAKING GRAINS",
+        "ACCENT MARKS/DIACRITICS (IN WRITING)"
+      ],
+      "TEFF": [
+        "BREAD-MAKING GRAINS",
+        "ETHIOPIAN/ERITREAN DISHES & STAPLES"
+      ],
+      "GRAVE": [
+        "ACCENT MARKS/DIACRITICS (IN WRITING)",
+        "HALLOWEEN SETTING/DECOR ELEMENTS"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "HALLOWEEN SETTING/DECOR ELEMENTS",
+        "words": [
+          "GRAVE",
+          "COFFIN",
+          "MAUSOLEUM",
+          "CEMETERY"
+        ],
+        "similarity": 0.7536,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "BREAD-MAKING GRAINS",
+        "words": [
+          "RYE",
+          "MILLET",
+          "BARLEY",
+          "SORGHUM"
+        ],
+        "similarity": 0.5268,
+        "color": "Green"
+      },
+      {
+        "category": "ACCENT MARKS/DIACRITICS (IN WRITING)",
+        "words": [
+          "DURUM",
+          "UMLAUT",
+          "TILDE",
+          "CEDILLA"
+        ],
+        "similarity": 0.3068,
+        "color": "Blue"
+      },
+      {
+        "category": "ETHIOPIAN/ERITREAN DISHES & STAPLES",
+        "words": [
+          "TEFF",
+          "TIBS",
+          "KITFO",
+          "NITER KIBBEH"
+        ],
+        "similarity": 0.3352,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "BARLEY",
+      "MAUSOLEUM",
+      "CEDILLA",
+      "TEFF",
+      "UMLAUT",
+      "KITFO",
+      "COFFIN",
+      "GRAVE",
+      "TIBS",
+      "RYE",
+      "MILLET",
+      "TILDE",
+      "NITER KIBBEH",
+      "CEMETERY",
+      "SORGHUM",
+      "DURUM"
+    ],
+    "source": "continued_valid_collection",
+    "recovered_from_stdout": false
+  },
+  {
+    "seed_words": [
+      "ENTERPRISE",
+      "BROWN",
+      "PEANUTS",
+      "ROUTINE"
+    ],
+    "story": "At dawn, the creaking starship **ENTERPRISE** drifted into a nebula the color of old tea, and Captain Mira watched **BROWN** constellations bloom like bruises across the viewport. Down in the galley, the ship’s AI broke its sacred **ROUTINE** by offering a single bowl of **PEANUTS**—each shell etched with a stranger’s forgotten name—asking the crew to choose which memories to keep before the jump.",
+    "groups": [
+      {
+        "category": "STAR TREK: SERIES TITLES",
+        "candidates": [
+          "ENTERPRISE",
+          "DISCOVERY",
+          "VOYAGER",
+          "PICARD",
+          "LOWER DECKS",
+          "PRODIGY",
+          "STRANGE NEW WORLDS",
+          "DEEP SPACE NINE"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "SPACEFLIGHT MILESTONES / PROGRAMS (REAL-WORLD)",
+        "candidates": [
+          "DISCOVERY",
+          "APOLLO",
+          "MERCURY",
+          "GEMINI",
+          "ARTEMIS",
+          "VOSTOK",
+          "SOYUZ",
+          "SHUTTLE"
+        ],
+        "overlap_word": "DISCOVERY",
+        "source_group": "STAR TREK: SERIES TITLES"
+      },
+      {
+        "category": "FAMOUS FRENCH SURNAMES (HISTORICAL FIGURES)",
+        "candidates": [
+          "PICARD",
+          "PASTEUR",
+          "CURIE",
+          "DEBUSSY",
+          "VOLTAIRE",
+          "DESCHAMPS",
+          "COUSTEAU",
+          "LAPLACE"
+        ],
+        "overlap_word": "PICARD",
+        "source_group": "STAR TREK: SERIES TITLES"
+      },
+      {
+        "category": "U.S. AIRCRAFT CARRIERS (REAL-WORLD SHIPS)",
+        "candidates": [
+          "ENTERPRISE",
+          "NIMITZ",
+          "FORD",
+          "EISENHOWER",
+          "CARL VINSON",
+          "THEODORE ROOSEVELT",
+          "ABRAHAM LINCOLN",
+          "GEORGE H.W. BUSH"
+        ],
+        "overlap_word": "ENTERPRISE",
+        "source_group": "STAR TREK: SERIES TITLES"
+      }
+    ],
+    "overlap_words": {
+      "ENTERPRISE": [
+        "STAR TREK: SERIES TITLES",
+        "U.S. AIRCRAFT CARRIERS (REAL-WORLD SHIPS)"
+      ],
+      "DISCOVERY": [
+        "STAR TREK: SERIES TITLES",
+        "SPACEFLIGHT MILESTONES / PROGRAMS (REAL-WORLD)"
+      ],
+      "PICARD": [
+        "STAR TREK: SERIES TITLES",
+        "FAMOUS FRENCH SURNAMES (HISTORICAL FIGURES)"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "SPACEFLIGHT MILESTONES / PROGRAMS (REAL-WORLD)",
+        "words": [
+          "APOLLO",
+          "MERCURY",
+          "GEMINI",
+          "ARTEMIS"
+        ],
+        "similarity": 0.456,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "STAR TREK: SERIES TITLES",
+        "words": [
+          "ENTERPRISE",
+          "DISCOVERY",
+          "VOYAGER",
+          "DEEP SPACE NINE"
+        ],
+        "similarity": 0.3949,
+        "color": "Green"
+      },
+      {
+        "category": "FAMOUS FRENCH SURNAMES (HISTORICAL FIGURES)",
+        "words": [
+          "PASTEUR",
+          "CURIE",
+          "VOLTAIRE",
+          "COUSTEAU"
+        ],
+        "similarity": 0.4456,
+        "color": "Blue"
+      },
+      {
+        "category": "U.S. AIRCRAFT CARRIERS (REAL-WORLD SHIPS)",
+        "words": [
+          "EISENHOWER",
+          "THEODORE ROOSEVELT",
+          "ABRAHAM LINCOLN",
+          "GEORGE H.W. BUSH"
+        ],
+        "similarity": 0.5917,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "APOLLO",
+      "MERCURY",
+      "CURIE",
+      "COUSTEAU",
+      "GEORGE H.W. BUSH",
+      "VOLTAIRE",
+      "THEODORE ROOSEVELT",
+      "ABRAHAM LINCOLN",
+      "ENTERPRISE",
+      "DISCOVERY",
+      "ARTEMIS",
+      "VOYAGER",
+      "EISENHOWER",
+      "DEEP SPACE NINE",
+      "PASTEUR",
+      "GEMINI"
+    ],
+    "source": "continued_valid_collection",
+    "recovered_from_stdout": false
+  }
+]

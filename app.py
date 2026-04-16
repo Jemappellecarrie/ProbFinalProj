@@ -7,7 +7,10 @@ import random
 app = Flask(__name__)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-PUZZLES_JSON_PATH = os.path.join(BASE_DIR, "puzzles.json")
+PUZZLES_JSON_PATH = os.getenv(
+    "PUZZLES_JSON_PATH",
+    os.path.join(BASE_DIR, "puzzles.json"),
+)
 
 
 def load_prebuilt_puzzles():
@@ -15,7 +18,7 @@ def load_prebuilt_puzzles():
         puzzles = json.load(f)
 
     # 如果你只想给用户 valid=True 的题，就取消下面这段注释
-    puzzles = [p for p in puzzles if p.get("valid", False)]
+    # puzzles = [p for p in puzzles if p.get("valid", False)]
 
     if not puzzles:
         raise RuntimeError("No puzzles found in puzzles.json")

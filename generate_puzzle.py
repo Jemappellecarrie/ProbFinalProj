@@ -27,7 +27,7 @@ from sentence_transformers import SentenceTransformer
 
 # --------------- Configuration ---------------
 
-MODEL = "GPT 4.1 Mini"
+MODEL = "gpt-5.2"
 TEMPERATURE = 1.0
 NUM_FEWSHOT = 3
 DATASET_PATH = os.path.join(
@@ -72,15 +72,19 @@ def pick_seed_words(dataset: list[dict], n: int = 4) -> list[str]:
 # --------------- LLM Calls ---------------
 
 def make_client() -> OpenAI:
-    token = os.getenv("LITELLM_TOKEN")
-    if not token:
-        raise RuntimeError(
-            "LITELLM_TOKEN not set. Please set the Duke AI Gateway token。"
+    openai_token = os.getenv("OPENAI_API_KEY")
+    if openai_token:
+        return OpenAI(api_key=openai_token)
+
+    litellm_token = os.getenv("LITELLM_TOKEN")
+    if litellm_token:
+        return OpenAI(
+            api_key=litellm_token,
+            base_url="https://litellm.oit.duke.edu/v1",
         )
 
-    return OpenAI(
-        api_key=token,
-        base_url="https://litellm.oit.duke.edu/v1",
+    raise RuntimeError(
+        "Neither OPENAI_API_KEY nor LITELLM_TOKEN is set."
     )
 
 def call_gpt4(client: OpenAI, messages: list[dict]) -> str:
@@ -113,14 +117,73 @@ def generate_diversity_story(client: OpenAI, seed_words: list[str]) -> str:
 
 
 CATEGORY_STYLE_INSTRUCTIONS = """\
-Category style MUST be one of these types:
-1. Synonyms/Slang — words that are synonyms or slang terms for the same concept
-   (e.g., Category: "CONFORMISTS" -> FOLLOWERS, LEMMINGS, PUPPETS, SHEEP)
-2. Wordplay — words connected by a linguistic trick such as homophones, hidden words,
-   anagrams, or sounds-like patterns
-   (e.g., Category: "PHILOSOPHER HOMOPHONES" -> LOCK, MARKS, PANE, RUSTLE)
-3. Fill-in-the-blank — words that all complete the same blank in a phrase
-   (e.g., Category: "B-___" -> BALL, MOVIE, SCHOOL, VITAMIN)"""
+Category style MUST be one of these four types. Each type has labeled subcategories
+(a), (b), (c), etc. You may choose ANY subcategory within a type.
+
+IMPORTANT DISTRIBUTION RULE for a complete 4-group puzzle:
+- Types 1 (Synonyms/Slang) and 4 (Knowledge-based) MUST appear in at least 2 of the 4 groups combined.
+- Type 3 (Fill-in-the-blank) may appear in at most 1 of the 4 groups.
+- Type 2 (Wordplay) may appear in 0-2 of the 4 groups.
+The LLM is free to choose which specific type and subcategory to use for each group,
+as long as the above distribution is respected.
+
+1. Synonyms/Slang — All 4 words mean the same thing (or nearly the same thing),
+   including informal slang, metaphors, and figurative language.
+   (a) Direct synonyms: words that are standard synonyms
+       "HAPPY" → GLAD, ELATED, THRILLED, STOKED
+   (b) Slang/informal: words where some or all are slang for the same concept
+       "MONEY" → CASH, DOUGH, BREAD, BUCKS
+   (c) Figurative/metaphorical: words that are metaphors for the same idea
+       "CONFORMISTS" → FOLLOWERS, LEMMINGS, PUPPETS, SHEEP
+
+2. Wordplay — All 4 words share a hidden linguistic trick. The category name MUST
+   explicitly state what the trick is.
+   (a) Homophones: words that SOUND LIKE something else
+       "PHILOSOPHER HOMOPHONES" → LOCK, MARKS, PANE, RUSTLE (sound like Locke, Marx, Paine, Russell)
+       "SOUNDS LIKE A GREEK LETTER" → MOO, NEW, PIE, ROW (sound like Mu, Nu, Pi, Rho)
+   (b) Hidden word: a secret word is hiding INSIDE each word's spelling
+       "WORDS CONTAINING A FISH" → ABSTRACT, TROUPE, SHARPEN, COBALT (hide BASS, TROUT, SHARP, COBALT)
+   (c) Anagram: letters can be rearranged to spell something in a shared category
+       "ANAGRAMS OF FRUITS" → PALEG, MELNO, HCAEP, PLPAE (rearrange to GRAPE, LEMON, PEACH, APPLE)
+   (d) Add/subtract letters: adding or removing letters from each word reveals a hidden category
+       "REMOVE FIRST LETTER TO GET A NUMBER" → HEIGHT, LONE, CANINE, OFTEN (eight, one, nine, ten)
+   (e) Palindrome: words that read the same forwards and backwards
+       "PALINDROMES" → LEVEL, KAYAK, CIVIC, RADAR
+   (f) Every letter is a Greek letter name: the word can be fully split into Greek letter names
+       "SPELLED ENTIRELY WITH GREEK LETTERS" → ALPHA, ALPHABET, PIOUS, PHOENIX
+
+3. Fill-in-the-blank — All 4 words complete the SAME phrase when placed in the blank.
+   The category name must show the blank with "___".
+   (a) Prefix blank: "___ X" where the blank comes before
+       "___ HOUSE" → FIRE, GREEN, WARE, POWER
+   (b) Suffix blank: "X ___" where the blank comes after
+       "B-___" → BALL, MOVIE, SCHOOL, VITAMIN
+   (c) Compound blank: words form a compound word or common phrase with the given word
+       "___ CAMP" → BAND, BASE, BOOT, SUMMER
+
+4. Knowledge-based — All 4 words belong to the same real-world category or appear in
+   the same scenario. Ideally, some words also have a common DIFFERENT meaning that
+   could mislead players.
+   (a) Taxonomy: words that belong to a specific real-world class
+       "FISH" → CHAR, POLLOCK, SOLE, TANG (all are fish, but also mean other things)
+       "HONDA MODELS" → ACCORD, CIVIC, ODYSSEY, PILOT (all are Honda cars, but also common English words)
+   (b) Scenario/setting: words that all appear together in a specific situation
+       "GRADUATION" → TASSEL, GOWN, CAP, DIPLOMA
+       "POKER TABLE" → CHIPS, FOLD, BLIND, RIVER
+   (c) Pop culture: words tied to a specific cultural domain
+       "TAYLOR SWIFT ALBUMS" → FOLKLORE, MIDNIGHTS, REPUTATION, LOVER"""
+
+WORD_DIFFICULTY_INSTRUCTIONS = """\
+WORD DIFFICULTY PREFERENCE:
+- Prefer words that feel medium-to-hard for a human Connections solver.
+- Avoid overly simple, first-thought, beginner-level words when a sharper option exists.
+- Favor words with nuance, secondary meanings, or less obvious associations.
+- Still keep the puzzle fair: use real, recognizable words, not ultra-obscure trivia.
+- For knowledge-based groups, prefer entries that are recognizable but not the most obvious 4 examples.
+- Do NOT make all 8 candidates extremely easy or overly literal.
+- Do not make all four answers contain or begin with the same overlapping visible part.
+- Do not make all four answers begin with the same visible token.
+- Do not make all four answers contain the same conspicuous prefix, suffix, or repeated letter chunk."""
 
 
 def generate_root_group(
@@ -135,6 +198,7 @@ Your task: generate ONE group for a Connections puzzle. Provide a category name
 and exactly 8 candidate words that fit that category.
 
 {CATEGORY_STYLE_INSTRUCTIONS}
+{WORD_DIFFICULTY_INSTRUCTIONS}
 
 Here are examples of complete Connections puzzles for reference:
 
@@ -155,6 +219,44 @@ WORDS: <word1>, <word2>, <word3>, <word4>, <word5>, <word6>, <word7>, <word8>"""
     ]
     text = call_gpt4(client, messages)
     return parse_group_response(text)
+
+
+def _detect_style(category: str) -> str:
+    """Detect which category style a group uses based on its category name."""
+    cat = category.upper()
+    if "___" in cat or "BLANK" in cat:
+        return "Fill-in-the-blank"
+    wordplay_keywords = ["HOMOPHONE", "ANAGRAM", "HIDDEN", "CONTAINING", "SOUNDS LIKE",
+                         "RHYME", "SPELLED"]
+    if any(kw in cat for kw in wordplay_keywords):
+        return "Wordplay"
+    knowledge_keywords = ["FISH", "PLANET", "GREEK", "LETTER", "ANIMAL", "FRUIT",
+                          "COUNTRY", "CITY", "TEAM", "BRAND", "COLOR", "FLOWER",
+                          "TREE", "BIRD", "ELEMENT", "RIVER", "MOUNTAIN", "CURRENCY"]
+    if any(kw in cat for kw in knowledge_keywords):
+        return "Knowledge-based"
+    return "Synonyms/Slang"
+
+
+def _build_style_constraint(prior_groups: list[dict]) -> str:
+    """Count styles used so far and build a constraint if any style has 2+ uses."""
+    style_counts = {}
+    for g in prior_groups:
+        style = _detect_style(g["category"])
+        style_counts[style] = style_counts.get(style, 0) + 1
+
+    maxed_styles = [s for s, c in style_counts.items() if c >= 2]
+    if not maxed_styles:
+        return ""
+
+    style_list = ", ".join(maxed_styles)
+    summary = ", ".join(f"{s}: {c}" for s, c in style_counts.items())
+    return (
+        f"\nSTYLE VARIETY CONSTRAINT:\n"
+        f"The existing groups already use these styles: {summary}.\n"
+        f"The following style(s) have been used 2 or more times and MUST NOT be used again: {style_list}.\n"
+        f"You MUST pick a DIFFERENT category style for this group.\n"
+    )
 
 
 def generate_followup_group(
@@ -183,6 +285,9 @@ def generate_followup_group(
     else:
         overlap_constraint = ""
 
+    # Build style variety constraint
+    style_constraint = _build_style_constraint(prior_groups)
+
     system_prompt = f"""\
 You are a puzzle designer for the New York Times "Connections" word game.
 
@@ -201,8 +306,9 @@ Steps:
    the 8 words (this creates the intentional overlap that makes the puzzle tricky).
 5. Your new category MUST be thematically VERY DIFFERENT from all existing groups.
    Do NOT create a category that is a near-synonym or subset of an existing one.
-{overlap_constraint}
+{overlap_constraint}{style_constraint}
 {CATEGORY_STYLE_INSTRUCTIONS}
+{WORD_DIFFICULTY_INSTRUCTIONS}
 
 Here are examples of real Connections puzzles for reference:
 
@@ -362,6 +468,8 @@ def assemble_puzzle(
     """
     Assemble a valid 16-word puzzle from 4 groups of 8 candidates.
     Tries all overlap assignments (2^k), picks the best valid one.
+    During assembly, each group uses the same target difficulty so we favor
+    semantically cohesive groups; final displayed difficulty is ranked later.
     """
     word_to_groups = find_overlaps(groups)
     overlap_words = {w: gidxs for w, gidxs in word_to_groups.items() if len(gidxs) > 1}
@@ -456,6 +564,7 @@ def _try_assignment(
         "puzzle": puzzle,
         "valid": validation["valid"],
         "ambiguous_words": validation["ambiguous_words"],
+        "difficulty_issues": validation["difficulty_issues"],
     }
 
 
@@ -495,7 +604,157 @@ def validate_unique_solution(
                     round(margin, 4),
                 ))
 
-    return {"valid": len(ambiguous) == 0, "ambiguous_words": ambiguous}
+    difficulty_issues = find_surface_pattern_issues(puzzle)
+    return {
+        "valid": len(ambiguous) == 0 and len(difficulty_issues) == 0,
+        "ambiguous_words": ambiguous,
+        "difficulty_issues": difficulty_issues,
+    }
+
+
+def _normalize_surface_text(text: str) -> str:
+    return re.sub(r"[^A-Z]", "", text.upper())
+
+
+def _word_tokens(text: str) -> list[str]:
+    return [tok for tok in re.findall(r"[A-Z]+", text.upper()) if tok]
+
+
+def _longest_common_substring(words: list[str]) -> str:
+    if not words:
+        return ""
+
+    shortest = min(words, key=len)
+    best = ""
+    for length in range(len(shortest), 2, -1):
+        for start in range(len(shortest) - length + 1):
+            candidate = shortest[start : start + length]
+            if candidate in best:
+                continue
+            if all(candidate in word for word in words):
+                return candidate
+    return best
+
+
+def find_surface_pattern_issues(puzzle: list[dict]) -> list[tuple[str, str, str]]:
+    """
+    Flag groups that are too easy because they share an overly obvious surface pattern,
+    such as the same visible token across all entries or the same visible substring.
+    """
+    issues = []
+
+    for group in puzzle:
+        words = group["words"]
+        token_sets = [set(_word_tokens(word)) for word in words]
+        shared_tokens = set.intersection(*token_sets) if token_sets else set()
+        meaningful_shared_tokens = [tok for tok in shared_tokens if len(tok) >= 4]
+        if meaningful_shared_tokens:
+            token = sorted(meaningful_shared_tokens, key=len, reverse=True)[0]
+            issues.append((
+                group["category"],
+                "shared_token",
+                token,
+            ))
+            continue
+
+        normalized_words = [_normalize_surface_text(word) for word in words]
+        shared_substring = _longest_common_substring(normalized_words)
+        if len(shared_substring) >= 4:
+            issues.append((
+                group["category"],
+                "shared_substring",
+                shared_substring,
+            ))
+            continue
+
+        if len(shared_substring) == 3:
+            visible_boundary_match = all(
+                word.startswith(shared_substring) or word.endswith(shared_substring)
+                for word in normalized_words
+            )
+            if visible_boundary_match:
+                issues.append((
+                    group["category"],
+                    "shared_substring",
+                    shared_substring,
+                ))
+
+    return issues
+
+
+# --------------- LLM Difficulty Ranking ---------------
+
+
+def rank_difficulty_with_llm(client: OpenAI, puzzle: list[dict]) -> list[dict]:
+    """
+    Ask the LLM to rank 4 groups from easiest to hardest, then assign
+    Yellow (easiest), Green, Blue, Purple (hardest) accordingly.
+    Returns the puzzle list reordered by difficulty color.
+    """
+    groups_text = "\n".join(
+        f"  Group {i+1}: Category: {g['category']}\n"
+        f"           Words: {', '.join(g['words'])}"
+        for i, g in enumerate(puzzle)
+    )
+
+    system_prompt = f"""\
+You are an expert player of the New York Times "Connections" word game.
+
+Given 4 word groups from a Connections puzzle, rank them from EASIEST to HARDEST
+for a human player to identify. Consider:
+- How obvious is the connection between the words?
+- Are the words common or obscure?
+- Does the category involve wordplay or hidden tricks (harder) vs simple synonyms (easier)?
+- Could any words be easily confused with another group?
+
+Here are the 4 groups:
+
+{groups_text}
+
+Respond in EXACTLY this format — list the group numbers from easiest to hardest:
+EASIEST: <group number>
+EASY: <group number>
+HARD: <group number>
+HARDEST: <group number>"""
+
+    messages = [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": "Rank these groups by difficulty now."},
+    ]
+    text = call_gpt4(client, messages)
+
+    # Parse the ranking
+    color_map = {
+        "EASIEST": "Yellow (Easiest)",
+        "EASY": "Green",
+        "HARD": "Blue",
+        "HARDEST": "Purple (Hardest)",
+    }
+
+    ranked_puzzle = []
+    used_indices = set()
+    for level, color in color_map.items():
+        match = re.search(rf"{level}\s*:\s*(\d+)", text, re.IGNORECASE)
+        if match:
+            idx = int(match.group(1)) - 1  # convert to 0-based
+            if 0 <= idx < len(puzzle) and idx not in used_indices:
+                group = dict(puzzle[idx])
+                group["color"] = color
+                ranked_puzzle.append(group)
+                used_indices.add(idx)
+
+    # Fallback: if parsing failed, assign colors by embedding similarity
+    if len(ranked_puzzle) != 4:
+        print("  [WARNING] LLM difficulty ranking parse failed, falling back to embedding order.")
+        sorted_by_sim = sorted(puzzle, key=lambda g: g["similarity"], reverse=True)
+        colors = ["Yellow (Easiest)", "Green", "Blue", "Purple (Hardest)"]
+        ranked_puzzle = []
+        for i, g in enumerate(sorted_by_sim):
+            group = dict(g)
+            group["color"] = colors[i]
+            ranked_puzzle.append(group)
+
+    return ranked_puzzle
 
 
 # --------------- Output ---------------
@@ -558,6 +817,11 @@ def print_assembled_puzzle(result: dict):
                 f"    '{word}' assigned to [{own}] but fits [{other}] "
                 f"better (margin={margin:+.4f})"
             )
+        for category, issue_type, signal in result.get("difficulty_issues", []):
+            print(
+                f"    Group [{category}] rejected for being too obvious "
+                f"({issue_type}={signal})"
+            )
 
     # Print shuffled 4x4 grid
     random.shuffle(all_words)
@@ -595,15 +859,19 @@ def generate_one_puzzle(client: OpenAI, dataset: list[dict], embed_model: Senten
         for g in groups:
             g["words"] = list(dict.fromkeys(g["words"]))
 
+        # Step 1: Assemble the most semantically cohesive groups for validation.
         result = assemble_puzzle(groups, embed_model, target_difficulty="Yellow (Easiest)")
         if result is None:
             return None
+
+        # Step 2: LLM re-ranks the 4 groups by perceived difficulty for display.
+        ranked_puzzle = rank_difficulty_with_llm(client, result["puzzle"])
 
         # Build output structure
         overlaps = find_overlaps(groups)
         shared = {w: gis for w, gis in overlaps.items() if len(gis) > 1}
 
-        all_words = [w for p in result["puzzle"] for w in p["words"]]
+        all_words = [w for p in ranked_puzzle for w in p["words"]]
         shuffled = all_words[:]
         random.shuffle(shuffled)
 
@@ -623,9 +891,10 @@ def generate_one_puzzle(client: OpenAI, dataset: list[dict], embed_model: Senten
                 w: [groups[gi]["category"] for gi in gis]
                 for w, gis in shared.items()
             },
-            "puzzle": result["puzzle"],
+            "puzzle": ranked_puzzle,
             "valid": result["valid"],
             "ambiguous_words": result["ambiguous_words"],
+            "difficulty_issues": result.get("difficulty_issues", []),
             "shuffled_grid": shuffled,
         }
     except Exception as e:

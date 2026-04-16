@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4 Valid Puzzles Viewer</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --panel: #ffffff;
+      --border: #dbe3ee;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+      --success-bg: #ecfdf5;
+      --warn-bg: #fffbeb;
+      --danger-bg: #fef2f2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(255,255,255,0.9), rgba(244,247,251,0.95)),
+        var(--bg);
+    }
+
+    .page {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 28px 20px 40px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #111827, #1f2937, #0f172a);
+      color: white;
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 22px;
+    }
+
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #d1d5db;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 8px 0;
+      font-size: 34px;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      margin: 0;
+      color: #cbd5e1;
+      max-width: 820px;
+      line-height: 1.7;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 16px;
+      padding: 13px 18px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+    }
+
+    button:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #111827;
+    }
+
+    .btn-success {
+      background: #10b981;
+      color: white;
+    }
+
+    .btn-ghost {
+      background: rgba(255,255,255,0.08);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 22px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      padding: 20px;
+    }
+
+    .panel h2, .panel h3 {
+      margin: 0;
+    }
+
+    .sub {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .status {
+      margin-bottom: 18px;
+      border-radius: 18px;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      background: #fff;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .status.success {
+      background: var(--success-bg);
+      border-color: #a7f3d0;
+      color: #065f46;
+    }
+
+    .status.warn {
+      background: var(--warn-bg);
+      border-color: #fde68a;
+      color: #92400e;
+    }
+
+    .status.error {
+      background: var(--danger-bg);
+      border-color: #fecaca;
+      color: #991b1b;
+    }
+
+    .status.info {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+      color: #1d4ed8;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .mini-card {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 16px;
+      background: #f8fafc;
+    }
+
+    .mini-card .label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+    }
+
+    .mini-card .value {
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    .word-bank-dropzone {
+      margin-top: 14px;
+      min-height: 180px;
+      border: 2px dashed var(--border);
+      border-radius: 20px;
+      background: #f8fafc;
+      padding: 16px;
+    }
+
+    .bank-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .tile {
+      user-select: none;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px 12px;
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+      cursor: grab;
+      transition: 0.18s ease;
+    }
+
+    .tile:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+    }
+
+    .bucket-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .bucket {
+      border: 2px solid var(--border);
+      background: #f8fafc;
+      border-radius: 22px;
+      padding: 16px;
+      min-height: 320px;
+      transition: 0.2s ease;
+    }
+
+    .bucket.drag-over {
+      border-color: #60a5fa;
+      background: #eff6ff;
+    }
+
+    .bucket.correct {
+      border-color: #6ee7b7;
+      background: #ecfdf5;
+    }
+
+    .bucket.color-yellow {
+      border-color: #facc15;
+      background: #fefce8;
+    }
+
+    .bucket.color-green {
+      border-color: #4ade80;
+      background: #f0fdf4;
+    }
+
+    .bucket.color-blue {
+      border-color: #60a5fa;
+      background: #eff6ff;
+    }
+
+    .bucket.color-purple {
+      border-color: #a78bfa;
+      background: #f5f3ff;
+    }
+
+    .bucket-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .bucket-label {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .bucket-category {
+      font-size: 15px;
+      font-weight: 800;
+      min-height: 20px;
+    }
+
+    .bucket-count {
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      background: white;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .bucket.correct .bucket-count {
+      background: #d1fae5;
+      border-color: #a7f3d0;
+      color: #065f46;
+    }
+
+    .bucket-slots {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .placeholder {
+      min-height: 78px;
+      border-radius: 16px;
+      border: 1px dashed #cbd5e1;
+      background: rgba(255,255,255,0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #94a3b8;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .meta-box {
+      margin-top: 16px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 14px;
+      background: #f8fafc;
+    }
+
+    .meta-title {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 10px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      border-radius: 999px;
+      padding: 7px 11px;
+      background: white;
+      border: 1px solid var(--border);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .story {
+      line-height: 1.7;
+      color: #374151;
+      white-space: pre-wrap;
+    }
+
+    .empty-note {
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+      padding: 32px 10px;
+    }
+
+    @media (max-width: 1100px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .bank-grid,
+      .bucket-slots,
+      .bucket-grid,
+      .cards {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .bank-grid,
+      .bucket-slots,
+      .bucket-grid,
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <div class="hero-top">
+        <div>
+          <div class="badge">NYT Connections Game</div>
+          <h1>4 Valid Puzzles Viewer</h1>
+          <p>
+            This page embeds 4 selected valid puzzles from <code>puzzles.json</code>.
+            Use Previous and Next to browse them, then drag words into the four containers just like the existing frontend.
+          </p>
+        </div>
+
+        <div class="toolbar">
+          <button id="prevPuzzleBtn" class="btn-primary">Previous Puzzle</button>
+          <button id="nextPuzzleBtn" class="btn-primary">Next Puzzle</button>
+          <button id="submitBtn" class="btn-success" disabled>Submit</button>
+          <button id="resetBtn" class="btn-ghost" disabled>Reset</button>
+          <button id="showAnswerBtn" class="btn-ghost" disabled>Show Answer</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="layout">
+      <section class="panel">
+        <div id="statusBox" class="status">Loading puzzle...</div>
+
+        <div class="cards">
+          <div class="mini-card">
+            <div class="label">Puzzle</div>
+            <div id="puzzleNumber" class="value">1/5</div>
+          </div>
+          <div class="mini-card">
+            <div class="label">Placed</div>
+            <div id="placedCount" class="value">0/16</div>
+          </div>
+          <div class="mini-card">
+            <div class="label">Filled Buckets</div>
+            <div id="filledBuckets" class="value">0/4</div>
+          </div>
+          <div class="mini-card">
+            <div class="label">Mode</div>
+            <div id="modeText" class="value" style="font-size:20px;">Idle</div>
+          </div>
+        </div>
+
+        <h2>Word Bank</h2>
+        <div class="sub">Drag words to the containers below. You can also drag words back here.</div>
+
+        <div id="wordBankDropzone" class="word-bank-dropzone">
+          <div id="bankGrid" class="bank-grid"></div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-title">Seed Words</div>
+          <div id="seedWords" class="chips"></div>
+        </div>
+
+        <div class="meta-box">
+          <div class="meta-title">Story</div>
+          <div id="storyText" class="story"></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Containers</h2>
+        <div class="sub">Each container must contain exactly 4 words.</div>
+        <div id="bucketGrid" class="bucket-grid"></div>
+
+        <div class="meta-box">
+          <div class="meta-title">Overlap Words</div>
+          <div id="overlapWords" class="chips"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script id="puzzles-data" type="application/json">[{"seed_words": ["CROSS", "FICTION", "BUZZ", "TEND"], "story": "At the CROSS of midnight streets and forgotten constellations, a librarian stitched FICTION into the sky like bandages over old wounds, and the city began to BUZZ as if every lamppost had grown a heartbeat. She stayed to TEND the glowing seams, only to discover the stars were healing her back—threading her shadow into something alive and unafraid.", "groups": [{"category": "NIGHT-SKY OBJECTS (ASTRONOMY)", "candidates": ["NEBULA", "QUASAR", "PULSAR", "GALAXY", "COMET", "ASTEROID", "METEOR", "SUPERNOVA"], "overlap_word": null, "source_group": null}, {"category": "ATHLETIC TEAMS NAMED “___S”", "candidates": ["COMET", "JET", "DOLPHIN", "PANTHER", "TITAN", "HURRICANE", "WILDCAT", "SPARTAN"], "overlap_word": "COMET", "source_group": "NIGHT-SKY OBJECTS (ASTRONOMY)"}, {"category": "THINGS YOU MIGHT “JET” (LEAVE QUICKLY) FROM", "candidates": ["JET", "BOLT", "BOUNCE", "BOOK", "SKEDADDLE", "SCRAM", "VAMOOSE", "SPLIT"], "overlap_word": "JET", "source_group": "ATHLETIC TEAMS NAMED “___S”"}, {"category": "SATURNS MOONS (NASA/ASTRONOMY)", "candidates": ["TITAN", "ENCELADUS", "MIMAS", "IAPETUS", "RHEA", "DIONE", "TETHYS", "HYPERION"], "overlap_word": "TITAN", "source_group": "ATHLETIC TEAMS NAMED “___S”"}], "overlap_words": {"COMET": ["NIGHT-SKY OBJECTS (ASTRONOMY)", "ATHLETIC TEAMS NAMED “___S”"], "JET": ["ATHLETIC TEAMS NAMED “___S”", "THINGS YOU MIGHT “JET” (LEAVE QUICKLY) FROM"], "TITAN": ["ATHLETIC TEAMS NAMED “___S”", "SATURNS MOONS (NASA/ASTRONOMY)"]}, "puzzle": [{"category": "THINGS YOU MIGHT “JET” (LEAVE QUICKLY) FROM", "words": ["BOLT", "BOUNCE", "SKEDADDLE", "SCRAM"], "similarity": 0.3289, "color": "Yellow (Easiest)"}, {"category": "NIGHT-SKY OBJECTS (ASTRONOMY)", "words": ["NEBULA", "QUASAR", "GALAXY", "SUPERNOVA"], "similarity": 0.5421, "color": "Green"}, {"category": "ATHLETIC TEAMS NAMED “___S”", "words": ["DOLPHIN", "PANTHER", "HURRICANE", "WILDCAT"], "similarity": 0.4274, "color": "Blue"}, {"category": "SATURNS MOONS (NASA/ASTRONOMY)", "words": ["TITAN", "RHEA", "TETHYS", "HYPERION"], "similarity": 0.4209, "color": "Purple (Hardest)"}], "valid": true, "ambiguous_words": [], "shuffled_grid": ["SKEDADDLE", "TITAN", "SUPERNOVA", "RHEA", "DOLPHIN", "NEBULA", "SCRAM", "GALAXY", "QUASAR", "BOLT", "TETHYS", "HURRICANE", "HYPERION", "BOUNCE", "WILDCAT", "PANTHER"]}, {"seed_words": ["POCKET", "MAIL", "CLUB", "BLACK"], "story": "In the deep **BLACK** of a moonless alley, I reached into my **POCKET** and pulled out a letter that hadn’t arrived through any ordinary **MAIL**, its seal warm like a heartbeat. Inside was an invitation to a midnight **CLUB** where lost memories danced in borrowed bodies—and when I stepped through the door, I realized the bouncer already knew my name because the letter had been written by the version of me I’d forgotten.", "groups": [{"category": "THINGS YOU MIGHT SEE AT A CLUB ENTRANCE (SCENARIO)", "candidates": ["BOUNCER", "VELVET ROPE", "COVER", "STAMP", "ID", "GUEST LIST", "DOORMAN", "WRISTBAND"], "overlap_word": null, "source_group": null}, {"category": "UNDERSTUDY / SUBSTITUTE (SYNONYMS)", "candidates": ["COVER", "SUB", "STAND-IN", "UNDERSTUDY", "ALTERNATE", "BACKUP", "RELIEF", "REPLACEMENT"], "overlap_word": "COVER", "source_group": "THINGS YOU MIGHT SEE AT A CLUB ENTRANCE (SCENARIO)"}, {"category": "TYPES OF POSTAGE STAMPS (PHILATELY)", "candidates": ["STAMP", "FOREVER", "COMMEMORATIVE", "DEFINITIVE", "AIRMIL", "POSTAGE DUE", "REGISTERED", "SEMI-POSTAL"], "overlap_word": "STAMP", "source_group": "THINGS YOU MIGHT SEE AT A CLUB ENTRANCE (SCENARIO)"}, {"category": "NASA MARS LANDERS/ROVERS (MISSIONS)", "candidates": ["MARS PATHFINDER", "SOJOURNER", "SPIRIT", "OPPORTUNITY", "CURIOSITY", "PERSEVERANCE", "PHOENIX", "INSIGHT"], "overlap_word": "ID", "source_group": "THINGS YOU MIGHT SEE AT A CLUB ENTRANCE (SCENARIO)"}], "overlap_words": {"COVER": ["THINGS YOU MIGHT SEE AT A CLUB ENTRANCE (SCENARIO)", "UNDERSTUDY / SUBSTITUTE (SYNONYMS)"], "STAMP": ["THINGS YOU MIGHT SEE AT A CLUB ENTRANCE (SCENARIO)", "TYPES OF POSTAGE STAMPS (PHILATELY)"]}, "puzzle": [{"category": "UNDERSTUDY / SUBSTITUTE (SYNONYMS)", "words": ["STAND-IN", "UNDERSTUDY", "ALTERNATE", "REPLACEMENT"], "similarity": 0.4227, "color": "Yellow (Easiest)"}, {"category": "THINGS YOU MIGHT SEE AT A CLUB ENTRANCE (SCENARIO)", "words": ["BOUNCER", "VELVET ROPE", "DOORMAN", "WRISTBAND"], "similarity": 0.2842, "color": "Green"}, {"category": "NASA MARS LANDERS/ROVERS (MISSIONS)", "words": ["SPIRIT", "OPPORTUNITY", "CURIOSITY", "INSIGHT"], "similarity": 0.4145, "color": "Blue"}, {"category": "TYPES OF POSTAGE STAMPS (PHILATELY)", "words": ["STAMP", "COMMEMORATIVE", "POSTAGE DUE", "SEMI-POSTAL"], "similarity": 0.4334, "color": "Purple (Hardest)"}], "valid": true, "ambiguous_words": [], "shuffled_grid": ["OPPORTUNITY", "POSTAGE DUE", "REPLACEMENT", "COMMEMORATIVE", "CURIOSITY", "STAMP", "UNDERSTUDY", "VELVET ROPE", "DOORMAN", "SEMI-POSTAL", "STAND-IN", "WRISTBAND", "ALTERNATE", "INSIGHT", "BOUNCER", "SPIRIT"]}, {"seed_words": ["AFFECT", "ALBUM", "TEASE", "PIPER"], "story": "In the catacombs beneath the concert hall, a lone PIPER played a melody that could AFFECT the temperature of memories, frosting over grief until it rang like glass. I opened an old ALBUM and watched the photographs wriggle into motion, each one a gentle TEASE from a future I hadn’t lived—until the tune sharpened and the pages began choosing me back.", "groups": [{"category": "WIND INSTRUMENTS (WOODWIND FAMILY)", "candidates": ["PIPER", "OBOE", "BASSOON", "CLARINET", "RECORDER", "PICCOLO", "SAXOPHONE", "ENGLISH HORN"], "overlap_word": null, "source_group": null}, {"category": "DEVICES THAT CAPTURE AUDIO/VIDEO", "candidates": ["RECORDER", "CAMCORDER", "DASHCAM", "BODYCAM", "WEBCAM", "DICTAPHONE", "VOICEMAIL", "TAPE DECK"], "overlap_word": "RECORDER", "source_group": "WIND INSTRUMENTS (WOODWIND FAMILY)"}, {"category": "FICTIONAL PIPERS (CHARACTERS WITH “PIPER” AS A NAME)", "candidates": ["PIPER CHAPMAN", "PIPER HALLIWELL", "PIPER LAURIE", "PIPER PERABO", "PIPER GILLES", "PIPER MCLAIN", "PIPER WRIGHT", "PIPER SHAW"], "overlap_word": "PIPER", "source_group": "WIND INSTRUMENTS (WOODWIND FAMILY)"}, {"category": "PARTS OF A CAR’S EXHAUST SYSTEM", "candidates": ["BASSOON", "CATALYTIC CONVERTER", "MUFFLER", "RESONATOR", "TAILPIPE", "OXYGEN SENSOR", "FLEX PIPE", "EXHAUST MANIFOLD"], "overlap_word": "BASSOON", "source_group": "WIND INSTRUMENTS (WOODWIND FAMILY)"}], "overlap_words": {"BASSOON": ["WIND INSTRUMENTS (WOODWIND FAMILY)", "PARTS OF A CAR’S EXHAUST SYSTEM"], "RECORDER": ["WIND INSTRUMENTS (WOODWIND FAMILY)", "DEVICES THAT CAPTURE AUDIO/VIDEO"]}, "puzzle": [{"category": "DEVICES THAT CAPTURE AUDIO/VIDEO", "words": ["CAMCORDER", "DASHCAM", "BODYCAM", "WEBCAM"], "similarity": 0.6843, "color": "Yellow (Easiest)"}, {"category": "WIND INSTRUMENTS (WOODWIND FAMILY)", "words": ["OBOE", "BASSOON", "CLARINET", "SAXOPHONE"], "similarity": 0.6886, "color": "Green"}, {"category": "PARTS OF A CAR’S EXHAUST SYSTEM", "words": ["MUFFLER", "TAILPIPE", "FLEX PIPE", "EXHAUST MANIFOLD"], "similarity": 0.4768, "color": "Blue"}, {"category": "FICTIONAL PIPERS (CHARACTERS WITH “PIPER” AS A NAME)", "words": ["PIPER CHAPMAN", "PIPER HALLIWELL", "PIPER LAURIE", "PIPER WRIGHT"], "similarity": 0.7724, "color": "Purple (Hardest)"}], "valid": true, "ambiguous_words": [], "shuffled_grid": ["PIPER WRIGHT", "EXHAUST MANIFOLD", "CAMCORDER", "OBOE", "DASHCAM", "SAXOPHONE", "WEBCAM", "PIPER LAURIE", "PIPER HALLIWELL", "BODYCAM", "FLEX PIPE", "BASSOON", "PIPER CHAPMAN", "TAILPIPE", "CLARINET", "MUFFLER"]}, {"seed_words": ["TWIN", "CLEAN", "TAP", "POINTER"], "story": "In the underlit subway chapel, my **TWIN** and I performed a **CLEAN** exorcism on the city’s noise—one gentle **TAP** on the tiled altar for each name we’d forgotten. When the last echo faded, a stray laser **POINTER** skittered across the ceiling like a nervous comet, and we realized it was tracing directions not to escape, but to where our future selves were waiting.", "groups": [{"category": "SYNONYMS FOR “TOUCH LIGHTLY”", "candidates": ["TAP", "DAB", "GRAZE", "BRUSH", "SKIM", "NICK", "BUMP", "NUDGE"], "overlap_word": null, "source_group": null}, {"category": "THINGS YOU MIGHT DO ON A SMARTPHONE SCREEN", "candidates": ["TAP", "SWIPE", "SCROLL", "PINCH", "ZOOM", "DRAG", "PRESS", "DOUBLE-TAP"], "overlap_word": "TAP", "source_group": "SYNONYMS FOR “TOUCH LIGHTLY”"}, {"category": "GRASSLAND ECOSYSTEMS (BIOMES)", "candidates": ["GRAZE", "PRAIRIE", "SAVANNA", "STEPPE", "PAMPAS", "VELD", "MEADOW", "LLANO"], "overlap_word": "GRAZE", "source_group": "SYNONYMS FOR “TOUCH LIGHTLY”"}, {"category": "ADD A LETTER TO MAKE A DANCE STYLE", "candidates": ["STEPPE", "TANG", "SALSA", "SWING", "POLKA", "WALTZ", "SAMBA", "TANGO"], "overlap_word": "STEPPE", "source_group": "GRASSLAND ECOSYSTEMS (BIOMES)"}], "overlap_words": {"TAP": ["SYNONYMS FOR “TOUCH LIGHTLY”", "THINGS YOU MIGHT DO ON A SMARTPHONE SCREEN"], "GRAZE": ["SYNONYMS FOR “TOUCH LIGHTLY”", "GRASSLAND ECOSYSTEMS (BIOMES)"], "STEPPE": ["GRASSLAND ECOSYSTEMS (BIOMES)", "ADD A LETTER TO MAKE A DANCE STYLE"]}, "puzzle": [{"category": "THINGS YOU MIGHT DO ON A SMARTPHONE SCREEN", "words": ["TAP", "SWIPE", "PRESS", "DOUBLE-TAP"], "similarity": 0.5367, "color": "Yellow (Easiest)"}, {"category": "SYNONYMS FOR “TOUCH LIGHTLY”", "words": ["DAB", "GRAZE", "BRUSH", "SKIM"], "similarity": 0.3701, "color": "Green"}, {"category": "GRASSLAND ECOSYSTEMS (BIOMES)", "words": ["PRAIRIE", "SAVANNA", "STEPPE", "MEADOW"], "similarity": 0.496, "color": "Blue"}, {"category": "ADD A LETTER TO MAKE A DANCE STYLE", "words": ["SALSA", "POLKA", "WALTZ", "TANGO"], "similarity": 0.504, "color": "Purple (Hardest)"}], "valid": true, "ambiguous_words": [], "shuffled_grid": ["SAVANNA", "STEPPE", "TAP", "PRESS", "WALTZ", "DOUBLE-TAP", "SKIM", "SALSA", "DAB", "TANGO", "SWIPE", "MEADOW", "PRAIRIE", "BRUSH", "POLKA", "GRAZE"]}]</script>
+</body>
+</html>

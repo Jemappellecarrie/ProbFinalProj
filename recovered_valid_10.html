@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recovered 10 Valid Puzzles</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --panel: #ffffff;
+      --border: #dbe3ee;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(255,255,255,0.9), rgba(244,247,251,0.95)),
+        var(--bg);
+    }
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 20px 40px;
+    }
+    .hero {
+      background: linear-gradient(135deg, #111827, #1f2937, #0f172a);
+      color: white;
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 22px;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #d1d5db;
+      margin-bottom: 14px;
+    }
+    h1 {
+      margin: 0 0 8px 0;
+      font-size: 34px;
+      line-height: 1.1;
+    }
+    .hero p {
+      margin: 0;
+      color: #cbd5e1;
+      max-width: 900px;
+      line-height: 1.7;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .puzzle {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      padding: 20px;
+    }
+    .puzzle h2 {
+      margin: 0 0 6px 0;
+      font-size: 22px;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+    .group {
+      border-radius: 18px;
+      padding: 14px 16px;
+      margin-top: 12px;
+      border: 1px solid var(--border);
+    }
+    .yellow { background: #fefce8; border-color: #facc15; }
+    .green { background: #f0fdf4; border-color: #4ade80; }
+    .blue { background: #eff6ff; border-color: #60a5fa; }
+    .purple { background: #f5f3ff; border-color: #a78bfa; }
+    .label {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+    .cat {
+      font-weight: 800;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+    .words {
+      line-height: 1.6;
+      color: #334155;
+      font-size: 14px;
+    }
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <div class="badge">Recovered Output</div>
+      <h1>10 Valid Puzzles Rebuilt From Stdout</h1>
+      <p>
+        This page is reconstructed from the terminal output of the 20-puzzle run.
+        It preserves the 4 categories and 16 answer words for each valid puzzle.
+        It does not include original seed words, stories, overlap metadata, or the exact saved JSON structure from that run.
+      </p>
+    </section>
+
+    <div class="grid">
+      <section class="puzzle">
+        <h2>Puzzle 1</h2>
+        <div class="meta">Recovered from valid attempt 1</div>
+        <div class="group yellow"><div class="label">Yellow</div><div class="cat">HURRICANE NAMES (ATLANTIC)</div><div class="words">KATRINA, SANDY, IRMA, MARIA</div></div>
+        <div class="group green"><div class="label">Green</div><div class="cat">SHAKESPEARE CHARACTER NAMES</div><div class="words">IAGO, OPHELIA, DESDEMONA, PROSPERO</div></div>
+        <div class="group blue"><div class="label">Blue</div><div class="cat">CHURCH ARCHITECTURE FEATURES</div><div class="words">CHANCEL, STEEPLE, BELLTOWER, CLOISTER</div></div>
+        <div class="group purple"><div class="label">Purple</div><div class="cat">U.S. PRESIDENTS' NICKNAMES</div><div class="words">DUBYA, JIMMY, JEB, JACKSON</div></div>
+      </section>
+
+      <section class="puzzle">
+        <h2>Puzzle 2</h2>
+        <div class="meta">Recovered from valid attempt 3</div>
+        <div class="group yellow"><div class="label">Yellow</div><div class="cat">APPROVE / "GIVE THE OK" (AS A BILL, PLAN, OR INSPECTION)</div><div class="words">PASS, APPROVE, RATIFY, ENDORSE</div></div>
+        <div class="group green"><div class="label">Green</div><div class="cat">PUNISHMENT / PENALTY (AS A NOUN)</div><div class="words">SANCTION, PENALTY, CENSURE, REPRIMAND</div></div>
+        <div class="group blue"><div class="label">Blue</div><div class="cat">MAP FEATURES IN MOUNTAIN TERRAIN</div><div class="words">SADDLE, RIDGE, SUMMIT, COL</div></div>
+        <div class="group purple"><div class="label">Purple</div><div class="cat">BONES IN THE HUMAN ANKLE/FOOT (ANATOMY)</div><div class="words">TALUS, NAVICULAR, METATARSAL, TIBIA</div></div>
+      </section>
+
+      <section class="puzzle">
+        <h2>Puzzle 3</h2>
+        <div class="meta">Recovered from valid attempt 5</div>
+        <div class="group yellow"><div class="label">Yellow</div><div class="cat">NASA SPACE SHUTTLES</div><div class="words">COLUMBIA, DISCOVERY, ATLANTIS, ENDEAVOUR</div></div>
+        <div class="group green"><div class="label">Green</div><div class="cat">NEWSPAPER PARTS / ROLES</div><div class="words">HEADLINE, COLUMNIST, EDITORIAL, OBITUARY</div></div>
+        <div class="group blue"><div class="label">Blue</div><div class="cat">CATHEDRAL ARCHITECTURE FEATURES</div><div class="words">NAVE, CHANCEL, BUTTRESS, FLYING BUTTRESS</div></div>
+        <div class="group purple"><div class="label">Purple</div><div class="cat">HOMOPHONES OF NAVAL RANKS</div><div class="words">ADMIRAL, COLONEL, ENSIGN, LIEUTENANT</div></div>
+      </section>
+
+      <section class="puzzle">
+        <h2>Puzzle 4</h2>
+        <div class="meta">Recovered from valid attempt 6</div>
+        <div class="group yellow"><div class="label">Yellow</div><div class="cat">HIGH-LEVEL PLAYING CARDS (A.K.A. "HONORS")</div><div class="words">ACE, KING, QUEEN, JACK</div></div>
+        <div class="group green"><div class="label">Green</div><div class="cat">BATMAN VILLAINS</div><div class="words">JOKER, BANE, RIDDLER, SCARECROW</div></div>
+        <div class="group blue"><div class="label">Blue</div><div class="cat">FLIGHTLESS BIRDS (TAXONOMY)</div><div class="words">KIWI, CASSOWARY, KAKAPO, TAKAHE</div></div>
+        <div class="group purple"><div class="label">Purple</div><div class="cat">SUBWAY/L TRAIN LINES (NYC)</div><div class="words">BDFM, G, JZ, NQRW</div></div>
+      </section>
+
+      <section class="puzzle">
+        <h2>Puzzle 5</h2>
+        <div class="meta">Recovered from valid attempt 10</div>
+        <div class="group yellow"><div class="label">Yellow</div><div class="cat">BRANCHES OF A COUNTRY'S ARMED FORCES</div><div class="words">NAVY, ARMY, AIR FORCE, MARINES</div></div>
+        <div class="group green"><div class="label">Green</div><div class="cat">TYPES OF BEANS</div><div class="words">FAVA, LIMA, GARBANZO, CANNELLINI</div></div>
+        <div class="group blue"><div class="label">Blue</div><div class="cat">PROFESSIONAL SPORTS TEAMS (PLURAL NICKNAMES)</div><div class="words">GIANTS, JETS, KNICKS, KINGS</div></div>
+        <div class="group purple"><div class="label">Purple</div><div class="cat">WORDS THAT CAN FOLLOW "JET" (___ JET)</div><div class="words">LAG, ENGINE, STREAM, FUEL</div></div>
+      </section>
+
+      <section class="puzzle">
+        <h2>Puzzle 6</h2>
+        <div class="meta">Recovered from valid attempt 13</div>
+        <div class="group yellow"><div class="label">Yellow</div><div class="cat">KNOWLEDGE-BASED (TAXONOMY): MUSCLE GROUPS</div><div class="words">HAMSTRING, CALF, BICEPS, TRICEPS</div></div>
+        <div class="group green"><div class="label">Green</div><div class="cat">CAMPUS BUILDINGS/PLACES</div><div class="words">CAFETERIA, GYMNASIUM, AUDITORIUM, CHAPEL</div></div>
+        <div class="group blue"><div class="label">Blue</div><div class="cat">KNOWLEDGE-BASED (TAXONOMY): HUMAN BODY ORGANS</div><div class="words">ORGAN, LIVER, KIDNEY, LUNG</div></div>
+        <div class="group purple"><div class="label">Purple</div><div class="cat">WORDPLAY — REMOVE FIRST LETTER TO GET A MUSICAL INSTRUMENT</div><div class="words">HARP, VIOLA, CELLO, FLUTE</div></div>
+      </section>
+
+      <section class="puzzle">
+        <h2>Puzzle 7</h2>
+        <div class="meta">Recovered from valid attempt 15</div>
+        <div class="group yellow"><div class="label">Yellow</div><div class="cat">SOUNDS A DOG MAKES</div><div class="words">BARK, GROWL, HOWL, SNARL</div></div>
+        <div class="group green"><div class="label">Green</div><div class="cat">FAMILY HISTORY / LINEAGE</div><div class="words">ANCESTRY, LINEAGE, PEDIGREE, GENEALOGY</div></div>
+        <div class="group blue"><div class="label">Blue</div><div class="cat">KNOWLEDGE-BASED (POP CULTURE): CLASSIC UNIVERSAL MONSTERS / HORROR ICONS</div><div class="words">DRACULA, FRANKENSTEIN, MUMMY, CREATURE</div></div>
+        <div class="group purple"><div class="label">Purple</div><div class="cat">TREE PARTS (BOTANY)</div><div class="words">SAPWOOD, HEARTWOOD, PHLOEM, XYLEM</div></div>
+      </section>
+
+      <section class="puzzle">
+        <h2>Puzzle 8</h2>
+        <div class="meta">Recovered from valid attempt 17</div>
+        <div class="group yellow"><div class="label">Yellow</div><div class="cat">ZODIAC SIGNS (ASTROLOGY)</div><div class="words">ARIES, VIRGO, LIBRA, SCORPIO</div></div>
+        <div class="group green"><div class="label">Green</div><div class="cat">THINGS ASSOCIATED WITH VIKINGS (NORSE CULTURE)</div><div class="words">VIKING, AXE, RUNE, VALHALLA</div></div>
+        <div class="group blue"><div class="label">Blue</div><div class="cat">NASA SPACECRAFT WITH A "TWIN" THEME</div><div class="words">VOYAGER, PIONEER, GALILEO, KEPLER</div></div>
+        <div class="group purple"><div class="label">Purple</div><div class="cat">TYPE 2(d) WORDPLAY — REMOVE FIRST LETTER TO GET A MUSIC GENRE</div><div class="words">KORE, KAVE, KETAL, KOUSE</div></div>
+      </section>
+
+      <section class="puzzle">
+        <h2>Puzzle 9</h2>
+        <div class="meta">Recovered from valid attempt 18</div>
+        <div class="group yellow"><div class="label">Yellow</div><div class="cat">SLANG TERMS FOR "OKAY/ACCEPTABLE"</div><div class="words">FINE, ALRIGHT, OKAY, ACCEPTABLE</div></div>
+        <div class="group green"><div class="label">Green</div><div class="cat">GRADUATION REGALIA / CEREMONY ITEMS</div><div class="words">TASSEL, GOWN, DIPLOMA, HONOR CORD</div></div>
+        <div class="group blue"><div class="label">Blue</div><div class="cat">THINGS THAT HANG</div><div class="words">SWING, PENDULUM, HAMMOCK, NOOSE</div></div>
+        <div class="group purple"><div class="label">Purple</div><div class="cat">TYPES OF JAZZ (AS GENRES)</div><div class="words">HARD BOP, RAGTIME, FREE JAZZ, DIXIELAND</div></div>
+      </section>
+
+      <section class="puzzle">
+        <h2>Puzzle 10</h2>
+        <div class="meta">Recovered from valid attempt 20</div>
+        <div class="group yellow"><div class="label">Yellow</div><div class="cat">ADJECTIVES FOR INTENSE ANGER</div><div class="words">FURIOUS, ENRAGED, INCENSED, IRATE</div></div>
+        <div class="group green"><div class="label">Green</div><div class="cat">COLORS/FINISHES IN PAINT NAMES</div><div class="words">TAUPE, TEAL, INDIGO, MAUVE</div></div>
+        <div class="group blue"><div class="label">Blue</div><div class="cat">TAX FORMS AND SCHEDULES (U.S.)</div><div class="words">W-2, 1099, 1040, W-4</div></div>
+        <div class="group purple"><div class="label">Purple</div><div class="cat">CRATER(S) ON MARS (I.A.U. FEATURE NAMES)</div><div class="words">GUSEV, ISIDIS, JEZERO, TIKHONRAVOV</div></div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

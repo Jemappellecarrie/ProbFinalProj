@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """
 NYT Connections Puzzle Generator — Intentional Overlap Pipeline
 
@@ -23,7 +25,6 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="repla
 
 import numpy as np
 from openai import OpenAI
-from sentence_transformers import SentenceTransformer
 
 # --------------- Configuration ---------------
 
@@ -371,6 +372,8 @@ DIFFICULTY_COLORS = ["Yellow (Easiest)", "Green", "Blue", "Purple (Hardest)"]
 
 
 def load_embedding_model() -> SentenceTransformer:
+    from sentence_transformers import SentenceTransformer
+
     return SentenceTransformer("all-mpnet-base-v2")
 
 
@@ -949,7 +952,6 @@ import os
 from functools import lru_cache
 
 from openai import OpenAI
-from sentence_transformers import SentenceTransformer
 
 @lru_cache(maxsize=1)
 def load_web_resources():
@@ -967,6 +969,8 @@ def load_web_resources():
 
     with open(dataset_path, "r", encoding="utf-8") as f:
         dataset = json.load(f)
+
+    from sentence_transformers import SentenceTransformer
 
     embed_model = SentenceTransformer("all-MiniLM-L6-v2")
 

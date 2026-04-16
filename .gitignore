@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+
+.venv*/
+venv/
+
+puzzles.backup_*.json
+invalid_puzzles.json

@@ -3642,5 +3642,3201 @@
       "DEA",
       "OUTLAW"
     ]
+  },
+  {
+    "seed_words": [
+      "SCRAPE",
+      "OSCAR",
+      "RADIATE",
+      "LOOSE"
+    ],
+    "story": "In the moonlit subway, I heard a single SCRAPE as OSCAR—an abandoned service robot with a cracked porcelain face—dragged his metal fingers across the tiles, trying to remember the song that once made commuters smile. When his chest-light began to RADIATE a warm, impossible sunrise, all the forgotten posters and lost prayers fluttered LOOSE from the walls, and the tunnel turned briefly into a cathedral built from things nobody meant to leave behind.",
+    "groups": [
+      {
+        "category": "THINGS YOU’D FIND IN A SUBWAY STATION",
+        "candidates": [
+          "TURNSTILE",
+          "PLATFORM",
+          "MEZZANINE",
+          "CONCOURSE",
+          "TRACK",
+          "TOKEN",
+          "KIOSK",
+          "STAIRCWELL"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "CRYPTOCURRENCY TERMS",
+        "candidates": [
+          "TOKEN",
+          "COIN",
+          "WALLET",
+          "EXCHANGE",
+          "MINING",
+          "STAKING",
+          "AIRDROP",
+          "GAS"
+        ],
+        "overlap_word": "TOKEN",
+        "source_group": "THINGS YOU’D FIND IN A SUBWAY STATION"
+      },
+      {
+        "category": "TYPES OF GAS (CHEMISTRY)",
+        "candidates": [
+          "GAS",
+          "ARGON",
+          "HELIUM",
+          "NEON",
+          "KRYPTON",
+          "XENON",
+          "OXYGEN",
+          "NITROGEN"
+        ],
+        "overlap_word": "GAS",
+        "source_group": "CRYPTOCURRENCY TERMS"
+      },
+      {
+        "category": "SOCIAL MEDIA WEBSITES/APP FEATURES",
+        "candidates": [
+          "PLATFORM",
+          "FEED",
+          "HANDLE",
+          "STORY",
+          "REEL",
+          "LIKE",
+          "FOLLOW",
+          "HASHTAG"
+        ],
+        "overlap_word": "PLATFORM",
+        "source_group": "THINGS YOU’D FIND IN A SUBWAY STATION"
+      }
+    ],
+    "overlap_words": {
+      "PLATFORM": [
+        "THINGS YOU’D FIND IN A SUBWAY STATION",
+        "SOCIAL MEDIA WEBSITES/APP FEATURES"
+      ],
+      "TOKEN": [
+        "THINGS YOU’D FIND IN A SUBWAY STATION",
+        "CRYPTOCURRENCY TERMS"
+      ],
+      "GAS": [
+        "CRYPTOCURRENCY TERMS",
+        "TYPES OF GAS (CHEMISTRY)"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "SOCIAL MEDIA WEBSITES/APP FEATURES",
+        "words": [
+          "FEED",
+          "LIKE",
+          "FOLLOW",
+          "HASHTAG"
+        ],
+        "similarity": 0.3267,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "CRYPTOCURRENCY TERMS",
+        "words": [
+          "TOKEN",
+          "COIN",
+          "WALLET",
+          "EXCHANGE"
+        ],
+        "similarity": 0.4433,
+        "color": "Green"
+      },
+      {
+        "category": "THINGS YOU’D FIND IN A SUBWAY STATION",
+        "words": [
+          "TURNSTILE",
+          "CONCOURSE",
+          "KIOSK",
+          "STAIRCWELL"
+        ],
+        "similarity": 0.3798,
+        "color": "Blue"
+      },
+      {
+        "category": "TYPES OF GAS (CHEMISTRY)",
+        "words": [
+          "GAS",
+          "HELIUM",
+          "OXYGEN",
+          "NITROGEN"
+        ],
+        "similarity": 0.5962,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "EXCHANGE",
+      "CONCOURSE",
+      "KIOSK",
+      "TOKEN",
+      "STAIRCWELL",
+      "FOLLOW",
+      "COIN",
+      "HELIUM",
+      "OXYGEN",
+      "NITROGEN",
+      "LIKE",
+      "TURNSTILE",
+      "WALLET",
+      "HASHTAG",
+      "FEED",
+      "GAS"
+    ]
+  },
+  {
+    "seed_words": [
+      "FAKE",
+      "MEAL",
+      "FROWN",
+      "AMIGO"
+    ],
+    "story": "In the lantern-lit desert market, my AMIGO served a FAKE MEAL of painted stones that somehow tasted like my childhood, and the stars overhead rearranged themselves into a map of every lie I’d ever told. I tried to FROWN, but the wind borrowed my expression and wore it as a mask, whispering that hunger isn’t always in the stomach—it’s sometimes in the stories we refuse to believe.",
+    "groups": [
+      {
+        "category": "GEOLOGIC MATERIALS (NONMETALS)",
+        "candidates": [
+          "BASALT",
+          "OBSIDIAN",
+          "SHALE",
+          "GRANITE",
+          "GYPSUM",
+          "TALC",
+          "QUARTZ",
+          "MICA"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "KNOWLEDGE-BASED (TAXONOMY): U.S. OIL & GAS SHALE PLAYS",
+        "candidates": [
+          "SHALE",
+          "BAKKEN",
+          "MARCELLUS",
+          "EAGLEFORD",
+          "PERMIAN",
+          "HAYNESVILLE",
+          "UTICA",
+          "BARNETT"
+        ],
+        "overlap_word": "SHALE",
+        "source_group": "GEOLOGIC MATERIALS (NONMETALS)"
+      },
+      {
+        "category": "SCENARIO/SETTING: GETTING READY AT THE SINK (TOILETRIES)",
+        "candidates": [
+          "TALC",
+          "TOOTHPASTE",
+          "MOUTHWASH",
+          "DEODORANT",
+          "COLOGNE",
+          "AFTERSHAVE",
+          "RAZOR",
+          "SHAVING_CREAM"
+        ],
+        "overlap_word": "TALC",
+        "source_group": "GEOLOGIC MATERIALS (NONMETALS)"
+      },
+      {
+        "category": "KNOWLEDGE-BASED (TAXONOMY): SCOOTER/MOTORCYCLE BRANDS",
+        "candidates": [
+          "RAZOR",
+          "VESPA",
+          "PIAGGIO",
+          "LAMBRETTA",
+          "APRILIA",
+          "KYMCO",
+          "HONDA",
+          "YAMAHA"
+        ],
+        "overlap_word": "RAZOR",
+        "source_group": "SCENARIO/SETTING: GETTING READY AT THE SINK (TOILETRIES)"
+      }
+    ],
+    "overlap_words": {
+      "SHALE": [
+        "GEOLOGIC MATERIALS (NONMETALS)",
+        "KNOWLEDGE-BASED (TAXONOMY): U.S. OIL & GAS SHALE PLAYS"
+      ],
+      "TALC": [
+        "GEOLOGIC MATERIALS (NONMETALS)",
+        "SCENARIO/SETTING: GETTING READY AT THE SINK (TOILETRIES)"
+      ],
+      "RAZOR": [
+        "SCENARIO/SETTING: GETTING READY AT THE SINK (TOILETRIES)",
+        "KNOWLEDGE-BASED (TAXONOMY): SCOOTER/MOTORCYCLE BRANDS"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "SCENARIO/SETTING: GETTING READY AT THE SINK (TOILETRIES)",
+        "words": [
+          "TOOTHPASTE",
+          "MOUTHWASH",
+          "DEODORANT",
+          "COLOGNE"
+        ],
+        "similarity": 0.5855,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "GEOLOGIC MATERIALS (NONMETALS)",
+        "words": [
+          "BASALT",
+          "OBSIDIAN",
+          "GRANITE",
+          "QUARTZ"
+        ],
+        "similarity": 0.5732,
+        "color": "Green"
+      },
+      {
+        "category": "KNOWLEDGE-BASED (TAXONOMY): SCOOTER/MOTORCYCLE BRANDS",
+        "words": [
+          "VESPA",
+          "LAMBRETTA",
+          "HONDA",
+          "YAMAHA"
+        ],
+        "similarity": 0.4598,
+        "color": "Blue"
+      },
+      {
+        "category": "KNOWLEDGE-BASED (TAXONOMY): U.S. OIL & GAS SHALE PLAYS",
+        "words": [
+          "EAGLEFORD",
+          "PERMIAN",
+          "HAYNESVILLE",
+          "BARNETT"
+        ],
+        "similarity": 0.3235,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "HAYNESVILLE",
+      "HONDA",
+      "LAMBRETTA",
+      "OBSIDIAN",
+      "COLOGNE",
+      "DEODORANT",
+      "YAMAHA",
+      "MOUTHWASH",
+      "BASALT",
+      "PERMIAN",
+      "QUARTZ",
+      "EAGLEFORD",
+      "BARNETT",
+      "TOOTHPASTE",
+      "VESPA",
+      "GRANITE"
+    ]
+  },
+  {
+    "seed_words": [
+      "JUICE",
+      "PEACH",
+      "BEAM",
+      "HARD KNOCKS"
+    ],
+    "story": "Under the moon’s cold BEAM, I drank starlit JUICE from a bruised PEACH and tasted every apology I’d never spoken. The orchard whispered of HARD KNOCKS—branches that broke, hearts that healed—and somehow the sweetness still chose to return.",
+    "groups": [
+      {
+        "category": "TYPES OF APOLOGIES",
+        "candidates": [
+          "REGRET",
+          "REMORSE",
+          "CONTRITION",
+          "PENITENCE",
+          "AMENDS",
+          "PARDON",
+          "ATONEMENT",
+          "REPENTANCE"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "US CONSTITUTIONAL AMENDMENTS (BY NUMBER)",
+        "candidates": [
+          "AMENDS",
+          "FIRST",
+          "SECOND",
+          "FOURTH",
+          "FIFTH",
+          "EIGHTH",
+          "THIRTEENTH",
+          "NINETEENTH"
+        ],
+        "overlap_word": "AMENDS",
+        "source_group": "TYPES OF APOLOGIES"
+      },
+      {
+        "category": "TIME UNITS (NOT NECESSARILY SI)",
+        "candidates": [
+          "SECOND",
+          "MINUTE",
+          "HOUR",
+          "DAY",
+          "WEEK",
+          "FORTNIGHT",
+          "MONTH",
+          "DECADE"
+        ],
+        "overlap_word": "SECOND",
+        "source_group": "US CONSTITUTIONAL AMENDMENTS (BY NUMBER)"
+      },
+      {
+        "category": "4(a) NASA MERCURY SEVEN ASTRONAUTS",
+        "candidates": [
+          "FIRST",
+          "CARPENTER",
+          "COOPER",
+          "GLENN",
+          "GRISSOM",
+          "SCHIRRA",
+          "SHEPARD",
+          "SLAYTON"
+        ],
+        "overlap_word": "FIRST",
+        "source_group": "US CONSTITUTIONAL AMENDMENTS (BY NUMBER)"
+      }
+    ],
+    "overlap_words": {
+      "AMENDS": [
+        "TYPES OF APOLOGIES",
+        "US CONSTITUTIONAL AMENDMENTS (BY NUMBER)"
+      ],
+      "FIRST": [
+        "US CONSTITUTIONAL AMENDMENTS (BY NUMBER)",
+        "4(a) NASA MERCURY SEVEN ASTRONAUTS"
+      ],
+      "SECOND": [
+        "US CONSTITUTIONAL AMENDMENTS (BY NUMBER)",
+        "TIME UNITS (NOT NECESSARILY SI)"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "TIME UNITS (NOT NECESSARILY SI)",
+        "words": [
+          "DAY",
+          "WEEK",
+          "FORTNIGHT",
+          "MONTH"
+        ],
+        "similarity": 0.4527,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "TYPES OF APOLOGIES",
+        "words": [
+          "REGRET",
+          "REMORSE",
+          "CONTRITION",
+          "REPENTANCE"
+        ],
+        "similarity": 0.6125,
+        "color": "Green"
+      },
+      {
+        "category": "US CONSTITUTIONAL AMENDMENTS (BY NUMBER)",
+        "words": [
+          "SECOND",
+          "FOURTH",
+          "FIFTH",
+          "EIGHTH"
+        ],
+        "similarity": 0.7018,
+        "color": "Blue"
+      },
+      {
+        "category": "4(a) NASA MERCURY SEVEN ASTRONAUTS",
+        "words": [
+          "CARPENTER",
+          "COOPER",
+          "GLENN",
+          "SHEPARD"
+        ],
+        "similarity": 0.3817,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "REMORSE",
+      "MONTH",
+      "REPENTANCE",
+      "SECOND",
+      "GLENN",
+      "EIGHTH",
+      "CONTRITION",
+      "WEEK",
+      "DAY",
+      "SHEPARD",
+      "FIFTH",
+      "COOPER",
+      "REGRET",
+      "FORTNIGHT",
+      "FOURTH",
+      "CARPENTER"
+    ]
+  },
+  {
+    "seed_words": [
+      "BUSH",
+      "PACE",
+      "FEATURE",
+      "SCARY"
+    ],
+    "story": "At a trembling PACE, I pushed through the midnight BUSH and found a moonlit amphitheater where the forest’s strangest FEATURE was a choir of moths singing my forgotten name. It should’ve been SCARY, but the song stitched my fears into something tender, and I realized the dark was only practicing how to be kind.",
+    "groups": [
+      {
+        "category": "PARTS OF A THEATER",
+        "candidates": [
+          "AISLE",
+          "BALCONY",
+          "CURTAIN",
+          "FOYER",
+          "MARQUEE",
+          "ORCHESTRA",
+          "PROSCENIUM",
+          "USHER"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "KNOWLEDGE-BASED (SCENARIO): THINGS YOU’LL SEE IN A SUPERMARKET",
+        "candidates": [
+          "AISLE",
+          "CART",
+          "CHECKOUT",
+          "COUPON",
+          "DELI",
+          "FREEZER",
+          "PRODUCE",
+          "SAMPLE"
+        ],
+        "overlap_word": "AISLE",
+        "source_group": "PARTS OF A THEATER"
+      },
+      {
+        "category": "WORDS THAT CONTAIN A MUSICAL INSTRUMENT",
+        "candidates": [
+          "ORCHESTRA",
+          "CAMPFIRE",
+          "MANDATE",
+          "HARMONICA",
+          "TRUMPET",
+          "BASSINET",
+          "TROMBONE",
+          "CLARINET"
+        ],
+        "overlap_word": "ORCHESTRA",
+        "source_group": "PARTS OF A THEATER"
+      },
+      {
+        "category": "THINGS YOU CAN “DRAW”",
+        "candidates": [
+          "CURTAIN",
+          "BLINDS",
+          "SHADES",
+          "BATH",
+          "SKETCH",
+          "MAP",
+          "PICTURE",
+          "CARD"
+        ],
+        "overlap_word": "CURTAIN",
+        "source_group": "PARTS OF A THEATER"
+      }
+    ],
+    "overlap_words": {
+      "AISLE": [
+        "PARTS OF A THEATER",
+        "KNOWLEDGE-BASED (SCENARIO): THINGS YOU’LL SEE IN A SUPERMARKET"
+      ],
+      "CURTAIN": [
+        "PARTS OF A THEATER",
+        "THINGS YOU CAN “DRAW”"
+      ],
+      "ORCHESTRA": [
+        "PARTS OF A THEATER",
+        "WORDS THAT CONTAIN A MUSICAL INSTRUMENT"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "PARTS OF A THEATER",
+        "words": [
+          "AISLE",
+          "BALCONY",
+          "CURTAIN",
+          "FOYER"
+        ],
+        "similarity": 0.4175,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "KNOWLEDGE-BASED (SCENARIO): THINGS YOU’LL SEE IN A SUPERMARKET",
+        "words": [
+          "CART",
+          "COUPON",
+          "DELI",
+          "FREEZER"
+        ],
+        "similarity": 0.3412,
+        "color": "Green"
+      },
+      {
+        "category": "THINGS YOU CAN “DRAW”",
+        "words": [
+          "BLINDS",
+          "SHADES",
+          "SKETCH",
+          "MAP"
+        ],
+        "similarity": 0.334,
+        "color": "Blue"
+      },
+      {
+        "category": "WORDS THAT CONTAIN A MUSICAL INSTRUMENT",
+        "words": [
+          "HARMONICA",
+          "TRUMPET",
+          "TROMBONE",
+          "CLARINET"
+        ],
+        "similarity": 0.6881,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "SHADES",
+      "BALCONY",
+      "TRUMPET",
+      "BLINDS",
+      "CLARINET",
+      "AISLE",
+      "FOYER",
+      "FREEZER",
+      "COUPON",
+      "DELI",
+      "MAP",
+      "CART",
+      "SKETCH",
+      "HARMONICA",
+      "TROMBONE",
+      "CURTAIN"
+    ]
+  },
+  {
+    "seed_words": [
+      "SAFARI",
+      "SCREEN",
+      "WISH",
+      "PUMPKIN"
+    ],
+    "story": "On a midnight SAFARI through a city of sleeping billboards, I watched a cracked SCREEN flicker to life and show a small PUMPKIN rolling backward through time, undoing every regret it touched. I made a WISH to follow it, and suddenly my footsteps grew quiet as starlight, as if the world had been waiting for someone to choose wonder over sense.",
+    "groups": [
+      {
+        "category": "NIGHTTIME ANIMALS",
+        "candidates": [
+          "RACCOON",
+          "OPOSSUM",
+          "SKUNK",
+          "PORCUPINE",
+          "OWL",
+          "BAT",
+          "FIREFLY",
+          "COYOTE"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "BASEBALL EQUIPMENT",
+        "candidates": [
+          "BAT",
+          "GLOVE",
+          "MITT",
+          "HELMET",
+          "CLEATS",
+          "JOCKSTRAP",
+          "CUP",
+          "SPIKES"
+        ],
+        "overlap_word": "BAT",
+        "source_group": "NIGHTTIME ANIMALS"
+      },
+      {
+        "category": "KNOWLEDGE-BASED (SCENARIO): COFFEE SHOP ORDER TERMS",
+        "candidates": [
+          "CUP",
+          "ESPRESSO",
+          "LATTE",
+          "CAPPUCCINO",
+          "AMERICANO",
+          "MACCHIATO",
+          "MOCHA",
+          "CORTADO"
+        ],
+        "overlap_word": "CUP",
+        "source_group": "BASEBALL EQUIPMENT"
+      },
+      {
+        "category": "GREEK MYTH FIGURES WITH “-HELMET” AS A NICKNAME/EPITHET (WORDPLAY: “HELMET” AS HEADGEAR, NOT SPORTS GEAR)",
+        "candidates": [
+          "HELMET",
+          "ATHENA",
+          "ARES",
+          "HECTOR",
+          "ODYSSEUS",
+          "ACHILLES",
+          "PERSEUS",
+          "AJAX"
+        ],
+        "overlap_word": "HELMET",
+        "source_group": "BASEBALL EQUIPMENT"
+      }
+    ],
+    "overlap_words": {
+      "BAT": [
+        "NIGHTTIME ANIMALS",
+        "BASEBALL EQUIPMENT"
+      ],
+      "HELMET": [
+        "BASEBALL EQUIPMENT",
+        "GREEK MYTH FIGURES WITH “-HELMET” AS A NICKNAME/EPITHET (WORDPLAY: “HELMET” AS HEADGEAR, NOT SPORTS GEAR)"
+      ],
+      "CUP": [
+        "BASEBALL EQUIPMENT",
+        "KNOWLEDGE-BASED (SCENARIO): COFFEE SHOP ORDER TERMS"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "KNOWLEDGE-BASED (SCENARIO): COFFEE SHOP ORDER TERMS",
+        "words": [
+          "ESPRESSO",
+          "LATTE",
+          "CAPPUCCINO",
+          "MOCHA"
+        ],
+        "similarity": 0.637,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "BASEBALL EQUIPMENT",
+        "words": [
+          "GLOVE",
+          "HELMET",
+          "CLEATS",
+          "JOCKSTRAP"
+        ],
+        "similarity": 0.498,
+        "color": "Green"
+      },
+      {
+        "category": "NIGHTTIME ANIMALS",
+        "words": [
+          "RACCOON",
+          "OPOSSUM",
+          "PORCUPINE",
+          "COYOTE"
+        ],
+        "similarity": 0.4716,
+        "color": "Blue"
+      },
+      {
+        "category": "GREEK MYTH FIGURES WITH “-HELMET” AS A NICKNAME/EPITHET (WORDPLAY: “HELMET” AS HEADGEAR, NOT SPORTS GEAR)",
+        "words": [
+          "ATHENA",
+          "ODYSSEUS",
+          "ACHILLES",
+          "PERSEUS"
+        ],
+        "similarity": 0.457,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "RACCOON",
+      "JOCKSTRAP",
+      "PERSEUS",
+      "CAPPUCCINO",
+      "ESPRESSO",
+      "ODYSSEUS",
+      "ACHILLES",
+      "MOCHA",
+      "PORCUPINE",
+      "LATTE",
+      "OPOSSUM",
+      "HELMET",
+      "COYOTE",
+      "ATHENA",
+      "CLEATS",
+      "GLOVE"
+    ]
+  },
+  {
+    "seed_words": [
+      "ARCH",
+      "DRILL",
+      "FAMILY",
+      "SPOIL"
+    ],
+    "story": "Under the moonlit ARCH of a ruined cathedral, I found an ancient DRILL humming softly as if it could bore into the past itself. When I used it, my FAMILY memories spilled out like glittering dust—beautiful, sharp, and impossible to hold—until I realized trying to keep them perfect would only SPOIL what they were meant to be.",
+    "groups": [
+      {
+        "category": "CATHEDRAL ARCHITECTURE FEATURES",
+        "candidates": [
+          "NAVE",
+          "TRANSEPT",
+          "APSE",
+          "CLOISTER",
+          "TRIFORIUM",
+          "VAULT",
+          "BUTTRESS",
+          "GARGOYLE"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "OLYMPIC GYMNASTICS EVENTS",
+        "candidates": [
+          "VAULT",
+          "FLOOR",
+          "RINGS",
+          "POMMEL",
+          "PARALLELS",
+          "HORIZONTAL",
+          "BEAM",
+          "UNEVEN"
+        ],
+        "overlap_word": "VAULT",
+        "source_group": "CATHEDRAL ARCHITECTURE FEATURES"
+      },
+      {
+        "category": "STAR WARS CHARACTERS",
+        "candidates": [
+          "BEAM",
+          "LUKE",
+          "LEIA",
+          "HAN",
+          "VADER",
+          "YODA",
+          "CHEWBACCA",
+          "LANDO"
+        ],
+        "overlap_word": "BEAM",
+        "source_group": "OLYMPIC GYMNASTICS EVENTS"
+      },
+      {
+        "category": "NEW TESTAMENT GOSPELS",
+        "candidates": [
+          "LUKE",
+          "MATTHEW",
+          "MARK",
+          "JOHN",
+          "SYNOPTIC",
+          "EVANGELIST",
+          "PARABLE",
+          "DISCIPLE"
+        ],
+        "overlap_word": "LUKE",
+        "source_group": "STAR WARS CHARACTERS"
+      }
+    ],
+    "overlap_words": {
+      "VAULT": [
+        "CATHEDRAL ARCHITECTURE FEATURES",
+        "OLYMPIC GYMNASTICS EVENTS"
+      ],
+      "BEAM": [
+        "OLYMPIC GYMNASTICS EVENTS",
+        "STAR WARS CHARACTERS"
+      ],
+      "LUKE": [
+        "STAR WARS CHARACTERS",
+        "NEW TESTAMENT GOSPELS"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "STAR WARS CHARACTERS",
+        "words": [
+          "LEIA",
+          "VADER",
+          "YODA",
+          "CHEWBACCA"
+        ],
+        "similarity": 0.6653,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "OLYMPIC GYMNASTICS EVENTS",
+        "words": [
+          "VAULT",
+          "FLOOR",
+          "HORIZONTAL",
+          "UNEVEN"
+        ],
+        "similarity": 0.2917,
+        "color": "Green"
+      },
+      {
+        "category": "CATHEDRAL ARCHITECTURE FEATURES",
+        "words": [
+          "NAVE",
+          "TRANSEPT",
+          "CLOISTER",
+          "BUTTRESS"
+        ],
+        "similarity": 0.2676,
+        "color": "Blue"
+      },
+      {
+        "category": "NEW TESTAMENT GOSPELS",
+        "words": [
+          "MATTHEW",
+          "JOHN",
+          "EVANGELIST",
+          "DISCIPLE"
+        ],
+        "similarity": 0.4059,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "LEIA",
+      "UNEVEN",
+      "VAULT",
+      "NAVE",
+      "EVANGELIST",
+      "HORIZONTAL",
+      "YODA",
+      "DISCIPLE",
+      "BUTTRESS",
+      "TRANSEPT",
+      "JOHN",
+      "VADER",
+      "CLOISTER",
+      "MATTHEW",
+      "FLOOR",
+      "CHEWBACCA"
+    ]
+  },
+  {
+    "seed_words": [
+      "MAGIC",
+      "FE",
+      "STORY",
+      "CRICKET"
+    ],
+    "story": "In the twilight bazaar, a CRICKET with a jeweled wing chirped out a STORY in a dialect called FE, and every syllable stirred forbidden MAGIC into the air like warm ash. By dawn, the town discovered the spell hadn’t changed their fortunes at all—it had simply made them remember each other’s grief, and to their surprise, they began to heal.",
+    "groups": [
+      {
+        "category": "ORNAMENTAL STONE INLAYS",
+        "candidates": [
+          "AGATE",
+          "AMBER",
+          "JADE",
+          "JASPER",
+          "LAPIS",
+          "MALACHITE",
+          "ONYX",
+          "TURQUOISE"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "POKÉMON SPECIES",
+        "candidates": [
+          "ONYX",
+          "EEVEE",
+          "DITTO",
+          "LAPRAS",
+          "SNORLAX",
+          "DRATINI",
+          "GENGAR",
+          "LUCARIO"
+        ],
+        "overlap_word": "ONYX",
+        "source_group": "ORNAMENTAL STONE INLAYS"
+      },
+      {
+        "category": "U.S. AMBER ALERT DETAILS",
+        "candidates": [
+          "AMBER",
+          "ABOUCTION",
+          "SUSPECT",
+          "VEHICLE",
+          "LICENSE",
+          "PLATE",
+          "DESCRIPTION",
+          "LAST_SEEN"
+        ],
+        "overlap_word": "AMBER",
+        "source_group": "ORNAMENTAL STONE INLAYS"
+      },
+      {
+        "category": "ORCHESTRAL PERCUSSION INSTRUMENTS",
+        "candidates": [
+          "PLATE",
+          "TAMBOURINE",
+          "TIMPANI",
+          "TRIANGLE",
+          "MARIMBA",
+          "VIBRAPHONE",
+          "GLOCKENSPIEL",
+          "CASTANETS"
+        ],
+        "overlap_word": "PLATE",
+        "source_group": "U.S. AMBER ALERT DETAILS"
+      }
+    ],
+    "overlap_words": {
+      "AMBER": [
+        "ORNAMENTAL STONE INLAYS",
+        "U.S. AMBER ALERT DETAILS"
+      ],
+      "ONYX": [
+        "ORNAMENTAL STONE INLAYS",
+        "POKÉMON SPECIES"
+      ],
+      "PLATE": [
+        "U.S. AMBER ALERT DETAILS",
+        "ORCHESTRAL PERCUSSION INSTRUMENTS"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "ORCHESTRAL PERCUSSION INSTRUMENTS",
+        "words": [
+          "TAMBOURINE",
+          "TIMPANI",
+          "MARIMBA",
+          "VIBRAPHONE"
+        ],
+        "similarity": 0.4453,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "U.S. AMBER ALERT DETAILS",
+        "words": [
+          "ABOUCTION",
+          "SUSPECT",
+          "VEHICLE",
+          "DESCRIPTION"
+        ],
+        "similarity": 0.2946,
+        "color": "Green"
+      },
+      {
+        "category": "ORNAMENTAL STONE INLAYS",
+        "words": [
+          "AMBER",
+          "JADE",
+          "MALACHITE",
+          "TURQUOISE"
+        ],
+        "similarity": 0.3836,
+        "color": "Blue"
+      },
+      {
+        "category": "POKÉMON SPECIES",
+        "words": [
+          "ONYX",
+          "LAPRAS",
+          "DRATINI",
+          "LUCARIO"
+        ],
+        "similarity": 0.3416,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "MALACHITE",
+      "MARIMBA",
+      "TURQUOISE",
+      "SUSPECT",
+      "VEHICLE",
+      "LAPRAS",
+      "JADE",
+      "ONYX",
+      "DRATINI",
+      "DESCRIPTION",
+      "TAMBOURINE",
+      "VIBRAPHONE",
+      "LUCARIO",
+      "TIMPANI",
+      "ABOUCTION",
+      "AMBER"
+    ]
+  },
+  {
+    "seed_words": [
+      "FACULTY",
+      "EXPRESSION",
+      "MET",
+      "SNOWMAN"
+    ],
+    "story": "On the night the FACULTY abandoned the university for a blackout drill, I MET a SNOWMAN in the quad whose coal-black eyes held an EXPRESSION of grief, as if he remembered every lecture ever forgotten. When the power returned, he leaned close and whispered the names of vanished students into my sleeve, and by morning the dawn had melted him into a shining puddle that spelled them out in ice-bright ink.",
+    "groups": [
+      {
+        "category": "POWER OUTAGE EMERGENCY ITEMS",
+        "candidates": [
+          "FLASHLIGHT",
+          "LANTERN",
+          "CANDLES",
+          "MATCHES",
+          "BATTERIES",
+          "RADIO",
+          "GENERATOR",
+          "POWERBANK"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "PROGRAMMING LANGUAGE FEATURE FOR CREATING ITERATORS",
+        "candidates": [
+          "GENERATOR",
+          "ITERATOR",
+          "YIELD",
+          "LAZY",
+          "COROUTINE",
+          "STREAM",
+          "PIPELINE",
+          "ENUMERATOR"
+        ],
+        "overlap_word": "GENERATOR",
+        "source_group": "POWER OUTAGE EMERGENCY ITEMS"
+      },
+      {
+        "category": "TRAFFIC SIGNS/INSTRUCTIONS SEEN ON ROADS",
+        "candidates": [
+          "YIELD",
+          "STOP",
+          "MERGE",
+          "DETOUR",
+          "ONE-WAY",
+          "SPEED LIMIT",
+          "DO NOT ENTER",
+          "RAILROAD CROSSING"
+        ],
+        "overlap_word": "YIELD",
+        "source_group": "PROGRAMMING LANGUAGE FEATURE FOR CREATING ITERATORS"
+      },
+      {
+        "category": "NCAA CONFERENCE NAMES (ABBREV.)",
+        "candidates": [
+          "STREAM",
+          "ACC",
+          "BIG TEN",
+          "BIG 12",
+          "SEC",
+          "PAC-12",
+          "AAC",
+          "C-USA"
+        ],
+        "overlap_word": "STREAM",
+        "source_group": "PROGRAMMING LANGUAGE FEATURE FOR CREATING ITERATORS"
+      }
+    ],
+    "overlap_words": {
+      "GENERATOR": [
+        "POWER OUTAGE EMERGENCY ITEMS",
+        "PROGRAMMING LANGUAGE FEATURE FOR CREATING ITERATORS"
+      ],
+      "YIELD": [
+        "PROGRAMMING LANGUAGE FEATURE FOR CREATING ITERATORS",
+        "TRAFFIC SIGNS/INSTRUCTIONS SEEN ON ROADS"
+      ],
+      "STREAM": [
+        "PROGRAMMING LANGUAGE FEATURE FOR CREATING ITERATORS",
+        "NCAA CONFERENCE NAMES (ABBREV.)"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "POWER OUTAGE EMERGENCY ITEMS",
+        "words": [
+          "FLASHLIGHT",
+          "LANTERN",
+          "CANDLES",
+          "BATTERIES"
+        ],
+        "similarity": 0.4687,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "TRAFFIC SIGNS/INSTRUCTIONS SEEN ON ROADS",
+        "words": [
+          "DETOUR",
+          "ONE-WAY",
+          "DO NOT ENTER",
+          "RAILROAD CROSSING"
+        ],
+        "similarity": 0.2956,
+        "color": "Green"
+      },
+      {
+        "category": "NCAA CONFERENCE NAMES (ABBREV.)",
+        "words": [
+          "BIG TEN",
+          "BIG 12",
+          "SEC",
+          "PAC-12"
+        ],
+        "similarity": 0.6046,
+        "color": "Blue"
+      },
+      {
+        "category": "PROGRAMMING LANGUAGE FEATURE FOR CREATING ITERATORS",
+        "words": [
+          "ITERATOR",
+          "YIELD",
+          "COROUTINE",
+          "ENUMERATOR"
+        ],
+        "similarity": 0.3089,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "DO NOT ENTER",
+      "YIELD",
+      "ENUMERATOR",
+      "PAC-12",
+      "ONE-WAY",
+      "FLASHLIGHT",
+      "BIG TEN",
+      "SEC",
+      "BIG 12",
+      "BATTERIES",
+      "COROUTINE",
+      "DETOUR",
+      "LANTERN",
+      "ITERATOR",
+      "CANDLES",
+      "RAILROAD CROSSING"
+    ]
+  },
+  {
+    "seed_words": [
+      "SEAR",
+      "AYE",
+      "SUGGESTION",
+      "CELLOPHANE"
+    ],
+    "story": "The captain watched the aurora SEAR the black sea and whispered, “AYE,” as if agreeing with the sky’s own SUGGESTION that sorrow could be navigated like a map. In the hold, a stowaway heart beat inside a crinkling sheet of CELLOPHANE, preserved against time—proof that even the strangest things can stay tender in the cold.",
+    "groups": [
+      {
+        "category": "NAUTICAL AFFIRMATIONS",
+        "candidates": [
+          "AYE",
+          "YEA",
+          "YEAH",
+          "YES",
+          "OKAY",
+          "RIGHT",
+          "SURE",
+          "ROGER"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "SCOTTISH WORDS/PHRASES (INFORMAL)",
+        "candidates": [
+          "AYE",
+          "BRAW",
+          "WEE",
+          "NAW",
+          "DREICH",
+          "KEN",
+          "BONNIE",
+          "CANNY"
+        ],
+        "overlap_word": "AYE",
+        "source_group": "NAUTICAL AFFIRMATIONS"
+      },
+      {
+        "category": "WWII-ERA AIRCRAFT NICKNAMES (U.S.)",
+        "candidates": [
+          "ROGER",
+          "MUSTANG",
+          "THUNDERBOLT",
+          "LIGHTNING",
+          "WILDCAT",
+          "HELLCAT",
+          "WARHAWK",
+          "CORSAIR"
+        ],
+        "overlap_word": "ROGER",
+        "source_group": "NAUTICAL AFFIRMATIONS"
+      },
+      {
+        "category": "PIRATES/BUCCANEERS IN POP CULTURE",
+        "candidates": [
+          "CORSAIR",
+          "BUCCANEER",
+          "PRIVATEER",
+          "SWASHBUCKLER",
+          "JACK SPARROW",
+          "BLACKBEARD",
+          "LONG JOHN SILVER",
+          "DREAD PIRATE ROBERTS"
+        ],
+        "overlap_word": "CORSAIR",
+        "source_group": "WWII-ERA AIRCRAFT NICKNAMES (U.S.)"
+      }
+    ],
+    "overlap_words": {
+      "AYE": [
+        "NAUTICAL AFFIRMATIONS",
+        "SCOTTISH WORDS/PHRASES (INFORMAL)"
+      ],
+      "ROGER": [
+        "NAUTICAL AFFIRMATIONS",
+        "WWII-ERA AIRCRAFT NICKNAMES (U.S.)"
+      ],
+      "CORSAIR": [
+        "WWII-ERA AIRCRAFT NICKNAMES (U.S.)",
+        "PIRATES/BUCCANEERS IN POP CULTURE"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "NAUTICAL AFFIRMATIONS",
+        "words": [
+          "YEA",
+          "YEAH",
+          "YES",
+          "RIGHT"
+        ],
+        "similarity": 0.521,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "PIRATES/BUCCANEERS IN POP CULTURE",
+        "words": [
+          "PRIVATEER",
+          "JACK SPARROW",
+          "BLACKBEARD",
+          "DREAD PIRATE ROBERTS"
+        ],
+        "similarity": 0.4742,
+        "color": "Green"
+      },
+      {
+        "category": "SCOTTISH WORDS/PHRASES (INFORMAL)",
+        "words": [
+          "WEE",
+          "KEN",
+          "BONNIE",
+          "CANNY"
+        ],
+        "similarity": 0.2884,
+        "color": "Blue"
+      },
+      {
+        "category": "WWII-ERA AIRCRAFT NICKNAMES (U.S.)",
+        "words": [
+          "THUNDERBOLT",
+          "WILDCAT",
+          "HELLCAT",
+          "WARHAWK"
+        ],
+        "similarity": 0.4291,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "YEAH",
+      "BONNIE",
+      "DREAD PIRATE ROBERTS",
+      "THUNDERBOLT",
+      "WARHAWK",
+      "YES",
+      "CANNY",
+      "JACK SPARROW",
+      "RIGHT",
+      "BLACKBEARD",
+      "WEE",
+      "KEN",
+      "HELLCAT",
+      "YEA",
+      "WILDCAT",
+      "PRIVATEER"
+    ]
+  },
+  {
+    "seed_words": [
+      "DIALECT",
+      "BARBECUE",
+      "KINGS",
+      "ODOR"
+    ],
+    "story": "In the moonlit alley behind the BARBECUE pit, an ODOR of smoked peaches and old prayers rose like incense, and the stray cats spoke in a clipped DIALECT that only the lonely could understand. The city’s forgotten KINGS—janitors, dishwashers, and night nurses—followed that scent to a door that wasn’t there yesterday, where their tired crowns were traded for constellations and their silence finally learned to sing.",
+    "groups": [
+      {
+        "category": "WORDS FOR A BAD SMELL",
+        "candidates": [
+          "ODOR",
+          "STENCH",
+          "MIASMA",
+          "FUNK",
+          "REEK",
+          "PONG",
+          "FETOR",
+          "WHIFF"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "INFORMAL WORDS FOR A SMALL AMOUNT (ESP. OF FOOD/DRINK)",
+        "candidates": [
+          "WHIFF",
+          "SIP",
+          "NIP",
+          "TASTE",
+          "SAMPLE",
+          "DAB",
+          "DOT",
+          "SMIDGE"
+        ],
+        "overlap_word": "WHIFF",
+        "source_group": "WORDS FOR A BAD SMELL"
+      },
+      {
+        "category": "U.S. NATIONAL PARKS",
+        "candidates": [
+          "REEK",
+          "YOSEMITE",
+          "ZION",
+          "ACADIA",
+          "DENALI",
+          "SEQUOIA",
+          "BADLANDS",
+          "EVERGLADES"
+        ],
+        "overlap_word": "REEK",
+        "source_group": "WORDS FOR A BAD SMELL"
+      },
+      {
+        "category": "RELIGIOUS MOVEMENTS OR CONCEPTS ENDING IN “-ISM” (REMOVE -ISM)",
+        "candidates": [
+          "ZION",
+          "JUDA",
+          "BUDDH",
+          "HINDU",
+          "ATHE",
+          "DEI",
+          "SHINTO",
+          "SIKH"
+        ],
+        "overlap_word": "ZION",
+        "source_group": "U.S. NATIONAL PARKS"
+      }
+    ],
+    "overlap_words": {
+      "REEK": [
+        "WORDS FOR A BAD SMELL",
+        "U.S. NATIONAL PARKS"
+      ],
+      "WHIFF": [
+        "WORDS FOR A BAD SMELL",
+        "INFORMAL WORDS FOR A SMALL AMOUNT (ESP. OF FOOD/DRINK)"
+      ],
+      "ZION": [
+        "U.S. NATIONAL PARKS",
+        "RELIGIOUS MOVEMENTS OR CONCEPTS ENDING IN “-ISM” (REMOVE -ISM)"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "WORDS FOR A BAD SMELL",
+        "words": [
+          "ODOR",
+          "STENCH",
+          "REEK",
+          "WHIFF"
+        ],
+        "similarity": 0.5329,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "U.S. NATIONAL PARKS",
+        "words": [
+          "ACADIA",
+          "DENALI",
+          "SEQUOIA",
+          "EVERGLADES"
+        ],
+        "similarity": 0.3677,
+        "color": "Green"
+      },
+      {
+        "category": "INFORMAL WORDS FOR A SMALL AMOUNT (ESP. OF FOOD/DRINK)",
+        "words": [
+          "NIP",
+          "SAMPLE",
+          "DAB",
+          "SMIDGE"
+        ],
+        "similarity": 0.3156,
+        "color": "Blue"
+      },
+      {
+        "category": "RELIGIOUS MOVEMENTS OR CONCEPTS ENDING IN “-ISM” (REMOVE -ISM)",
+        "words": [
+          "BUDDH",
+          "HINDU",
+          "SHINTO",
+          "SIKH"
+        ],
+        "similarity": 0.461,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "WHIFF",
+      "SIKH",
+      "DENALI",
+      "BUDDH",
+      "SAMPLE",
+      "SEQUOIA",
+      "ACADIA",
+      "SHINTO",
+      "NIP",
+      "ODOR",
+      "HINDU",
+      "SMIDGE",
+      "STENCH",
+      "EVERGLADES",
+      "REEK",
+      "DAB"
+    ]
+  },
+  {
+    "seed_words": [
+      "BACK",
+      "US",
+      "SURFACE",
+      "HEX"
+    ],
+    "story": "We crawled BACK to the moonlit lake where a thin mist clung to the SURFACE like a half-remembered lullaby, and the water reflected not our faces but the lives we’d almost lived. “It’s not a HEX,” you whispered, yet the ripples spelled US in wavering light, and the lake began returning our lost choices one by one—kindnesses we’d buried, betrayals we’d polished—until the future rose to meet us, dripping and undeniable.",
+    "groups": [
+      {
+        "category": "SYMBOLS IN A HEX DUMP",
+        "candidates": [
+          "DEADBEEF",
+          "CAFEBABE",
+          "FEEDFACE",
+          "BAADF00D",
+          "8BADF00D",
+          "DEFEC8ED",
+          "B16B00B5",
+          "FACEFEED"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "SOCIAL MEDIA-STYLE WAYS TO DELIVER CONTENT",
+        "candidates": [
+          "FACEFEED",
+          "TIMELINE",
+          "NEWSFEED",
+          "STORY",
+          "REEL",
+          "THREAD",
+          "FORYOU",
+          "DISCOVER"
+        ],
+        "overlap_word": "FACEFEED",
+        "source_group": "SYMBOLS IN A HEX DUMP"
+      },
+      {
+        "category": "FASTENERS / THINGS YOU USE TO JOIN MATERIALS",
+        "candidates": [
+          "THREAD",
+          "STAPLE",
+          "RIVET",
+          "GROMMET",
+          "DOWEL",
+          "MORTISE",
+          "TENON",
+          "SOLDER"
+        ],
+        "overlap_word": "THREAD",
+        "source_group": "SOCIAL MEDIA-STYLE WAYS TO DELIVER CONTENT"
+      },
+      {
+        "category": "FLY-FISHING GEAR / TERMS",
+        "candidates": [
+          "REEL",
+          "WADER",
+          "TIPPET",
+          "LEADER",
+          "FLY",
+          "STREAMER",
+          "GILLIE",
+          "CREEL"
+        ],
+        "overlap_word": "REEL",
+        "source_group": "SOCIAL MEDIA-STYLE WAYS TO DELIVER CONTENT"
+      }
+    ],
+    "overlap_words": {
+      "FACEFEED": [
+        "SYMBOLS IN A HEX DUMP",
+        "SOCIAL MEDIA-STYLE WAYS TO DELIVER CONTENT"
+      ],
+      "REEL": [
+        "SOCIAL MEDIA-STYLE WAYS TO DELIVER CONTENT",
+        "FLY-FISHING GEAR / TERMS"
+      ],
+      "THREAD": [
+        "SOCIAL MEDIA-STYLE WAYS TO DELIVER CONTENT",
+        "FASTENERS / THINGS YOU USE TO JOIN MATERIALS"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "SOCIAL MEDIA-STYLE WAYS TO DELIVER CONTENT",
+        "words": [
+          "TIMELINE",
+          "NEWSFEED",
+          "STORY",
+          "THREAD"
+        ],
+        "similarity": 0.3002,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "FASTENERS / THINGS YOU USE TO JOIN MATERIALS",
+        "words": [
+          "STAPLE",
+          "RIVET",
+          "GROMMET",
+          "DOWEL"
+        ],
+        "similarity": 0.3956,
+        "color": "Green"
+      },
+      {
+        "category": "FLY-FISHING GEAR / TERMS",
+        "words": [
+          "WADER",
+          "STREAMER",
+          "GILLIE",
+          "CREEL"
+        ],
+        "similarity": 0.3353,
+        "color": "Blue"
+      },
+      {
+        "category": "SYMBOLS IN A HEX DUMP",
+        "words": [
+          "BAADF00D",
+          "8BADF00D",
+          "DEFEC8ED",
+          "B16B00B5"
+        ],
+        "similarity": 0.5044,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "TIMELINE",
+      "THREAD",
+      "STREAMER",
+      "BAADF00D",
+      "B16B00B5",
+      "STAPLE",
+      "8BADF00D",
+      "STORY",
+      "DOWEL",
+      "GROMMET",
+      "CREEL",
+      "DEFEC8ED",
+      "WADER",
+      "NEWSFEED",
+      "RIVET",
+      "GILLIE"
+    ]
+  },
+  {
+    "seed_words": [
+      "ODD",
+      "MONITOR",
+      "INSPIRE",
+      "GUITAR"
+    ],
+    "story": "On an ODD midnight, the cracked MONITOR in Mira’s studio flickered to life, showing not code but a live feed of her own memories—each one strumming itself into sound. She lifted her battered GUITAR and played along, letting the impossible duet INSPIRE her to forgive the past and rewrite what the screen insisted was unchangeable.",
+    "groups": [
+      {
+        "category": "DISPLAY DEVICES",
+        "candidates": [
+          "MONITOR",
+          "SCREEN",
+          "PROJECTOR",
+          "TERMINAL",
+          "DASHBOARD",
+          "BILLBOARD",
+          "TELEVISION",
+          "TABLET"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "AIRPORT AREAS / SERVICES",
+        "candidates": [
+          "TERMINAL",
+          "GATE",
+          "CONCOURSE",
+          "TARMAC",
+          "CHECK-IN",
+          "SECURITY",
+          "BAGGAGE CLAIM",
+          "LOUNGE"
+        ],
+        "overlap_word": "TERMINAL",
+        "source_group": "DISPLAY DEVICES"
+      },
+      {
+        "category": "EXPERTISE “GATES” IN ACADEMIA (SUBJECT AREAS)",
+        "candidates": [
+          "GATE",
+          "ANTHROPOLOGY",
+          "ECONOMICS",
+          "GEOMETRY",
+          "LITERATURE",
+          "PHILOSOPHY",
+          "PSYCHOLOGY",
+          "THEOLOGY"
+        ],
+        "overlap_word": "GATE",
+        "source_group": "AIRPORT AREAS / SERVICES"
+      },
+      {
+        "category": "CAR INTERIOR CONTROLS / FEATURES",
+        "candidates": [
+          "DASHBOARD",
+          "SPEEDOMETER",
+          "ODOMETER",
+          "TACHOMETER",
+          "GLOVEBOX",
+          "SUNVISOR",
+          "CUPHOLDER",
+          "HAND_BRAKE"
+        ],
+        "overlap_word": "DASHBOARD",
+        "source_group": "DISPLAY DEVICES"
+      }
+    ],
+    "overlap_words": {
+      "TERMINAL": [
+        "DISPLAY DEVICES",
+        "AIRPORT AREAS / SERVICES"
+      ],
+      "DASHBOARD": [
+        "DISPLAY DEVICES",
+        "CAR INTERIOR CONTROLS / FEATURES"
+      ],
+      "GATE": [
+        "AIRPORT AREAS / SERVICES",
+        "EXPERTISE “GATES” IN ACADEMIA (SUBJECT AREAS)"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "DISPLAY DEVICES",
+        "words": [
+          "MONITOR",
+          "SCREEN",
+          "PROJECTOR",
+          "TABLET"
+        ],
+        "similarity": 0.5093,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "CAR INTERIOR CONTROLS / FEATURES",
+        "words": [
+          "DASHBOARD",
+          "SPEEDOMETER",
+          "ODOMETER",
+          "TACHOMETER"
+        ],
+        "similarity": 0.4143,
+        "color": "Green"
+      },
+      {
+        "category": "AIRPORT AREAS / SERVICES",
+        "words": [
+          "CONCOURSE",
+          "TARMAC",
+          "BAGGAGE CLAIM",
+          "LOUNGE"
+        ],
+        "similarity": 0.3862,
+        "color": "Blue"
+      },
+      {
+        "category": "EXPERTISE “GATES” IN ACADEMIA (SUBJECT AREAS)",
+        "words": [
+          "ANTHROPOLOGY",
+          "PHILOSOPHY",
+          "PSYCHOLOGY",
+          "THEOLOGY"
+        ],
+        "similarity": 0.6381,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "TACHOMETER",
+      "BAGGAGE CLAIM",
+      "CONCOURSE",
+      "PSYCHOLOGY",
+      "MONITOR",
+      "TARMAC",
+      "PROJECTOR",
+      "TABLET",
+      "DASHBOARD",
+      "THEOLOGY",
+      "SCREEN",
+      "SPEEDOMETER",
+      "PHILOSOPHY",
+      "ANTHROPOLOGY",
+      "ODOMETER",
+      "LOUNGE"
+    ]
+  },
+  {
+    "seed_words": [
+      "CURL",
+      "EVEN",
+      "KOOKY",
+      "CORNER"
+    ],
+    "story": "In the last **CORNER** of the city’s midnight library, a whispered spell made the ink on every page **CURL** into tiny black vines that climbed my wrists, translating my doubts into readable petals. **EVEN** the most **KOOKY** footnote—about grief hiding inside laughter—opened like a door, and I walked through it into a dawn that smelled of rain and second chances.",
+    "groups": [
+      {
+        "category": "SECTIONS OF A BOOK",
+        "candidates": [
+          "FOREWORD",
+          "PREFACE",
+          "PROLOGUE",
+          "EPILOGUE",
+          "INDEX",
+          "GLOSSARY",
+          "APPENDIX",
+          "BIBLIOGRAPHY"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "STOCK MARKET INDEXES",
+        "candidates": [
+          "INDEX",
+          "DOW",
+          "NASDAQ",
+          "S&P",
+          "RUSSELL",
+          "NIKKEI",
+          "DAX",
+          "FTSE"
+        ],
+        "overlap_word": "INDEX",
+        "source_group": "SECTIONS OF A BOOK"
+      },
+      {
+        "category": "DOG BREEDS (MEDIUM-TO-LARGE)",
+        "candidates": [
+          "DAX",
+          "AKITA",
+          "BORZOI",
+          "BOXER",
+          "DOBERMAN",
+          "MALAMUTE",
+          "POINTER",
+          "WEIMARANER"
+        ],
+        "overlap_word": "DAX",
+        "source_group": "STOCK MARKET INDEXES"
+      },
+      {
+        "category": "KNOWLEDGE-BASED (TAXONOMY): COMMON WORDS IN DIRECTIONAL PLACE NAMES",
+        "candidates": [
+          "DOW",
+          "NORTH",
+          "SOUTH",
+          "EAST",
+          "WEST",
+          "UPPER",
+          "LOWER",
+          "CENTRAL"
+        ],
+        "overlap_word": "DOW",
+        "source_group": "STOCK MARKET INDEXES"
+      }
+    ],
+    "overlap_words": {
+      "INDEX": [
+        "SECTIONS OF A BOOK",
+        "STOCK MARKET INDEXES"
+      ],
+      "DOW": [
+        "STOCK MARKET INDEXES",
+        "KNOWLEDGE-BASED (TAXONOMY): COMMON WORDS IN DIRECTIONAL PLACE NAMES"
+      ],
+      "DAX": [
+        "STOCK MARKET INDEXES",
+        "DOG BREEDS (MEDIUM-TO-LARGE)"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "KNOWLEDGE-BASED (TAXONOMY): COMMON WORDS IN DIRECTIONAL PLACE NAMES",
+        "words": [
+          "NORTH",
+          "SOUTH",
+          "EAST",
+          "WEST"
+        ],
+        "similarity": 0.7195,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "SECTIONS OF A BOOK",
+        "words": [
+          "FOREWORD",
+          "PREFACE",
+          "PROLOGUE",
+          "EPILOGUE"
+        ],
+        "similarity": 0.594,
+        "color": "Green"
+      },
+      {
+        "category": "DOG BREEDS (MEDIUM-TO-LARGE)",
+        "words": [
+          "BOXER",
+          "DOBERMAN",
+          "MALAMUTE",
+          "WEIMARANER"
+        ],
+        "similarity": 0.4614,
+        "color": "Blue"
+      },
+      {
+        "category": "STOCK MARKET INDEXES",
+        "words": [
+          "NASDAQ",
+          "S&P",
+          "NIKKEI",
+          "FTSE"
+        ],
+        "similarity": 0.5163,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "SOUTH",
+      "EPILOGUE",
+      "NORTH",
+      "FTSE",
+      "DOBERMAN",
+      "PROLOGUE",
+      "WEIMARANER",
+      "PREFACE",
+      "EAST",
+      "NASDAQ",
+      "FOREWORD",
+      "BOXER",
+      "MALAMUTE",
+      "S&P",
+      "WEST",
+      "NIKKEI"
+    ]
+  },
+  {
+    "seed_words": [
+      "PILLAR",
+      "BOUQUET",
+      "FENCE",
+      "SIGNS"
+    ],
+    "story": "At the edge of the sleeping city, a cracked PILLAR hummed like a throat remembering songs, and a wilting BOUQUET in my hands warmed as if it had its own pulse. I slipped through a rusted FENCE where the air tasted of lightning, and the drifting SIGNS above the alley rearranged themselves into messages from my future—warning me that grief can be a doorway if you dare to open it.",
+    "groups": [
+      {
+        "category": "FUNERAL FLOWERS",
+        "candidates": [
+          "WREATH",
+          "SPRAY",
+          "CORSAGE",
+          "BOUTONNIERE",
+          "LILY",
+          "CHRYSANTHEMUM",
+          "CARNATION",
+          "ROSE"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "AEROSOL PRODUCTS (IN A CAN)",
+        "candidates": [
+          "SPRAY",
+          "DEODORANT",
+          "HAIRSPRAY",
+          "SUNSCREEN",
+          "INSECTICIDE",
+          "AIR FRESHENER",
+          "PAINT",
+          "WHIPPED CREAM"
+        ],
+        "overlap_word": "SPRAY",
+        "source_group": "FUNERAL FLOWERS"
+      },
+      {
+        "category": "GRAMMY AWARD RECORD OF THE YEAR WINNERS (PAST DECADES)",
+        "candidates": [
+          "ROSE",
+          "SMOOTH",
+          "UPTOWN",
+          "REHAB",
+          "ROYALE",
+          "HELLO",
+          "STAY",
+          "ABOUT DAMN TIME"
+        ],
+        "overlap_word": "ROSE",
+        "source_group": "FUNERAL FLOWERS"
+      },
+      {
+        "category": "WORDS WITH A SILENT “T”",
+        "candidates": [
+          "STAY",
+          "CASTLE",
+          "HUSTLE",
+          "LISTEN",
+          "MOISTEN",
+          "FASTEN",
+          "WRESTLE",
+          "WHISTLE"
+        ],
+        "overlap_word": "STAY",
+        "source_group": "GRAMMY AWARD RECORD OF THE YEAR WINNERS (PAST DECADES)"
+      }
+    ],
+    "overlap_words": {
+      "SPRAY": [
+        "FUNERAL FLOWERS",
+        "AEROSOL PRODUCTS (IN A CAN)"
+      ],
+      "ROSE": [
+        "FUNERAL FLOWERS",
+        "GRAMMY AWARD RECORD OF THE YEAR WINNERS (PAST DECADES)"
+      ],
+      "STAY": [
+        "GRAMMY AWARD RECORD OF THE YEAR WINNERS (PAST DECADES)",
+        "WORDS WITH A SILENT “T”"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "FUNERAL FLOWERS",
+        "words": [
+          "LILY",
+          "CHRYSANTHEMUM",
+          "CARNATION",
+          "ROSE"
+        ],
+        "similarity": 0.4392,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "AEROSOL PRODUCTS (IN A CAN)",
+        "words": [
+          "DEODORANT",
+          "HAIRSPRAY",
+          "SUNSCREEN",
+          "INSECTICIDE"
+        ],
+        "similarity": 0.5001,
+        "color": "Green"
+      },
+      {
+        "category": "WORDS WITH A SILENT “T”",
+        "words": [
+          "HUSTLE",
+          "LISTEN",
+          "WRESTLE",
+          "WHISTLE"
+        ],
+        "similarity": 0.2938,
+        "color": "Blue"
+      },
+      {
+        "category": "GRAMMY AWARD RECORD OF THE YEAR WINNERS (PAST DECADES)",
+        "words": [
+          "SMOOTH",
+          "UPTOWN",
+          "ROYALE",
+          "HELLO"
+        ],
+        "similarity": 0.2382,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "DEODORANT",
+      "HAIRSPRAY",
+      "SUNSCREEN",
+      "WRESTLE",
+      "UPTOWN",
+      "HELLO",
+      "ROSE",
+      "LILY",
+      "WHISTLE",
+      "ROYALE",
+      "CARNATION",
+      "LISTEN",
+      "HUSTLE",
+      "SMOOTH",
+      "CHRYSANTHEMUM",
+      "INSECTICIDE"
+    ]
+  },
+  {
+    "seed_words": [
+      "NEAR DARK",
+      "RELISH",
+      "SNARE",
+      "MAINTAIN"
+    ],
+    "story": "NEAR DARK, the lighthouse keeper would RELISH the moment the sea turned ink-black, because the waves whispered forgotten names like prayers. He set a brass SNARE not for fish but for stray regrets, and each time it caught one, he’d MAINTAIN the lantern’s flame a little longer—until the night itself learned to forgive.",
+    "groups": [
+      {
+        "category": "LIGHTHOUSE FEATURES",
+        "candidates": [
+          "LANTERN",
+          "BEACON",
+          "LENS",
+          "TOWER",
+          "GALLERY",
+          "LANTERNROOM",
+          "CATWALK",
+          "FOGHORN"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "PHOTOGRAPHY/VIDEOGRAPHY GEAR",
+        "candidates": [
+          "LENS",
+          "APERTURE",
+          "SHUTTER",
+          "ISO",
+          "TRIPOD",
+          "GIMBAL",
+          "FLASH",
+          "FILTER"
+        ],
+        "overlap_word": "LENS",
+        "source_group": "LIGHTHOUSE FEATURES"
+      },
+      {
+        "category": "INTERNATIONAL STANDARDS ORGANIZATIONS (INITIALISMS)",
+        "candidates": [
+          "ISO",
+          "IEC",
+          "ITU",
+          "IATA",
+          "IMO",
+          "WIPO",
+          "UNESCO",
+          "WHO"
+        ],
+        "overlap_word": "ISO",
+        "source_group": "PHOTOGRAPHY/VIDEOGRAPHY GEAR"
+      },
+      {
+        "category": "DC COMICS SPEEDSTERS (THE “FLASH FAMILY”)",
+        "candidates": [
+          "FLASH",
+          "KIDFLASH",
+          "JAYGARRICK",
+          "BARRYALLEN",
+          "WALLYWEST",
+          "IMPULSE",
+          "XS",
+          "GODSPEED"
+        ],
+        "overlap_word": "FLASH",
+        "source_group": "PHOTOGRAPHY/VIDEOGRAPHY GEAR"
+      }
+    ],
+    "overlap_words": {
+      "LENS": [
+        "LIGHTHOUSE FEATURES",
+        "PHOTOGRAPHY/VIDEOGRAPHY GEAR"
+      ],
+      "ISO": [
+        "PHOTOGRAPHY/VIDEOGRAPHY GEAR",
+        "INTERNATIONAL STANDARDS ORGANIZATIONS (INITIALISMS)"
+      ],
+      "FLASH": [
+        "PHOTOGRAPHY/VIDEOGRAPHY GEAR",
+        "DC COMICS SPEEDSTERS (THE “FLASH FAMILY”)"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "PHOTOGRAPHY/VIDEOGRAPHY GEAR",
+        "words": [
+          "LENS",
+          "APERTURE",
+          "SHUTTER",
+          "TRIPOD"
+        ],
+        "similarity": 0.4222,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "LIGHTHOUSE FEATURES",
+        "words": [
+          "LANTERN",
+          "BEACON",
+          "TOWER",
+          "LANTERNROOM"
+        ],
+        "similarity": 0.5045,
+        "color": "Green"
+      },
+      {
+        "category": "DC COMICS SPEEDSTERS (THE “FLASH FAMILY”)",
+        "words": [
+          "FLASH",
+          "KIDFLASH",
+          "JAYGARRICK",
+          "BARRYALLEN"
+        ],
+        "similarity": 0.3348,
+        "color": "Blue"
+      },
+      {
+        "category": "INTERNATIONAL STANDARDS ORGANIZATIONS (INITIALISMS)",
+        "words": [
+          "IEC",
+          "ITU",
+          "IATA",
+          "UNESCO"
+        ],
+        "similarity": 0.3162,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "UNESCO",
+      "TOWER",
+      "LENS",
+      "KIDFLASH",
+      "LANTERN",
+      "JAYGARRICK",
+      "SHUTTER",
+      "BARRYALLEN",
+      "BEACON",
+      "FLASH",
+      "IATA",
+      "TRIPOD",
+      "APERTURE",
+      "ITU",
+      "IEC",
+      "LANTERNROOM"
+    ]
+  },
+  {
+    "seed_words": [
+      "BONUS",
+      "POLLEN",
+      "GRAM",
+      "POKER"
+    ],
+    "story": "At midnight in the greenhouse casino, I played **POKER** with a queen bee who slid a **BONUS** chip across the felt—one luminous **GRAM** of starlight—while the air thickened with **POLLEN** like golden snowfall. When I finally called her bluff, the cards fluttered into wings and the whole room remembered it was a garden, not a gamble.",
+    "groups": [
+      {
+        "category": "CASINO TABLE ACTIONS",
+        "candidates": [
+          "SHUFFLE",
+          "DEAL",
+          "CUT",
+          "BET",
+          "RAISE",
+          "CALL",
+          "FOLD",
+          "ANTE"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "EDITING MARKS / REVISION ACTIONS",
+        "candidates": [
+          "CUT",
+          "INSERT",
+          "DELETE",
+          "REDACT",
+          "REWRITE",
+          "PROOFREAD",
+          "FORMAT",
+          "FOOTNOTE"
+        ],
+        "overlap_word": "CUT",
+        "source_group": "CASINO TABLE ACTIONS"
+      },
+      {
+        "category": "LATIN PHRASES USED IN ACADEMIC/LEGAL WRITING",
+        "candidates": [
+          "ANTE",
+          "POST",
+          "INTER ALIA",
+          "PER SE",
+          "DE FACTO",
+          "BONA FIDE",
+          "AD HOC",
+          "IN VITRO"
+        ],
+        "overlap_word": "ANTE",
+        "source_group": "CASINO TABLE ACTIONS"
+      },
+      {
+        "category": "U.S. STATES’ POSTAL ABBREVIATIONS THAT ARE ALSO COMMON WORDS",
+        "candidates": [
+          "CALL",
+          "OR",
+          "IN",
+          "ME",
+          "HI",
+          "BE",
+          "WE",
+          "AM"
+        ],
+        "overlap_word": "CALL",
+        "source_group": "CASINO TABLE ACTIONS"
+      }
+    ],
+    "overlap_words": {
+      "CUT": [
+        "CASINO TABLE ACTIONS",
+        "EDITING MARKS / REVISION ACTIONS"
+      ],
+      "CALL": [
+        "CASINO TABLE ACTIONS",
+        "U.S. STATES’ POSTAL ABBREVIATIONS THAT ARE ALSO COMMON WORDS"
+      ],
+      "ANTE": [
+        "CASINO TABLE ACTIONS",
+        "LATIN PHRASES USED IN ACADEMIC/LEGAL WRITING"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "CASINO TABLE ACTIONS",
+        "words": [
+          "CUT",
+          "RAISE",
+          "CALL",
+          "FOLD"
+        ],
+        "similarity": 0.3212,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "LATIN PHRASES USED IN ACADEMIC/LEGAL WRITING",
+        "words": [
+          "INTER ALIA",
+          "PER SE",
+          "DE FACTO",
+          "AD HOC"
+        ],
+        "similarity": 0.395,
+        "color": "Green"
+      },
+      {
+        "category": "EDITING MARKS / REVISION ACTIONS",
+        "words": [
+          "DELETE",
+          "REDACT",
+          "REWRITE",
+          "FORMAT"
+        ],
+        "similarity": 0.3836,
+        "color": "Blue"
+      },
+      {
+        "category": "U.S. STATES’ POSTAL ABBREVIATIONS THAT ARE ALSO COMMON WORDS",
+        "words": [
+          "ME",
+          "HI",
+          "BE",
+          "AM"
+        ],
+        "similarity": 0.297,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "CALL",
+      "PER SE",
+      "HI",
+      "INTER ALIA",
+      "REDACT",
+      "FOLD",
+      "DE FACTO",
+      "DELETE",
+      "FORMAT",
+      "RAISE",
+      "ME",
+      "CUT",
+      "AD HOC",
+      "BE",
+      "REWRITE",
+      "AM"
+    ]
+  },
+  {
+    "seed_words": [
+      "TAP",
+      "RIGHT",
+      "OPTION",
+      "WAR"
+    ],
+    "story": "At the edge of a clockwork desert, Mara found a rusted door labeled **OPTION** and, with a careful **TAP**, it opened into a room where yesterday was still arguing with tomorrow. The voices offered her no **RIGHT** choice—only a quiet bargain: end the **WAR** outside by starting a gentler one within, against the parts of herself that wanted to win at any cost.",
+    "groups": [
+      {
+        "category": "FORMS OF \"OPTION\" (RIGHT/CHOICE)",
+        "candidates": [
+          "ALTERNATIVE",
+          "CHOICE",
+          "ELECTION",
+          "LIBERTY",
+          "PREFERENCE",
+          "PRIVILEGE",
+          "RIGHT",
+          "SELECTION"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "U.S. ELECTION NIGHT TERMS",
+        "candidates": [
+          "ELECTION",
+          "BALLOT",
+          "INCUMBENT",
+          "PRIMARY",
+          "CAUCUS",
+          "RUNOFF",
+          "TURNOUT",
+          "CONCESSION"
+        ],
+        "overlap_word": "ELECTION",
+        "source_group": "FORMS OF \"OPTION\" (RIGHT/CHOICE)"
+      },
+      {
+        "category": "MOVES IN BALLET CLASS (FRENCH)",
+        "candidates": [
+          "BALLOT",
+          "PLIÉ",
+          "TENDU",
+          "JETÉ",
+          "ROND DE JAMBE",
+          "RELEVÉ",
+          "ARABESQUE",
+          "PIROUETTE"
+        ],
+        "overlap_word": "BALLOT",
+        "source_group": "U.S. ELECTION NIGHT TERMS"
+      },
+      {
+        "category": "U.S. CONSERVATIVE MEDIA OUTLETS (NETWORKS/SITES)",
+        "candidates": [
+          "RIGHT",
+          "FOX",
+          "NEWSMAX",
+          "OANN",
+          "BREITBART",
+          "DAILY WIRE",
+          "NATIONAL REVIEW",
+          "EPOCH TIMES"
+        ],
+        "overlap_word": "RIGHT",
+        "source_group": "FORMS OF \"OPTION\" (RIGHT/CHOICE)"
+      }
+    ],
+    "overlap_words": {
+      "ELECTION": [
+        "FORMS OF \"OPTION\" (RIGHT/CHOICE)",
+        "U.S. ELECTION NIGHT TERMS"
+      ],
+      "RIGHT": [
+        "FORMS OF \"OPTION\" (RIGHT/CHOICE)",
+        "U.S. CONSERVATIVE MEDIA OUTLETS (NETWORKS/SITES)"
+      ],
+      "BALLOT": [
+        "U.S. ELECTION NIGHT TERMS",
+        "MOVES IN BALLET CLASS (FRENCH)"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "FORMS OF \"OPTION\" (RIGHT/CHOICE)",
+        "words": [
+          "ALTERNATIVE",
+          "CHOICE",
+          "PREFERENCE",
+          "SELECTION"
+        ],
+        "similarity": 0.468,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "U.S. CONSERVATIVE MEDIA OUTLETS (NETWORKS/SITES)",
+        "words": [
+          "NEWSMAX",
+          "BREITBART",
+          "DAILY WIRE",
+          "NATIONAL REVIEW"
+        ],
+        "similarity": 0.5344,
+        "color": "Green"
+      },
+      {
+        "category": "U.S. ELECTION NIGHT TERMS",
+        "words": [
+          "ELECTION",
+          "BALLOT",
+          "INCUMBENT",
+          "CAUCUS"
+        ],
+        "similarity": 0.5453,
+        "color": "Blue"
+      },
+      {
+        "category": "MOVES IN BALLET CLASS (FRENCH)",
+        "words": [
+          "JETÉ",
+          "ROND DE JAMBE",
+          "RELEVÉ",
+          "ARABESQUE"
+        ],
+        "similarity": 0.3376,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "PREFERENCE",
+      "INCUMBENT",
+      "ALTERNATIVE",
+      "CHOICE",
+      "SELECTION",
+      "RELEVÉ",
+      "NATIONAL REVIEW",
+      "BALLOT",
+      "BREITBART",
+      "DAILY WIRE",
+      "ELECTION",
+      "JETÉ",
+      "CAUCUS",
+      "ARABESQUE",
+      "NEWSMAX",
+      "ROND DE JAMBE"
+    ]
+  },
+  {
+    "seed_words": [
+      "TOILETRIES",
+      "BING",
+      "CANAL",
+      "FLOCK"
+    ],
+    "story": "At dusk, Mara unpacked her TOILETRIES beside the moonlit CANAL, where the water carried not just boats but whispered regrets from the city. A sudden BING rang from her old phone, and a FLOCK of paper birds lifted from the reeds, folding themselves into constellations as if the night were trying to apologize.",
+    "groups": [
+      {
+        "category": "TOILETRY BAG ITEMS",
+        "candidates": [
+          "DEODORANT",
+          "FLOSS",
+          "RAZOR",
+          "SHAMPOO",
+          "CONDITIONER",
+          "TWEEZERS",
+          "TOOTHPASTE",
+          "MOISTURIZER"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "OKLAHOMA! CHARACTERS",
+        "candidates": [
+          "RAZOR",
+          "CURLY",
+          "LAUREY",
+          "ADO",
+          "JUD",
+          "ALI HAKIM",
+          "AUNT ELLER",
+          "WILL PARKER"
+        ],
+        "overlap_word": "RAZOR",
+        "source_group": "TOILETRY BAG ITEMS"
+      },
+      {
+        "category": "TYPES OF BRACKETS/BRACES (BY SHAPE/NICKNAME)",
+        "candidates": [
+          "CURLY",
+          "SQUARE",
+          "ANGLE",
+          "ROUND",
+          "PIPE",
+          "CHEVRON",
+          "SLASH",
+          "TILDE"
+        ],
+        "overlap_word": "CURLY",
+        "source_group": "OKLAHOMA! CHARACTERS"
+      },
+      {
+        "category": "WOODWIND INSTRUMENTS",
+        "candidates": [
+          "PIPE",
+          "OBOE",
+          "BASSOON",
+          "CLARINET",
+          "FLUTE",
+          "PICCOLO",
+          "RECORDER",
+          "SAXOPHONE"
+        ],
+        "overlap_word": "PIPE",
+        "source_group": "TYPES OF BRACKETS/BRACES (BY SHAPE/NICKNAME)"
+      }
+    ],
+    "overlap_words": {
+      "RAZOR": [
+        "TOILETRY BAG ITEMS",
+        "OKLAHOMA! CHARACTERS"
+      ],
+      "CURLY": [
+        "OKLAHOMA! CHARACTERS",
+        "TYPES OF BRACKETS/BRACES (BY SHAPE/NICKNAME)"
+      ],
+      "PIPE": [
+        "TYPES OF BRACKETS/BRACES (BY SHAPE/NICKNAME)",
+        "WOODWIND INSTRUMENTS"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "TOILETRY BAG ITEMS",
+        "words": [
+          "DEODORANT",
+          "SHAMPOO",
+          "TOOTHPASTE",
+          "MOISTURIZER"
+        ],
+        "similarity": 0.64,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "WOODWIND INSTRUMENTS",
+        "words": [
+          "OBOE",
+          "CLARINET",
+          "FLUTE",
+          "SAXOPHONE"
+        ],
+        "similarity": 0.7539,
+        "color": "Green"
+      },
+      {
+        "category": "TYPES OF BRACKETS/BRACES (BY SHAPE/NICKNAME)",
+        "words": [
+          "CURLY",
+          "SQUARE",
+          "ANGLE",
+          "ROUND"
+        ],
+        "similarity": 0.3544,
+        "color": "Blue"
+      },
+      {
+        "category": "OKLAHOMA! CHARACTERS",
+        "words": [
+          "LAUREY",
+          "ALI HAKIM",
+          "AUNT ELLER",
+          "WILL PARKER"
+        ],
+        "similarity": 0.2517,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "ANGLE",
+      "WILL PARKER",
+      "AUNT ELLER",
+      "SQUARE",
+      "LAUREY",
+      "TOOTHPASTE",
+      "SHAMPOO",
+      "SAXOPHONE",
+      "CLARINET",
+      "ALI HAKIM",
+      "MOISTURIZER",
+      "FLUTE",
+      "ROUND",
+      "CURLY",
+      "DEODORANT",
+      "OBOE"
+    ]
+  },
+  {
+    "seed_words": [
+      "CIRCULATE",
+      "CREATOR",
+      "LA",
+      "SUITE"
+    ],
+    "story": "In LA, a midnight SUITE of rooms rearranged itself each hour, forcing secrets to CIRCULATE through vents like warm breath. The CREATOR of the place—a retired sound engineer who claimed he could edit fate—left a single microphone on the pillow, and when I whispered my name into it, the walls answered with everyone else’s.",
+    "groups": [
+      {
+        "category": "STUDIO AUDIO GEAR",
+        "candidates": [
+          "POP FILTER",
+          "WINDSCREEN",
+          "MIC STAND",
+          "BOOM ARM",
+          "SHOCK MOUNT",
+          "INTERFACE",
+          "PREAMP",
+          "HEADPHONES"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "USER INTERFACE ELEMENTS",
+        "candidates": [
+          "INTERFACE",
+          "MENU",
+          "TOOLBAR",
+          "CURSOR",
+          "ICON",
+          "BUTTON",
+          "SLIDER",
+          "CHECKBOX"
+        ],
+        "overlap_word": "INTERFACE",
+        "source_group": "STUDIO AUDIO GEAR"
+      },
+      {
+        "category": "BUTTONS ON CLOTHING",
+        "candidates": [
+          "BUTTON",
+          "TOGGLE",
+          "SNAP",
+          "STUD",
+          "RIVET",
+          "ZIPPER",
+          "HOOK",
+          "VELCRO"
+        ],
+        "overlap_word": "BUTTON",
+        "source_group": "USER INTERFACE ELEMENTS"
+      },
+      {
+        "category": "U.S. GOVERNMENT AGENCIES (INITIALISMS)",
+        "candidates": [
+          "SNAP",
+          "NASA",
+          "NOAA",
+          "OSHA",
+          "FEMA",
+          "TSA",
+          "IRS",
+          "NIH"
+        ],
+        "overlap_word": "SNAP",
+        "source_group": "BUTTONS ON CLOTHING"
+      }
+    ],
+    "overlap_words": {
+      "INTERFACE": [
+        "STUDIO AUDIO GEAR",
+        "USER INTERFACE ELEMENTS"
+      ],
+      "BUTTON": [
+        "USER INTERFACE ELEMENTS",
+        "BUTTONS ON CLOTHING"
+      ],
+      "SNAP": [
+        "BUTTONS ON CLOTHING",
+        "U.S. GOVERNMENT AGENCIES (INITIALISMS)"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "U.S. GOVERNMENT AGENCIES (INITIALISMS)",
+        "words": [
+          "NASA",
+          "NOAA",
+          "FEMA",
+          "TSA"
+        ],
+        "similarity": 0.3857,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "USER INTERFACE ELEMENTS",
+        "words": [
+          "TOOLBAR",
+          "CURSOR",
+          "ICON",
+          "SLIDER"
+        ],
+        "similarity": 0.3503,
+        "color": "Green"
+      },
+      {
+        "category": "BUTTONS ON CLOTHING",
+        "words": [
+          "RIVET",
+          "ZIPPER",
+          "HOOK",
+          "VELCRO"
+        ],
+        "similarity": 0.425,
+        "color": "Blue"
+      },
+      {
+        "category": "STUDIO AUDIO GEAR",
+        "words": [
+          "MIC STAND",
+          "BOOM ARM",
+          "SHOCK MOUNT",
+          "HEADPHONES"
+        ],
+        "similarity": 0.2514,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "VELCRO",
+      "SLIDER",
+      "CURSOR",
+      "ICON",
+      "NASA",
+      "HEADPHONES",
+      "MIC STAND",
+      "TSA",
+      "TOOLBAR",
+      "FEMA",
+      "HOOK",
+      "BOOM ARM",
+      "SHOCK MOUNT",
+      "ZIPPER",
+      "RIVET",
+      "NOAA"
+    ]
+  },
+  {
+    "seed_words": [
+      "BEAD",
+      "LOG",
+      "CHARADE",
+      "OBSERVE"
+    ],
+    "story": "On the riverbank, I found a single **BEAD** glowing like a trapped star inside a hollow **LOG**, and when I held it to my eye I could **OBSERVE** tiny lives rehearsing my memories as if they were sacred theater. Across the water, a heron performed a solemn **CHARADE** of dying and rebirth, and the bead pulsed—asking what part of me was pretending, and what part was true.",
+    "groups": [
+      {
+        "category": "ACTING WITHOUT WORDS (CHARADES-LIKE)",
+        "candidates": [
+          "MIME",
+          "PANTOMIME",
+          "GESTURE",
+          "GRIMACE",
+          "SHRUG",
+          "WINK",
+          "NOD",
+          "BECKON"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "INTERNET MEDIA TYPES (FILE EXTENSIONS)",
+        "candidates": [
+          "MIME",
+          "JPEG",
+          "PNG",
+          "GIF",
+          "MP3",
+          "MP4",
+          "PDF",
+          "ZIP"
+        ],
+        "overlap_word": "MIME",
+        "source_group": "ACTING WITHOUT WORDS (CHARADES-LIKE)"
+      },
+      {
+        "category": "U.S. POSTAL ABBREVIATIONS WITH A “ZIP” IN THE NAME (WORDPLAY: HIDDEN WORD)",
+        "candidates": [
+          "ARIZONA",
+          "MISSISSIPPI",
+          "PRINCIPAL",
+          "HORIZON",
+          "PIZZERIA",
+          "RITZIER",
+          "SCHIZOID",
+          "ZIP"
+        ],
+        "overlap_word": "ZIP",
+        "source_group": "INTERNET MEDIA TYPES (FILE EXTENSIONS)"
+      },
+      {
+        "category": "GIPHY/REACTION GIF SEARCH KEYWORDS (SCENARIO/SETTING)",
+        "candidates": [
+          "GIF",
+          "FACEPALM",
+          "EYEROLL",
+          "MICDROP",
+          "SLOWCLAP",
+          "SPITTAKE",
+          "DOUBLETAKE",
+          "FISTBUMP"
+        ],
+        "overlap_word": "GIF",
+        "source_group": "INTERNET MEDIA TYPES (FILE EXTENSIONS)"
+      }
+    ],
+    "overlap_words": {
+      "MIME": [
+        "ACTING WITHOUT WORDS (CHARADES-LIKE)",
+        "INTERNET MEDIA TYPES (FILE EXTENSIONS)"
+      ],
+      "GIF": [
+        "INTERNET MEDIA TYPES (FILE EXTENSIONS)",
+        "GIPHY/REACTION GIF SEARCH KEYWORDS (SCENARIO/SETTING)"
+      ],
+      "ZIP": [
+        "INTERNET MEDIA TYPES (FILE EXTENSIONS)",
+        "U.S. POSTAL ABBREVIATIONS WITH A “ZIP” IN THE NAME (WORDPLAY: HIDDEN WORD)"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "INTERNET MEDIA TYPES (FILE EXTENSIONS)",
+        "words": [
+          "JPEG",
+          "PNG",
+          "MP3",
+          "MP4"
+        ],
+        "similarity": 0.4635,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "ACTING WITHOUT WORDS (CHARADES-LIKE)",
+        "words": [
+          "GESTURE",
+          "SHRUG",
+          "WINK",
+          "NOD"
+        ],
+        "similarity": 0.4465,
+        "color": "Green"
+      },
+      {
+        "category": "GIPHY/REACTION GIF SEARCH KEYWORDS (SCENARIO/SETTING)",
+        "words": [
+          "MICDROP",
+          "SLOWCLAP",
+          "SPITTAKE",
+          "DOUBLETAKE"
+        ],
+        "similarity": 0.3254,
+        "color": "Blue"
+      },
+      {
+        "category": "U.S. POSTAL ABBREVIATIONS WITH A “ZIP” IN THE NAME (WORDPLAY: HIDDEN WORD)",
+        "words": [
+          "ARIZONA",
+          "MISSISSIPPI",
+          "HORIZON",
+          "PIZZERIA"
+        ],
+        "similarity": 0.3432,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "ARIZONA",
+      "SPITTAKE",
+      "MICDROP",
+      "MP4",
+      "SLOWCLAP",
+      "DOUBLETAKE",
+      "PNG",
+      "JPEG",
+      "MISSISSIPPI",
+      "PIZZERIA",
+      "MP3",
+      "WINK",
+      "NOD",
+      "HORIZON",
+      "GESTURE",
+      "SHRUG"
+    ]
+  },
+  {
+    "seed_words": [
+      "LOTUS",
+      "TANK",
+      "TYCOON",
+      "IVORY"
+    ],
+    "story": "In the flooded city, a weary **TYCOON** steered his rusting **TANK** through streets turned to canals, following the glow of a single **LOTUS** blooming where the stock exchange once stood. When he reached it, the flower’s petals opened to reveal a shard of **IVORY** carved with the names of everyone he’d stepped on—and the water rose softly, as if the world itself had decided to forgive nothing.",
+    "groups": [
+      {
+        "category": "TYPES OF CHESS PIECES",
+        "candidates": [
+          "KING",
+          "QUEEN",
+          "ROOK",
+          "BISHOP",
+          "KNIGHT",
+          "PAWN",
+          "PRINCE",
+          "DUCHESS"
+        ],
+        "overlap_word": null,
+        "source_group": null
+      },
+      {
+        "category": "NFL TEAMS (SINGULAR NICKNAMES)",
+        "candidates": [
+          "ROOK",
+          "BEAR",
+          "BILL",
+          "BROWN",
+          "CARDINAL",
+          "COLT",
+          "JAGUAR",
+          "RAM"
+        ],
+        "overlap_word": "ROOK",
+        "source_group": "TYPES OF CHESS PIECES"
+      },
+      {
+        "category": "TERMS FOR FORCEFULLY COLLIDE WITH",
+        "candidates": [
+          "RAM",
+          "SLAM",
+          "SMASH",
+          "CRASH",
+          "BANG",
+          "PLOW",
+          "T-BONE",
+          "PILEUP"
+        ],
+        "overlap_word": "RAM",
+        "source_group": "NFL TEAMS (SINGULAR NICKNAMES)"
+      },
+      {
+        "category": "U.S. CATHOLIC HIERARCHY ROLES/TITLES",
+        "candidates": [
+          "BISHOP",
+          "PRIEST",
+          "DEACON",
+          "CARDINAL",
+          "ARCHBISHOP",
+          "MONSIGNOR",
+          "NUN",
+          "POPE"
+        ],
+        "overlap_word": "BISHOP",
+        "source_group": "TYPES OF CHESS PIECES"
+      }
+    ],
+    "overlap_words": {
+      "ROOK": [
+        "TYPES OF CHESS PIECES",
+        "NFL TEAMS (SINGULAR NICKNAMES)"
+      ],
+      "BISHOP": [
+        "TYPES OF CHESS PIECES",
+        "U.S. CATHOLIC HIERARCHY ROLES/TITLES"
+      ],
+      "CARDINAL": [
+        "NFL TEAMS (SINGULAR NICKNAMES)",
+        "U.S. CATHOLIC HIERARCHY ROLES/TITLES"
+      ],
+      "RAM": [
+        "NFL TEAMS (SINGULAR NICKNAMES)",
+        "TERMS FOR FORCEFULLY COLLIDE WITH"
+      ]
+    },
+    "puzzle": [
+      {
+        "category": "TERMS FOR FORCEFULLY COLLIDE WITH",
+        "words": [
+          "SLAM",
+          "SMASH",
+          "CRASH",
+          "BANG"
+        ],
+        "similarity": 0.3436,
+        "color": "Yellow (Easiest)"
+      },
+      {
+        "category": "U.S. CATHOLIC HIERARCHY ROLES/TITLES",
+        "words": [
+          "BISHOP",
+          "PRIEST",
+          "ARCHBISHOP",
+          "POPE"
+        ],
+        "similarity": 0.6119,
+        "color": "Green"
+      },
+      {
+        "category": "NFL TEAMS (SINGULAR NICKNAMES)",
+        "words": [
+          "BEAR",
+          "BROWN",
+          "COLT",
+          "JAGUAR"
+        ],
+        "similarity": 0.4188,
+        "color": "Blue"
+      },
+      {
+        "category": "TYPES OF CHESS PIECES",
+        "words": [
+          "KING",
+          "QUEEN",
+          "PRINCE",
+          "DUCHESS"
+        ],
+        "similarity": 0.5337,
+        "color": "Purple (Hardest)"
+      }
+    ],
+    "valid": true,
+    "ambiguous_words": [],
+    "difficulty_issues": [],
+    "shuffled_grid": [
+      "CRASH",
+      "JAGUAR",
+      "PRIEST",
+      "BANG",
+      "ARCHBISHOP",
+      "SMASH",
+      "QUEEN",
+      "DUCHESS",
+      "BROWN",
+      "BISHOP",
+      "POPE",
+      "COLT",
+      "SLAM",
+      "PRINCE",
+      "KING",
+      "BEAR"
+    ]
   }
 ]

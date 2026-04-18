@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, render_template
-from generate_puzzle import generate_one_puzzle_for_web
+from generate_puzzle import generate_one_puzzle_for_web, load_web_resources
 import json
 import os
 import random
@@ -27,6 +27,10 @@ def load_prebuilt_puzzles():
 
 
 PREBUILT_PUZZLES = load_prebuilt_puzzles()
+
+print("Preloading LLM client, dataset, and embedding model...")
+load_web_resources()
+print("Preload complete. Ready to serve requests.")
 
 
 @app.route("/")
